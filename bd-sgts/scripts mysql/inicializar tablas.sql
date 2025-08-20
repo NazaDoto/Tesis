@@ -107,7 +107,7 @@ titulo VARCHAR(255),
 contenido TEXT
 );
 insert into noticias(titulo,contenido) values('Prueba noticia 1', 'Prueba contenido 1');
-insert into noticias(titulo,contenido) values('Prueba noticia 2', 'Prueba contenido 2');
+insert into NOTICIAS(titulo,contenido) values('Prueba noticia 2', 'Prueba contenido 2');
 
 CREATE TABLE NOTICIAS_IMAGENES (
 id INT PRIMARY KEY AUTO_INCREMENT,
@@ -115,5 +115,5 @@ path VARCHAR(255),
 id_noticia INT,
 FOREIGN KEY (id_noticia) REFERENCES NOTICIAS(id)
 );
-insert into noticias_imagenes(path,id_noticia) values('/uploads/noticia1.jpg',1);
-insert into noticias_imagenes(path,id_noticia) values('/uploads/noticia2.jpg',2);
+insert into NOTICIAS_IMAGENES(path,id_noticia) values('/uploads/noticia1.jpg',1);
+insert into NOTICIAS_IMAGENES(path,id_noticia) values('/uploads/noticia2.jpg',2);

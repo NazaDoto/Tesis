@@ -1,4 +1,4 @@
-INSERT INTO localidades (cod_localidad, descripcion, cod_dpto) VALUES
+INSERT INTO LOCALIDADES (cod_localidad, descripcion, cod_dpto) VALUES
 ('1', '25 DE MAYO', '9'),
 ('1', 'FISCO DE FATIMA', '13'),
 ('2', '25 DE MAYO', '17'),
