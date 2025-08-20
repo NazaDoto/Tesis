@@ -24,11 +24,6 @@ const env = 'prod';
 
 
 
-// Middleware para exponer io en rutas
-app.use((req, res, next) => {
-    req.io = io;
-    next();
-});
 
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
