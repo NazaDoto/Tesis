@@ -26,7 +26,9 @@ const port = process.env.PORT || 3500;
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "*", // ajustalo a tu dominio del front
+        origin: "https://sgts.nazadoto.com", // sin /* 
+        methods: ["GET", "POST"],
+        credentials: true
     }
 });
 
