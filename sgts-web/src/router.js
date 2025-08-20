@@ -43,7 +43,7 @@ const routes = [{
     component: LoginComponent,
 },
 {
-    path: '/solicitar-tarjeta',
+    path: '/registrar',
     component: RegisterComponent,
     meta: { requiresAuth: false },
 },
