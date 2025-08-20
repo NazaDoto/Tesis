@@ -4,8 +4,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
-const Server = require('socket.io').Server;
-const http = require('http');
+const configurarSocketIO = require('./socket');
 
 //Definición de rutas
 const authRoutes = require('./routes/auth');
@@ -21,16 +20,9 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3500;
+const env = 'prod';
 
 
-const server = http.createServer(app);
-const io = new Server(server, {
-    cors: {
-        origin: "https://sgts.nazadoto.com", // sin /* 
-        methods: ["GET", "POST"],
-        credentials: true
-    }
-});
 
 // Middleware para exponer io en rutas
 app.use((req, res, next) => {
@@ -53,7 +45,8 @@ app.use('/tarjetas/', tarjetasRoutes);
 app.use('/uploads', express.static(path.join(__dirname, 'routes', 'uploads')));
 
 
-// Iniciar el servidor con Socket.IO
+// Integrar Socket.IO y iniciar el servidor
+const server = configurarSocketIO(env, app);
 server.listen(port, () => {
     console.log(`Servidor ejecutándose en http://localhost:${port}`);
 });
