@@ -9,7 +9,7 @@ if (env == 'dev') {
     axios.defaults.baseURL = 'http://192.168.1.182:3000';
 } else {
 
-    axios.defaults.baseURL = 'https://nazadoto.com:3500';
+    axios.defaults.baseURL = 'https://sgts.nazadoto.com:3500';
 }
 
 
