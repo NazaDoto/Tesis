@@ -1,0 +1,84 @@
+CREATE TABLE DEPARTAMENTOS (
+    id INT PRIMARY KEY,
+    descripcion VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE LOCALIDADES (
+    id INT PRIMARY KEY,
+    descripcion VARCHAR(100) NOT NULL,
+    id_departamento INT,
+    FOREIGN KEY (id_departamento) REFERENCES DEPARTAMENTOS(id)
+);
+
+CREATE TABLE BARRIOS (
+    id INT PRIMARY KEY,
+    descripcion VARCHAR(100) NOT NULL,
+    id_departamento INT,
+    id_localidad INT,
+    FOREIGN KEY (id_departamento) REFERENCES DEPARTAMENTOS(id),
+    FOREIGN KEY (id_localidad) REFERENCES LOCALIDADES(id)
+);
+
+CREATE TABLE TIPOS_MOVIM (
+    id INT PRIMARY KEY,
+    descripcion VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE BENEFICIARIOS (
+    dni INT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    fecha_nacimiento DATE,
+    sexo CHAR(1),
+    id_departamento INT,
+    id_localidad INT,
+    id_barrio INT,
+    domicilio VARCHAR(200),
+    fecha_registro DATE,
+    hora_registro TIME,
+    estado CHAR(1),
+    fecha_modificacion DATE,
+    hora_modificacion TIME,
+    observaciones VARCHAR(255),
+    cant_parientes INT,
+    usuario VARCHAR(50),
+    FOREIGN KEY (id_departamento) REFERENCES DEPARTAMENTOS(id),
+    FOREIGN KEY (id_localidad) REFERENCES LOCALIDADES(id),
+    FOREIGN KEY (id_barrio) REFERENCES BARRIOS(id)
+);
+
+CREATE TABLE PARIENTES (
+    dni_titular INT,
+    dni_pariente INT,
+    nombre_pariente VARCHAR(100),
+    fecha_nacimiento DATE,
+    sexo CHAR(1),
+    fecha_registro DATE,
+    hora_registro TIME,
+    estado CHAR(1),
+    fecha_modificacion DATE,
+    hora_modificacion TIME,
+    FOREIGN KEY (dni_titular) REFERENCES BENEFICIARIOS(dni)
+);
+
+CREATE TABLE TARJETAS_SOC (
+    dni INT,
+    num_cuenta VARCHAR(20),
+    num_tarjeta VARCHAR(20),
+    fecha_registro DATE,
+    estado CHAR(1),
+    fecha_modificacion DATE,
+    importe_acreditado DECIMAL(10, 2),
+    PRIMARY KEY (dni, num_cuenta),
+    FOREIGN KEY (dni) REFERENCES BENEFICIARIOS(dni)
+);
+
+CREATE TABLE HISTORIAL_MOV (
+    dni INT,
+    tipo_mov INT,
+    observaciones VARCHAR(255),
+    importe DECIMAL(10, 2),
+    fecha_registro DATE,
+    usuario VARCHAR(50),
+    FOREIGN KEY (dni) REFERENCES BENEFICIARIOS(dni),
+    FOREIGN KEY (tipo_mov) REFERENCES TIPOS_MOVIM(id)
+);
