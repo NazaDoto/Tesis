@@ -15,7 +15,7 @@
                 <li>Fotografía o PDF del Historial médico.</li>
             </ol>
             <div class="text-center">
-                <router-link class="btn-css c-black" to="/solicitar-tarjeta"><strong>SOLICITAR TARJETA</strong></router-link>
+                <router-link class="btn-css c-black" to="/registrar"><strong>SOLICITAR TARJETA</strong></router-link>
             </div>
         </div>
     </div>

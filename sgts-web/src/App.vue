@@ -1,7 +1,7 @@
 <template>
     <div class="body">
         <NavbarPublicoComponent
-            v-if="$route.path === '/' || $route.path === '/login' || $route.path === '/contacto' || $route.path === '/registrar' || $route.path === '/requisitos' || $route.path === '/solicitar-tarjeta' || /^\/noticias(\/.*)?$/.test($route.path)" />
+            v-if="$route.path === '/' || $route.path === '/login' || $route.path === '/contacto' || $route.path === '/registrar' || /^\/noticias(\/.*)?$/.test($route.path)" />
         <router-view></router-view>
     </div>
 </template>

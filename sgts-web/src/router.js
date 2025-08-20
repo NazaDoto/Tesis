@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import InicioUsuarioComponent from './components/InicioUsuarioComponent.vue';
 import InicioComponent from './components/InicioComponent.vue';
 import LoginComponent from './components/auth/LoginComponent.vue';
 import RegisterComponent from './components/auth/RegisterComponent.vue';
@@ -31,11 +30,6 @@ const routes = [{
     path: '/',
     component: InicioComponent,
     meta: { requiresAuth: false },
-},
-{
-    path: '/home',
-    component: InicioUsuarioComponent,
-    meta: { requiresAuth: true },
 },
 
 {
@@ -122,7 +116,11 @@ const routes = [{
             meta: {requiresAuth: true, role: 0}
         },
     ]
-}
+},
+{
+    path: '/:catchAll(.*)',
+    redirect: '/'
+  }
 
 ];
 
