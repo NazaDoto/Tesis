@@ -180,7 +180,7 @@
                             <button type="button" class="btn-quitar" @click="quitarArchivoMsg"
                                 :disabled="!habilitarModificacion">×</button>
                             <a class="to-hidden"
-                                :href="`http://192.168.1.182:3000/uploads/beneficiario/${form.dni}/${archivo.nombre}`"
+                                :href="`https://nazadoto.com:3500/uploads/beneficiario/${form.dni}/${archivo.nombre}`"
                                 target="_blank">
                                 <img :src="archivo.vistaPrevia" :alt="archivo.nombre" class="imagen-preview"
                                     v-if="archivo.tipo === 'imagen'" />

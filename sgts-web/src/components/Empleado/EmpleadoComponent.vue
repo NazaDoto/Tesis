@@ -15,7 +15,7 @@ export default {
   },
   mounted() {
     // 1. Conectar con el backend
-    const socket = io("http://192.168.1.182:3000"); // ajusta la URL según tu server
+    const socket = io("https://nazadoto.com:3500"); // ajusta la URL según tu server
 
     // 2. Escuchar evento de nuevas solicitudes
     socket.on("nueva_solicitud", (data) => {

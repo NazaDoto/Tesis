@@ -67,11 +67,11 @@
                 <span>{{ solicitud.dni }}</span>
                 <span>{{ formatearFecha(solicitud.fecha_solicitud) }}</span>
                 <a class="btn btn-secundario"
-                    :href="('http://192.168.1.182:3000/get/descargar?path=' + solicitud.path_dni)">
+                    :href="('https://nazadoto.com:3500/get/descargar?path=' + solicitud.path_dni)">
                     Ver
                 </a>
                 <a class="btn btn-secundario"
-                    :href="('http://192.168.1.182:3000/get/descargar?path=' + solicitud.path_historial_medico)">
+                    :href="('https://nazadoto.com:3500/get/descargar?path=' + solicitud.path_historial_medico)">
                     Ver
                 </a>
                 <span :class="estadoClass(solicitud.estado)">{{ solicitud.estado }}</span>
