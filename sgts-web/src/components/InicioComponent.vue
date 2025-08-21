@@ -14,7 +14,7 @@
         </div>
 
         <!-- Contenedor con overflow para el resto de las noticias -->
-         <div class="flex-column">
+         <div class="flex-column" v-if="noticias.length > 1">
            <div class="noticias-scroll">
              <router-link :to="'/noticias/' + noticia.id" v-for="noticia in noticias.slice(1)" :key="noticia.id"
                class="noticia-cuadrada">
@@ -64,8 +64,8 @@ export default {
   methods: {
     async fetchNoticias(){
       try {
-          const response = await axios.get('/noticias');
-          this.noticias = response.data;
+          const response = await axios.get('/noticias/get');
+          this.noticias = response.data[0];
       } catch (error) {
         console.log('No se pudo obtener las noticias. ', error);
       }

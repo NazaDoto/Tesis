@@ -23,7 +23,12 @@ const upload = multer({ storage });
 // 🔹 Listar todas las noticias
 router.get('/get', async (req, res) => {
     try {
-        const [rows] = await db.query('SELECT * FROM noticias ORDER BY id DESC');
+const [rows] = await db.query(`
+    SELECT n.id, n.titulo, n.contenido, n.fecha, ni.path AS imagen
+    FROM noticias n
+    LEFT JOIN noticias_imagenes ni ON n.id = ni.id_noticia
+    ORDER BY n.id DESC
+`);
         res.json([rows]);
     } catch (error) {
         console.error('Error al obtener noticias:', error);
