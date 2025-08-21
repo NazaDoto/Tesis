@@ -1,45 +1,127 @@
 <template>
   <div class="vista">
     <div class="container">
-        <h3 class="mt-2">Generar Informes</h3>
-
-        <section class="seccion">
-          <h4 class="subtitulo">Beneficiarios</h4>
-          <div class="fila">
-            <button class="btn-opcion" @click="generar('beneficiarios', 'todo')">Todo</button>
-            <button class="btn-opcion" @click="generar('beneficiarios', 'capital')">Capital</button>
-            <button class="btn-opcion" @click="generar('beneficiarios', 'banda')">Banda</button>
-            <button class="btn-opcion" @click="generar('beneficiarios', 'interior')">Interior</button>
-          </div>
-        </section>
-
-        <section class="seccion">
-          <h4 class="subtitulo">Tarjetas Sociales</h4>
-          <div class="fila">
-            <button class="btn-opcion" @click="generar('tarjetas', 'todo')">Todo</button>
-            <button class="btn-opcion" @click="generar('tarjetas', 'capital')">Capital</button>
-            <button class="btn-opcion" @click="generar('tarjetas', 'banda')">Banda</button>
-            <button class="btn-opcion" @click="generar('tarjetas', 'interior')">Interior</button>
-            <button class="btn-opcion" @click="generar('tarjetas', 'ncaja')">N° Caja</button>
-          </div>
-        </section>
+      <div v-if="cargandoDatos" class="pantalla-carga-vista text-center">
+        <div class="logo-carga">
+          <img class="logo-img" src="/favicon.ico" width="50" alt="" />
+          <div class="texto-carga">Cargando...</div>
+        </div>
       </div>
+
+      <div v-if="mensajePopup" class="mensaje-container-fondo">
+        <div class="mensaje-container">
+          <span class="mensaje">{{ mensaje }}</span>
+          <button class="btn-mensaje" @click="mensajePopup = false; mensaje = ''">Ok</button>
+        </div>
+      </div>
+
+      <h3 class="mt-2">Generar Informes</h3>
+
+      <section class="seccion">
+        <h4 class="subtitulo">Beneficiarios</h4>
+        <div class="fila">
+          <button class="btn-opcion" @click="generar('beneficiarios', 'todo')">Todo</button>
+          <button class="btn-opcion" @click="generar('beneficiarios', 'capital')">Capital</button>
+          <button class="btn-opcion" @click="generar('beneficiarios', 'banda')">Banda</button>
+          <button class="btn-opcion" @click="generar('beneficiarios', 'interior')">Interior</button>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <h4 class="subtitulo">Tarjetas Sociales</h4>
+        <div class="fila">
+          <button class="btn-opcion" @click="generar('tarjetas', 'todo')">Todo</button>
+          <button class="btn-opcion" @click="generar('tarjetas', 'capital')">Capital</button>
+          <button class="btn-opcion" @click="generar('tarjetas', 'banda')">Banda</button>
+          <button class="btn-opcion" @click="generar('tarjetas', 'interior')">Interior</button>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+import jsPDF from "jspdf";
+import * as XLSX from "xlsx";
+
 export default {
+  data() {
+    return {
+      cargandoDatos: false,
+      mensajePopup: false,
+      mensaje: "",
+    };
+  },
   methods: {
-    generar(seccion, tipo) {
-      // Lógica para generar informe
-      console.log(`Generar PDF: ${seccion} - ${tipo}`);
-    }
-  }
-}
+    async generar(seccion, tipo) {
+      try {
+        this.cargandoDatos = true;
+
+        let url = "";
+        if (seccion === "beneficiarios") {
+          url = `/informes/beneficiarios/${tipo}`;
+        } else if (seccion === "tarjetas") {
+          url = `/informes/tarjetas/${tipo}`;
+        }
+
+        const res = await axios.get(url);
+        const datos = res.data;
+
+        if (!datos || datos.length === 0) {
+          this.mensaje = "No hay datos para este informe.";
+          this.mensajePopup = true;
+          return;
+        }
+
+        // Descargar PDF
+        this.descargarPDF(seccion, tipo, datos);
+
+        // Descargar XLS
+        this.descargarXLS(seccion, tipo, datos);
+
+      } catch (e) {
+        console.error(e);
+        this.mensaje = "Error al generar el informe.";
+        this.mensajePopup = true;
+      } finally {
+        this.cargandoDatos = false;
+      }
+    },
+
+    descargarPDF(seccion, tipo, datos) {
+      const doc = new jsPDF();
+      doc.setFontSize(16);
+      doc.text(`Informe de ${seccion.toUpperCase()} - ${tipo.toUpperCase()}`, 14, 20);
+      doc.setFontSize(12);
+
+      let y = 30;
+      datos.forEach((item) => {
+        const line = Object.entries(item)
+          .map(([key, value]) => `${key}: ${value}`)
+          .join(" | ");
+        doc.text(line, 14, y);
+        y += 8;
+        if (y > 280) {
+          doc.addPage();
+          y = 20;
+        }
+      });
+
+      doc.save(`Informe_${seccion}_${tipo}.pdf`);
+    },
+
+    descargarXLS(seccion, tipo, datos) {
+      const worksheet = XLSX.utils.json_to_sheet(datos);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, "Informe");
+      XLSX.writeFile(workbook, `Informe_${seccion}_${tipo}.xlsx`);
+    },
+  },
+};
 </script>
 
 <style scoped>
-
 .card {
   background-color: white;
   border-radius: 10px;
@@ -73,7 +155,7 @@ export default {
 }
 
 .btn-opcion {
-    background-color: rgb(0, 179, 250);
+  background-color: rgb(0, 179, 250);
   color: white;
   padding: 12px 20px;
   border: none;
@@ -85,6 +167,6 @@ export default {
 }
 
 .btn-opcion:hover {
-    background-color: rgb(0, 158, 250);
+  background-color: rgb(0, 158, 250);
 }
 </style>

@@ -9,6 +9,7 @@ const configurarSocketIO = require('./socket');
 //Definición de rutas
 const authRoutes = require('./routes/auth');
 const noticiasRoutes = require('./routes/noticias');
+const informesRoutes = require('./routes/informes');
 const getRoutes = require('./routes/get');
 const beneficiariosRoutes = require('./routes/beneficiarios');
 const tarjetasRoutes = require('./routes/tarjetas');
@@ -37,6 +38,7 @@ app.use('/get/', getRoutes);
 app.use('/beneficiarios/', beneficiariosRoutes);
 app.use('/tarjetas/', tarjetasRoutes);
 app.use('/noticias/', noticiasRoutes);
+app.use('/informes/', informesRoutes);
 app.use('/uploads', express.static(path.join(__dirname, 'routes', 'uploads')));
 // Después de todas las rutas API
 app.use(express.static(path.join(__dirname, 'dist')));
