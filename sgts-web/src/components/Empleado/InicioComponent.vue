@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import {io} from 'socket.io-client';
 export default {
   data() {
     return {
@@ -35,6 +36,13 @@ export default {
   },
   mounted() {
     this.usuario = JSON.parse(localStorage.getItem('user'));
+    const socket = io("https://nazadoto.com:3500"); // ajusta la URL según tu server
+  
+    // 2. Escuchar evento de nuevas solicitudes
+    socket.on("nueva_solicitud", (data) => {
+      console.log("Nueva solicitud:", data);
+      this.mostrarNotificacion(data);
+    });
   },
 };
 </script>
