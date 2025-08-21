@@ -90,7 +90,7 @@ WHERE dni = ?;`,
             // Buscar historial de movimientos
             const [historial] = await db.execute(
                 `SELECT observaciones, fecha 
-         FROM HISTORIAL_MOV 
+         FROM historial_mov 
          WHERE dni = ? 
          ORDER BY fecha DESC`,
                 [dni]
@@ -280,7 +280,7 @@ router.post('/solicitar', upload.fields([
 
         // 1. Insertar en beneficiarios (incluyendo archivo_adjunto que será pathDni)
         await db.query(`
-      INSERT INTO beneficiarios (
+      INSERT into beneficiarios (
         dni, nombre, fecha_nacimiento, sexo, telefono, cod_dpto, cod_localidad, cod_barrio,
         domicilio, fecha_registro, hora_registro, fecha_modificacion, hora_modificacion,
         cant_parientes, usuario, cuil
@@ -308,7 +308,7 @@ router.post('/solicitar', upload.fields([
         if (parientes.length > 0) {
             for (const pariente of parientes) {
                 await db.query(`
-            INSERT INTO parientes (
+            insert into parientes (
               dni_titular, dni_pariente, nombre_pariente, fecha_nacimiento, sexo,
               fecha_registro, fecha_modificacion
             ) VALUES (?, ?, ?, ?, ?, ?, ?)

@@ -233,13 +233,13 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
 
       // Guardar también en tabla de archivos, si corresponde
       await db.query(`
-    INSERT INTO ARCHIVO_BENEFICIARIO (dni, path)
+    INSERT INTO archivo_beneficiario (dni, path)
     VALUES (?, ?)
     ON DUPLICATE KEY UPDATE path = VALUES(path)
   `, [dni, archivoNombre]);
       // Insertar o actualizar en BENEFICIARIOS
       await db.query(`
-    INSERT INTO BENEFICIARIOS (
+    INSERT into beneficiarios (
       dni, cuil, nombre, fecha_nacimiento, sexo,
       cod_dpto, cod_localidad, cod_barrio, domicilio,
       fecha_registro, hora_registro, 
@@ -270,7 +270,7 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
     } else {
       // Insertar o actualizar en BENEFICIARIOS
       await db.query(`
-        INSERT INTO BENEFICIARIOS (
+        INSERT into beneficiarios (
           dni, cuil, nombre, fecha_nacimiento, sexo,
           cod_dpto, cod_localidad, cod_barrio, domicilio,
           fecha_registro, hora_registro, 
@@ -318,7 +318,7 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
     for (const p of parientesArray) {
       if (p.dni && p.nombre) {
         await db.query(`
-          INSERT INTO PARIENTES (
+          insert into parientes (
             dni_titular, dni_pariente, nombre_pariente,
             fecha_nacimiento, sexo,
             fecha_registro, hora_registro, 
@@ -354,7 +354,7 @@ router.delete('/quitarArchivo', async (req, res) => {
   try {
     // Obtener archivo de la base
     const [archivos] = await db.query(
-      `SELECT path FROM ARCHIVO_BENEFICIARIO WHERE dni = ?`,
+      `SELECT path FROM archivo_beneficiario WHERE dni = ?`,
       [dni]
     );
 
@@ -369,9 +369,9 @@ router.delete('/quitarArchivo', async (req, res) => {
       fs.unlinkSync(archivoPath);
     }
 
-    // Eliminar de la tabla ARCHIVO_BENEFICIARIO
+    // Eliminar de la tabla archivo_beneficiario
     await db.query(
-      `DELETE FROM ARCHIVO_BENEFICIARIO WHERE dni = ?`,
+      `DELETE FROM archivo_beneficiario WHERE dni = ?`,
       [dni]
     );
 
