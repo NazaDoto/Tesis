@@ -7,8 +7,8 @@
       <section class="noticias" v-if="noticias.length > 0">
         <!-- Noticia destacada a la izquierda -->
         <div class="noticia-destacada">
-          <router-link :to="'/noticias/' + noticias[0].id" v-if="noticias.length > 0">
-            <img class="noticia-imagen-destacada" :src="'http://localhost:3000' + noticias[0].imagenes[0]" alt="">
+          <router-link :to="'/noticia/' + noticias[0].id" v-if="noticias.length > 0">
+            <img class="noticia-imagen-destacada" :src="'https://nazadoto.com:3500' + noticias[0].imagen" alt="">
             <div class="noticia-titulo destacada">{{ noticias[0].titulo }}</div>
           </router-link>
         </div>
@@ -16,9 +16,9 @@
         <!-- Contenedor con overflow para el resto de las noticias -->
          <div class="flex-column" v-if="noticias.length > 1">
            <div class="noticias-scroll">
-             <router-link :to="'/noticias/' + noticia.id" v-for="noticia in noticias.slice(1)" :key="noticia.id"
+             <router-link :to="'/noticia/' + noticia.id" v-for="noticia in noticias.slice(1)" :key="noticia.id"
                class="noticia-cuadrada">
-               <img class="noticia-imagen" :src="'http://localhost:3000' + noticia.imagenes[0]" alt="">
+               <img class="noticia-imagen" :src="'https://nazadoto.com:3500' + noticia.imagen" alt="">
                <div class="noticia-titulo">{{ noticia.titulo }}</div>
              </router-link>
            </div>

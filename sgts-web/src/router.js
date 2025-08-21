@@ -20,6 +20,7 @@ import AdminComponent from './components/Admin/AdminComponent.vue';
 import AdminInicioComponent from './components/Admin/AdminInicioComponent.vue';
 import AdminUsuariosComponent from './components/Admin/AdminUsuarioComponent.vue';
 import AdminNoticiasComponent from './components/Admin/AdminNoticiasComponent.vue';
+import NoticiaComponent from './components/NoticiaComponent.vue';
 
 function getUserFromLocalStorage() {
     const user = JSON.parse(localStorage.getItem('user'));
@@ -55,17 +56,17 @@ const routes = [{
         {
             path: '',
             component: AdminInicioComponent,
-            meta: {requiresAuth: true, role: 2}
+            meta: { requiresAuth: true, role: 2 }
         },
         {
             path: 'usuarios',
             component: AdminUsuariosComponent,
-            meta: {requiresAuth: true, role:2}
+            meta: { requiresAuth: true, role: 2 }
         },
         {
             path: 'noticias',
             component: AdminNoticiasComponent,
-            meta: {requiresAuth: true, role:2}
+            meta: { requiresAuth: true, role: 2 }
         }
     ]
 },
@@ -108,25 +109,31 @@ const routes = [{
     children: [
         {
             path: '',
-            component:BeneficiarioInicioComponent,
-            meta: {requiresAuth: true, role: 0}
+            component: BeneficiarioInicioComponent,
+            meta: { requiresAuth: true, role: 0 }
         },
         {
             path: 'solicitud',
-            component:BeneficiarioSolicitudComponent,
-            meta: {requiresAuth: true, role: 0}
+            component: BeneficiarioSolicitudComponent,
+            meta: { requiresAuth: true, role: 0 }
         },
         {
             path: 'tarjeta',
-            component:BeneficiarioTarjetaComponent,
-            meta: {requiresAuth: true, role: 0}
+            component: BeneficiarioTarjetaComponent,
+            meta: { requiresAuth: true, role: 0 }
         },
     ]
+}, {
+    path: '/noticia/:id',
+    component: NoticiaComponent,
+    props: true,          // ✅ permite recibir `id` como prop
+    meta: { requiresAuth: false }
 },
+
 {
     path: '/:catchAll(.*)',
     redirect: '/'
-  }
+}
 
 ];
 

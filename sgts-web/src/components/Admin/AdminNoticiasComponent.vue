@@ -122,6 +122,7 @@ export default {
       this.nuevaNoticia = { titulo: "", contenido: "", imagen: null };
     },
     async agregarNoticia() {
+        this.cargando = true;
       try {
         const formData = new FormData();
         formData.append("titulo", this.nuevaNoticia.titulo);
@@ -139,6 +140,9 @@ export default {
       } catch (e) {
         this.mensaje = "Error al agregar noticia." + e;
         this.mensajePopup = true;
+      }
+      finally{
+        this.cargando = false;
       }
     },
     async editarNoticia(noticia) {
