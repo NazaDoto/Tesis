@@ -1,7 +1,7 @@
 <template>
     <div class="body">
         <NavbarPublicoComponent
-            v-if="$route.path === '/' || $route.path === '/login' || $route.path === '/contacto' || $route.path === '/registrar' || /^\/noticias(\/.*)?$/.test($route.path)" />
+            v-if="$route.path === '/' || $route.path === '/login' || $route.path === '/contacto' || $route.path === '/registrar' || $route.path === '/noticias' || /^\/noticia(\/.*)?$/.test($route.path)" />
         <router-view></router-view>
     </div>
 </template>
@@ -160,7 +160,7 @@ a {
 .btn-css-underline::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     width: 0;
     height: 5px;

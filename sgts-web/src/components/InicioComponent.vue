@@ -22,7 +22,6 @@
                <div class="noticia-titulo">{{ noticia.titulo }}</div>
              </router-link>
            </div>
-           <router-link class="btn-css-underline text-top mt-2" to="/noticias">Ver Más</router-link>
          </div>
       </section>
     </div>

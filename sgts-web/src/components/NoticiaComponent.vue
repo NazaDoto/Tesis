@@ -1,60 +1,58 @@
 <template>
-    <div class="vista-noticia">
-        <!-- Navbar público -->
-        <NavbarPublicoComponent />
+    <div>
 
-        <!-- Pantalla de carga -->
-        <div v-if="cargando" class="pantalla-carga text-center">
-            <div class="logo-carga">
-                <img class="logo-img" src="/favicon.ico" width="50" alt="Logo" />
-                <div class="texto-carga">Cargando noticia...</div>
-            </div>
-        </div>
-
-        <!-- Popup mensaje -->
-        <div v-if="mensajePopup" class="mensaje-container-fondo">
-            <div class="mensaje-container">
-                <span class="mensaje">{{ mensaje }}</span>
-                <button class="btn-mensaje" @click="mensajePopup = false; mensaje = ''">
-                    Ok
-                </button>
-            </div>
-        </div>
-
-        <!-- Contenido de la noticia -->
-        <div v-if="!cargando" class="contenido-noticia container">
-            <main class="noticia-principal">
-                <h2 class="titulo-noticia">{{ noticia.titulo }}</h2>
-                <img v-if="noticia.imagen" :src="'https://nazadoto.com:3500' + noticia.imagen" alt=""
-                    class="imagen-noticia" />
-                <p class="contenido-texto">{{ noticia.contenido }}</p>
-                <p class="fecha-texto">{{ formatearFecha(noticia.fecha) }}</p>
-            </main>
-
-            <!-- Aside con resto de las noticias -->
-            <aside class="noticias-laterales">
-                <h3>Otras noticias</h3>
-                <div class="lista-noticias">
-                    <router-link v-for="n in otrasNoticias" :key="n.id" :to="'/noticia/' + n.id"
-                        class="noticia-lateral">
-                        <img v-if="n.imagen" :src="'https://nazadoto.com:3500' + n.imagen" alt=""
-                            class="noticia-imagen-lateral" />
-                        <span>{{ n.titulo }}</span>
-                    </router-link>
+        <div class="ancho-pag">
+            <!-- Pantalla de carga -->
+            <div v-if="cargando" class="pantalla-carga text-center">
+                <div class="logo-carga">
+                    <img class="logo-img" src="/favicon.ico" width="50" alt="Logo" />
+                    <div class="texto-carga">Cargando noticia...</div>
                 </div>
-            </aside>
+            </div>
+    
+            <!-- Popup mensaje -->
+            <div v-if="mensajePopup" class="mensaje-container-fondo">
+                <div class="mensaje-container">
+                    <span class="mensaje">{{ mensaje }}</span>
+                    <button class="btn-mensaje" @click="mensajePopup = false; mensaje = ''">
+                        Ok
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Contenido de la noticia -->
+            <div v-if="!cargando" class="contenido-noticia container">
+                <main class="noticia-principal">
+                    <h2 class="titulo-noticia">{{ noticia.titulo }}</h2>
+                    <img v-if="noticia.imagen" :src="'https://nazadoto.com:3500' + noticia.imagen" alt=""
+                        class="imagen-noticia" />
+                    <p class="fecha-texto">{{ formatearFecha(noticia.fecha) }}</p>
+                    <p class="contenido-texto">{{ noticia.contenido }}</p>
+                </main>
+    
+                <!-- Aside con resto de las noticias -->
+                <aside class="noticias-laterales">
+                    <div class="lista-noticias mt-2">
+                        <router-link v-for="n in otrasNoticias" :key="n.id" :to="'/noticia/' + n.id"
+                            class="noticia-lateral">
+                            <img v-if="n.imagen" :src="'https://nazadoto.com:3500' + n.imagen" alt=""
+                                class="noticia-imagen-lateral" />
+                            <span>{{ n.titulo }}</span>
+                        </router-link>                    
+                    </div>
+                </aside>
+            </div>
         </div>
+        <pie-component></pie-component>
     </div>
 </template>
 
 <script>
 import axios from "axios";
-import NavbarPublicoComponent from './NavbarPublicoComponent.vue';
+import PieComponent from './PieComponent.vue';
 
 export default {
-    components: {
-        NavbarPublicoComponent,
-    },
+  components: { PieComponent },
     data() {
         return {
             noticia: {},
@@ -110,6 +108,7 @@ export default {
     gap: 20px;
     margin-top: 20px;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .noticia-principal {
@@ -131,8 +130,13 @@ export default {
 .contenido-texto {
     font-size: 1.1rem;
     line-height: 1.6;
+    text-align: justify;
+    
 }
-
+.text-top{
+  margin: 0 auto auto auto;
+  text-align: center;
+}
 .fecha-texto {
     font-size: 0.9rem;
     color: gray;
@@ -141,8 +145,9 @@ export default {
 
 .noticias-laterales {
     flex: 1;
-    border-left: 1px solid #ccc;
     padding-left: 10px;
+    display:flex;
+    flex-direction: column;
 }
 
 .lista-noticias {
@@ -161,8 +166,8 @@ export default {
 }
 
 .noticia-imagen-lateral {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 80px;
     object-fit: cover;
     border-radius: 6px;
 }
