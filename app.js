@@ -12,7 +12,6 @@ const noticiasRoutes = require('./routes/noticias');
 const getRoutes = require('./routes/get');
 const beneficiariosRoutes = require('./routes/beneficiarios');
 const tarjetasRoutes = require('./routes/tarjetas');
-const noticiasRoutes = require('./routes/noticias');
 
 // Configurar variables de entorno
 dotenv.config();
@@ -33,7 +32,6 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 //Uso de rutas
-app.use('/', noticiasRoutes);
 app.use('/auth', authRoutes);
 app.use('/get/', getRoutes);
 app.use('/beneficiarios/', beneficiariosRoutes);

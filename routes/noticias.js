@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // 🔹 Listar todas las noticias
-router.get('/', async (req, res) => {
+router.get('/get', async (req, res) => {
     try {
         const [rows] = await db.query('SELECT * FROM noticias ORDER BY id DESC');
         res.json([rows]);

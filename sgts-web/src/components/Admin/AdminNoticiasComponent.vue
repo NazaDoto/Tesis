@@ -99,7 +99,7 @@ export default {
     async fetchNoticias() {
       this.cargando = true;
       try {
-        const res = await axios.get("/get/noticias");
+        const res = await axios.get("/noticias/get");
         this.noticias = res.data[0];
       } catch (e) {
         this.mensaje = "Error al cargar noticias." + e;
