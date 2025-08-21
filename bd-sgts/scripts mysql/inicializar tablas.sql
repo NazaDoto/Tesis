@@ -104,6 +104,7 @@ CREATE TABLE SOLICITUDES (
 CREATE TABLE NOTICIAS (
 id INT PRIMARY KEY AUTO_INCREMENT,
 titulo VARCHAR(255),
+fecha Date,
 contenido TEXT
 );
 insert into noticias(titulo,contenido) values('Prueba noticia 1', 'Prueba contenido 1');

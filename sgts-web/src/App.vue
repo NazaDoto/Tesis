@@ -297,17 +297,6 @@ html {
     background: linear-gradient(rgb(255, 175, 175), rgb(168, 0, 0)) !important;
 }
 
-.btn-agregar {
-    background: linear-gradient(rgb(255, 251, 234), rgb(255, 240, 155)) !important;
-    box-shadow: 0.2px 0.2px 2px white;
-    border: none;
-    border-radius: 1px;
-}
-
-.btn-agregar:hover {
-    background: linear-gradient(rgb(253, 247, 217), rgb(255, 236, 128)) !important;
-}
-
 .barra-busqueda {
     border: none;
     box-shadow: 0.2px 0.2px 2px !important;

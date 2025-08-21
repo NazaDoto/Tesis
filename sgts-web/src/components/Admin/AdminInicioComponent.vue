@@ -9,6 +9,10 @@
           <h5>Gestionar Usuarios</h5>
           <p>Ver y modificar la información de los usuarios.</p>
         </div>
+        <div class="card acceso" @click="$router.push('/admin/noticias')">
+          <h5>Gestionar Noticias</h5>
+          <p>Subir y modificar noticias.</p>
+        </div>
       </div>
     </div>
   </div>

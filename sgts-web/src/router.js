@@ -19,6 +19,7 @@ import Empleado_SolicitudesComponent from './components/Empleado/SolicitudesComp
 import AdminComponent from './components/Admin/AdminComponent.vue';
 import AdminInicioComponent from './components/Admin/AdminInicioComponent.vue';
 import AdminUsuariosComponent from './components/Admin/AdminUsuarioComponent.vue';
+import AdminNoticiasComponent from './components/Admin/AdminNoticiasComponent.vue';
 
 function getUserFromLocalStorage() {
     const user = JSON.parse(localStorage.getItem('user'));
@@ -59,6 +60,11 @@ const routes = [{
         {
             path: 'usuarios',
             component: AdminUsuariosComponent,
+            meta: {requiresAuth: true, role:2}
+        },
+        {
+            path: 'noticias',
+            component: AdminNoticiasComponent,
             meta: {requiresAuth: true, role:2}
         }
     ]

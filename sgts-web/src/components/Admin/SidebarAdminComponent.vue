@@ -24,6 +24,10 @@
                     <router-link class="item-btn" to="/admin/usuarios"
                         :class="{ active: $route.path === '/admin/usuarios' }">Usuarios</router-link>
                 </div>
+                <div>
+                    <router-link class="item-btn" to="/admin/noticias"
+                        :class="{ active: $route.path === '/admin/noticias' }">Noticias</router-link>
+                </div>
                 <button class="item-btn mt-4" @click="cerrarSesionModal">Cerrar Sesión</button>
             </div>
         </div>
