@@ -36,13 +36,22 @@ router.post('/agregar', upload.single('imagen'), async (req, res) => {
     try {
         const { titulo, contenido } = req.body;
         const imagen = req.file ? `/uploads/noticias/${req.file.filename}` : null;
+        // 1️⃣ Insertar noticia (solo titulo, contenido y fecha)
         const fecha = new Date();
+        const [result] = await db.query(`
+    INSERT INTO noticias (titulo, contenido, fecha)
+    VALUES (?, ?, ?)
+`, [titulo, contenido, fecha]);
 
-        await db.query(`
-            INSERT INTO noticias (titulo, contenido, imagen, fecha)
-            VALUES (?, ?, ?, ?)
-        `, [titulo, contenido, imagen, fecha]);
-
+        // 2️⃣ Insertar imagen asociada en noticias_imagenes (si existe)
+        if (req.file) {
+            const pathImagen = `/uploads/noticias/${req.file.filename}`;
+            const idNoticia = result.insertId; // id generado de la noticia
+            await db.query(`
+        INSERT INTO noticias_imagenes (path, id_noticia)
+        VALUES (?, ?)
+    `, [pathImagen, idNoticia]);
+        }
         res.json({ mensaje: 'Noticia agregada correctamente' });
     } catch (error) {
         console.error('Error al agregar noticia:', error);

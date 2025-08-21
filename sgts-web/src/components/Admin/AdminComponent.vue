@@ -6,15 +6,14 @@
         <div class="texto-carga c-black">Cargando...</div>
       </div>
     </div>
-    <SidebarAdminComponent :tiene-tarjeta="tieneTarjeta"></SidebarAdminComponent>
-    <router-view class="vista" :tiene-tarjeta="tieneTarjeta"></router-view>
+    <SidebarAdminComponent></SidebarAdminComponent>
+    <router-view class="vista"></router-view>
 
   </div>
 </template>
 
 <script>
 import SidebarAdminComponent from './SidebarAdminComponent.vue';
-import axios from 'axios';
 export default {
   components: {
     SidebarAdminComponent,
@@ -22,29 +21,8 @@ export default {
   data() {
     return {
       cargando: false,
-      tieneTarjeta: null
     }
   },
-  methods: {
-    async verificarTarjeta() {
-      this.cargando = true;
-      const dni = JSON.parse(localStorage.getItem('user')).dni
-      try {
-        const response = await axios.get('/beneficiarios/verificarTarjeta', {
-          params: { dni: dni }
-        });
-        this.tieneTarjeta = response.data.estado;
-        localStorage.setItem('tieneTarjeta', this.tieneTarjeta);
-      } catch (error) {
-        console.log('No tiene tarjeta.');
-      } finally {
-        this.cargando = false;
-      }
-    },
-  },
-  mounted() {
-    this.verificarTarjeta();
-  }
 }
 </script>
 

@@ -56,14 +56,14 @@
 
     <!-- Modal Agregar Noticia -->
     <div v-if="mostrarAgregar" class="modal-fondo">
-      <div class="modal">
+      <div class="modal-contenido">
         <h4>Agregar Noticia</h4>
-        <input v-model="nuevaNoticia.titulo" placeholder="Título" class="input-tabla" />
-        <textarea v-model="nuevaNoticia.contenido" placeholder="Contenido" class="input-tabla"></textarea>
-        <input type="file" @change="onFileChangeNueva($event)" />
+        <input id="titulo" v-model="nuevaNoticia.titulo" placeholder="Título" class="input-tabla" />
+        <textarea id="contenido" v-model="nuevaNoticia.contenido" placeholder="Contenido" class="input-tabla"></textarea>
+        <input id="imagen" type="file" @change="onFileChangeNueva($event)" accept=".jpg, .png, .jpeg" />
         <div class="mt-2">
           <button class="btn-guardar" @click="agregarNoticia">Agregar</button>
-          <button class="btn-cancelar" @click="cerrarAgregar">Cancelar</button>
+          <button class="btn" @click="cerrarAgregar">Cancelar</button>
         </div>
       </div>
     </div>
@@ -245,12 +245,16 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 8;
 }
 
-.modal {
+.modal-contenido {
   background: white;
   padding: 20px;
   border-radius: 8px;
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 </style>
