@@ -42,7 +42,6 @@
 
 <script>
 import axios from "axios";
-import jsPDF from "jspdf";
 import * as XLSX from "xlsx";
 
 export default {
@@ -74,9 +73,6 @@ export default {
           return;
         }
 
-        // Descargar PDF
-        this.descargarPDF(seccion, tipo, datos);
-
         // Descargar XLS
         this.descargarXLS(seccion, tipo, datos);
 
@@ -87,28 +83,6 @@ export default {
       } finally {
         this.cargandoDatos = false;
       }
-    },
-
-    descargarPDF(seccion, tipo, datos) {
-      const doc = new jsPDF();
-      doc.setFontSize(16);
-      doc.text(`Informe de ${seccion.toUpperCase()} - ${tipo.toUpperCase()}`, 14, 20);
-      doc.setFontSize(12);
-
-      let y = 30;
-      datos.forEach((item) => {
-        const line = Object.entries(item)
-          .map(([key, value]) => `${key}: ${value}`)
-          .join(" | ");
-        doc.text(line, 14, y);
-        y += 8;
-        if (y > 280) {
-          doc.addPage();
-          y = 20;
-        }
-      });
-
-      doc.save(`Informe_${seccion}_${tipo}.pdf`);
     },
 
     descargarXLS(seccion, tipo, datos) {
