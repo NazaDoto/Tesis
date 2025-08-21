@@ -36,7 +36,7 @@ export default {
     mostrarNotificacion(data) {
       if ("Notification" in window && Notification.permission === "granted") {
         new Notification("Nueva Solicitud", {
-          body: `De: ${data.nombre} - ${data.detalle}`,
+          body: `De: ${data.nombre} - ${data.dni}`,
           icon: "/recursos/icono-noti.png", // opcional
         });
       } else {
