@@ -44,11 +44,11 @@ export default {
       this.cargando = true;
       try {
         // Cargar noticia principal
-        const res = await axios.get(`/get/noticia/${this.id}`);
+        const res = await axios.get(`/noticias/getNoticia/${this.id}`);
         this.noticia = res.data;
 
         // Cargar resto de noticias
-        const res2 = await axios.get('/get/noticias');
+        const res2 = await axios.get('/noticias/get');
         // Filtrar la noticia actual
         this.otrasNoticias = res2.data.filter(n => n.id !== this.id);
       } catch (e) {

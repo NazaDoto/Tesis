@@ -23,7 +23,7 @@ const upload = multer({ storage });
 // 🔹 Listar todas las noticias
 router.get('/get', async (req, res) => {
     try {
-const [rows] = await db.query(`
+        const [rows] = await db.query(`
     SELECT n.id, n.titulo, n.contenido, n.fecha, ni.path AS imagen
     FROM noticias n
     LEFT JOIN noticias_imagenes ni ON n.id = ni.id_noticia
@@ -33,6 +33,33 @@ const [rows] = await db.query(`
     } catch (error) {
         console.error('Error al obtener noticias:', error);
         res.status(500).json({ error: 'Error al obtener noticias' });
+    }
+});
+
+
+// Obtener una noticia por ID
+router.get('/getNoticia/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        // Traer noticia y su imagen principal (si hay)
+        const [rows] = await db.query(`
+            SELECT n.id, n.titulo, n.contenido, n.fecha, ni.path AS imagen
+            FROM noticias n
+            LEFT JOIN noticias_imagenes ni ON ni.id_noticia = n.id
+            WHERE n.id = ?
+            ORDER BY ni.id ASC
+            LIMIT 1
+        `, [id]);
+
+        if (rows.length === 0) {
+            return res.status(404).json({ error: 'Noticia no encontrada' });
+        }
+
+        res.json(rows[0]); // Devolver un objeto con la noticia
+    } catch (error) {
+        console.error('Error al obtener noticia:', error);
+        res.status(500).json({ error: 'Error al obtener noticia' });
     }
 });
 
