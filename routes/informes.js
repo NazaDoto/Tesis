@@ -62,4 +62,4 @@ router.get("/tarjetas/:tipo", async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;
