@@ -349,8 +349,9 @@ router.post('/solicitar', upload.fields([
 
         await db.query(`INSERT INTO historial_mov(dni, observaciones, fecha) VALUES (?, ?, ?)`, [dni, 'SOLICITUD DE TARJETA', fechaHoy])
 
-// 🔔 Emitir evento a empleados
-        req.io.emit("nueva_solicitud", {
+        // 🔔 Emitir evento a empleados
+        const io = req.app.get('io'); // <--- esto obtiene la instancia de Socket.IO
+        io.emit("nueva_solicitud", {
             dni,
             nombre,
             fecha
