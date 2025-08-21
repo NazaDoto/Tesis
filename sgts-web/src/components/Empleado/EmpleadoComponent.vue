@@ -7,25 +7,40 @@
 
 <script>
 import SidebarEmpleadoComponent from './SidebarEmpleadoComponent.vue';
+import {io} from 'socket.io-client';
 
 export default {
   components: {
     SidebarEmpleadoComponent,
   },
-  
-  methods: {
-    async mostrarNotificacion(data) {
-      // Pedir permiso si no está concedido
-      if (Notification.permission !== "granted") {
-        await Notification.requestPermission();
-      }
-
-      // Mostrar notificación
-      if (Notification.permission === "granted") {
-        new Notification("Nueva solicitud de Tarjeta Social", {
-          body: `${data.nombre} (DNI: ${data.dni}) ha realizado una solicitud.`,
-          icon: "/img/icono-mds.png" // poné un ícono accesible desde tu app
+  mounted() {
+    // 1. Pedir permiso para notificaciones
+    if ("Notification" in window) {
+      if (Notification.permission === "default") {
+        Notification.requestPermission().then((permiso) => {
+          console.log("Permiso de notificación:", permiso);
         });
+      }
+    }
+
+    // 2. Conectar con el backend (socket.io)
+    const socket = io("https://nazadoto.com:3500");
+
+    // 3. Escuchar evento de nuevas solicitudes
+    socket.on("nueva_solicitud", (data) => {
+      console.log("Nueva solicitud:", data);
+      this.mostrarNotificacion(data);
+    });
+  },
+  methods: {
+    mostrarNotificacion(data) {
+      if ("Notification" in window && Notification.permission === "granted") {
+        new Notification("Nueva Solicitud", {
+          body: `De: ${data.nombre} - ${data.detalle}`,
+          icon: "/recursos/icono-noti.png", // opcional
+        });
+      } else {
+        console.log("Notificaciones no permitidas por el usuario");
       }
     }
   }
@@ -33,8 +48,8 @@ export default {
 </script>
 
 <style scoped>
-.flex-inline{
-  display:flex;
+.flex-inline {
+  display: flex;
   flex-direction: row;
   height: 100%;
   width: 100%;
