@@ -285,7 +285,7 @@ export default {
         router.push('/beneficiario');
       } catch (error) {
         this.mensajePopup = true;
-        this.mensaje = ('Error al solicitar: ' + error);
+        this.mensaje = ('Error al solicitar: ' + error.message);
       }
       finally{
         this.cargando = false;

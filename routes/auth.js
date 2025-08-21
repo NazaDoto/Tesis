@@ -62,7 +62,7 @@ router.post('/register', async (req, res) => {
     } catch (error) {
         console.error('Error al crear usuario:', error);
         if (error.sqlState == '23000') {
-            res.status(500).json({ message: 'Ya existe un usuario con este nombre.' });
+            res.status(500).json({ message: 'Ya existe un usuario con este usuario/dni.' });
         } else {
             res.status(500).json({ message: 'Error al crear usuario. ', error });
         }

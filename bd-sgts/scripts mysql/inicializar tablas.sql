@@ -4,7 +4,7 @@ use sgts;
 
 CREATE TABLE USUARIOS (
 id INT PRIMARY KEY AUTO_INCREMENT,
-dni INT,
+dni INT UNIQUE,
 usuario VARCHAR(50) UNIQUE,
 contraseña VARCHAR(255),
 fecha_registro DATE,
@@ -56,7 +56,7 @@ CREATE TABLE BENEFICIARIOS (
     FOREIGN KEY (usuario) REFERENCES USUARIOS(id)
 );
 
-CREATE TABLE archivo_beneficiario(
+CREATE TABLE ARCHIVO_BENEFICIARIO(
 dni INT,
 id_archivo INT,
 path VARCHAR(100),
