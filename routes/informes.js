@@ -1,6 +1,5 @@
 const express = require('express');
-const db = require("../db.js"); // tu conexión a la DB
-
+const db = require("../db.js"); // conexión MySQL
 const router = express.Router();
 
 // Mapear nombres de departamento a cod_dpto
@@ -12,8 +11,8 @@ const departamentosMap = {
 // Función para construir cláusula WHERE según tipo
 function getWhereClause(tipo) {
   if (tipo === "todo") return ""; // sin filtro
-  if (tipo === "interior") return "WHERE cod_dpto NOT IN (5,7)"; // todos menos banda y capital
-  if (departamentosMap[tipo]) return `WHERE cod_dpto = ${departamentosMap[tipo]}`;
+  if (tipo === "interior") return "WHERE b.cod_dpto NOT IN (5,7)"; // todos menos banda y capital
+  if (departamentosMap[tipo]) return `WHERE b.cod_dpto = ${departamentosMap[tipo]}`;
   return "";
 }
 
@@ -24,11 +23,27 @@ router.get("/beneficiarios/:tipo", async (req, res) => {
     const where = getWhereClause(tipo);
 
     const [rows] = await db.query(
-      `SELECT b.id, b.nombre, b.apellido, b.dni, b.cod_dpto, d.descripcion as departamento
+      `SELECT 
+          b.dni, 
+          b.nombre, 
+          b.fecha_nacimiento, 
+          b.sexo, 
+          b.cod_dpto, 
+          d.descripcion AS departamento,
+          b.cod_localidad, 
+          b.cod_barrio, 
+          b.domicilio, 
+          b.fecha_registro, 
+          b.hora_registro, 
+          b.fecha_modificacion, 
+          b.hora_modificacion, 
+          b.cant_parientes, 
+          b.cuil, 
+          b.telefono
        FROM beneficiarios b
        LEFT JOIN departamentos d ON b.cod_dpto = d.cod_dpto
        ${where}
-       ORDER BY b.id`
+       ORDER BY b.dni`
     );
 
     res.json(rows);
@@ -45,20 +60,40 @@ router.get("/tarjetas/:tipo", async (req, res) => {
     const where = getWhereClause(tipo);
 
     const [rows] = await db.query(
-      `SELECT t.id as tarjeta_id, t.numero as nro_tarjeta, t.estado, 
-              b.id as beneficiario_id, b.nombre, b.apellido, b.dni, b.cod_dpto,
-              d.descripcion as departamento
-       FROM tarjetas t
-       INNER JOIN beneficiarios b ON t.id_beneficiario = b.id
+      `SELECT 
+          t.dni AS dni_beneficiario,
+          b.nombre, 
+          b.fecha_nacimiento, 
+          b.sexo,
+          b.cod_dpto, 
+          d.descripcion AS departamento,
+          b.cod_localidad, 
+          b.cod_barrio, 
+          b.domicilio, 
+          b.fecha_registro AS fecha_registro_benef,
+          b.hora_registro, 
+          b.fecha_modificacion AS fecha_modif_benef,
+          b.hora_modificacion, 
+          b.cant_parientes, 
+          b.cuil, 
+          b.telefono,
+          t.num_tarjeta, 
+          t.fecha_registro AS fecha_registro_tarjeta, 
+          t.estado, 
+          t.fecha_modificacion AS fecha_modif_tarjeta, 
+          t.importe_acreditado, 
+          t.num_cuenta
+       FROM tarjetas_soc t
+       INNER JOIN beneficiarios b ON t.dni = b.dni
        LEFT JOIN departamentos d ON b.cod_dpto = d.cod_dpto
        ${where}
-       ORDER BY t.id`
+       ORDER BY t.num_tarjeta`
     );
 
     res.json(rows);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Error al obtener tarjetas" });
+    res.status(500).json({ error: "Error al obtener tarjetas sociales" });
   }
 });
 
