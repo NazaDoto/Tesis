@@ -31,7 +31,9 @@ router.get("/beneficiarios/:tipo", async (req, res) => {
           b.cod_dpto, 
           d.descripcion AS departamento,
           b.cod_localidad, 
+          l.descripcion AS localidad,
           b.cod_barrio, 
+          br.descripcion AS barrio,
           b.domicilio, 
           b.fecha_registro, 
           b.hora_registro, 
@@ -42,6 +44,8 @@ router.get("/beneficiarios/:tipo", async (req, res) => {
           b.telefono
        FROM beneficiarios b
        LEFT JOIN departamentos d ON b.cod_dpto = d.cod_dpto
+       LEFT JOIN localidades l ON b.cod_localidad = l.cod_localidad
+       LEFT JOIN barrios br ON b.cod_barrio = br.cod_barrio
        ${where}
        ORDER BY b.dni`
     );
@@ -68,7 +72,9 @@ router.get("/tarjetas/:tipo", async (req, res) => {
           b.cod_dpto, 
           d.descripcion AS departamento,
           b.cod_localidad, 
+          l.descripcion AS localidad,
           b.cod_barrio, 
+          br.descripcion AS barrio,
           b.domicilio, 
           b.fecha_registro AS fecha_registro_benef,
           b.hora_registro, 
@@ -86,6 +92,8 @@ router.get("/tarjetas/:tipo", async (req, res) => {
        FROM tarjetas_soc t
        INNER JOIN beneficiarios b ON t.dni = b.dni
        LEFT JOIN departamentos d ON b.cod_dpto = d.cod_dpto
+       LEFT JOIN localidades l ON b.cod_localidad = l.cod_localidad
+       LEFT JOIN barrios br ON b.cod_barrio = br.cod_barrio
        ${where}
        ORDER BY t.num_tarjeta`
     );
