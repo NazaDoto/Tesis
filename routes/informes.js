@@ -41,11 +41,19 @@ router.get("/beneficiarios/:tipo", async (req, res) => {
           b.hora_modificacion, 
           b.cant_parientes, 
           b.cuil, 
-          b.telefono
+          b.telefono,
+          -- Campos de parientes (pueden ser NULL si no tiene)
+          p.dni_pariente,
+          p.nombre_pariente,
+          p.fecha_nacimiento AS fecha_nacimiento_pariente,
+          p.sexo AS sexo_pariente,
+          p.fecha_registro AS fecha_registro_pariente,
+          p.fecha_modificacion AS fecha_modif_pariente
        FROM beneficiarios b
        LEFT JOIN departamentos d ON b.cod_dpto = d.cod_dpto
        LEFT JOIN localidades l ON b.cod_localidad = l.cod_localidad
        LEFT JOIN barrios br ON b.cod_barrio = br.cod_barrio
+       LEFT JOIN parientes p ON b.dni = p.dni_titular
        ${where}
        ORDER BY b.dni`
     );
@@ -56,6 +64,7 @@ router.get("/beneficiarios/:tipo", async (req, res) => {
     res.status(500).json({ error: "Error al obtener beneficiarios" });
   }
 });
+
 
 // ================== TARJETAS SOCIALES ==================
 router.get("/tarjetas/:tipo", async (req, res) => {
