@@ -38,7 +38,12 @@ app.use('/beneficiarios/', beneficiariosRoutes);
 app.use('/tarjetas/', tarjetasRoutes);
 app.use('/noticias/', noticiasRoutes);
 app.use('/uploads', express.static(path.join(__dirname, 'routes', 'uploads')));
+// Después de todas las rutas API
+app.use(express.static(path.join(__dirname, 'dist')));
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
 
 // Integrar Socket.IO y iniciar el servidor
 const server = configurarSocketIO(env, app);

@@ -1,120 +1,173 @@
 <template>
-  <div class="vista">
-    <div v-if="cargando" class="pantalla-carga text-center">
-      <div class="logo-carga">
-        <img class="logo-img" src="/favicon.ico" width="50" alt="Logo" />
-        <div class="texto-carga">Cargando...</div>
-      </div>
-    </div>
+    <div class="vista-noticia">
+        <!-- Navbar público -->
+        <NavbarPublicoComponent />
 
-    <div v-if="!cargando && noticia">
-      <div class="noticia-principal">
-        <img v-if="noticia.imagen" :src="'https://nazadoto.com:3500' + noticia.imagen" class="noticia-imagen-principal" alt="Imagen noticia">
-        <h1 class="noticia-titulo-principal">{{ noticia.titulo }}</h1>
-        <p class="noticia-contenido">{{ noticia.contenido }}</p>
-      </div>
-
-      <aside class="noticias-otras">
-        <h4>Otras noticias</h4>
-        <div v-for="n in otrasNoticias" :key="n.id" class="noticia-otra">
-          <router-link :to="'/noticia/' + n.id">
-            <img v-if="n.imagen" :src="'https://nazadoto.com:3500' + n.imagen" class="noticia-imagen-pequena" alt="Imagen noticia">
-            <div class="noticia-titulo-pequena">{{ n.titulo }}</div>
-          </router-link>
+        <!-- Pantalla de carga -->
+        <div v-if="cargando" class="pantalla-carga text-center">
+            <div class="logo-carga">
+                <img class="logo-img" src="/favicon.ico" width="50" alt="Logo" />
+                <div class="texto-carga">Cargando noticia...</div>
+            </div>
         </div>
-      </aside>
+
+        <!-- Popup mensaje -->
+        <div v-if="mensajePopup" class="mensaje-container-fondo">
+            <div class="mensaje-container">
+                <span class="mensaje">{{ mensaje }}</span>
+                <button class="btn-mensaje" @click="mensajePopup = false; mensaje = ''">
+                    Ok
+                </button>
+            </div>
+        </div>
+
+        <!-- Contenido de la noticia -->
+        <div v-if="!cargando" class="contenido-noticia container">
+            <main class="noticia-principal">
+                <h2 class="titulo-noticia">{{ noticia.titulo }}</h2>
+                <img v-if="noticia.imagen" :src="'https://nazadoto.com:3500' + noticia.imagen" alt=""
+                    class="imagen-noticia" />
+                <p class="contenido-texto">{{ noticia.contenido }}</p>
+                <p class="fecha-texto">{{ formatearFecha(noticia.fecha) }}</p>
+            </main>
+
+            <!-- Aside con resto de las noticias -->
+            <aside class="noticias-laterales">
+                <h3>Otras noticias</h3>
+                <div class="lista-noticias">
+                    <router-link v-for="n in otrasNoticias" :key="n.id" :to="'/noticia/' + n.id"
+                        class="noticia-lateral">
+                        <img v-if="n.imagen" :src="'https://nazadoto.com:3500' + n.imagen" alt=""
+                            class="noticia-imagen-lateral" />
+                        <span>{{ n.titulo }}</span>
+                    </router-link>
+                </div>
+            </aside>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
+import NavbarPublicoComponent from './NavbarPublicoComponent.vue';
 
 export default {
-  props: ['id'],
-  data() {
-    return {
-      cargando: false,
-      noticia: null,
-      otrasNoticias: [],
-    };
-  },
-  methods: {
-    async fetchNoticia() {
-      this.cargando = true;
-      try {
-        // Cargar noticia principal
-        const res = await axios.get(`/noticias/getNoticia/${this.id}`);
-        this.noticia = res.data;
+    components: {
+        NavbarPublicoComponent,
+    },
+    data() {
+        return {
+            noticia: {},
+            otrasNoticias: [],
+            cargando: false,
+            mensajePopup: false,
+            mensaje: "",
+            id: this.$route.params.id,
+        };
+    },
+    methods: {
+        formatearFecha(fecha) {
+            return new Date(fecha).toLocaleDateString('es-AR', {
+                day: '2-digit',
+                month: '2-digit',
+                year: '2-digit',
+            });
+        },
+        async fetchNoticia() {
+            this.noticia = {};
+            this.otrasNoticias = [];
+            this.cargando = true;
+            try {
+                const res = await axios.get(`/noticias/getNoticia/${this.id}`);
+                this.noticia = res.data;
 
-        // Cargar resto de noticias
-        const res2 = await axios.get('/noticias/get');
-        // Filtrar la noticia actual
-        this.otrasNoticias = res2.data.filter(n => n.id !== this.id);
-      } catch (e) {
-        console.error('Error al cargar noticias:', e);
-      } finally {
-        this.cargando = false;
-      }
-    }
-  },
-  mounted() {
-    this.fetchNoticia();
-  }
+                const res2 = await axios.get(`/noticias/get`);
+                this.otrasNoticias = res2.data[0].filter(n => n.id !== this.noticia.id);
+
+            } catch (e) {
+                this.mensaje = "Error al cargar la noticia.";
+                this.mensajePopup = true;
+            } finally {
+                this.cargando = false;
+            }
+        },
+    },
+    watch: {
+        '$route.params.id'(newId) {
+            this.id = newId;
+            this.fetchNoticia();
+        }
+    },
+    mounted() {
+        this.fetchNoticia();
+    },
 };
 </script>
 
 <style scoped>
+.container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
 .noticia-principal {
-  width: 70%;
-  float: left;
-  padding-right: 20px;
+    flex: 2;
 }
 
-.noticia-imagen-principal {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
+.titulo-noticia {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.noticia-titulo-principal {
-  font-size: 28px;
-  font-weight: 700;
-  margin: 15px 0;
+.imagen-noticia {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
-.noticia-contenido {
-  font-size: 16px;
-  line-height: 1.6;
+.contenido-texto {
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
-.noticias-otras {
-  width: 28%;
-  float: right;
-  padding-left: 10px;
+.fecha-texto {
+    font-size: 0.9rem;
+    color: gray;
+    margin-top: 10px;
 }
 
-.noticia-otra {
-  margin-bottom: 15px;
+.noticias-laterales {
+    flex: 1;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
 }
 
-.noticia-imagen-pequena {
-  width: 100%;
-  max-height: 80px;
-  object-fit: cover;
-  border-radius: 6px;
+.lista-noticias {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.noticia-titulo-pequena {
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: 5px;
+.noticia-lateral {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
-.vista::after {
-  content: "";
-  display: table;
-  clear: both;
+.noticia-imagen-lateral {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.noticia-lateral span {
+    font-size: 0.95rem;
 }
 </style>
