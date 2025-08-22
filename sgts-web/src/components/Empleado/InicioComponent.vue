@@ -1,7 +1,11 @@
 <template>
   <div class="vista">
     <div class="container">
-      <h3 class="mt-2">Bienvenid@, {{ usuario.usuario?.toUpperCase() }}</h3>
+      <span class="inline-flex">
+        <h3 class="mt-2">Bienvenid@, {{ usuario.usuario?.toUpperCase() }}</h3>
+        <button class="btn-mensaje" @click="abrirModal = true">Cambiar contraseña</button>
+
+      </span>
       <p class="lead">Desde aquí podés acceder a las principales funciones de gestión del sistema.</p>
 
       <div class="tarjetas-inicio">
@@ -22,19 +26,67 @@
           <p>Obtener reportes de beneficiarios y tarjetas.</p>
         </div>
       </div>
+
+      <!-- 🔹 Modal de cambio de contraseña -->
+    <div v-if="abrirModal" class="modal-fondo">
+      <div class="modal-contenido">
+        <h3>Cambiar contraseña</h3>
+        <input class="form-control" v-model="form.contraseñaActual" type="password" placeholder="Contraseña actual" />
+        <input class="form-control" v-model="form.contraseñaNueva" type="password" placeholder="Nueva contraseña" />
+        <input class="form-control" v-model="form.repetirContraseña" type="password" placeholder="Repetir nueva contraseña" />
+
+        <p v-if="error" class="error">{{ error }}</p>
+
+        <div class="modal-actions">
+          <button class="btn-mensaje" @click="cambiarContraseña">Guardar</button>
+          <button class="btn" @click="abrirModal = false">Cancelar</button>
+        </div>
+      </div>
+    </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   data() {
     return {
       usuario: '',
+      abrirModal: false,
+      error: "",
+      form: {
+        contraseñaActual: "",
+        contraseñaNueva: "",
+        repetirContraseña: "",
+      },
     };
   },
   mounted() {
     this.usuario = JSON.parse(localStorage.getItem('user'));
+  },
+   methods: {
+    async cambiarContraseña() {
+      this.error = "";
+
+      if (this.form.contraseñaNueva !== this.form.repetirContraseña) {
+        this.error = "Las contraseñas nuevas no coinciden.";
+        return;
+      }
+
+      try {
+        await axios.post("/auth/cambiarContraseña", {
+          usuario: this.usuario.usuario,
+          contraseñaActual: this.form.contraseñaActual,
+          contraseñaNueva: this.form.contraseñaNueva,
+        });
+        alert("Contraseña cambiada correctamente.");
+        this.abrirModal = false;
+        this.form = { contraseñaActual: "", contraseñaNueva: "", repetirContraseña: "" };
+      } catch (e) {
+        this.error = e.response?.data?.message || "Error al cambiar la contraseña.";
+      }
+    },
   },
 };
 </script>
@@ -46,6 +98,7 @@ export default {
   gap: 20px;
   margin-top: 30px;
 }
+
 
 .card.acceso {
   flex: 1 1 300px;
@@ -66,4 +119,5 @@ export default {
   margin-bottom: 10px;
   font-weight: bold;
 }
+
 </style>

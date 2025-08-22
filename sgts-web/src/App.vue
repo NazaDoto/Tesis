@@ -20,6 +20,32 @@ export default {
 </script>
 
 <style>
+.modal-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+}
+.inline-flex{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .formulario-beneficiario {
     display: flex;
     flex-direction: column;

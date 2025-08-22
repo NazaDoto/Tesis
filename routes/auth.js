@@ -57,5 +57,47 @@ router.post('/register', async (req, res) => {
         }
     }
 });
+router.post('/cambiarContraseña', async (req, res) => {
+    const { usuario, contraseñaActual, contraseñaNueva } = req.body;
+
+    try {
+        // Buscar usuario
+        const [rows] = await db.query('SELECT * FROM usuarios WHERE usuario = ?', [usuario]);
+        if (rows.length === 0) {
+            return res.status(404).json({ message: 'Usuario no encontrado.' });
+        }
+
+        const user = rows[0];
+
+        // Validar contraseña actual
+        const isValidPassword = await bcrypt.compare(contraseñaActual, user.contraseña);
+        if (!isValidPassword) {
+            return res.status(401).json({ message: 'Contraseña actual incorrecta.' });
+        }
+
+        // Encriptar nueva contraseña
+        const hashedPassword = await bcrypt.hash(contraseñaNueva, 10);
+
+        // Actualizar en BD
+        await db.query('UPDATE usuarios SET contraseña = ? WHERE usuario = ?', [hashedPassword, usuario]);
+
+        // Insertar log
+        await db.query(
+            'INSERT INTO logs (usuario, actividad, detalles, ip, user_agent) VALUES (?, ?, ?, ?, ?)',
+            [
+              usuario,
+              'CAMBIO_CONTRASEÑA',
+              `El usuario ${usuario} cambió su contraseña`,
+              req.ip,
+              req.headers['user-agent']
+            ]
+        );
+
+        res.json({ message: 'Contraseña cambiada correctamente.' });
+    } catch (error) {
+        console.error('Error al cambiar contraseña:', error);
+        res.status(500).json({ message: 'Error al cambiar contraseña.' });
+    }
+});
 
 module.exports = router;
