@@ -83,7 +83,7 @@ router.post('/cambiarContrasena', async (req, res) => {
 
         // Insertar log
         await db.query(
-            'INSERT INTO logs (usuario, actividad, detalles, ip, user_agent) VALUES (?, ?, ?, ?, ?)',
+            'INSERT INTO logs (usuario, actividad, detalles) VALUES (?, ?, ?)',
             [
               usuario,
               'CAMBIO_CONTRASEÑA',
