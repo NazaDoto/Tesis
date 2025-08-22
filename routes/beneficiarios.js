@@ -192,7 +192,7 @@ router.get('/getDatos', async (req, res) => {
         cuil: ''
       });
     }
-    await registrarLog(req.user?.usuario || 'desconocido', "CONSULTA_BENEFICIARIO", `Consulta datos de DNI ${dni}`, req);
+    await registrarLog(req.user?.usuario || 'desconocido', "CONSULTA_BENEFICIARIO", `Consulta datos de DNI ${dni}`);
 
     return res.status(404).json({ error: 'DNI no encontrado en ninguna fuente' });
 
@@ -301,7 +301,7 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
       ]);
 
     }
-    await registrarLog(usuario || 'desconocido', "ACTUALIZAR_BENEFICIARIO", `Se actualizó beneficiario DNI ${dni} (${nombre})`, req);
+    await registrarLog(usuario || 'desconocido', "ACTUALIZAR_BENEFICIARIO", `Se actualizó beneficiario DNI ${dni} (${nombre})`);
 
 
     const fechaHoy = new Date().toISOString().split('T')[0];
@@ -338,7 +338,7 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
           fechaHoy,
           horaHoy
         ]);
-        await registrarLog(usuario || 'desconocido', "INSERTAR_PARIENTE", `Beneficiario DNI ${dni}, Pariente: ${p.nombre} (${p.dni})`, req);
+        await registrarLog(usuario || 'desconocido', "INSERTAR_PARIENTE", `Beneficiario DNI ${dni}, Pariente: ${p.nombre} (${p.dni})`);
 
       }
     }
@@ -385,7 +385,7 @@ router.delete('/quitarArchivo', async (req, res) => {
       `UPDATE BENEFICIARIOS SET archivo_adjunto = NULL WHERE dni = ?`,
       [dni]
     );
-    await registrarLog(req.user?.usuario || 'desconocido', "ELIMINAR_ARCHIVO", `Se eliminó archivo adjunto del DNI ${dni}`, req);
+    await registrarLog(req.user?.usuario || 'desconocido', "ELIMINAR_ARCHIVO", `Se eliminó archivo adjunto del DNI ${dni}`);
 
     res.json({ success: true });
   } catch (error) {
@@ -498,7 +498,7 @@ router.post('/updateUsuario', async (req, res) => {
         WHERE id = ?`;
   try {
     await db.query(sql, [usuario, correo, rol, dni, id]);
-    await registrarLog(req.user?.usuario || 'desconocido', "ACTUALIZAR_USUARIO", `Se actualizó usuario ID ${id}, usuario=${usuario}`, req);
+    await registrarLog(req.user?.usuario || 'desconocido', "ACTUALIZAR_USUARIO", `Se actualizó usuario ID ${id}, usuario=${usuario}`);
 
     res.json({ success: true, message: "Usuario actualizado correctamente" });
 

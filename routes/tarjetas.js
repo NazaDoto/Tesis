@@ -214,7 +214,7 @@ router.post('/update', async (req, res) => {
                 [dni, observacion, fechaHoy]
             );
         }
-        await registrarLog(req.user?.usuario || 'desconocido', accion, `Gestión tarjeta DNI ${dni} - Cuenta ${num_cuenta}`, req);
+        await registrarLog(req.user?.usuario || 'desconocido', accion, `Gestión tarjeta DNI ${dni} - Cuenta ${num_cuenta}`);
 
         // 🔔 Enviar correo si hubo cambio de estado
         if (estadoAnterior && estadoAnterior !== estado) {
@@ -310,7 +310,7 @@ router.post('/solicitar', upload.fields([
             usuario || null,
             cuil
         ]);
-        await registrarLog(req.user?.usuario || 'desconocido', "SOLICITUD_TARJETA", `Nueva solicitud tarjeta DNI ${dni} - Nombre: ${nombre}`, req);
+        await registrarLog(req.user?.usuario || 'desconocido', "SOLICITUD_TARJETA", `Nueva solicitud tarjeta DNI ${dni} - Nombre: ${nombre}`);
 
         // 2. Insertar parientes
         if (parientes.length > 0) {
@@ -503,7 +503,7 @@ router.post('/actualizarSolicitud', async (req, res) => {
                 }
             }
         }
-        await registrarLog(req.user?.usuario || 'desconocido', "ACTUALIZAR_SOLICITUD", `Actualización solicitud tarjeta DNI ${dni} - Nuevo estado: ${estado} - Obs: ${observacion}`, req);
+        await registrarLog(req.user?.usuario || 'desconocido', "ACTUALIZAR_SOLICITUD", `Actualización solicitud tarjeta DNI ${dni} - Nuevo estado: ${estado} - Obs: ${observacion}`);
 
         res.json({ mensaje: 'Solicitud actualizada correctamente' });
     } catch (error) {

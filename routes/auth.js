@@ -12,14 +12,14 @@ router.post('/login', async (req, res) => {
     try {
         const [rows] = await db.query('SELECT * FROM usuarios WHERE usuario = ?', [usuario]);
         if (rows.length === 0) {
-            await registrarLog(usuario, "LOGIN_FALLIDO", "Usuario no encontrado", req); // log fallo
+            await registrarLog(usuario, "LOGIN_FALLIDO", "Usuario no encontrado"); // log fallo
             return res.status(500).json({ message: 'Usuario o contraseña incorrectos.' });
         }
 
         const user = rows[0];
         const isValidPassword = await bcrypt.compare(contraseña, user.contraseña);
         if (!isValidPassword) {
-            await registrarLog(usuario, "LOGIN_FALLIDO", "Contraseña incorrecta", req); // log fallo
+            await registrarLog(usuario, "LOGIN_FALLIDO", "Contraseña incorrecta"); // log fallo
             return res.status(401).json({ message: 'Usuario o contraseña incorrectos.' });
         }
 
@@ -27,7 +27,7 @@ router.post('/login', async (req, res) => {
         const dni = user.dni;
         const token = jwt.sign({ usuario: user.usuario }, process.env.SECRET_KEY, { expiresIn: '1h' });
 
-        await registrarLog(usuario, "LOGIN_EXITOSO", `Usuario ${usuario} inició sesión`, req); // log éxito
+        await registrarLog(usuario, "LOGIN_EXITOSO", `Usuario ${usuario} inició sesión`); // log éxito
         res.json({ token, rol, dni });
     } catch (error) {
         console.error('Error al iniciar sesión:', error);
@@ -46,7 +46,7 @@ router.post('/register', async (req, res) => {
             [usuario, hashedPassword, fechaRegistro, correo, dni]
         );
 
-        await registrarLog(usuario, "REGISTRO", `Usuario ${usuario} registrado con dni ${dni}`, req); // log registro
+        await registrarLog(usuario, "REGISTRO", `Usuario ${usuario} registrado con dni ${dni}`); // log registro
         res.json('Registro correcto.');
     } catch (error) {
         console.error('Error al crear usuario:', error);

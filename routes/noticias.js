@@ -85,7 +85,7 @@ router.post('/agregar', upload.single('imagen'), async (req, res) => {
         VALUES (?, ?)
     `, [pathImagen, idNoticia]);
         }
-        await registrarLog(req.user?.usuario || 'desconocido', "CREAR_NOTICIA", `Se creó noticia '${titulo}' (ID ${result.insertId})`, req);
+        await registrarLog(req.user?.usuario || 'desconocido', "CREAR_NOTICIA", `Se creó noticia '${titulo}' (ID ${result.insertId})`);
 
         res.json({ mensaje: 'Noticia agregada correctamente' });
     } catch (error) {
@@ -112,7 +112,7 @@ router.post('/editar', upload.single('imagen'), async (req, res) => {
         params.push(id);
 
         await db.query(query, params);
-        await registrarLog(req.user?.usuario || 'desconocido', "EDITAR_NOTICIA", `Se editó noticia ID ${id}, nuevo título='${titulo}'`, req);
+        await registrarLog(req.user?.usuario || 'desconocido', "EDITAR_NOTICIA", `Se editó noticia ID ${id}, nuevo título='${titulo}'`);
 
         res.json({ mensaje: 'Noticia editada correctamente' });
     } catch (error) {
@@ -134,7 +134,7 @@ router.post('/eliminar', async (req, res) => {
         }
 
         await db.query('DELETE FROM noticias WHERE id = ?', [id]);
-        await registrarLog(req.user?.usuario || 'desconocido', "ELIMINAR_NOTICIA", `Se eliminó noticia ID ${id}`, req);
+        await registrarLog(req.user?.usuario || 'desconocido', "ELIMINAR_NOTICIA", `Se eliminó noticia ID ${id}`);
 
         res.json({ mensaje: 'Noticia eliminada correctamente' });
     } catch (error) {

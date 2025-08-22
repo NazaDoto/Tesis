@@ -124,8 +124,6 @@ CREATE TABLE logs (
   usuario VARCHAR(100) NOT NULL,
   actividad VARCHAR(255) NOT NULL,
   detalles TEXT,
-  ip VARCHAR(50),
-  user_agent VARCHAR(255),
   fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
