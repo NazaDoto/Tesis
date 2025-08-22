@@ -13,6 +13,10 @@
           <h5>Gestionar Noticias</h5>
           <p>Subir y modificar noticias.</p>
         </div>
+        <div class="card acceso" @click="$router.push('/admin/logs')">
+          <h5>Auditoría</h5>
+          <p>Ver el registro de acciones de los usuarios.</p>
+        </div>
       </div>
     </div>
   </div>

@@ -20,6 +20,7 @@ import AdminComponent from './components/Admin/AdminComponent.vue';
 import AdminInicioComponent from './components/Admin/AdminInicioComponent.vue';
 import AdminUsuariosComponent from './components/Admin/AdminUsuarioComponent.vue';
 import AdminNoticiasComponent from './components/Admin/AdminNoticiasComponent.vue';
+import AdminLogsComponent from './components/Admin/AdminLogsComponent.vue';
 import NoticiaComponent from './components/NoticiaComponent.vue';
 
 function getUserFromLocalStorage() {
@@ -66,6 +67,11 @@ const routes = [{
         {
             path: 'noticias',
             component: AdminNoticiasComponent,
+            meta: { requiresAuth: true, role: 2 }
+        },
+        {
+            path: 'logs',
+            component: AdminLogsComponent,
             meta: { requiresAuth: true, role: 2 }
         }
     ]

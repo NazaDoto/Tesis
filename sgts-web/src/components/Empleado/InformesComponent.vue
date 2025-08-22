@@ -1,6 +1,7 @@
 <template>
   <div class="vista">
     <div class="container">
+      <!-- Pantalla de carga -->
       <div v-if="cargandoDatos" class="pantalla-carga-vista text-center">
         <div class="logo-carga">
           <img class="logo-img" src="/favicon.ico" width="50" alt="" />
@@ -8,6 +9,7 @@
         </div>
       </div>
 
+      <!-- Popup mensajes -->
       <div v-if="mensajePopup" class="mensaje-container-fondo">
         <div class="mensaje-container">
           <span class="mensaje">{{ mensaje }}</span>
@@ -17,6 +19,33 @@
 
       <h3 class="mt-2">Generar Informes</h3>
 
+      <!-- Filtros -->
+      <section class="filtros">
+        <div class="fila flex-between">
+          <span class="gap-2">
+            <label class="form-label" for="fechaDesde">
+              Fecha desde:
+              <input id="fechaDesde" class="form-control" type="date" v-model="fechaDesde" />
+            </label>
+            <label class="form-label" for="fechaHasta">
+              Fecha hasta:
+              <input id="fechaHasta" class="form-control" type="date" v-model="fechaHasta" />
+            </label>
+          </span>
+          <label class="form-label" for="filtroEstado">
+            Estado tarjeta:
+            <select id="filtroEstado" class="form-select" v-model="estadoTarjeta">
+              <option value="">Todos</option>
+              <option value="SOLICITADA">Solicitada</option>
+              <option value="PENDIENTE">Pendiente</option>
+              <option value="ENTREGADA">Entregada</option>
+              <option value="BAJA">Baja</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <!-- Beneficiarios -->
       <section class="seccion">
         <h4 class="subtitulo">Beneficiarios</h4>
         <div class="fila">
@@ -27,6 +56,7 @@
         </div>
       </section>
 
+      <!-- Tarjetas -->
       <section class="seccion">
         <h4 class="subtitulo">Tarjetas Sociales</h4>
         <div class="fila">
@@ -50,6 +80,9 @@ export default {
       cargandoDatos: false,
       mensajePopup: false,
       mensaje: "",
+      fechaDesde: "",
+      fechaHasta: "",
+      estadoTarjeta: "",
     };
   },
   methods: {
@@ -64,7 +97,15 @@ export default {
           url = `/informes/tarjetas/${tipo}`;
         }
 
-        const res = await axios.get(url);
+        // Agregar filtros como query params
+        const params = {};
+        if (this.fechaDesde) params.fecha_desde = this.fechaDesde;
+        if (this.fechaHasta) params.fecha_hasta = this.fechaHasta;
+        if (this.estadoTarjeta && seccion === "tarjetas") {
+          params.estado = this.estadoTarjeta;
+        }
+
+        const res = await axios.get(url, { params });
         const datos = res.data;
 
         if (!datos || datos.length === 0) {
@@ -95,7 +136,17 @@ export default {
 };
 </script>
 
+
 <style scoped>
+.flex-between {
+  justify-content: space-between !important;
+}
+
+.gap-2 {
+  display: flex;
+  flex-direction: row;
+}
+
 .card {
   background-color: white;
   border-radius: 10px;

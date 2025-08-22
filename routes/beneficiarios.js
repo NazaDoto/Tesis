@@ -5,6 +5,7 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const { DBFFile } = require('dbffile');
+const { registrarLog } = require('../utils/logger'); // 👈 importar logger
 
 // Configuración de multer para guardar los archivos subidos
 const storage = multer.diskStorage({
@@ -191,6 +192,7 @@ router.get('/getDatos', async (req, res) => {
         cuil: ''
       });
     }
+    await registrarLog(req.user?.usuario || 'desconocido', "CONSULTA_BENEFICIARIO", `Consulta datos de DNI ${dni}`, req);
 
     return res.status(404).json({ error: 'DNI no encontrado en ninguna fuente' });
 
@@ -299,6 +301,7 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
       ]);
 
     }
+    await registrarLog(usuario || 'desconocido', "ACTUALIZAR_BENEFICIARIO", `Se actualizó beneficiario DNI ${dni} (${nombre})`, req);
 
 
     const fechaHoy = new Date().toISOString().split('T')[0];
@@ -335,6 +338,8 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
           fechaHoy,
           horaHoy
         ]);
+        await registrarLog(usuario || 'desconocido', "INSERTAR_PARIENTE", `Beneficiario DNI ${dni}, Pariente: ${p.nombre} (${p.dni})`, req);
+
       }
     }
 
@@ -380,6 +385,7 @@ router.delete('/quitarArchivo', async (req, res) => {
       `UPDATE BENEFICIARIOS SET archivo_adjunto = NULL WHERE dni = ?`,
       [dni]
     );
+    await registrarLog(req.user?.usuario || 'desconocido', "ELIMINAR_ARCHIVO", `Se eliminó archivo adjunto del DNI ${dni}`, req);
 
     res.json({ success: true });
   } catch (error) {
@@ -492,6 +498,8 @@ router.post('/updateUsuario', async (req, res) => {
         WHERE id = ?`;
   try {
     await db.query(sql, [usuario, correo, rol, dni, id]);
+    await registrarLog(req.user?.usuario || 'desconocido', "ACTUALIZAR_USUARIO", `Se actualizó usuario ID ${id}, usuario=${usuario}`, req);
+
     res.json({ success: true, message: "Usuario actualizado correctamente" });
 
   } catch (error) {

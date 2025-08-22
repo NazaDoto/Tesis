@@ -4,6 +4,7 @@ const db = require('../db'); // Ajusta según tu conexión a MySQL
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const { registrarLog } = require('../utils/logger'); // 👈 importar logger
 
 // Configuración de multer para subir imágenes
 const storage = multer.diskStorage({
@@ -84,6 +85,8 @@ router.post('/agregar', upload.single('imagen'), async (req, res) => {
         VALUES (?, ?)
     `, [pathImagen, idNoticia]);
         }
+        await registrarLog(req.user?.usuario || 'desconocido', "CREAR_NOTICIA", `Se creó noticia '${titulo}' (ID ${result.insertId})`, req);
+
         res.json({ mensaje: 'Noticia agregada correctamente' });
     } catch (error) {
         console.error('Error al agregar noticia:', error);
@@ -109,6 +112,7 @@ router.post('/editar', upload.single('imagen'), async (req, res) => {
         params.push(id);
 
         await db.query(query, params);
+        await registrarLog(req.user?.usuario || 'desconocido', "EDITAR_NOTICIA", `Se editó noticia ID ${id}, nuevo título='${titulo}'`, req);
 
         res.json({ mensaje: 'Noticia editada correctamente' });
     } catch (error) {
@@ -130,6 +134,8 @@ router.post('/eliminar', async (req, res) => {
         }
 
         await db.query('DELETE FROM noticias WHERE id = ?', [id]);
+        await registrarLog(req.user?.usuario || 'desconocido', "ELIMINAR_NOTICIA", `Se eliminó noticia ID ${id}`, req);
+
         res.json({ mensaje: 'Noticia eliminada correctamente' });
     } catch (error) {
         console.error('Error al eliminar noticia:', error);

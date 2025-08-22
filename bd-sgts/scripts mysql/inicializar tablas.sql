@@ -118,3 +118,14 @@ FOREIGN KEY (id_noticia) REFERENCES NOTICIAS(id)
 );
 insert into NOTICIAS_IMAGENES(path,id_noticia) values('/uploads/noticia1.jpg',1);
 insert into NOTICIAS_IMAGENES(path,id_noticia) values('/uploads/noticia2.jpg',2);
+
+CREATE TABLE logs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  usuario VARCHAR(100) NOT NULL,
+  actividad VARCHAR(255) NOT NULL,
+  detalles TEXT,
+  ip VARCHAR(50),
+  user_agent VARCHAR(255),
+  fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+

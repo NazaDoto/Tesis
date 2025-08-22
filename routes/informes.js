@@ -20,7 +20,16 @@ function getWhereClause(tipo) {
 router.get("/beneficiarios/:tipo", async (req, res) => {
   try {
     const tipo = req.params.tipo;
-    const where = getWhereClause(tipo);
+    const whereBase = getWhereClause(tipo);
+
+    const { fecha_desde, fecha_hasta } = req.query;
+
+    let filtros = [];
+    if (whereBase) filtros.push(whereBase.replace("WHERE", "").trim());
+    if (fecha_desde) filtros.push(`b.fecha_registro >= '${fecha_desde}'`);
+    if (fecha_hasta) filtros.push(`b.fecha_registro <= '${fecha_hasta}'`);
+
+    const whereFinal = filtros.length > 0 ? "WHERE " + filtros.join(" AND ") : "";
 
     const [rows] = await db.query(
       `SELECT 
@@ -46,7 +55,7 @@ router.get("/beneficiarios/:tipo", async (req, res) => {
        LEFT JOIN departamentos d ON b.cod_dpto = d.cod_dpto
        LEFT JOIN localidades l ON b.cod_localidad = l.cod_localidad
        LEFT JOIN barrios br ON b.cod_barrio = br.cod_barrio
-       ${where}
+       ${whereFinal}
        ORDER BY b.dni`
     );
 
@@ -61,7 +70,17 @@ router.get("/beneficiarios/:tipo", async (req, res) => {
 router.get("/tarjetas/:tipo", async (req, res) => {
   try {
     const tipo = req.params.tipo;
-    const where = getWhereClause(tipo);
+    const whereBase = getWhereClause(tipo);
+
+    const { fecha_desde, fecha_hasta, estado } = req.query;
+
+    let filtros = [];
+    if (whereBase) filtros.push(whereBase.replace("WHERE", "").trim());
+    if (fecha_desde) filtros.push(`t.fecha_registro >= '${fecha_desde}'`);
+    if (fecha_hasta) filtros.push(`t.fecha_registro <= '${fecha_hasta}'`);
+    if (estado) filtros.push(`t.estado = '${estado}'`);
+
+    const whereFinal = filtros.length > 0 ? "WHERE " + filtros.join(" AND ") : "";
 
     const [rows] = await db.query(
       `SELECT 
@@ -94,7 +113,7 @@ router.get("/tarjetas/:tipo", async (req, res) => {
        LEFT JOIN departamentos d ON b.cod_dpto = d.cod_dpto
        LEFT JOIN localidades l ON b.cod_localidad = l.cod_localidad
        LEFT JOIN barrios br ON b.cod_barrio = br.cod_barrio
-       ${where}
+       ${whereFinal}
        ORDER BY t.num_tarjeta`
     );
 
