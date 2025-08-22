@@ -89,7 +89,7 @@ export default {
         if (this.usuario) params.usuario = this.usuario;
         if (this.actividad) params.actividad = this.actividad;
 
-        const res = await axios.get("/logs", { params });
+        const res = await axios.get("/get/logs", { params });
         this.logs = res.data;
       } catch (e) {
         console.error("Error al cargar logs:", e);

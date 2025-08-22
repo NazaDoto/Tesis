@@ -57,4 +57,50 @@ router.get('/usuarios', async (req, res) => {
         res.status(500).json(error);
     }
 });
+// ================== LOGS ==================
+router.get("/logs", async (req, res) => {
+  try {
+    const { fecha_desde, fecha_hasta, usuario, actividad } = req.query;
+
+    let query = `
+      SELECT 
+        id,
+        usuario,
+        actividad,
+        detalles,
+        fecha
+      FROM logs
+      WHERE 1=1
+    `;
+    const params = [];
+
+    // Filtros dinámicos
+    if (fecha_desde) {
+      query += " AND fecha >= ?";
+      params.push(fecha_desde + " 00:00:00");
+    }
+    if (fecha_hasta) {
+      query += " AND fecha <= ?";
+      params.push(fecha_hasta + " 23:59:59");
+    }
+    if (usuario) {
+      query += " AND usuario LIKE ?";
+      params.push("%" + usuario + "%");
+    }
+    if (actividad) {
+      query += " AND actividad LIKE ?";
+      params.push("%" + actividad + "%");
+    }
+
+    query += " ORDER BY fecha DESC";
+
+    const [rows] = await db.query(query, params);
+    res.json(rows);
+  } catch (err) {
+    console.error("Error al obtener logs:", err);
+    res.status(500).json({ error: "Error al obtener logs" });
+  }
+});
+
+
 module.exports = router; // Exportar el router
