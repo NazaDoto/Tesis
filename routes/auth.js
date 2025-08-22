@@ -57,7 +57,7 @@ router.post('/register', async (req, res) => {
         }
     }
 });
-router.post('/cambiarContraseña', async (req, res) => {
+router.post('/cambiarContrasena', async (req, res) => {
     const { usuario, contraseñaActual, contraseñaNueva } = req.body;
 
     try {

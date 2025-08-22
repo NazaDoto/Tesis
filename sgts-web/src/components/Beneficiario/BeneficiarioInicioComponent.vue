@@ -71,7 +71,7 @@ export default {
       }
 
       try {
-        await axios.post("/auth/cambiarContraseña", {
+        await axios.post("/auth/cambiarContrasena", {
           usuario: this.usuario.usuario,
           contraseñaActual: this.form.contraseñaActual,
           contraseñaNueva: this.form.contraseñaNueva,
