@@ -87,9 +87,7 @@ router.post('/cambiarContrasena', async (req, res) => {
             [
               usuario,
               'CAMBIO_CONTRASEÑA',
-              `El usuario ${usuario} cambió su contraseña`,
-              req.ip,
-              req.headers['user-agent']
+              `El usuario ${usuario} cambió su contraseña`
             ]
         );
 
