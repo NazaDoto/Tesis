@@ -130,7 +130,7 @@ export default {
                 const response = await axios.get('/tarjetas/getSolicitudes');
                 this.solicitudes = response.data[0];
             } catch (error) {
-                console.log(error);
+               // console.log(error);
             } finally {
                 this.cargandoDatos = false;
             }

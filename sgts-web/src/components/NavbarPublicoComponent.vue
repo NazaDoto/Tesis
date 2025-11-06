@@ -28,7 +28,6 @@ export default {
         this.obtenerUsuario();
         emitter.on('usuarioLogueado', this.obtenerUsuario);
         emitter.on('usuarioDeslogueado', this.obtenerUsuario);
-        console.log('Se carga navbarpublico');
     },
     unmounted() {
         emitter.off('usuarioLogueado', this.obtenerUsuario);

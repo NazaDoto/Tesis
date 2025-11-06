@@ -46,8 +46,8 @@ router.get('/getDatos', async (req, res) => {
 
   try {
     // 1. Buscar en la base de datos MySQL
-    const [rows] = await db.query('SELECT * FROM beneficiarios WHERE dni = ?', [dni]);
-    const [rows2] = await db.query('SELECT * FROM tarjetas_soc WHERE dni = ?', [dni]);
+    const [rows] = await db.query('SELECT * FROM beneficiario WHERE dni = ?', [dni]);
+    const [rows2] = await db.query('SELECT * FROM tarjeta_soc WHERE dni = ?', [dni]);
     const [historial] = await db.execute(
       `SELECT observaciones, fecha 
              FROM HISTORIAL_MOV 
@@ -63,9 +63,9 @@ router.get('/getDatos', async (req, res) => {
         nombre: b.nombre,
         fecha_nacimiento: formatearFecha(b.fecha_nacimiento),
         sexo: b.sexo,
-        cod_dpto: b.cod_dpto,
-        cod_localidad: b.cod_localidad,
-        cod_barrio: b.cod_barrio,
+        id_dpto: b.id_dpto,
+        id_loc: b.id_loc,
+        id_barrio: b.id_barrio,
         domicilio: b.domicilio,
         estado: c.estado || 'default',
         fecha_registro: formatearFecha(b.fecha_registro),
@@ -105,36 +105,36 @@ router.get('/getDatos', async (req, res) => {
       const loc_desc = ben.LOC?.trim().toLowerCase() || '';
       const barrio_desc = ben.BARRIO?.trim().toLowerCase() || '';
 
-      let cod_dpto = null;
-      let cod_localidad = null;
-      let cod_barrio = null;
+      let id_dpto = null;
+      let id_loc = null;
+      let id_barrio = null;
 
       try {
-        // Buscar cod_dpto
+        // Buscar id_dpto
         const [dptoRows] = await db.query(`
-            SELECT cod_dpto FROM departamentos WHERE LOWER(TRIM(descripcion)) = ?
+            SELECT id FROM departamento WHERE LOWER(TRIM(descripcion)) = ?
         `, [dpto_desc]);
 
         if (dptoRows.length > 0) {
-          cod_dpto = dptoRows[0].cod_dpto;
+          id_dpto = dptoRows[0].id_dpto;
 
-          // Buscar cod_localidad
+          // Buscar id_loc
           const [locRows] = await db.query(`
-                SELECT cod_localidad FROM localidades 
-                WHERE LOWER(TRIM(descripcion)) = ? AND cod_dpto = ?
-            `, [loc_desc, cod_dpto]);
+                SELECT id FROM localidades 
+                WHERE LOWER(TRIM(descripcion)) = ? AND id_dpto = ?
+            `, [loc_desc, id_dpto]);
 
           if (locRows.length > 0) {
-            cod_localidad = locRows[0].cod_localidad;
+            id_loc = locRows[0].id_loc;
 
-            // Buscar cod_barrio
+            // Buscar id_barrio
             const [barrioRows] = await db.query(`
-                    SELECT cod_barrio FROM barrios 
-                    WHERE LOWER(TRIM(descripcion)) = ? AND cod_localidad = ?
-                `, [barrio_desc, cod_localidad]);
+                    SELECT id FROM barrios 
+                    WHERE LOWER(TRIM(descripcion)) = ? AND id_loc = ?
+                `, [barrio_desc, id_loc]);
 
             if (barrioRows.length > 0) {
-              cod_barrio = barrioRows[0].cod_barrio;
+              id_barrio = barrioRows[0].id_barrio;
             }
           }
         }
@@ -148,9 +148,9 @@ router.get('/getDatos', async (req, res) => {
         fecha_nacimiento,
         sexo,
         domicilio,
-        cod_dpto,
-        cod_localidad,
-        cod_barrio,
+        id_dpto,
+        id_loc,
+        id_barrio,
         estado,
         fecha_registro,
         hora_registro,
@@ -179,9 +179,9 @@ router.get('/getDatos', async (req, res) => {
         fecha_nacimiento: '', // No se puede obtener de padron_e.dbf
         sexo: padron.GENERO?.charAt(0).toUpperCase() === 'F' ? 'F' : 'M',
         domicilio: padron.DOMI?.trim() || '',
-        cod_dpto: '',
-        cod_localidad: '',
-        cod_barrio: '',
+        id_dpto: '',
+        id_loc: '',
+        id_barrio: '',
         estado: null,
         fecha_registro: '',
         hora_registro: '',
@@ -204,19 +204,18 @@ router.get('/getDatos', async (req, res) => {
 
 router.post('/update', upload.single('archivo'), async (req, res) => {
   try {
-    const { beneficiario, parientes } = req.body;
+    const { beneficiario, parientes, empleado } = req.body;
     const beneficiarioData = JSON.parse(beneficiario);
     const parientesArray = JSON.parse(parientes);
-
     const {
       dni,
       cuil,
       nombre,
       fecha_nacimiento,
       sexo,
-      cod_dpto,
-      cod_localidad,
-      cod_barrio,
+      id_dpto,
+      id_loc,
+      id_barrio,
       domicilio,
       fecha_registro,
       hora_registro,
@@ -226,6 +225,7 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
       observaciones,
       cant_parientes,
       importe,
+      id_usuario,
     } = beneficiarioData;
 
     // Archivo adjunto
@@ -234,111 +234,114 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
       archivoNombre = relativePath.replace(/\\/g, '/'); // Para compatibilidad Windows/Linux
 
       // Guardar también en tabla de archivos, si corresponde
+      const result = await db.query ('SELECT id FROM beneficiario WHERE dni = ?', [dni]);
+      const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
       await db.query(`
-    INSERT INTO archivo_beneficiario (dni, path)
-    VALUES (?, ?)
+    INSERT INTO archivo_beneficiario (id_beneficiario, dni, path)
+    VALUES (?, ?, ?)
     ON DUPLICATE KEY UPDATE path = VALUES(path)
-  `, [dni, archivoNombre]);
-      // Insertar o actualizar en BENEFICIARIOS
+  `, [id_beneficiario, dni, archivoNombre]);
+      // Insertar o actualizar en beneficiario
       await db.query(`
-    INSERT into beneficiarios (
+    INSERT into beneficiario (
       dni, cuil, nombre, fecha_nacimiento, sexo,
-      cod_dpto, cod_localidad, cod_barrio, domicilio,
+      id_dpto, id_loc, id_barrio, domicilio,
       fecha_registro, hora_registro, 
-      fecha_modificacion, hora_modificacion, cant_parientes, archivo_adjunto, usuario
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      fecha_modificacion, hora_modificacion, cant_parientes, archivo_adjunto
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ON DUPLICATE KEY UPDATE
       cuil = VALUES(cuil),
       nombre = VALUES(nombre),
       fecha_nacimiento = VALUES(fecha_nacimiento),
       sexo = VALUES(sexo),
-      cod_dpto = VALUES(cod_dpto),
-      cod_localidad = VALUES(cod_localidad),
-      cod_barrio = VALUES(cod_barrio),
+      id_dpto = VALUES(id_dpto),
+      id_loc = VALUES(id_loc),
+      id_barrio = VALUES(id_barrio),
       domicilio = VALUES(domicilio),
       fecha_registro = VALUES(fecha_registro),
       hora_registro = VALUES(hora_registro),
       fecha_modificacion = VALUES(fecha_modificacion),
       hora_modificacion = VALUES(hora_modificacion),
       cant_parientes = VALUES(cant_parientes),
-      archivo_adjunto = VALUES(archivo_adjunto),
-      usuario = VALUES(usuario)
+      archivo_adjunto = VALUES(archivo_adjunto)
   `, [
         dni, cuil, nombre, fecha_nacimiento, sexo,
-        cod_dpto, cod_localidad, cod_barrio, domicilio,
+        id_dpto, id_loc, id_barrio, domicilio,
         fecha_registro, hora_registro,
-        fecha_modificacion, hora_modificacion, cant_parientes, archivoNombre, usuario
+        fecha_modificacion, hora_modificacion, cant_parientes, archivoNombre
       ]);
     } else {
-      // Insertar o actualizar en BENEFICIARIOS
+      // Insertar o actualizar en beneficiario
       await db.query(`
-        INSERT into beneficiarios (
+        INSERT into beneficiario (
           dni, cuil, nombre, fecha_nacimiento, sexo,
-          cod_dpto, cod_localidad, cod_barrio, domicilio,
+          id_dpto, id_loc, id_barrio, domicilio,
           fecha_registro, hora_registro, 
-          fecha_modificacion, hora_modificacion, cant_parientes, usuario
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+          fecha_modificacion, hora_modificacion, cant_parientes
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON DUPLICATE KEY UPDATE
           cuil = VALUES(cuil),
           nombre = VALUES(nombre),
           fecha_nacimiento = VALUES(fecha_nacimiento),
           sexo = VALUES(sexo),
-          cod_dpto = VALUES(cod_dpto),
-          cod_localidad = VALUES(cod_localidad),
-          cod_barrio = VALUES(cod_barrio),
+          id_dpto = VALUES(id_dpto),
+          id_loc = VALUES(id_loc),
+          id_barrio = VALUES(id_barrio),
           domicilio = VALUES(domicilio),
           fecha_registro = VALUES(fecha_registro),
           hora_registro = VALUES(hora_registro),
           fecha_modificacion = VALUES(fecha_modificacion),
           hora_modificacion = VALUES(hora_modificacion),
-          cant_parientes = VALUES(cant_parientes),
-          usuario = VALUES(usuario)
+          cant_parientes = VALUES(cant_parientes)
       `, [
         dni, cuil, nombre, fecha_nacimiento, sexo,
-        cod_dpto, cod_localidad, cod_barrio, domicilio,
+        id_dpto, id_loc, id_barrio, domicilio,
         fecha_registro, hora_registro,
-        fecha_modificacion, hora_modificacion, cant_parientes, usuario
+        fecha_modificacion, hora_modificacion, cant_parientes
       ]);
 
     }
-    await registrarLog(usuario || 'desconocido', "ACTUALIZAR_BENEFICIARIO", `Se actualizó beneficiario DNI ${dni} (${nombre})`);
+    await registrarLog(empleado || 'desconocido', "ACTUALIZAR_BENEFICIARIO", `Se actualizó beneficiario DNI ${dni} (${nombre})`);
 
 
     const fechaHoy = new Date().toISOString().split('T')[0];
     const horaHoy = new Date().toTimeString().split(' ')[0].slice(0, 5);
-    await db.query(`INSERT INTO tarjetas_soc(dni, fecha_registro, fecha_modificacion, estado, importe_acreditado) VALUES (?,?,?,?,?)
+    const result = await db.query(`SELECT id FROM beneficiario WHERE dni = ?`, [dni]);
+    const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
+    await db.query(`INSERT INTO tarjeta_soc(id_beneficiario, dni, fecha_registro, fecha_modificacion, estado, importe_acreditado) VALUES (?,?,?,?,?,?)
       ON DUPLICATE KEY UPDATE
       fecha_modificacion = VALUES(fecha_modificacion),
       estado = VALUES(estado),
-      importe_acreditado = VALUES(importe_acreditado)`, [dni, fechaHoy, fechaHoy, estado, importe])
-    await db.query(`INSERT INTO historial_mov(observaciones, fecha, dni) VALUES (?, ?, ?)`, [observaciones ? observaciones : 'ACTUALIZACIÓN DE BENEFICIARIO', fechaHoy, dni])
+      importe_acreditado = VALUES(importe_acreditado)`, [id_beneficiario,dni, fechaHoy, fechaHoy, estado, importe])
+    await db.query(`INSERT INTO historial_mov(id_beneficiario,observaciones, fecha, dni) VALUES (?,?, ?, ?)`, [id_beneficiario,observaciones ? observaciones : 'ACTUALIZACIÓN DE BENEFICIARIO', fechaHoy, dni])
 
     // Eliminar parientes anteriores
-    await db.query(`DELETE FROM PARIENTES WHERE dni_titular = ?`, [dni]);
+    await db.query(`DELETE FROM PARIENTE WHERE dni_titular = ?`, [dni]);
 
     // Insertar nuevos parientes
 
     for (const p of parientesArray) {
       if (p.dni && p.nombre) {
+        const result = await db.query(`SELECT id FROM beneficiario WHERE dni = ?`, [p.dni]);
+        const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
         await db.query(`
-          insert into parientes (
-            dni_titular, dni_pariente, nombre_pariente,
+          insert into pariente (
+            id_beneficiario, dni_titular, dni_pariente, nombre_pariente,
             fecha_nacimiento, sexo,
-            fecha_registro, hora_registro, 
-            fecha_modificacion, hora_modificacion
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            fecha_registro,  
+            fecha_modificacion
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         `, [
+          id_beneficiario,
           dni,
           p.dni,
           p.nombre,
           p.fecha_nacimiento || null,
           p.sexo || null,
           fechaHoy,
-          horaHoy,
           fechaHoy,
-          horaHoy
         ]);
-        await registrarLog(usuario || 'desconocido', "INSERTAR_PARIENTE", `Beneficiario DNI ${dni}, Pariente: ${p.nombre} (${p.dni})`);
+        await registrarLog(empleado || 'desconocido', "INSERTAR_PARIENTE", `Beneficiario DNI ${dni}, Pariente: ${p.nombre} (${p.dni})`);
 
       }
     }
@@ -346,7 +349,7 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
     res.json({ success: true });
 
   } catch (error) {
-    console.error('Error en /beneficiarios/update:', error);
+    console.error('Error en /beneficiario/update:', error);
     res.status(500).json({ success: false, error: error.message });
   }
 });
@@ -380,9 +383,9 @@ router.delete('/quitarArchivo', async (req, res) => {
       [dni]
     );
 
-    // Limpiar campo archivo_adjunto en la tabla BENEFICIARIOS
+    // Limpiar campo archivo_adjunto en la tabla beneficiario
     await db.query(
-      `UPDATE BENEFICIARIOS SET archivo_adjunto = NULL WHERE dni = ?`,
+      `UPDATE beneficiario SET archivo_adjunto = NULL WHERE dni = ?`,
       [dni]
     );
     await registrarLog(req.user?.usuario || 'desconocido', "ELIMINAR_ARCHIVO", `Se eliminó archivo adjunto del DNI ${dni}`);
@@ -393,40 +396,6 @@ router.delete('/quitarArchivo', async (req, res) => {
     res.status(500).json({ success: false, error: 'Error interno al eliminar archivo' });
   }
 });
-// Obtener departamentos
-router.get('/departamentos', async (req, res) => {
-  try {
-    const [rows] = await db.query('SELECT cod_dpto, descripcion FROM departamentos ORDER BY descripcion');
-    res.json(rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Error al obtener departamentos');
-  }
-});
-
-// Obtener localidades por cod_dpto
-router.get('/localidades', async (req, res) => {
-  const { cod_dpto } = req.query;
-  try {
-    const [rows] = await db.query('SELECT cod_localidad, descripcion FROM localidades WHERE cod_dpto = ?', [cod_dpto]);
-    res.json(rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Error al obtener localidades');
-  }
-});
-
-// Obtener barrios por cod_localidad
-router.get('/barrios', async (req, res) => {
-  const { cod_localidad } = req.query;
-  try {
-    const [rows] = await db.query('SELECT cod_barrio, descripcion FROM barrios WHERE cod_localidad = ?', [cod_localidad]);
-    res.json(rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Error al obtener barrios');
-  }
-});
 
 router.get('/verificarTarjeta', async (req, res) => {
   const dni = req.query.dni;
@@ -434,7 +403,7 @@ router.get('/verificarTarjeta', async (req, res) => {
 
   try {
     // 1. Buscar en MySQL
-    const [rows] = await db.query('SELECT estado FROM tarjetas_soc WHERE dni = ?', [dni]);
+    const [rows] = await db.query('SELECT estado FROM tarjeta_soc WHERE dni = ?', [dni]);
     if (rows.length > 0) {
       return res.json({ estado: rows[0].estado || null });
     }
@@ -484,16 +453,17 @@ router.get('/getDatosPadron', async (req, res) => {
     console.log(error)
   }
 })
-// POST /beneficiarios/updateUsuario
+// POST /beneficiario/updateUsuario
 router.post('/updateUsuario', async (req, res) => {
   const { id, usuario, correo, rol, dni } = req.body.usuario;
+    const empleado = req.body.empleado || 'desconocido';
 
   if (!id) {
     return res.status(400).json({ error: "Falta el ID del usuario" });
   }
 
   const sql = `
-        UPDATE usuarios
+        UPDATE usuario
         SET usuario = ?, correo = ?, rol = ?, dni = ?
         WHERE id = ?`;
   try {
@@ -503,7 +473,7 @@ router.post('/updateUsuario', async (req, res) => {
     res.json({ success: true, message: "Usuario actualizado correctamente" });
 
   } catch (error) {
-    return res.status(500).json({ error: "Error al actualizar usuario" });
+    return res.status(500).json({ error: "Error al actualizar usuario", details: error.message });
 
   }
 });

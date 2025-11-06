@@ -44,6 +44,8 @@
 import axios from 'axios';
 import router from '@/router';
 import emitter from '@/eventBus';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 export default {
   data() {
@@ -56,39 +58,55 @@ export default {
         rol: '',
       },
       cargando: false,
+    };
+  },
 
+  mounted() {
+    // ✅ Mostrar toast si viene la query msg=expirada
+    if (this.$route.query.msg === 'expirada') {
+      console.log('Mostrar toast de sesión expirada');
+      const toastOptions = {
+        autoClose: 3000,       // 3s: suficiente para leerlo
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        theme: "colored",      // Más profesional que “light”
+        hideProgressBar: true, // Sin barrita animada
+        position: "top-right", // Discreto y clásico
+      };
+
+      toast("La sesión expiró. Volvé a ingresar.", toastOptions);
     }
   },
+
   methods: {
     restrictInput(event) {
       const input = event.target.value;
-      // Expresión regular para buscar espacios y ciertos símbolos
       const restrictedChars = /[\s!@#$%^&*()_+=[\]{};':"\\|,<>?`´¨~¡/°¬¿]/g;
       if (restrictedChars.test(input)) {
-        this.usuario.usuario = this.usuario.usuario.substring(0, this.usuario.usuario.length - 1);
+        this.usuario.usuario = this.usuario.usuario.slice(0, -1);
       }
     },
+
     async login() {
       this.cargando = true;
-      let response;
       try {
-        response = await axios.post('/auth/login', this.usuario);
-        // Guardar el usuario en localStorage o en store
+        const response = await axios.post('/auth/login', this.usuario);
 
-        const user = {usuario: this.usuario.usuario, dni: response.data.dni, rol: response.data.rol}
+        const user = {
+          usuario: this.usuario.usuario,
+          dni: response.data.dni,
+          rol: response.data.rol
+        };
+
         localStorage.setItem('user', JSON.stringify(user));
-        emitter.emit('usuarioLogueado'); // 🔥 emitir evento
-        // Redirigir según rol
+        localStorage.setItem('auth_token', response.data.token);
+        emitter.emit('usuarioLogueado');
+
         switch (user.rol) {
-          case 0:
-            router.push('/beneficiario');
-            break;
-          case 1:
-            router.push('/empleado');
-            break;
-          case 2:
-            router.push('/admin');
-            break;
+          case 0: router.push('/beneficiario'); break;
+          case 1: router.push('/empleado'); break;
+          case 2: router.push('/admin'); break;
         }
       } catch (error) {
         this.mostrarMensaje(error.response?.data?.message || 'Error al iniciar sesión');
@@ -102,8 +120,9 @@ export default {
       this.mensajePopup = true;
     }
   }
-}
+};
 </script>
+
 
 <style scoped>
 .flex-container {

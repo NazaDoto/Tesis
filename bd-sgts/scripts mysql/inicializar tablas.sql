@@ -2,7 +2,7 @@
 CREATE DATABASE sgts;
 use sgts;
 
-CREATE TABLE USUARIOS (
+CREATE TABLE USUARIO (
 id INT PRIMARY KEY AUTO_INCREMENT,
 dni INT UNIQUE,
 usuario VARCHAR(50) UNIQUE,
@@ -11,36 +11,35 @@ fecha_registro DATE,
 correo VARCHAR(100),
 rol tinyint default 0
 );
-CREATE TABLE DEPARTAMENTOS (
-    cod_dpto INT PRIMARY KEY,
+CREATE TABLE DEPARTAMENTO (
+	id INT PRIMARY KEY,
     descripcion VARCHAR(100) NOT NULL
 );
 
-insert into departamentos (cod_dpto, descripcion) values (0, 'Ninguno');
-
-
-CREATE TABLE LOCALIDADES (
-    cod_localidad INT,
-    descripcion VARCHAR(100) NOT NULL,
-    cod_dpto INT,
-    FOREIGN KEY (cod_dpto) REFERENCES DEPARTAMENTOS(cod_dpto)
+CREATE TABLE LOCALIDAD (
+	id INT PRIMARY KEY,
+    descripcion VARCHAR(255),
+    id_dpto INT,
+    FOREIGN KEY (id_dpto) REFERENCES DEPARTAMENTO(id)
 );
 
-CREATE TABLE BARRIOS (
-    cod_barrio INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE BARRIO (
+    id INT PRIMARY KEY,
     descripcion VARCHAR(100) NOT NULL,
-    cod_localidad INT
+    id_loc INT,
+    FOREIGN KEY (id_loc) REFERENCES LOCALIDAD(id)
 );
 
-CREATE TABLE BENEFICIARIOS (
-    dni INT PRIMARY KEY,
+CREATE TABLE BENEFICIARIO (
+	id int primary key auto_increment,
+    dni INT,
     cuil varchar(20),
     nombre VARCHAR(100) NOT NULL,
     fecha_nacimiento DATE,
     sexo CHAR(1),
-    cod_dpto INT,
-    cod_localidad INT,
-    cod_barrio INT,
+    id_dpto INT null,
+    id_loc INT null,
+    id_barrio INT null,
     domicilio VARCHAR(200),
     fecha_registro DATE,
     hora_registro TIME,
@@ -50,19 +49,25 @@ CREATE TABLE BENEFICIARIOS (
     cant_parientes INT DEFAULT 0,
     archivo_adjunto VARCHAR(100),
     telefono VARCHAR(100),
-    usuario INT,
-    FOREIGN KEY (cod_dpto) REFERENCES DEPARTAMENTOS(cod_dpto),
-    FOREIGN KEY (cod_barrio) REFERENCES BARRIOS(cod_barrio),
-    FOREIGN KEY (usuario) REFERENCES USUARIOS(id)
+    id_usuario INT,
+    FOREIGN KEY (id_dpto) REFERENCES DEPARTAMENTO(id),
+    FOREIGN KEY (id_loc) REFERENCES LOCALIDAD(id),
+    FOREIGN KEY (id_barrio) REFERENCES BARRIO(id),
+    FOREIGN KEY (id_usuario) REFERENCES USUARIO(id)
 );
 
 CREATE TABLE ARCHIVO_BENEFICIARIO(
+id int primary key auto_increment,
+id_beneficiario int,
 dni INT,
 id_archivo INT,
 path VARCHAR(100),
-FOREIGN KEY (dni) REFERENCES BENEFICIARIOS(dni)
+FOREIGN KEY (id_beneficiario) REFERENCES BENEFICIARIO(id)
 );
-CREATE TABLE PARIENTES (
+
+CREATE TABLE PARIENTE (
+	id int  primary key auto_increment,
+    id_beneficiario int,
     dni_titular INT,
     dni_pariente INT,
     nombre_pariente VARCHAR(100),
@@ -70,10 +75,12 @@ CREATE TABLE PARIENTES (
     sexo CHAR(1),
     fecha_registro DATE,
     fecha_modificacion DATE,
-    FOREIGN KEY (dni_titular) REFERENCES BENEFICIARIOS(dni)
+    FOREIGN KEY (id_beneficiario) REFERENCES BENEFICIARIO(id)
 );
 
-CREATE TABLE TARJETAS_SOC (
+CREATE TABLE TARJETA_SOC (
+	id int primary key auto_increment,
+    id_beneficiario int,
     dni INT,
     num_cuenta VARCHAR(20),
     num_tarjeta VARCHAR(20),
@@ -81,49 +88,49 @@ CREATE TABLE TARJETAS_SOC (
     estado VARCHAR(30),
     fecha_modificacion DATE,
     importe_acreditado DECIMAL(10, 2),
-    PRIMARY KEY (dni),
-    FOREIGN KEY (dni) REFERENCES BENEFICIARIOS(dni)
+    FOREIGN KEY (id_beneficiario) REFERENCES BENEFICIARIO(id)
 );
 
 CREATE TABLE HISTORIAL_MOV (
+	id int primary key auto_increment,
+    id_beneficiario int,
     dni INT,
     observaciones VARCHAR(255),
     fecha DATE,
-    FOREIGN KEY (dni) REFERENCES BENEFICIARIOS(dni)
+    FOREIGN KEY (id_beneficiario) REFERENCES BENEFICIARIO(id)
 );
 
-CREATE TABLE SOLICITUDES (
+CREATE TABLE SOLICITUD (
 	id INT PRIMARY KEY AUTO_INCREMENT,
+    id_beneficiario int,
 	dni INT,
     fecha_solicitud DATE,
     path_dni VARCHAR(100),
     path_historial_medico VARCHAR(100),
-    FOREIGN KEY (dni) REFERENCES BENEFICIARIOS(dni)
+    FOREIGN KEY (id_beneficiario) REFERENCES BENEFICIARIO(id)
 );
 
-CREATE TABLE NOTICIAS (
+CREATE TABLE NOTICIA (
 id INT PRIMARY KEY AUTO_INCREMENT,
 titulo VARCHAR(255),
 fecha Date,
-contenido TEXT
+contenido TEXT,
+usuario INT,
+foreign key (usuario) references usuario(id)
 );
-insert into noticias(titulo,contenido) values('Prueba noticia 1', 'Prueba contenido 1');
-insert into NOTICIAS(titulo,contenido) values('Prueba noticia 2', 'Prueba contenido 2');
 
-CREATE TABLE NOTICIAS_IMAGENES (
+CREATE TABLE NOTICIA_IMAGEN (
 id INT PRIMARY KEY AUTO_INCREMENT,
 path VARCHAR(255),
 id_noticia INT,
-FOREIGN KEY (id_noticia) REFERENCES NOTICIAS(id)
+FOREIGN KEY (id_noticia) REFERENCES NOTICIA(id)
 );
-insert into NOTICIAS_IMAGENES(path,id_noticia) values('/uploads/noticia1.jpg',1);
-insert into NOTICIAS_IMAGENES(path,id_noticia) values('/uploads/noticia2.jpg',2);
 
-CREATE TABLE logs (
+CREATE TABLE log (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  usuario VARCHAR(100) NOT NULL,
-  actividad VARCHAR(255) NOT NULL,
+  usuario VARCHAR(50),
+  actividad VARCHAR(255),
   detalles TEXT,
-  fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  foreign key (usuario) references usuario(usuario)
 );
-

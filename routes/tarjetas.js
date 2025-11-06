@@ -81,7 +81,7 @@ router.get('/getDatos', async (req, res) => {
     estado, 
     fecha_modificacion, 
     importe_acreditado
-FROM tarjetas_soc 
+FROM tarjeta_soc 
 WHERE dni = ?;`,
             [dni]
         );
@@ -130,7 +130,7 @@ WHERE dni = ?;`,
                 estado: registro.TS,
                 fecha_modificacion: registro.FECHA_MOD ? new Date(registro.FECHA_MOD).toLocaleDateString('es-AR') : '',
                 importe_acreditado: registro.TOT_IMP || 0,
-                historial: registro.OBSERV || ''
+                historias: [{ fecha: formatearFecha(registro.FECHA_MOD), observaciones: registro.OBSERV }] || ''
             });
         }
 
@@ -142,6 +142,7 @@ WHERE dni = ?;`,
     }
 });
 router.post('/update', async (req, res) => {
+
     const {
         dni,
         num_cuenta,
@@ -150,7 +151,8 @@ router.post('/update', async (req, res) => {
         estado,
         fecha_modificacion,
         importe_acreditado,
-        observaciones
+        observaciones,
+        empleado
     } = req.body;
 
     if (!dni || !num_cuenta) {
@@ -162,7 +164,7 @@ router.post('/update', async (req, res) => {
 
         // Buscar tarjeta actual
         const [rows] = await db.execute(
-            'SELECT * FROM tarjetas_soc WHERE dni = ? AND num_cuenta = ?',
+            'SELECT * FROM tarjeta_soc WHERE dni = ? AND num_cuenta = ?',
             [dni, num_cuenta]
         );
 
@@ -175,7 +177,7 @@ router.post('/update', async (req, res) => {
 
             // Actualizar tarjeta
             await db.execute(
-                `UPDATE tarjetas_soc SET
+                `UPDATE tarjeta_soc SET
                   num_tarjeta = ?,
                   fecha_registro = ?,
                   estado = ?,
@@ -188,44 +190,43 @@ router.post('/update', async (req, res) => {
             observacion = (estadoAnterior !== estado)
                 ? `ACTUALIZACIÓN DE DATOS DE TARJETA. Estado: ${estadoAnterior} pasa a ${estado}. ${observaciones}`
                 : `ACTUALIZACIÓN DE DATOS DE TARJETA (sin cambio de estado). ${observaciones}`;
-
+            const result = await db.query(`SELECT id FROM beneficiario WHERE dni = ?`, [dni]);
+            const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
             await db.query(
-                `INSERT INTO historial_mov (dni, observaciones, fecha)
-                 VALUES (?, ?, ?)`,
-                [dni, observacion, fechaHoy]
+                `INSERT INTO historial_mov(id_beneficiario,observaciones, fecha, dni) VALUES (?,?, ?, ?)`, [id_beneficiario, observacion, fechaHoy, dni]
             );
 
         } else {
             accion = "ALTA_TARJETA";
 
             // Insertar nueva tarjeta
+            const result = await db.query(`SELECT id FROM beneficiario WHERE dni = ?`, [dni]);
+            const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
             await db.execute(
-                `INSERT INTO tarjetas_soc 
-                 (dni, num_cuenta, num_tarjeta, fecha_registro, estado, fecha_modificacion, importe_acreditado)
-                 VALUES (?, ?, ?, ?, ?, ?, ?)`,
-                [dni, num_cuenta, num_tarjeta, fecha_registro, estado, fecha_modificacion, importe_acreditado]
+                `INSERT INTO tarjeta_soc 
+                 (id_beneficiario, dni, num_cuenta, num_tarjeta, fecha_registro, estado, fecha_modificacion, importe_acreditado)
+                 VALUES (?,?, ?, ?, ?, ?, ?, ?)`,
+                [id_beneficiario, dni, num_cuenta, num_tarjeta, fecha_registro, estado, fecha_modificacion, importe_acreditado]
             );
 
             observacion = `ALTA DE DATOS DE TARJETA. ${observaciones}`;
 
             await db.query(
-                `INSERT INTO historial_mov(dni, observaciones, fecha) 
-                 VALUES (?, ?, ?)`,
-                [dni, observacion, fechaHoy]
+                `INSERT INTO historial_mov(id_beneficiario,observaciones, fecha, dni) VALUES (?,?, ?, ?)`, [id_beneficiario, observacion, fechaHoy, dni]
             );
         }
-        await registrarLog(req.user?.usuario || 'desconocido', accion, `Gestión tarjeta DNI ${dni} - Cuenta ${num_cuenta}`);
+        await registrarLog(empleado || 'desconocido', accion, `Gestión tarjeta DNI ${dni} - Cuenta ${num_cuenta}`);
 
         // 🔔 Enviar correo si hubo cambio de estado
         if (estadoAnterior && estadoAnterior !== estado) {
             // Buscar correo del beneficiario
             const [userRows] = await db.execute(
-                'SELECT correo, nombre FROM usuarios WHERE dni = ?',
+                'SELECT correo FROM usuario WHERE dni = ?',
                 [dni]
             );
 
             if (userRows.length > 0) {
-                const { correo, nombre } = userRows[0];
+                const { correo } = userRows[0];
 
                 const mailOptions = {
                     from: '"Notificaciones MDS" <notificaciones@mdssde.gob.ar>',
@@ -235,7 +236,7 @@ router.post('/update', async (req, res) => {
                         <div style="box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); background-color: white; padding: 1cm 2.5cm 5px 2.5cm;">
                             <div id="notificacion">
                                 <div style="margin-top: 5px; text-align: center;">
-                                    <h3>Estimado/a ${nombre},</h3>
+                                    <h3>Estimado/a,</h3>
                                     <p>Le informamos que el estado de su Tarjeta Social ha cambiado:</p>
                                     <p><b>${estadoAnterior} ➝ ${estado}</b></p>
                                     <p>${observaciones || ''}</p>
@@ -268,10 +269,11 @@ router.post('/solicitar', upload.fields([
     { name: 'dni', maxCount: 1 },
     { name: 'historial', maxCount: 1 }
 ]), async (req, res) => {
+
     try {
         const {
             dni, nombre, fecha_nacimiento, sexo, telefono, departamento, localidad, barrio,
-            domicilio, cant_parientes, usuario, cuil
+            domicilio, cant_parientes, usuario, cuil, empleado
         } = req.body;
 
         // Parientes llega como JSON string, parsearlo
@@ -285,10 +287,10 @@ router.post('/solicitar', upload.fields([
         const pathDni = req.files['dni'] ? `/uploads/solicitudes/${req.files['dni'][0].filename}` : null;
         const pathHistorial = req.files['historial'] ? `/uploads/solicitudes/${req.files['historial'][0].filename}` : null;
 
-        // 1. Insertar en beneficiarios (incluyendo archivo_adjunto que será pathDni)
+        // 1. Insertar en beneficiario (incluyendo archivo_adjunto que será pathDni)
         await db.query(`
-      INSERT into beneficiarios (
-        dni, nombre, fecha_nacimiento, sexo, telefono, cod_dpto, cod_localidad, cod_barrio,
+      INSERT into beneficiario (
+        dni, nombre, fecha_nacimiento, sexo, telefono, id_dpto, id_loc, id_barrio,
         domicilio, fecha_registro, hora_registro, fecha_modificacion, hora_modificacion,
         cant_parientes, usuario, cuil
       ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -310,17 +312,22 @@ router.post('/solicitar', upload.fields([
             usuario || null,
             cuil
         ]);
-        await registrarLog(req.user?.usuario || 'desconocido', "SOLICITUD_TARJETA", `Nueva solicitud tarjeta DNI ${dni} - Nombre: ${nombre}`);
+        await registrarLog(empleado || 'desconocido', "SOLICITUD_TARJETA", `Nueva solicitud tarjeta DNI ${dni} - Nombre: ${nombre}`);
 
         // 2. Insertar parientes
         if (parientes.length > 0) {
             for (const pariente of parientes) {
+                const result = await db.query(`SELECT id FROM beneficiario WHERE dni = ?`, [p.dni]);
+                const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
                 await db.query(`
-            insert into parientes (
-              dni_titular, dni_pariente, nombre_pariente, fecha_nacimiento, sexo,
-              fecha_registro, fecha_modificacion
-            ) VALUES (?, ?, ?, ?, ?, ?, ?)
-          `, [
+          insert into pariente (
+            id_beneficiario, dni_titular, dni_pariente, nombre_pariente,
+            fecha_nacimiento, sexo,
+            fecha_registro,  
+            fecha_modificacion
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        `, [
+                    id_beneficiario,
                     dni,
                     pariente.dni_pariente,
                     pariente.nombre_pariente,
@@ -334,10 +341,10 @@ router.post('/solicitar', upload.fields([
 
         // 3. Insertar en solicitudes (con paths)
         await db.query(`
-      INSERT INTO solicitudes (
-        dni, fecha_solicitud, path_dni, path_historial_medico
-      ) VALUES (?, ?, ?, ?)
-    `, [
+      INSERT INTO solicitud (
+        id_beneficiario, dni, fecha_solicitud, path_dni, path_historial_medico
+      ) VALUES (?, ?, ?, ?, ?)
+    `, [id_beneficiario,
             dni,
             fecha,
             pathDni,
@@ -345,17 +352,20 @@ router.post('/solicitar', upload.fields([
         ]);
 
         // 4. Inicializar tarjeta
+        const result = await db.query(`SELECT id FROM beneficiario WHERE dni = ?`, [dni]);
+        const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
         await db.query(`
-      INSERT INTO tarjetas_soc (
-        dni, fecha_registro, estado
-      ) VALUES (?, ?, ?)
+      INSERT INTO tarjeta_soc (
+        id_beneficiario, dni, fecha_registro, estado
+      ) VALUES (?,?, ?, ?)
     `, [
+            id_beneficiario,
             dni,
             fecha,
             'PENDIENTE'
         ]);
 
-        await db.query(`INSERT INTO historial_mov(dni, observaciones, fecha) VALUES (?, ?, ?)`, [dni, 'SOLICITUD DE TARJETA', fechaHoy])
+        await db.query(`INSERT INTO historial_mov(id_beneficiario,observaciones, fecha, dni) VALUES (?,?, ?, ?)`, [id_beneficiario, 'SOLICITUD DE TARJETA', fechaHoy, dni])
 
         // 🔔 Emitir evento a empleados
         const io = req.app.get('io'); // <--- esto obtiene la instancia de Socket.IO
@@ -380,13 +390,13 @@ router.get('/getSolicitud', async (req, res) => {
     try {
         // 1. Estado de la tarjeta
         const [tarjetaRows] = await db.query(
-            'SELECT estado FROM tarjetas_soc WHERE dni = ? LIMIT 1',
+            'SELECT estado FROM tarjeta_soc WHERE dni = ? LIMIT 1',
             [dni]
         );
 
         // 2. Fecha de solicitud
         const [solicitudRows] = await db.query(
-            'SELECT id, fecha_solicitud FROM solicitudes WHERE dni = ? LIMIT 1',
+            'SELECT id, fecha_solicitud FROM solicitud WHERE dni = ? LIMIT 1',
             [dni]
         );
 
@@ -412,8 +422,8 @@ router.get('/getSolicitudes', async (req, res) => {
     try {
         const response = await db.query(`
   SELECT s.*, t.estado AS estado
-  FROM solicitudes s
-  LEFT JOIN tarjetas_soc t ON s.dni = t.dni
+  FROM solicitud s
+  LEFT JOIN tarjeta_soc t ON s.dni = t.dni
 `); res.json(response);
     } catch (error) {
         res.status(500);
@@ -425,9 +435,9 @@ router.post('/actualizarSolicitud', async (req, res) => {
         const { form } = req.body.params; // obtenemos el form del front
         const { id, dni, estado, observacion } = form;
 
-        // 1. Obtener estado actual de tarjetas_soc
+        // 1. Obtener estado actual de tarjeta_soc
         const [tarjetaActual] = await db.query(
-            'SELECT estado FROM tarjetas_soc WHERE dni = ?',
+            'SELECT estado FROM tarjeta_soc WHERE dni = ?',
             [dni]
         );
 
@@ -440,7 +450,7 @@ router.post('/actualizarSolicitud', async (req, res) => {
         // 2. Actualizar estado solo si cambió
         if (estado !== 'default' && estado !== estadoViejo) {
             await db.query(
-                'UPDATE tarjetas_soc SET estado = ?, fecha_modificacion = NOW() WHERE dni = ?',
+                'UPDATE tarjeta_soc SET estado = ?, fecha_modificacion = NOW() WHERE dni = ?',
                 [estado, dni]
             );
         }
@@ -457,16 +467,18 @@ router.post('/actualizarSolicitud', async (req, res) => {
 
         // 4. Insertar en historial_mov solo si hay algo que registrar
         if (observacionFinal) {
+            const result = await db.query(`SELECT id FROM beneficiario WHERE dni = ?`, [dni]);
+            const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
+            const fechaHoy = new Date().toISOString().slice(0, 10);
             await db.query(
-                'INSERT INTO historial_mov (dni, observaciones, fecha) VALUES (?, ?, NOW())',
-                [dni, observacionFinal]
+                `INSERT INTO historial_mov (id_beneficiario,observaciones, fecha, dni) VALUES (?,?, ?, ?)`, [id_beneficiario, observacionFinal, fechaHoy, dni]
             );
         }
 
         // 5. 🔔 Enviar correo si hubo cambio de estado
         if (estado !== 'default' && estado !== estadoViejo) {
             const [userRows] = await db.query(
-                'SELECT correo FROM usuarios WHERE dni = ?',
+                'SELECT correo FROM usuario WHERE dni = ?',
                 [dni]
             );
 
@@ -503,7 +515,7 @@ router.post('/actualizarSolicitud', async (req, res) => {
                 }
             }
         }
-        await registrarLog(req.user?.usuario || 'desconocido', "ACTUALIZAR_SOLICITUD", `Actualización solicitud tarjeta DNI ${dni} - Nuevo estado: ${estado} - Obs: ${observacion}`);
+        await registrarLog(empleado || 'desconocido', "ACTUALIZAR_SOLICITUD", `Actualización solicitud tarjeta DNI ${dni} - Nuevo estado: ${estado} - Obs: ${observacion}`);
 
         res.json({ mensaje: 'Solicitud actualizada correctamente' });
     } catch (error) {

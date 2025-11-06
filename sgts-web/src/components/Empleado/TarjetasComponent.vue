@@ -115,6 +115,7 @@ export default {
                 importe_acreditado: '',
                 observaciones: '',
                 historias: [],
+                empleado: JSON.parse(localStorage.getItem('user')).usuario || 'desconocido',
             },
             mensajePopup: false,
             mensaje: '',

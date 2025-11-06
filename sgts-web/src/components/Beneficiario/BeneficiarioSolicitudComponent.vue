@@ -78,7 +78,7 @@
             <select class="form-select" v-model="usuario.departamento" @change="fetchLocalidades(usuario.departamento)"
               required>
               <option value="default" disabled>Seleccionar</option>
-              <option :value="dpto.cod_dpto" v-for="(dpto, index) in departamentos" :key="index">{{ dpto.descripcion
+              <option :value="dpto.id" v-for="(dpto, index) in departamentos" :key="index">{{ dpto.descripcion
               }}
               </option>
             </select>
@@ -88,7 +88,7 @@
             <select class="form-select" v-model="usuario.localidad" :disabled="!(usuario.departamento != 'default')"
               @change="fetchBarrios(usuario.localidad)" required>
               <option value="default" disabled>Seleccionar</option>
-              <option :value="localidad.cod_localidad" v-for="(localidad, index) in localidades" :key="index">{{
+              <option :value="localidad.id" v-for="(localidad, index) in localidades" :key="index">{{
                 localidad.descripcion }}</option>
             </select>
           </div>
@@ -98,7 +98,7 @@
             <label class="form-label" for="barrio">Barrio</label>
             <select class="form-select" v-model="usuario.barrio" :disabled="!(usuario.localidad != 'default')" required>
               <option value="default" disabled>Seleccionar</option>
-              <option :value="barrio.cod_barrio" v-for="(barrio, index) in barrios" :key="index">{{ barrio.descripcion
+              <option :value="barrio.id" v-for="(barrio, index) in barrios" :key="index">{{ barrio.descripcion
               }}</option>
             </select>
           </div>
@@ -275,7 +275,7 @@ export default {
 
         if (archivoDni) formData.append('dni', archivoDni);
         if (archivoHistorial) formData.append('historial', archivoHistorial);
-
+        formData.append('empleado', JSON.parse(localStorage.getItem('user')).usuario || 'desconocido');
         // Enviar con axios usando multipart/form-data
         await axios.post('/tarjetas/solicitar', formData, {
           headers: {
@@ -299,19 +299,24 @@ export default {
         console.error(error);
       }
     },
-    async fetchLocalidades(cod_dpto) {
+    async fetchLocalidades(id_dpto) {
       try {
-        const response = await axios.get(`/get/localidades/${cod_dpto}`);
+        const response = await axios.get('/get/localidades', {
+                    params: { id_dpto }
+                });
         this.localidades = response.data;
+        console.log(this.localidades, response)
         this.usuario.localidad = 'default';
         this.usuario.barrio = 'default';
       } catch (error) {
         console.error(error);
       }
     },
-    async fetchBarrios(cod_localidad) {
+    async fetchBarrios(id_localidad) {
       try {
-        const response = await axios.get(`/get/barrios/${cod_localidad}`);
+        const  response  = await axios.get('/get/barrios', {
+                    params: { id_localidad }
+                });
         this.barrios = response.data;
         this.usuario.barrio = 'default';
       } catch (error) {

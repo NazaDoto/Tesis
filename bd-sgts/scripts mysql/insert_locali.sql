@@ -1,1538 +1,1538 @@
-INSERT INTO LOCALIDADES (cod_localidad, descripcion, cod_dpto) VALUES
-('1', '25 DE MAYO', '9'),
-('1', 'FISCO DE FATIMA', '13'),
-('2', '25 DE MAYO', '17'),
-('2', 'NEGRA MUERTA', '5'),
-('3', '9 DE JULIO', '12'),
-('3', 'SANTA TERESA', '8'),
-('4', '9 DE JULIO', '18'),
-('4', 'SANTA SILVINA', '8'),
-('5', 'AÑATUYA', '11'),
-('5', 'SAN MIGUEL', '8'),
-('6', 'ABRA DE LA CRUZ', '21'),
-('6', 'LLAJTA SUMAJ', '8'),
-('7', 'ABRA GRANDE', '5'),
-('7', 'SAN PEDRO', '8'),
-('8', 'ACOS', '21'),
-('8', 'KM 23', '8'),
-('9', 'ACOSTA', '5'),
-('9', 'CIUDAD CAPITAL', '7'),
-('10', 'AEROLITO', '17'),
-('11', 'LA BANDA', '5'),
-('11', 'AGUA AMARGA', '19'),
-('12', 'AGUA AZUL', '19'),
-('13', 'AGUA BLANCA', '2'),
-('14', 'AGUA BLANCA', '18'),
-('15', 'AGUA DULCE', '11'),
-('16', 'AGUSTINA LIBARONA', '2'),
-('17', 'AHI VEREMOS', '12'),
-('18', 'AHI VEREMOS', '18'),
-('19', 'AHI VEREMOS', '19'),
-('20', 'AIBAL', '10'),
-('21', 'AIBALITO', '2'),
-('22', 'AIBALITO', '12'),
-('23', 'ALEJITO', '26'),
-('24', 'ALGARROBAL VIEJO', '19'),
-('25', 'ALHUAMPA', '17'),
-('26', 'ALLPA YURAJ', '2'),
-('27', 'ALTA GRACIA', '7'),
-('28', 'ALTO BELLO', '9'),
-('29', 'ALTO POZO', '5'),
-('30', 'AMAMA', '17'),
-('31', 'AMAPOLA', '21'),
-('32', 'AMBARGASTA', '18'),
-('33', 'AMICHA', '21'),
-('34', 'AMIMAN', '18'),
-('35', 'AMOLADERAS', '18'),
-('36', 'AMPA', '26'),
-('37', 'ANCAJAN', '9'),
-('38', 'ANCHANGA', '27'),
-('39', 'ANGA', '24'),
-('40', 'ANTAJE', '5'),
-('41', 'ANTILO', '7'),
-('42', 'ARAGONES', '21'),
-('43', 'ARBOL BLANCO', '17'),
-('44', 'ARBOL DEL NEGRO', '16'),
-('45', 'ARBOL SOLO', '9'),
-('46', 'ARBOL SOLO', '20'),
-('47', 'ARBOLITOS', '10'),
-('48', 'ARBOLITOS', '13'),
-('49', 'ARBOLITOS', '18'),
-('50', 'ARDILES', '5'),
-('51', 'ARGENTINA', '1'),
-('52', 'ARGENTINA', '8'),
-('53', 'ARMONIA', '17'),
-('54', 'ARRAGA', '27'),
-('55', 'ASPA SHINCHI', '23'),
-('56', 'ASPA SINCHI', '25'),
-('57', 'ATALAYA', '9'),
-('58', 'ATOJ POZO', '25'),
-('59', 'AVERIAS', '11'),
-('60', 'AYUNCHA', '14'),
-('61', 'BAEZ', '18'),
-('62', 'BAHOMA', '21'),
-('63', 'BAJADITA', '3'),
-('64', 'BAJO GRANDE', '5'),
-('65', 'BAJO GRANDE', '19'),
-('66', 'BAJO VERAE', '21'),
-('67', 'BALBUENA', '18'),
-('68', 'BANDERA', '6'),
-('69', 'BANDERA BAJADA', '10'),
-('70', 'BARRANCA COLORADA', '25'),
-('71', 'BARRANCAS', '24'),
-('72', 'BARRANCAS', '25'),
-('73', 'BARRANCAS COLORADAS', '24'),
-('74', 'BARRIAL ALTO', '25'),
-('75', 'BARRIALITO', '18'),
-('76', 'BARRIALITO', '21'),
-('77', 'BAYO MUERTO', '5'),
-('78', 'BEJAN', '5'),
-('79', 'BELBRANO', '8'),
-('80', 'BELGRANO', '12'),
-('81', 'BELGRANO', '19'),
-('82', 'BELGRANO', '20'),
-('83', 'BELLA VISTA', '10'),
-('84', 'BELLA VISTA', '13'),
-('85', 'BELLA VISTA', '14'),
-('86', 'BELTRAN', '23'),
-('87', 'BELTRAN-LORETO', '14'),
-('88', 'BLANCA POZO', '4'),
-('89', 'BOBADAL', '13'),
-('90', 'BORDO PAMPA', '24'),
-('91', 'BOTIJA', '8'),
-('92', 'BREA POZO', '25'),
-('93', 'BUEN LUGAR', '2'),
-('94', 'BUEN LUGAR', '19'),
-('95', 'BUENA VISTA', '10'),
-('96', 'BUENA VISTA', '18'),
-('97', 'BUENA VISTA', '20'),
-('98', 'BUENA VISTA', '21'),
-('99', 'BUENA VISTA', '21'),
-('100', 'BUEY MUERTO', '23'),
-('101', 'BUEY RODEO', '27'),
-('102', 'BURRA HUAÑAUANA', '14'),
-('103', 'CAÑADA RICA', '14'),
-('104', 'CAÑADA SAN RAMON', '25'),
-('105', 'CADILLO', '9'),
-('106', 'CAJON', '18'),
-('107', 'CALOJ', '4'),
-('108', 'CAMPO ALEGRE', '2'),
-('109', 'CAMPO ALEGRE', '8'),
-('110', 'CAMPO ALEGRE', '18'),
-('111', 'CAMPO ALEGRE', '27'),
-('113', 'CAMPO DEL AGUILA', '2'),
-('114', 'CAMPO DEL CIELO', '15'),
-('115', 'CAMPO DEL CIELO', '17'),
-('116', 'CAMPO DEL CISNE', '20'),
-('117', 'CAMPO DEL CISNE', '26'),
-('118', 'CAMPO GALLO', '2'),
-('119', 'CAMPO GRANDE', '2'),
-('120', 'CAMPO GRANDE', '7'),
-('121', 'CAMPO GRANDE', '19'),
-('122', 'CAMPO VERDE', '8'),
-('123', 'CAMPO VERDE', '10'),
-('124', 'CAMPO VERDE', '12'),
-('125', 'CAMPO VERDE', '17'),
-('126', 'CANARIO', '9'),
-('127', 'CANCINOS', '27'),
-('128', 'CANDELARIA', '26'),
-('129', 'CANDELARIA', '27'),
-('131', 'CARBON POZO', '3'),
-('132', 'CARBON POZO', '26'),
-('133', 'CARDON ESQUINA', '10'),
-('134', 'CASARES', '1'),
-('135', 'CASHICO', '13'),
-('136', 'CASPI CORRAL', '10'),
-('137', 'CAZADORES', '25'),
-('138', 'CAÑADA DE LA COSTA', '21'),
-('139', 'CAÑADA DEL MEDIO', '7'),
-('140', 'CAÑADA ESCOBAR', '5'),
-('141', 'CAÑADA HONDA', '21'),
-('142', 'CAÑADA TALA POZO', '21'),
-('143', 'CEJOLAO', '17'),
-('144', 'CERRILLOS', '12'),
-('145', 'CERRILLOS', '24'),
-('146', 'CERRITO', '18'),
-('147', 'CERRO BLANCO', '18'),
-('148', 'CERRO RICO', '9'),
-('149', 'CHAÑAR LAGUNA', '9'),
-('150', 'CHAÑAR POZO', '2'),
-('151', 'CHAÑAR POZO', '8'),
-('152', 'CHAÑAR POZO', '9'),
-('153', 'CHAÑAR POZO', '19'),
-('154', 'CHAÑAR POZO', '21'),
-('155', 'CHAÑAR POZO', '24'),
-('156', 'CHAÑAR PUJIO', '5'),
-('157', 'CHAÑAR PUJIO', '27'),
-('158', 'CHACRAS', '18'),
-('159', 'CHANCHILLOS', '21'),
-('160', 'CHARCO VIEJO', '21'),
-('161', 'CHARQUINA', '5'),
-('162', 'CHAUCHILLAS', '21'),
-('163', 'CHAUPI POZO', '5'),
-('164', 'CHAÑAR POCITO', '21'),
-('165', 'CHAÑAR POZO', '4'),
-('166', 'CHAÑAR POZO', '21'),
-('167', 'CHAÑAR POZO DE ABAJO', '21'),
-('168', 'CHILCA', '18'),
-('169', 'CHILCA', '18'),
-('170', 'CHILCA JULIANA', '24'),
-('171', 'CHILCAS LA LOMA', '3'),
-('172', 'CHILENO', '24'),
-('173', 'CHINCHILLAL', '15'),
-('174', 'CHIRA', '24'),
-('175', 'CHOYA', '9'),
-('176', 'CHUÑA ALBARDON', '14'),
-('177', 'CHURQUI', '19'),
-('179', 'CLODOMIRA', '5'),
-('180', 'CNEL. MANUEL LEONCIO RICO', '2'),
-('181', 'CODO POZO', '24'),
-('182', 'COLLERA HURCUNA', '3'),
-('183', 'COLOMBIA', '8'),
-('184', 'COLONIA ALPINA', '22'),
-('185', 'COLONIA DORA', '4'),
-('186', 'COLONIA EL SIMBOLAR', '23'),
-('187', 'COLONIA GAMARA', '5'),
-('188', 'COLONIA JOSEFINA', '15'),
-('189', 'COLONIA LA SEGUNDA', '6'),
-('190', 'COLONIA LA VICTORIA', '22'),
-('191', 'COLONIA LIBANESA', '4'),
-('192', 'COLONIA MACKINLAY', '22'),
-('193', 'COLONIA MARIA ELENA', '5'),
-('194', 'COLONIA MERCEDES', '18'),
-('195', 'COLONIA PINTO', '25'),
-('196', 'COLONIA SAN JUAN', '10'),
-('197', 'COLONIA SANTA ROSA AGUIRRE', '1'),
-('198', 'COLONIA SIEGEL', '26'),
-('199', 'CONCEPCION', '17'),
-('200', 'CONDOR HUASI', '5'),
-('201', 'CONSULÑOJ', '26'),
-('202', 'CONTRERAS', '7'),
-('203', 'CORONEL BARROS', '11'),
-('204', 'CORONEL FERNANDEZ', '20'),
-('205', 'CORRAL DEL REY', '20'),
-('206', 'CORRAL QUEMADO', '19'),
-('207', 'CRUZ BAJADA', '8'),
-('208', 'CRUZ POZO', '4'),
-('209', 'CUATRO BOCAS', '6'),
-('210', 'CUYOJ', '5'),
-('211', 'DESVIO POZO DULCE', '6'),
-('212', 'DIENTE DEL ARADO', '14'),
-('213', 'DOÑA LORENZA', '1'),
-('214', 'DOÑA LUISA', '12'),
-('215', 'DOLORES', '10'),
-('216', 'DOLORES', '15'),
-('217', 'DONADEU', '2'),
-('218', 'DOS ARBOLES', '8'),
-('219', 'DOS HERMANAS', '10'),
-('220', 'EL 110', '15'),
-('221', 'EL 25', '9'),
-('222', 'EL AÑIL', '13'),
-('223', 'EL ABRA', '9'),
-('224', 'EL ABRA', '20'),
-('225', 'EL AIBAL', '1'),
-('226', 'EL AIBAL', '10'),
-('227', 'EL AIBE', '5'),
-('228', 'EL ALAMBRADO', '5'),
-('229', 'EL ALAMBRADO', '21'),
-('230', 'EL ALGARROBO', '18'),
-('231', 'EL ARBOLITO', '17'),
-('232', 'EL ARBOLITO', '20'),
-('233', 'EL ARBOLITO', '21'),
-('234', 'EL ASPIRANTE', '6'),
-('235', 'EL BAGUAL', '13'),
-('236', 'EL BAJO', '9'),
-('237', 'EL BAJO', '18'),
-('238', 'EL BAJO', '20'),
-('239', 'EL BALDE', '19'),
-('240', 'EL BARRIAL', '7'),
-('241', 'EL BARRIAL', '18'),
-('242', 'EL BOBADAL', '19'),
-('243', 'EL BOQUERON', '6'),
-('244', 'EL BOSQUE', '5'),
-('245', 'EL BRAGADO', '17'),
-('246', 'EL CAÑON', '6'),
-('247', 'EL CABURE', '8'),
-('248', 'EL CACHI', '18'),
-('249', 'EL CADILLO', '12'),
-('250', 'EL CAJON', '19'),
-('251', 'EL CAMBIADO', '2'),
-('252', 'EL CAMBIADO', '13'),
-('253', 'EL CAMBIADO', '19'),
-('254', 'EL CARMEN', '5'),
-('255', 'EL CARMEN', '12'),
-('256', 'EL CARMEN', '17'),
-('257', 'EL CARMEN', '18'),
-('258', 'EL CARMEN', '27'),
-('259', 'EL CERRITO', '18'),
-('260', 'EL CERRO', '20'),
-('261', 'EL CHAÑAR', '9'),
-('262', 'EL CHAÑAR', '10'),
-('263', 'EL CHARCO', '13'),
-('264', 'EL CHUCHI', '18'),
-('265', 'EL COLORADO', '15'),
-('266', 'EL COLORADO', '17'),
-('267', 'EL CORRIDO', '8'),
-('268', 'EL CRUCE', '5'),
-('269', 'EL CRUCERO', '6'),
-('270', 'EL CRUCERO', '10'),
-('271', 'EL CUADRADO', '15'),
-('272', 'EL DEAN', '7'),
-('273', 'EL DESCANSO', '19'),
-('274', 'EL DESIERTO', '2'),
-('275', 'EL DESTINO', '16'),
-('276', 'EL DIABLO', '19'),
-('277', 'EL DIAMANTE', '5'),
-('278', 'EL DIAMANTE', '18'),
-('279', 'EL DORADO', '3'),
-('280', 'EL EMPEDRADO', '26'),
-('281', 'EL FISCO', '2'),
-('282', 'EL HOYO', '17'),
-('283', 'EL HUAICO', '16'),
-('284', 'EL JUMIAL', '12'),
-('285', 'EL JUNIALITO', '5'),
-('286', 'EL MALACARA', '11'),
-('287', 'EL MANANTIAL', '21'),
-('288', 'EL MISTOL', '23'),
-('289', 'EL MOJON', '19'),
-('290', 'EL MOJON', '27'),
-('291', 'EL MOJONCITO', '9'),
-('292', 'EL NEGRITO', '10'),
-('293', 'EL OJITO', '19'),
-('294', 'EL OSO', '16'),
-('295', 'EL PACARA', '13'),
-('296', 'EL PALOMAR', '8'),
-('297', 'EL PALOMAR', '13'),
-('298', 'EL PALOMAR', '13'),
-('299', 'EL PALOMAR', '17'),
-('300', 'EL PALOMAR', '20'),
-('301', 'EL PARAISO', '20'),
-('302', 'EL PERAL', '3'),
-('303', 'EL PERSEGUIDO', '8'),
-('304', 'EL PERTIGO', '17'),
-('305', 'EL PIRUCHO', '10'),
-('306', 'EL POLEAR', '5'),
-('307', 'EL PORVENIR', '2'),
-('308', 'EL PORVENIR', '12'),
-('309', 'EL PORVENIR', '19'),
-('310', 'EL PORVENIR', '20'),
-('311', 'EL PUEBLITO', '20'),
-('312', 'EL PUENTE', '5'),
-('313', 'EL PUENTE', '25'),
-('314', 'EL PUESTITO', '5'),
-('315', 'EL PUESTITO', '7'),
-('316', 'EL PUESTITO', '12'),
-('317', 'EL PUESTO', '18'),
-('318', 'EL PUESTO', '20'),
-('319', 'EL PUESTO', '21'),
-('320', 'EL QUEBRACHAL', '23'),
-('321', 'EL QUEMADO', '10'),
-('322', 'EL QUEMADO', '15'),
-('323', 'EL QUEMADO', '19'),
-('324', 'EL QUILLIN', '12'),
-('325', 'EL REMANSO', '14'),
-('326', 'EL REMATE', '19'),
-('327', 'EL RETIRO', '5'),
-('328', 'EL RETIRO', '18'),
-('329', 'EL RETIRO', '18'),
-('330', 'EL RETIRO', '21'),
-('331', 'EL RINCON', '9'),
-('333', 'EL RINCON', '13'),
-('334', 'EL RINCON', '21'),
-('335', 'EL RODEO', '7'),
-('336', 'EL ROSARIO', '5'),
-('337', 'EL ROSARIO', '8'),
-('338', 'EL ROSARIO', '17'),
-('339', 'EL ROSARIO', '19'),
-('340', 'EL ROSARIO', '23'),
-('341', 'EL SALADILLO', '19'),
-('342', 'EL SALVADOR', '9'),
-('343', 'EL SAUCE', '18'),
-('344', 'EL SIMBOL', '6'),
-('345', 'EL SIMBOL-ALBERDI', '2'),
-('346', 'EL SIMBOLAR', '12'),
-('347', 'EL TOBIANA', '11'),
-('348', 'EL UCLE', '1'),
-('349', 'EL VALLE', '2'),
-('350', 'EL VEINTICINO', '20'),
-('351', 'EL VIZCACHERAL', '14'),
-('352', 'ENSENADA', '19'),
-('353', 'ESTACION ATAMISQUI', '3'),
-('354', 'ESTANCIA VIEJA', '21'),
-('355', 'ESTEROS', '2'),
-('356', 'FERNANDEZ', '23'),
-('357', 'FLORIDA', '2'),
-('358', 'FLORIDA', '9'),
-('359', 'FORRES', '23'),
-('360', 'FORTIN INCA', '6'),
-('361', 'FRIAS', '9'),
-('362', 'GALEANO', '21'),
-('363', 'GARCEANO', '25'),
-('364', 'GARZA', '26'),
-('365', 'GIRARDET', '17'),
-('366', 'GRAMILLA', '13'),
-('367', 'GRANADERO GATICA', '17'),
-('368', 'GUAÑAGASTA', '4'),
-('369', 'GUAMPACHA', '12'),
-('370', 'GUANACO SOMBRIANA', '3'),
-('371', 'GUARDIA ESCOLTA', '6'),
-('372', 'GUASAYAN', '12'),
-('373', 'GUAYPE', '26'),
-('374', 'GUERRA', '24'),
-('375', 'HAASE', '17'),
-('376', 'HERNAN MEJIA MIRAVAL', '17'),
-('377', 'HERRERA', '4'),
-('378', 'HORCOS TUCUCUNA', '20'),
-('379', 'HORNILLO', '3'),
-('380', 'HORNILLO', '26'),
-('381', 'HOYON', '3'),
-('382', 'HUACHANA', '2'),
-('383', 'HUAICO HONDO', '7'),
-('384', 'HUAYCURU', '5'),
-('385', 'HUCHO PALLANA', '17'),
-('386', 'HUILLA CATINA', '5'),
-('387', 'HUILLA CATINA', '10'),
-('388', 'HURITU HUASI', '26'),
-('389', 'HUYAMAMPA', '5'),
-('390', 'ICAÑO', '4'),
-('391', 'INGENIERO EZCURRA', '7'),
-('392', 'INTI HUASI', '18'),
-('393', 'ISCA YACU', '13'),
-('394', 'ISLA BAJA', '6'),
-('395', 'ISLA DE ARAGONES', '21'),
-('396', 'ISLA DE LOS SOTELOS', '21'),
-('397', 'ISLA DE ROJAS', '5'),
-('398', 'ISLA VERDE', '3'),
-('399', 'ISLA VERDE', '14'),
-('400', 'JACIMAMPA', '20'),
-('401', 'JAMIAL GRANDE', '10'),
-('402', 'JIMENEZ', '23'),
-('403', 'JUANILLO', '3'),
-('404', 'JUMI POZO', '5'),
-('405', 'JUMI POZO', '14'),
-('406', 'JUMI POZO', '15'),
-('407', 'JUMI VIEJO', '10'),
-('408', 'JUMIALITO', '10'),
-('409', 'JUNI POZO', '19'),
-('410', 'KENTI TACO', '21'),
-('411', 'KILOMETRO', '11'),
-('412', 'KILOMETRO 18', '9'),
-('413', 'KILOMETRO 477', '15'),
-('414', 'KILOMETRO 49', '18'),
-('415', 'KILOMETRO 55', '9'),
-('416', 'LA ABRA', '18'),
-('417', 'LA ABRITA', '27'),
-('418', 'LA AGUADA', '21'),
-('419', 'LA ALEMANA', '6'),
-('420', 'LA ALOJA', '19'),
-('421', 'LA ANGELITA', '2'),
-('422', 'LA ARMONIA', '2'),
-('423', 'LA ARMONIA', '8'),
-('424', 'LA ARMONIA', '19'),
-('425', 'LA AURORA', '5'),
-('426', 'LA AURORA', '8'),
-('428', 'LA BELLA CRIOLLA', '20'),
-('429', 'LA BLANCA', '1'),
-('430', 'LA BLANCA', '9'),
-('431', 'LA BLANCA', '19'),
-('432', 'LA BLANCA', '23'),
-('433', 'LA BLANCA', '25'),
-('434', 'LA BLANCA', '26'),
-('435', 'LA BREA', '10'),
-('436', 'LA CAÑADA', '5'),
-('437', 'LA CAÑADA', '8'),
-('438', 'LA CAÑADA', '10'),
-('439', 'LA CAÑADA', '18'),
-('440', 'LA CAÑADA', '25'),
-('441', 'LA CALERA', '12'),
-('442', 'LA CALERA', '18'),
-('443', 'LA CAROLINA', '6'),
-('444', 'LA CHILCA', '12'),
-('445', 'LA CHILCA', '18'),
-('446', 'LA CHILCA', '18'),
-('447', 'LA CLEMIRA', '18'),
-('448', 'LA COSTA', '4'),
-('449', 'LA COSTOSA', '13'),
-('450', 'LA CRUZ', '15'),
-('451', 'LA CRUZ', '18'),
-('452', 'LA CRUZ', '26'),
-('453', 'LA CUCHILLA', '23'),
-('454', 'LA DARSENA', '5'),
-('455', 'LA DONOSA', '21'),
-('456', 'LA DORMIDA', '14'),
-('457', 'LA ENSENADA', '2'),
-('458', 'LA ENSENADA', '9'),
-('459', 'LA ESMERALDA', '1'),
-('460', 'LA ESMERALDA', '11'),
-('461', 'LA ESPERANZA', '6'),
-('462', 'LA ESPERANZA', '7'),
-('463', 'LA ESPERANZA', '8'),
-('464', 'LA ESPERANZA', '9'),
-('465', 'LA ESPERANZA', '10'),
-('466', 'LA ESPERANZA', '13'),
-('467', 'LA ESPERANZA', '18'),
-('468', 'LA ESQUINA', '9'),
-('469', 'LA ESQUINA', '21'),
-('470', 'LA FALDA', '5'),
-('471', 'LA FALDA', '26'),
-('472', 'LA FIRMEZA', '8'),
-('473', 'LA FLORIDA', '9'),
-('474', 'LA FLORIDA', '18'),
-('475', 'LA FLORIDA', '19'),
-('476', 'LA FLORIDA', '23'),
-('477', 'LA FORTUNA', '2'),
-('478', 'LA FORTUNA', '13'),
-('479', 'LA FRAGUA', '19'),
-('480', 'LA GRANJA', '5'),
-('481', 'LA GRANJA', '8'),
-('482', 'LA GUARDIA', '9'),
-('483', 'LA GUARDIA', '10'),
-('484', 'LA GUARDIA', '10'),
-('485', 'LA GUARIDA', '5'),
-('486', 'LA HIGUERA', '25'),
-('487', 'LA HIGUERA', '27'),
-('488', 'LA INVERNADA', '10'),
-('489', 'LA ISLA', '5'),
-('490', 'LA ISLA', '18'),
-('491', 'LA LAGUNA', '9'),
-('492', 'LA LAGUNA', '20'),
-('493', 'LA LOMA', '10'),
-('494', 'LA LOMA', '26'),
-('495', 'LA MELADA', '9'),
-('496', 'LA MELADA', '13'),
-('497', 'LA NEGRITA', '15'),
-('498', 'LA NENA', '11'),
-('499', 'LA NORIA', '3'),
-('500', 'LA NORIA', '14'),
-('501', 'LA PALMA', '17'),
-('502', 'LA PALOMA', '2'),
-('503', 'LA PALOMA', '17'),
-('504', 'LA PALOMA', '24'),
-('505', 'LA PAMPA', '6'),
-('506', 'LA PAMPA', '17'),
-('507', 'LA PAMPA', '18'),
-('508', 'LA PAMPA', '20'),
-('509', 'LA PAZ', '23'),
-('510', 'LA PAZ', '26'),
-('511', 'LA PETRONILA', '26'),
-('512', 'LA PORTEÑA', '9'),
-('513', 'LA PORTEÑA', '7'),
-('514', 'LA PRIMAVERA', '18'),
-('515', 'LA PUERTA', '18'),
-('516', 'LA PUERTA', '18'),
-('517', 'LA PUERTA', '21'),
-('518', 'LA PUNTA', '9'),
-('519', 'LA REBANCHA', '14'),
-('520', 'LA REPRESA', '9'),
-('521', 'LA RIVERA', '23'),
-('523', 'LA ROMELIA', '22'),
-('524', 'LA SIMONA', '6'),
-('525', 'LA SIMONA', '11'),
-('526', 'LA TAPA', '10'),
-('527', 'LA TIJERA', '5'),
-('528', 'LA TRAMPA', '20'),
-('529', 'LA UNION', '2'),
-('530', 'LA UNION', '8'),
-('531', 'LA UNION', '22'),
-('532', 'LA VIRTUD', '8'),
-('533', 'LA VIUDA', '14'),
-('534', 'LA VUELTA DE LA BARRANCA', '7'),
-('535', 'LAGUNA BLANCA', '14'),
-('536', 'LAGUNA DEL SUNCHO', '20'),
-('537', 'LAGUNILLA', '14'),
-('538', 'LAPRIDA', '9'),
-('539', 'LAS ABRAS', '21'),
-('540', 'LAS ABRAS-MITRE', '16'),
-('541', 'LAS AGUILAS', '2'),
-('542', 'LAS AGUILAS', '18'),
-('543', 'LAS CAÑAS', '20'),
-('544', 'LAS CEJAS', '7'),
-('545', 'LAS CEJAS', '21'),
-('546', 'LAS CHACRAS', '5'),
-('547', 'LAS CHACRAS', '18'),
-('548', 'LAS CHARCAS', '19'),
-('549', 'LAS COLONIAS', '5'),
-('550', 'LAS COLONIAS', '20'),
-('551', 'LAS DELICIAS', '1'),
-('552', 'LAS DELICIAS', '19'),
-('553', 'LAS DOLORES', '6'),
-('554', 'LAS FLORES', '9'),
-('556', 'LAS FLORES', '11'),
-('557', 'LAS FLORES', '12'),
-('558', 'LAS FLORES', '18'),
-('559', 'LAS FLORES', '20'),
-('560', 'LAS JUNTAS', '12'),
-('561', 'LAS LAJAS', '19'),
-('562', 'LAS LOMAS', '18'),
-('563', 'LAS LOMAS', '19'),
-('564', 'LAS LOMAS', '24'),
-('565', 'LAS LOMITAS', '18'),
-('566', 'LAS LOMITAS', '18'),
-('567', 'LAS MARAVILLAS', '12'),
-('568', 'LAS PEÑAS', '9'),
-('569', 'LAS PERFORACIONES', '2'),
-('570', 'LAS PUERTAS', '19'),
-('571', 'LAS RANDAS', '17'),
-('572', 'LAS TINAJAS', '17'),
-('573', 'LAS VIVORITAS', '16'),
-('574', 'LAVALLE', '8'),
-('575', 'LAVALLE', '12'),
-('576', 'LESCANO', '18'),
-('577', 'LEZCANOS', '21'),
-('578', 'LIBERTAD', '17'),
-('579', 'LIBERTAD', '19'),
-('580', 'LILO VIEJO', '17'),
-('581', 'LIMACHE', '16'),
-('582', 'LLAJTA MAUCA', '15'),
-('583', 'LOJLO', '15'),
-('584', 'LOMA DE YESO', '12'),
-('585', 'LOMA DEL MEDIO', '21'),
-('586', 'LOMAS BLANCAS', '19'),
-('587', 'LOMITAS', '3'),
-('588', 'LOMITAS', '9'),
-('589', 'LOMITAS', '10'),
-('590', 'LOMITAS', '14'),
-('591', 'LOMITAS', '18'),
-('592', 'LOMITAS', '23'),
-('593', 'LOMITAS BLANCAS', '18'),
-('594', 'LORETO', '14'),
-('595', 'LORO HUASI', '21'),
-('596', 'LOS ALDERETES', '5'),
-('597', 'LOS ARIAS', '23'),
-('598', 'LOS CARDOZOS', '7'),
-('599', 'LOS CERILLOS', '12'),
-('600', 'LOS CERRILLOS', '9'),
-('601', 'LOS CERRILLOS', '24'),
-('602', 'LOS CESPEDES', '5'),
-('603', 'LOS ENCANTOS', '22'),
-('604', 'LOS FLORES', '7'),
-('605', 'LOS GALLEGOS', '25'),
-('606', 'LOS HERRERAS', '5'),
-('607', 'LOS JURIES', '11'),
-('608', 'LOS LINARES', '11'),
-('609', 'LOS MILAGROS', '1'),
-('610', 'LOS MILAGROS', '17'),
-('611', 'LOS MOLLES', '19'),
-('612', 'LOS MOLLES', '20'),
-('613', 'LOS NARANJOS', '5'),
-('614', 'LOS NUÑEZ', '21'),
-('615', 'LOS PEREIRA', '23'),
-('616', 'LOS PIRPINTOS', '8'),
-('617', 'LOS POCITOS', '11'),
-('618', 'LOS QUEBRACHOS', '13'),
-('619', 'LOS QUEBRACHOS', '20'),
-('620', 'LOS QUIROGA', '5'),
-('621', 'LOS RALOS', '9'),
-('623', 'LOS RALOS', '13'),
-('624', 'LOS REMANSOS', '20'),
-('625', 'LOS ROBLES', '13'),
-('626', 'LOS ROMANOS', '23'),
-('627', 'LOS SAUCES', '3'),
-('628', 'LOS TABLEROS', '6'),
-('629', 'LOS TELARES', '24'),
-('630', 'LOS TIGRES', '8'),
-('631', 'LOTE 25', '11'),
-('632', 'LUGONES', '4'),
-('633', 'LUJAN', '4'),
-('634', 'MACO', '7'),
-('635', 'MACO', '10'),
-('636', 'MAGDALENA', '17'),
-('637', 'MAILIN', '4'),
-('638', 'MAJADAS', '25'),
-('639', 'MAL PASO', '4'),
-('640', 'MAL PASO', '24'),
-('641', 'MALBRAN', '1'),
-('642', 'MALOTA', '24'),
-('643', 'MANANTIALES', '21'),
-('644', 'MANGRULLO', '12'),
-('645', 'MANOGASTA', '27'),
-('647', 'MANSUPA', '21'),
-('648', 'MAQUITA', '7'),
-('649', 'MARAVILLA', '1'),
-('650', 'MARAVILLA', '8'),
-('651', 'MARAVILLA', '9'),
-('652', 'MARAVILLA', '19'),
-('653', 'MARCOSPA', '17'),
-('654', 'MARTIN GARCIA', '13'),
-('655', 'MATARA', '15'),
-('656', 'MEDELLIN', '3'),
-('657', 'MEDIA FLOR', '5'),
-('658', 'MEDIA LUNA', '8'),
-('659', 'MEDIA LUNA', '19'),
-('660', 'MELERO', '15'),
-('661', 'MENDOZA', '9'),
-('662', 'MERCEDES', '7'),
-('663', 'MERCEDES', '8'),
-('664', 'MERCEDES', '17'),
-('665', 'MIEL DE PALO', '11'),
-('666', 'MILAGRO', '15'),
-('667', 'MILAGRO', '17'),
-('668', 'MILAGRO', '18'),
-('669', 'MILI', '23'),
-('670', 'MINERVA', '10'),
-('671', 'MIRANDA', '21'),
-('672', 'MISTOL MUYOJ', '21'),
-('673', 'MISTOL PAMPA', '17'),
-('674', 'MISTOLITO', '8'),
-('675', 'MONTE ALTO', '17'),
-('676', 'MONTE POTRERO', '19'),
-('677', 'MONTE QUEMADO', '8'),
-('678', 'MONTE QUEMADO', '19'),
-('679', 'MONTE REDONDO', '9'),
-('680', 'MONTE REDONDO', '10'),
-('681', 'MONTE REDONDO', '14'),
-('682', 'MONTE RICO', '2'),
-('683', 'MONTE RICO', '27'),
-('684', 'MONTE VERDE', '2'),
-('685', 'MONTE VERDE', '18'),
-('686', 'MORALES', '7'),
-('687', 'MORAMPA LORETO', '14'),
-('688', 'NARANJITO', '2'),
-('689', 'NARANJITO', '21'),
-('690', 'NARANJITOS', '18'),
-('691', 'NASALO', '15'),
-('692', 'NAVARRO', '24'),
-('693', 'NEGRA MUERTA', '18'),
-('694', 'NORQUEOJ', '2'),
-('695', 'NUEVA CERES', '22'),
-('696', 'NUEVA ESPERANZA', '8'),
-('697', 'NUEVA ESPERANZA', '19'),
-('698', 'NUEVA FRANCIA', '27'),
-('699', 'NUEVA GRANADA', '2'),
-('700', 'NUEVA GRANADA', '15'),
-('701', 'NUEVA TRINIDAD', '1'),
-('702', 'NUEVA TRINIDAD', '5'),
-('703', 'NUEVO LIBANO', '2'),
-('704', 'OBRAJE LOS TIGRES', '8'),
-('705', 'OBRAJE MAILIN', '11'),
-('706', 'OJO DE AGUA', '18'),
-('707', 'ONCAN', '18'),
-('708', 'ORATORIA', '20'),
-('709', 'OTUMPA', '17'),
-('710', 'OVEJEROS', '21'),
-('711', 'PAAJ MUYO', '4'),
-('712', 'PAAJ POZO', '8'),
-('713', 'PAAJ RODEO', '26'),
-('714', 'PALIZAS', '24'),
-('715', 'PALMA FLOR', '12'),
-('716', 'PALMA LARGA', '21'),
-('717', 'PALMA POZO', '2'),
-('718', 'PALMA REDONDA', '21'),
-('719', 'PALMARES', '5'),
-('720', 'PALMITAS', '5'),
-('721', 'PALMITAS', '12'),
-('722', 'PALO NEGRO', '22'),
-('723', 'PALOMAR', '17'),
-('724', 'PALOS QUEMADOS', '5'),
-('725', 'PAMPA DE LOS GUANACOS', '8'),
-('726', 'PAMPA GRANDE', '18'),
-('727', 'PAMPA MAYO', '5'),
-('728', 'PAMPA MUYOJ', '7'),
-('729', 'PAMPA MUYOJ', '17'),
-('730', 'PAMPA POZO', '12'),
-('731', 'PAMPA POZO', '14'),
-('732', 'PAMPA POZO', '15'),
-('733', 'PAMPA POZO', '17'),
-('734', 'PAMPA POZO', '17'),
-('735', 'PAMPA POZO', '19'),
-('736', 'PAMPA TOTORA LORETO', '14'),
-('737', 'PARAJE BAJO CHICO', '25'),
-('738', 'PARAJE EL 20', '4'),
-('739', 'PARAJE LOA', '23'),
-('740', 'PARAJE POZO SUNI', '23'),
-('741', 'PARANA', '8'),
-('742', 'PARANA', '9'),
-('743', 'PASO DE OSCARES', '24'),
-('744', 'PASO GRANDE', '4'),
-('745', 'PATAY', '17'),
-('746', 'PATILLO', '21'),
-('747', 'PERCAS', '4'),
-('748', 'PERCHIL BAJO', '14'),
-('749', 'PERCHIL BAJO', '25'),
-('750', 'PIEDRA BLANCA', '18'),
-('751', 'PINTO', '1'),
-('752', 'PIRUITAS', '14'),
-('753', 'PLATERO', '8'),
-('754', 'POZO BETBEDER', '19'),
-('755', 'POZO CABADO', '4'),
-('756', 'POZO CABADO', '12'),
-('757', 'POZO CABADO', '18'),
-('758', 'POZO CASTAÑO', '10'),
-('759', 'POZO CERCADO', '9'),
-('760', 'POZO CERCADO', '21'),
-('761', 'POZO CIEGO', '14'),
-('762', 'POZO DE LA PUERTA', '9'),
-('763', 'POZO DE VILLEGAS', '19'),
-('764', 'POZO DEL ARBOLITO', '21'),
-('765', 'POZO DEL CAMPO', '9'),
-('766', 'POZO DEL CHAÑAR', '18'),
-('767', 'POZO DEL CHAÑAR', '20'),
-('768', 'POZO DEL MONTE', '20'),
-('769', 'POZO DEL TOBA', '13'),
-('770', 'POZO DEL TOBA', '15'),
-('771', 'POZO DULCE', '6'),
-('772', 'POZO GRANDE', '2'),
-('773', 'POZO GRANDE', '15'),
-('774', 'POZO GRANDE', '18'),
-('775', 'POZO GRANDE', '21'),
-('776', 'POZO HALLADO', '8'),
-('777', 'POZO HERRERA', '11'),
-('778', 'POZO HONDO', '13'),
-('779', 'POZO HUASCHO', '12'),
-('780', 'POZO LIMPIO', '2'),
-('781', 'POZO MOSOJ', '25'),
-('782', 'POZO MUERTO', '2'),
-('783', 'POZO NUEVO', '7'),
-('784', 'POZO VERDE', '20'),
-('785', 'POZO VERDE', '23'),
-('786', 'POZO VIEJO', '15'),
-('787', 'POZUELOS', '21'),
-('789', 'PUENTE DEL SALADILLO', '24'),
-('790', 'PUENTE NEGRO', '4'),
-('791', 'PUERTA CHIQUITA', '12'),
-('792', 'PUERTA DEL MONTE', '20'),
-('793', 'PUESTITO', '25'),
-('794', 'PUESTITO DE SAN ANTONIO', '7'),
-('795', 'PUESTO', '9'),
-('796', 'PUESTO', '18'),
-('797', 'PUESTO DE DIAZ', '3'),
-('798', 'PUESTO DE DIAZ', '12'),
-('799', 'PUESTO DE JUANES', '14'),
-('800', 'PUESTO DE VIEYRA', '7'),
-('801', 'PUESTO DEL MEDIO', '2'),
-('802', 'PUESTO DEL MEDIO', '12'),
-('803', 'PUESTO DEL MEDIO', '18'),
-('804', 'PUESTO DEL MEDIO', '19'),
-('805', 'PUESTO DEL MEDIO', '20'),
-('806', 'PUESTO DEL MEDIO', '27'),
-('807', 'PUESTO DEL RETIRO', '21'),
-('808', 'PUESTO DEL ROSARIO', '3'),
-('809', 'PUESTO NUEVO', '7'),
-('810', 'PUESTO NUEVO', '19'),
-('811', 'PUESTO NUEVO', '21'),
-('812', 'PUNA', '17'),
-('813', 'PUNI TAJO', '11'),
-('814', 'PUNTA CORRAL', '4'),
-('815', 'PUNTA DEL MONTE', '1'),
-('816', 'PUNTA POZO', '3'),
-('817', 'PUNTA POZO', '4'),
-('818', 'PUNTA POZO', '21'),
-('819', 'QUEBRACHAL', '10'),
-('820', 'QUEBRACHAL', '18'),
-('821', 'QUEBRACHITO', '18'),
-('822', 'QUEBRACHITOS', '1'),
-('823', 'QUEBRACHITOS', '16'),
-('824', 'QUEBRACHO COTO', '19'),
-('825', 'QUEBRACHOS', '9'),
-('826', 'QUEBRACHOS', '12'),
-('827', 'QUEBRACHOS', '21'),
-('828', 'QUEBRADA ESQUINA', '19'),
-('829', 'QUENTI TACO', '18'),
-('830', 'QUILUMPA', '17'),
-('831', 'QUIMILI', '17'),
-('832', 'QUIMILIOJ', '10'),
-('833', 'QUISHKA', '5'),
-('834', 'QUITA PUNCO', '5'),
-('835', 'RAMA PASO', '20'),
-('836', 'RAMADITA', '14'),
-('837', 'RAMADITA', '20'),
-('838', 'RAMIREZ DE VELAZCO', '20'),
-('839', 'RANCHITOS', '2'),
-('840', 'RANCHITOS', '19'),
-('841', 'RAPELLI', '19'),
-('842', 'REAL SAYANA', '4'),
-('843', 'REMANCITO', '9'),
-('844', 'REMANCITO', '10'),
-('845', 'REMANCITO', '17'),
-('846', 'REMES', '7'),
-('847', 'REPARO', '10'),
-('848', 'REPRESA', '4'),
-('849', 'RETIRO', '2'),
-('850', 'RETIRO', '13'),
-('851', 'RETIRO', '16'),
-('852', 'RETIRO', '18'),
-('853', 'RETIRO', '20'),
-('854', 'RIMBOL', '27'),
-('855', 'RINCON', '5'),
-('856', 'RINCON', '10'),
-('857', 'RINCON', '18'),
-('858', 'RIO DE LA PLATA', '8'),
-('859', 'RIO MUERTO', '2'),
-('860', 'RIO VIEJO', '20'),
-('861', 'RIVADAVIA', '2'),
-('862', 'RIVADAVIA', '23'),
-('863', 'ROBLES', '25'),
-('864', 'RODEANA', '5'),
-('865', 'RODEANA', '6'),
-('866', 'RODEO DE SORIA', '7'),
-('867', 'ROMANOS', '23'),
-('868', 'ROSARIO', '13'),
-('869', 'ROVERSI', '17'),
-('870', 'RUBIA MORENO', '5'),
-('871', 'RUBIA PASO', '24'),
-('872', 'RUMI ESQUINA', '9'),
-('873', 'RUMI JACU', '20'),
-('874', 'RUMIOS', '5'),
-('875', 'SABAGASTA', '24'),
-('876', 'SACHAYOJ', '2'),
-('877', 'SALADILLO', '2'),
-('878', 'SALADILLO', '21'),
-('879', 'SALADILLO', '24'),
-('880', 'SALAVINA', '24'),
-('881', 'SALVIAIOJ GAITAN', '4'),
-('882', 'SAN AGUSTIN', '9'),
-('883', 'SAN AGUSTIN', '27'),
-('884', 'SAN ANDRES', '20'),
-('885', 'SAN ANDRES', '23'),
-('886', 'SAN ANTONIO', '4'),
-('887', 'SAN ANTONIO', '5'),
-('888', 'SAN ANTONIO', '15'),
-('889', 'SAN ANTONIO', '17'),
-('890', 'SAN ANTONIO', '27'),
-('891', 'SAN ANTONIO (LAVALLE)', '12'),
-('892', 'SAN ANTONIO (SAN PEDRO)', '12'),
-('893', 'SAN ANTONIO DE COPO', '4'),
-('894', 'SAN ANTONIO DE LOS CACERES', '7'),
-('896', 'SAN BENITO', '9'),
-('897', 'SAN BENITO', '27'),
-('898', 'SAN CARLOS', '5'),
-('899', 'SAN CARLOS', '8'),
-('900', 'SAN CARLOS', '15'),
-('901', 'SAN CARLOS', '17'),
-('902', 'SAN CARLOS', '20'),
-('903', 'SAN CARLOS', '21'),
-('904', 'SAN DIONICIO', '3'),
-('905', 'SAN ENRIQUE', '25'),
-('906', 'SAN FELIPE', '5'),
-('907', 'SAN FELIPE', '10'),
-('908', 'SAN FELIPE', '17'),
-('909', 'SAN FELIX', '5'),
-('910', 'SAN FELIX', '13'),
-('911', 'SAN FERNANDO', '24'),
-('912', 'SAN FRANCISCO', '15'),
-('913', 'SAN FRANCISCO', '17'),
-('914', 'SAN FRANCISCO', '18'),
-('915', 'SAN FRANCISCO', '20'),
-('916', 'SAN FRANCISCO (CNEL FERNANDEZ)', '20'),
-('917', 'SAN GREGORIO', '13'),
-('918', 'SAN GREGORIO', '14'),
-('919', 'SAN IGNACIO', '14'),
-('920', 'SAN IGNACIO', '18'),
-('921', 'SAN IGNACIO', '27'),
-('922', 'SAN IGNACIO (PIEDRA BLANCA)', '18'),
-('923', 'SAN ISIDRO', '2'),
-('924', 'SAN ISIDRO', '4'),
-('925', 'SAN ISIDRO', '5'),
-('926', 'SAN ISIDRO', '7'),
-('927', 'SAN ISIDRO', '8'),
-('928', 'SAN ISIDRO', '10'),
-('929', 'SAN ISIDRO', '10'),
-('930', 'SAN ISIDRO', '14'),
-('931', 'SAN ISIDRO', '17'),
-('932', 'SAN ISIDRO', '18'),
-('933', 'SAN JAVIER', '5'),
-('935', 'SAN JAVIER', '18'),
-('936', 'SAN JAVIER', '20'),
-('937', 'SAN JAVIER', '23'),
-('938', 'SAN JERONIMO', '14'),
-('939', 'SAN JORGE', '10'),
-('940', 'SAN JORGE', '20'),
-('941', 'SAN JOSE', '1'),
-('942', 'SAN JOSE', '4'),
-('943', 'SAN JOSE', '9'),
-('944', 'SAN JOSE', '10'),
-('945', 'SAN JOSE', '12'),
-('946', 'SAN JOSE', '14'),
-('947', 'SAN JOSE', '20'),
-('948', 'SAN JOSE', '22'),
-('949', 'SAN JOSE', '26'),
-('950', 'SAN JOSE DE FLORES', '25'),
-('951', 'SAN JOSE DEL BOQUERON', '8'),
-('952', 'SAN JOSE MONTE REDONDO', '10'),
-('953', 'SAN JOSE-AVELLANEDA', '4'),
-('954', 'SAN JUAN', '5'),
-('955', 'SAN JUAN', '8'),
-('956', 'SAN JUAN', '9'),
-('957', 'SAN JUAN', '12'),
-('958', 'SAN JUAN', '14'),
-('959', 'SAN JUAN', '18'),
-('960', 'SAN JUSTO', '9'),
-('961', 'SAN LORENZO', '5'),
-('962', 'SAN LORENZO', '7'),
-('963', 'SAN LORENZO', '12'),
-('964', 'SAN LORENZO', '20'),
-('965', 'SAN LUIS', '2'),
-('966', 'SAN LUIS', '3'),
-('967', 'SAN LUIS', '4'),
-('968', 'SAN LUIS', '5'),
-('969', 'SAN LUIS', '14'),
-('970', 'SAN LUIS', '15'),
-('971', 'SAN LUIS', '17'),
-('972', 'SAN LUIS', '18'),
-('973', 'SAN LUIS', '20'),
-('974', 'SAN MANUEL', '9'),
-('975', 'SAN MARTIN', '5'),
-('976', 'SAN MARTIN', '17'),
-('977', 'SAN MARTIN', '20'),
-('978', 'SAN MATEO', '20'),
-('979', 'SAN MIGUEL', '9'),
-('980', 'SAN MIGUEL', '14'),
-('981', 'SAN NICOLAS', '10'),
-('982', 'SAN NICOLAS', '24'),
-('983', 'SAN NICOLAS (ABRA GRANDE)', '5'),
-('984', 'SAN NICOLAS (SIMBOLAR)', '5'),
-('985', 'SAN PABLO', '5'),
-('986', 'SAN PABLO', '10'),
-('987', 'SAN PABLO', '10'),
-('988', 'SAN PABLO', '14'),
-('989', 'SAN PABLO', '17'),
-('990', 'SAN PABLO', '21'),
-('991', 'SAN PEDRO', '5'),
-('992', 'SAN PEDRO', '9'),
-('993', 'SAN PEDRO', '12'),
-('994', 'SAN PEDRO', '13'),
-('995', 'SAN PEDRO', '15'),
-('996', 'SAN PEDRO', '17'),
-('997', 'SAN PEDRO', '26'),
-('998', 'SAN PEDRO (BAEZ)', '18'),
-('999', 'SAN PEDRO (KILOMETRO 49)', '18'),
-('1000', 'SAN PEDRO (MAILIN)', '4'),
-('1001', 'SAN PEDRO (OJO DE AGUA)', '18'),
-('1002', 'SAN PEDRO (PUNTA CORRAL)', '4'),
-('1003', 'SAN RAMON', '2'),
-('1004', 'SAN RAMON', '4'),
-('1005', 'SAN RAMON', '5'),
-('1006', 'SAN RAMON', '9'),
-('1007', 'SAN RAMON', '12'),
-('1008', 'SAN RAMON', '15'),
-('1009', 'SAN RAMON', '17'),
-('1010', 'SAN RAMON', '18'),
-('1011', 'SAN RAMON', '20'),
-('1012', 'SAN RAMON', '23'),
-('1013', 'SAN RAMON-PELLEGRINI', '19'),
-('1014', 'SAN ROQUE', '4'),
-('1015', 'SAN ROQUE', '5'),
-('1016', 'SAN ROQUE', '9'),
-('1017', 'SAN ROQUE', '10'),
-('1018', 'SAN ROQUE', '17'),
-('1019', 'SAN VICENTE', '2'),
-('1020', 'SAN VICENTE', '8'),
-('1021', 'SAN VICENTE', '23'),
-('1022', 'SAN VICENTE', '26'),
-('1023', 'SAN VICENTE', '27'),
-('1024', 'SAN VICENTE-FOGUEROA', '10'),
-('1025', 'SAN VICENTE-LORETO', '14'),
-('1026', 'SANAVIRONES', '11'),
-('1027', 'SANTA ANA', '1'),
-('1028', 'SANTA ANA', '9'),
-('1029', 'SANTA ANA', '20'),
-('1030', 'SANTA BARBARA', '14'),
-('1031', 'SANTA BRIGIDA', '20'),
-('1032', 'SANTA CATALINA', '6'),
-('1033', 'SANTA CATALINA', '12'),
-('1034', 'SANTA CLARA', '18'),
-('1035', 'SANTA CRUZ', '2'),
-('1036', 'SANTA CRUZ', '5'),
-('1037', 'SANTA CRUZ', '19'),
-('1038', 'SANTA ELENA', '17'),
-('1039', 'SANTA ELENA', '20'),
-('1040', 'SANTA INES', '23'),
-('1041', 'SANTA JUSTINA', '17'),
-('1042', 'SANTA LUCIA', '9'),
-('1043', 'SANTA LUCIA', '17'),
-('1044', 'SANTA LUCIA', '24'),
-('1045', 'SANTA LUCIA', '24'),
-('1046', 'SANTA MARIA', '7'),
-('1047', 'SANTA MARIA', '14'),
-('1048', 'SANTA MARIA', '15'),
-('1049', 'SANTA MARIA', '17'),
-('1050', 'SANTA MARIA', '18'),
-('1051', 'SANTA MARIA', '20'),
-('1052', 'SANTA MARIA (LA CAÑADA)', '10'),
-('1053', 'SANTA MARIA (VILLA FIGUEROA)', '10'),
-('1054', 'SANTA RITA', '5'),
-('1055', 'SANTA RITA', '9'),
-('1056', 'SANTA RITA', '10'),
-('1057', 'SANTA RITA', '17'),
-('1058', 'SANTA ROSA', '2'),
-('1059', 'SANTA ROSA', '7'),
-('1060', 'SANTA ROSA', '8'),
-('1061', 'SANTA ROSA', '12'),
-('1062', 'SANTA ROSA', '14'),
-('1063', 'SANTA ROSA', '18'),
-('1064', 'SANTA ROSA', '19'),
-('1065', 'SANTA ROSA', '20'),
-('1066', 'SANTA ROSA (LA CAÑADA)', '10'),
-('1067', 'SANTA ROSA (SAN PABLO)', '10'),
-('1068', 'SANTA ROSA (SAN RAMON)', '5'),
-('1069', 'SANTA ROSA (SIMBOLAR)', '5'),
-('1070', 'SANTO DOMINGO', '4'),
-('1071', 'SANTO DOMINGO', '5'),
-('1072', 'SANTO DOMINGO', '7'),
-('1073', 'SANTO DOMINGO', '10'),
-('1074', 'SANTO DOMINGO', '17'),
-('1075', 'SANTO DOMINGO PELLEGRINI', '19'),
-('1076', 'SANTO DOMINGO PELLEGRINI', '19'),
-('1077', 'SANTO DOMINGO-OJO DE AGUA', '18'),
-('1079', 'SANTOS LUGARES', '2'),
-('1080', 'SANTOS LUGARES', '5'),
-('1081', 'SANTOS LUGARES', '12'),
-('1082', 'SARA PAMPA', '19'),
-('1083', 'SAUCE BAJADA', '4'),
-('1084', 'SAUCE SOLO', '14'),
-('1085', 'SAUZAL', '21'),
-('1086', 'SELVA', '22'),
-('1087', 'SESTEADERO', '19'),
-('1088', 'SEÑORA PUJIO', '5'),
-('1089', 'SHISHI POZO', '9'),
-('1090', 'SIETE ARBOLES', '12'),
-('1091', 'SIETE ARBOLES', '19'),
-('1092', 'SILIPICA', '27'),
-('1093', 'SIMBOL', '17'),
-('1094', 'SIMBOL BAJO', '11'),
-('1095', 'SIMBOL CAÑADA', '5'),
-('1096', 'SIMBOL POZO', '19'),
-('1097', 'SIMBOLAR', '5'),
-('1098', 'SIMBOLAR', '18'),
-('1099', 'SINCHI CAÑA', '9'),
-('1100', 'SOCONCHO', '4'),
-('1101', 'SOL DE JULIO', '18'),
-('1102', 'SOL DE MAYO', '3'),
-('1103', 'SOL DE MAYO', '7'),
-('1104', 'SOL DE MAYO', '9'),
-('1106', 'SOTELILLOS', '21'),
-('1107', 'SOTELOS', '21'),
-('1108', 'STAYLE', '17'),
-('1109', 'SUMAMAO', '27'),
-('1110', 'SUMANPA', '20'),
-('1111', 'SUNCHITUYOJ', '4'),
-('1112', 'SUNCHO CORRAL', '15'),
-('1113', 'SUNCHO POZO', '11'),
-('1114', 'SUNCHO POZO', '25'),
-('1115', 'SURI POZO', '5'),
-('1116', 'SURI POZO', '18'),
-('1117', 'SURI POZO', '18'),
-('1118', 'SURIHUAYA', '17'),
-('1119', 'TABIANITA', '17'),
-('1120', 'TABLADA DEL BOQUERON', '10'),
-('1121', 'TABOADA', '25'),
-('1122', 'TACAÑITAS', '11'),
-('1123', 'TACANITAS', '19'),
-('1124', 'TACO ATUN', '11'),
-('1125', 'TACO BAJADA', '19'),
-('1126', 'TACO POZO', '2'),
-('1127', 'TACO POZO', '20'),
-('1128', 'TACO PUJIO', '23'),
-('1129', 'TACO TOTARAYOJ', '24'),
-('1130', 'TACOYOJ', '5'),
-('1131', 'TACOYOJ', '25'),
-('1132', 'TAJAMAR', '10'),
-('1133', 'TALA', '4'),
-('1134', 'TALA', '21'),
-('1135', 'TALA POZO', '7'),
-('1136', 'TALA POZO', '12'),
-('1137', 'TALA POZO', '21'),
-('1138', 'TALA POZO', '23'),
-('1139', 'TALA POZO', '25'),
-('1140', 'TALA YACU', '18'),
-('1141', 'TAPSO', '9'),
-('1142', 'TAQUELLO', '21'),
-('1143', 'TAQUETUYOJ', '14'),
-('1144', 'TERMAS DE RIO HONDO', '21'),
-('1145', 'TINAPJERAYOJ', '11'),
-('1146', 'TINCO', '21'),
-('1147', 'TINTINA', '17'),
-('1148', 'TIO ALTO', '24'),
-('1149', 'TIO POZO', '14'),
-('1150', 'TIPIRO', '7'),
-('1151', 'TIUN PUNCO', '15'),
-('1152', 'TIUN PUNCO', '15'),
-('1153', 'TOBAS', '15'),
-('1154', 'TOMAS YOUNG', '11'),
-('1155', 'TORO PAMPA', '4'),
-('1156', 'TORO PAMPA', '8'),
-('1157', 'TORO POZO', '13'),
-('1158', 'TORO POZO', '13'),
-('1159', 'TORO POZO', '26'),
-('1160', 'TOSCA POZO', '10'),
-('1161', 'TOTORILLAS', '13'),
-('1162', 'TOTORILLAS', '18'),
-('1163', 'TRAMO 16', '5'),
-('1164', 'TRES BAJADAS', '14'),
-('1164', 'SAN JOSE', '5'),
-('1165', 'TRES CERROS', '12'),
-('1165', 'ESTACION SIMBOLAR', '5'),
-('1166', 'TRES CRUCES', '13'),
-('1166', 'LOS SORIA', '5'),
-('1167', 'TRES FLORES', '13'),
-('1167', 'GRAN PORVENIR', '5'),
-('1168', 'TRES LAGUNAS', '1'),
-('1168', 'SANTA ELENA', '5'),
-('1169', 'TRES LAGUNAS', '6'),
-('1169', 'COLONIA MARIA LUIS', '5'),
-('1170', 'TRES MOJONES', '17'),
-('1170', 'LA BAJADA', '5'),
-('1171', 'TRES POZOS', '1'),
-('1172', 'TRES POZOS', '11'),
-('1172', 'PUESTO DEL MEDIO', '5'),
-('1173', 'TRES POZOS', '17'),
-('1173', 'TABLA REDONDA', '5'),
-('1174', 'TROZO POZO', '27'),
-('1174', 'LOS ACOSTA', '5'),
-('1175', 'TUCANITAS', '14'),
-('1175', 'COLONIA ARGENTINA', '5'),
-('1176', 'TUNAS PUNCO', '7'),
-('1177', 'TUSCA BAJADA', '19'),
-('1178', 'TUSCA POZO', '10'),
-('1179', 'TUSCA POZO', '13'),
-('1180', 'TUSCA POZO', '14'),
-('1182', 'TUSCA POZO (FERNANDEZ)', '23'),
-('1183', 'TUSCA POZO (SAN VICENTE)', '14'),
-('1184', 'UNION', '16'),
-('1185', 'UPIANITA', '7'),
-('1185', 'LOMA BLANCA', '16'),
-('1186', 'URUTAU', '8'),
-('1186', 'PASO DE OSCARES', '16'),
-('1187', 'UTURUNCO', '13'),
-('1187', 'EL ALBORDON', '16'),
-('1188', 'VACA HUA|UNA', '10'),
-('1189', 'VACA HUMAN', '24'),
-('1190', 'VERON', '24'),
-('1191', 'VILELAS', '15'),
-('1191', 'LOMA BLANCA', '24'),
-('1192', 'VILLA ABREGU', '11'),
-('1193', 'VILLA ATAMISQUI', '3'),
-('1194', 'VILLA BALNEARIA', '21'),
-('1194', 'PARAJE BOQUERON', '3'),
-('1195', 'VILLA BRANA', '17'),
-('1195', 'LA BAJADITA', '3'),
-('1196', 'VILLA FIGUEROA', '10'),
-('1197', 'VILLA GUASAYAN', '12'),
-('1197', 'JUME ESQUINA', '10'),
-('1198', 'VILLA HIPOLITA', '23'),
-('1198', 'TOTORILLA', '10'),
-('1199', 'VILLA JIMENEZ', '21'),
-('1199', 'LUJAN', '10'),
-('1200', 'VILLA LA PUNTA', '9'),
-('1200', 'KM 0', '10'),
-('1201', 'VILLA MATARA', '26'),
-('1201', 'VINAL ISLA', '10'),
-('1202', 'VILLA MATOQUE', '8'),
-('1202', 'CANDELARIA', '10'),
-('1203', 'VILLA MERCEDES', '19'),
-('1203', 'CAMPO DE MAYO', '8'),
-('1204', 'VILLA NUEVA', '19'),
-('1204', 'EL PUESTO', '8'),
-('1205', 'VILLA NUEVA', '19'),
-('1205', 'SANTA TERESA', '8'),
-('1206', 'VILLA NUEVA', '25'),
-('1206', 'SANTA SILVINA', '8'),
-('1207', 'VILLA PALMAR', '2'),
-('1207', 'SAN MIGUEL', '8'),
-('1208', 'VILLA QUEBRACHOS', '20'),
-('1208', 'EL BRETE', '2'),
-('1208', 'LLAJTA SUMAJ', '8'),
-('1209', 'VILLA RIO HONDO', '21'),
-('1209', 'HORNILLAS', '2'),
-('1209', 'SAN PEDRO', '8'),
-('1210', 'VILLA ROBLES', '23'),
-('1210', 'TACANITAS', '2'),
-('1210', 'KM 23', '8'),
-('1211', 'VILLA SAN MARTIN', '14'),
-('1211', 'LA MANGA', '2'),
-('1211', 'RINCON DE ESPERANZA', '8'),
-('1212', 'VILLA SAN PEDRO', '9'),
-('1212', 'EL CHURQUI', '2'),
-('1212', 'LA MELADA', '14'),
-('1212', 'VALLE GRANDE', '8'),
-('1213', 'VILMER', '23'),
-('1213', 'LA BAJADA', '9'),
-('1213', 'LA MELEADA', '14'),
-('1213', 'RINCON DEL VALLE', '8'),
-('1213', 'JUMIAL GRANDE', '2'),
-('1214', 'VINAL POZO', '19'),
-('1214', 'LA BLANCA', '14'),
-('1214', 'PICHANA', '9'),
-('1214', 'LA CANDELARIA', '8'),
-('1214', 'CASASOLA', '2'),
-('1215', 'VINARA', '21'),
-('1215', 'SAN JUANCITO', '9'),
-('1215', 'TERNERO HUATANA', '14'),
-('1215', 'PIRUAJ BAJO', '8'),
-('1215', 'SANTA ALCIRA', '2'),
-('1216', 'VIZCACHERAL', '12'),
-('1216', 'LA REVANCHA', '14'),
-('1216', 'SANTA ALCIRA', '2'),
-('1216', 'AHI VEREMOS', '8'),
-('1217', 'WEISBURD', '17'),
-('1217', 'LUJAN', '12'),
-('1217', 'EL HOYON', '14'),
-('1217', 'SAUCE BAJADA', '2'),
-('1217', 'PARAJE CONZUELO', '8'),
-('1218', 'YACU ICHACUNA', '15'),
-('1218', 'LAS TALITAS', '12'),
-('1218', 'CAMPO AMOR', '14'),
-('1218', 'PARAJE SAN LUIS', '2'),
-('1218', 'LOC. MARIA ANGELICA', '17'),
-('1219', 'YALAN', '26'),
-('1219', 'EL RINCON', '12'),
-('1219', 'LA BLANCA', '14'),
-('1219', 'MANISMIOJ', '2'),
-('1220', 'YANDA', '7'),
-('1220', 'CONCHAYOJ', '26'),
-('1220', 'TOTORA PAMPA', '14'),
-('1221', 'YASO', '25'),
-('1221', 'BAJADITA', '14'),
-('1222', 'YUCHAN', '15'),
-('1222', 'COLLERA HURCUNA', '14'),
-('1223', 'YUTO YACA', '21'),
-('1223', 'PARAJE SUNCHO POZO EL TRIUNFO', '15'),
-('1224', 'ZANJON', '7'),
-('1224', 'ROLDAN', '15'),
-('1225', 'MOJON', '19'),
-('1225', 'PUESTO DEL MEDIO', '7'),
-('1225', 'EL DESVIO', '15'),
-('1226', 'TALA ATUN', '4'),
-('1226', 'SAN PEDRO', '7'),
-('1226', 'EL TOBA', '15'),
-('1227', 'PAMPA ATUN', '23'),
-('1227', 'LA ABRITA', '7'),
-('1227', 'BREAYOJ', '4'),
-('1227', 'KM 25', '15'),
-('1228', 'ESTACION ROBLES', '25'),
-('1228', 'EL CHURQUI', '7'),
-('1228', 'HORNILLOS', '4'),
-('1229', 'BARRANCA', '19'),
-('1229', 'SAN ROQUE', '7'),
-('1230', 'PAMPA ATUN', '25'),
-('1230', 'LOS MOJONES', '7'),
-('1230', 'SAN FRANCISCO', '19'),
-('1231', 'ESTACION TABOADA', '25'),
-('1231', 'LA MESADA', '19'),
-('1231', 'CAÑADA DELMEDIO', '7'),
-('1232', 'LA SOLEDAD', '21'),
-('1232', 'SAN JAVIER', '19'),
-('1232', 'LOMAS DE ZAMORA', '7'),
-('1232', 'GARZA', '25'),
-('1233', 'PAMPA MULLOJ', '23'),
-('1233', 'TORO POZO', '21'),
-('1233', 'SAN ROQUE', '19'),
-('1233', 'PARAJE NUEVA ESPERANZA', '7'),
-('1234', 'EL ARENAL', '13'),
-('1234', 'PALO BORRACHO', '23'),
-('1234', 'TORO YACU', '21'),
-('1234', 'SAN SERAFIN', '19'),
-('1234', 'LA ESTANCITA', '7'),
-('1235', 'EL SIMBOL', '27'),
-('1235', 'ZURI POZO', '13'),
-('1235', 'ESTACION ROBLES', '23'),
-('1235', 'LA MANGA', '19'),
-('1235', 'RODEO VALDEZ', '21'),
-('1236', 'FISCO DE FATIMA', '13'),
-('1236', 'PARAJE MORCILLO', '23'),
-('1236', 'TACO POSO', '19'),
-('1236', 'CAÑADA DEL MONTE', '21'),
-('1236', 'SABAGASTA', '27'),
-('1237', 'SAN JUAN', '23'),
-('1237', 'EL SOCORRO', '19'),
-('1237', 'CHAÑARITO', '13'),
-('1237', 'COLONIA TINCO', '21'),
-('1238', 'EL BARRIAL (PARAJE)', '23'),
-('1238', 'EL CHURQUI', '13'),
-('1238', 'LA NUEVA DONOSA', '21'),
-('1239', 'EL REFUGIO', '23'),
-('1239', 'SAN ANTONIO', '13'),
-('1240', 'SANTO DOMINGO', '23'),
-('1241', 'PARAJE EL MORCILLO', '23'),
-('1241', 'SIN ESPECIFICAR', '1'),
-('1242', 'MEDIA LUNA', '1'),
-('1243', 'TACAÑITAS', '11'),
-('1244', 'COLONIA RASQUIN', '5'),
-('1245', 'LAS ABRAS', '5'),
-('1246', 'LA CAPILLA', '5'),
-('1247', 'PAMPA MUYOJ', '5'),
-('1248', 'MISTOLITO', '5'),
-('1249', 'TRAMO 20', '5'),
-('1250', 'CHILCA', '23'),
-('1251', 'HIGUERA CHACRA', '23'),
-('1252', 'TURENA', '23'),
-('1253', 'JANTA', '23'),
-('1254', 'LAS DELICIAS', '23'),
-('1255', 'YUTU YACU', '21'),
-('1256', 'LOS DECIMA', '21'),
-('1257', 'RINCON DE ATACAMA', '21'),
-('1258', 'CAÑADA DE LA COSTA', '21'),
-('1259', 'CAÑADA DE TALA POZO', '21'),
-('1260', 'LA RESERVA', '21'),
-('1261', 'EL BRACHO', '23'),
-('1262', 'SAN JOSE', '17'),
-('1263', 'PUESTO SAN PABLO', '21'),
-('1264', 'QUENTI TACO', '21'),
-('1265', 'EL PUESTITO', '21'),
-('1266', 'TRAMO 18', '0'),
-('1267', 'VUELTA DE LA BARRANCA', '7'),
-('1268', 'EL DEANCITO', '7'),
-('1269', 'CHAÑAR POZO', '5'),
-('1270', 'TRAMO 18', '5'),
-('1271', 'RODEO', '9'),
-('1272', 'KM. 340', '20'),
-('1273', 'MAQUITO', '7'),
-('1274', 'SANTA ELENA', '11'),
-('1275', 'SAN BENITO', '7'),
-('1276', 'CUATRO ESQUINA', '2'),
-('1277', 'PUNUA', '14'),
-('1278', 'PUESTITO NORTE', '7'),
-('1279', 'CARA PUJIO', '23'),
-('1280', 'CARA PUGIO', '23'),
-('1281', 'COMERCIAL', '23'),
-('1282', 'SAN JOSE DE FLORES', '23'),
-('1283', 'CHILQUITA', '23'),
-('1284', 'SAN JOSE', '23'),
-('1285', 'CHAGUAR PUNCO', '23'),
-('1286', 'EL QUEMAO', '23'),
-('1287', 'LOAJ', '23'),
-('1288', 'PUESTO NUEVO', '23'),
-('1289', 'LA LOMA', '23'),
-('1290', 'POZO SUNI', '23'),
-('1291', 'TUSCA POZO', '23'),
-('1292', 'MISTOL', '23'),
-('1293', 'SAN PEDRO', '11'),
-('1294', 'EL CERCADO', '5'),
-('1295', 'VILLA DE AGUA', '0'),
-('1296', 'VILLA OJO DE AGUA', '18'),
-('1297', 'LESCANO', '21'),
-('1298', 'EL FISCO', '17'),
-('1299', 'CUATRO HORCONES', '5'),
-('1300', 'QUEBRACHO MARCADO', '7'),
-('1301', 'QUIMILI BAJADA', '14'),
-('1302', 'EL MOLLE', '18'),
-('1303', 'LOMA COLORADA', '18'),
-('1304', 'EL QUEBRACHITO', '18'),
-('1305', 'EL SIMBOLAR', '18'),
-('1306', 'EL SIMBOLAR', '17'),
-('1307', 'LOS CHAÑARES', '18'),
-('1308', 'LOS SUNCHOS', '18'),
-('1309', 'EL CINCO', '17'),
-('1310', 'SUMAMPA', '20'),
-('1311', 'EL SIMBOL', '20'),
-('1312', 'ORATORIO', '20'),
-('1313', 'LA ARGENTINA', '20'),
-('1314', 'LA CHICHARRA', '20'),
-('1315', 'LA AGUADITA', '20'),
-('1316', 'LOS PUESTOS', '20'),
-('1317', 'LA SOLEDAD', '18'),
-('1318', 'EL BRACHO', '4'),
-('1319', 'SANTA ELENA', '8'),
-('1320', 'EL VEINTE', '4'),
-('1321', 'SAN BERNARDO', '8'),
-('1322', 'MORCILLO', '23'),
-('1323', 'SANTA ROSA', '4'),
-('1324', 'ESTACION PUNTA', '0'),
-('1325', 'BRACHO LAGUNA', '4'),
-('1326', 'ESTACION LA PUNTA', '9'),
-('1327', 'COLONIA ISLA', '4'),
-('1328', 'EL CERRO', '18'),
-('1329', 'LAS BARRANCAS', '18'),
-('1330', 'EL CANARIO', '9'),
-('1331', 'LAS CAÑITAS', '18'),
-('1332', 'RUMI POZO', '18'),
-('1333', 'POZO DEL SIMBOL', '18'),
-('1334', 'LOS POZOS', '18'),
-('1335', 'EL CHAÑAR', '18'),
-('1336', 'SANTA LUCIA', '18'),
-('1337', 'LAS TALAS', '18'),
-('1338', 'KM. 88', '18'),
-('1339', 'CAMPO SAN ANTONIO', '4'),
-('1340', 'EL MOJON', '5'),
-('1341', 'TACUARI', '23'),
-('1342', 'COLONIA PINTO', '23'),
-('1343', 'SAN ROQUE', '23'),
-('1344', 'SAN IGNACIO', '23'),
-('1345', 'PUESTITO DEL MEDIO', '7'),
-('1346', 'NUEVA LEMA', '1'),
-('1347', 'MORAMPA', '14'),
-('1348', 'LOS PIRPINTOS', '0'),
-('1349', 'EL EMBUDO', '1'),
-('1350', 'CARA PUJIO', '5'),
-('1351', 'COLONIA MARIA LUISA', '5'),
-('1352', 'VILLA MORENO', '5'),
-('1353', 'EL PINTO', '14'),
-('1354', 'COLONIA HIPOLITO IRIGOYEN', '14'),
-('1355', 'LAS CHACRAS', '14'),
-('1356', 'EL VINAL', '23'),
-('1357', 'LAS HERMANAS', '5'),
-('1358', 'POLPOLLAJTA', '0'),
-('1359', 'SUNCHO POZO', '0'),
-('1360', 'TINAJERAYOJ', '17'),
-('1361', 'BAJO LAS PIEDRAS', '20'),
-('1362', 'SAUCE BAJADA', '5'),
-('1363', 'SAN ANTONIO', '9'),
-('1364', 'PAMPA MUYOJ', '16'),
-('1365', 'PAMPA MUYOJ', '19'),
-('1366', 'LA MAJADILLA', '18'),
-('1367', 'LOS RALOS', '21'),
-('1368', 'LAS TINAJAS', '21'),
-('1369', 'LA BAJADA', '19'),
-('1370', 'EL TARTAGAL', '19'),
-('1371', 'EL SAUCE', '19'),
-('1372', 'PUESTO DEL ANGEL', '19'),
-('1373', 'ELCORRALITO', '19'),
-('1374', 'EL CORRALITO', '19'),
-('1375', 'EL PORVENIR', '21'),
-('1376', 'CARANCHI YACU', '14'),
-('1377', 'CARANCHI YACU', '18'),
-('1378', 'EL SIMBOL', '18'),
-('1379', 'POZO DEL BARRIAL', '0'),
-('1380', 'POZO DEL BARRIAL', '1'),
-('1381', 'SOCONCHO', '3'),
-('1382', 'YACU CHIRI', '0'),
-('1383', 'YACU CHIRI', '3'),
-('1384', 'MOCHINO', '0'),
-('1385', 'MOCHINO', '3'),
-('1386', 'CAMPO RASSO', '11'),
-('1387', 'COLONIA OSVALDO', '11'),
-('1388', 'EL RODEO', '0'),
-('1389', 'EL RINCON', '0'),
-('1390', 'EL RODEO', '9'),
-('1391', 'CANAL SAUCE', '4'),
-('1392', 'TOCON ESQUINA', '4'),
-('1393', 'COLONIA ALCIRA', '4'),
-('1394', 'VILLA AURORA', '23'),
-('1395', 'COLONIA SAN JOSE', '23'),
-('1396', 'LA LAGUNA', '18'),
-('1397', 'CORRAL DE SANCHEZ', '18'),
-('1398', 'KM. 50', '18'),
-('1399', 'TALA CRUZ', '18'),
-('1400', 'LOS PARAISOS', '18'),
-('1401', 'POZO DE VARGAS', '20'),
-('1402', 'SANTA MARIA', '23'),
-('1403', 'CRUCECITAS', '14'),
-('1404', 'LA FUENTE', '20'),
-('1405', 'LA ELSITA', '17'),
-('1406', 'EL 90', '17'),
-('1407', 'LA HIGUERA', '23'),
-('1408', 'LA HIGUERA', '0'),
-('1409', 'LA HIGUERA', '20'),
-('1410', 'MATARA', '23'),
-('1411', 'CANAL MELERO', '11'),
-('1412', 'EL BARRIAL', '5'),
-('1413', 'FUERTE VIEJO', '20'),
-('1414', 'FISCO CHICO', '2'),
-('1415', 'LOS MORALES', '7'),
-('1416', 'EL PUESTITO SAN MARCOS', '7'),
-('1417', 'SAN ANTONIO', '0'),
-('1418', 'SAN ANTONIO', '7'),
-('1419', 'LA BERNACHA', '7'),
-('1420', 'ABRA GRANDE', '7'),
-('1421', 'PINTO', '0'),
-('1422', 'EL TUSCAL', '0'),
-('1423', 'EL POLEAR', '0'),
-('1424', 'VILLA SUAYA', '5'),
-('1425', 'SAUCE BAJADA', '23'),
-('1426', 'PUESTITO SAN ANTONIO', '7'),
-('1427', 'PUESTITO SAN ANTONIO..', '7'),
-('1428', 'LOS QUIROGA', '7'),
-('1429', 'PUESTITO SUD', '7'),
-('1430', 'TALA PUNCO', '25'),
-('1431', 'LOS REMES', '7'),
-('1432', 'LAGUNA BLACA', '13');
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (0, 'NINGUNO', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1, ' 25 DE MAYO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (2, ' FISCO DE FATIMA', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (3, ' 25 DE MAYO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (4, ' NEGRA MUERTA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (5, ' 9 DE JULIO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (6, ' SANTA TERESA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (7, ' 9 DE JULIO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (8, ' SANTA SILVINA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (9, ' AÑATUYA', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (10, ' SAN MIGUEL', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (11, ' ABRA DE LA CRUZ', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (12, ' LLAJTA SUMAJ', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (13, ' ABRA GRANDE', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (14, ' SAN PEDRO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (15, ' ACOS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (16, ' KM 23', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (17, ' ACOSTA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (18, ' CIUDAD CAPITAL', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (19, ' AEROLITO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (20, ' LA BANDA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (21, ' AGUA AMARGA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (22, ' AGUA AZUL', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (23, ' AGUA BLANCA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (24, ' AGUA BLANCA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (25, ' AGUA DULCE', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (26, ' AGUSTINA LIBARONA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (27, ' AHI VEREMOS', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (28, ' AHI VEREMOS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (29, ' AHI VEREMOS', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (30, ' AIBAL', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (31, ' AIBALITO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (32, ' AIBALITO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (33, ' ALEJITO', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (34, ' ALGARROBAL VIEJO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (35, ' ALHUAMPA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (36, ' ALLPA YURAJ', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (37, ' ALTA GRACIA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (38, ' ALTO BELLO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (39, ' ALTO POZO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (40, ' AMAMA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (41, ' AMAPOLA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (42, ' AMBARGASTA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (43, ' AMICHA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (44, ' AMIMAN', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (45, ' AMOLADERAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (46, ' AMPA', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (47, ' ANCAJAN', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (48, ' ANCHANGA', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (49, ' ANGA', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (50, ' ANTAJE', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (51, ' ANTILO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (52, ' ARAGONES', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (53, ' ARBOL BLANCO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (54, ' ARBOL DEL NEGRO', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (55, ' ARBOL SOLO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (56, ' ARBOL SOLO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (57, ' ARBOLITOS', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (58, ' ARBOLITOS', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (59, ' ARBOLITOS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (60, ' ARDILES', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (61, ' ARGENTINA', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (62, ' ARGENTINA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (63, ' ARMONIA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (64, ' ARRAGA', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (65, ' ASPA SHINCHI', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (66, ' ASPA SINCHI', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (67, ' ATALAYA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (68, ' ATOJ POZO', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (69, ' AVERIAS', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (70, ' AYUNCHA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (71, ' BAEZ', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (72, ' BAHOMA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (73, ' BAJADITA', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (74, ' BAJO GRANDE', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (75, ' BAJO GRANDE', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (76, ' BAJO VERAE', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (77, ' BALBUENA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (78, ' BANDERA', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (79, ' BANDERA BAJADA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (80, ' BARRANCA COLORADA', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (81, ' BARRANCAS', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (82, ' BARRANCAS', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (83, ' BARRANCAS COLORADAS', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (84, ' BARRIAL ALTO', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (85, ' BARRIALITO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (86, ' BARRIALITO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (87, ' BAYO MUERTO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (88, ' BEJAN', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (89, ' BELBRANO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (90, ' BELGRANO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (91, ' BELGRANO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (92, ' BELGRANO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (93, ' BELLA VISTA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (94, ' BELLA VISTA', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (95, ' BELLA VISTA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (96, ' BELTRAN', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (97, ' BELTRAN-LORETO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (98, ' BLANCA POZO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (99, ' BOBADAL', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (100, ' BORDO PAMPA', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (101, ' BOTIJA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (102, ' BREA POZO', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (103, ' BUEN LUGAR', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (104, ' BUEN LUGAR', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (105, ' BUENA VISTA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (106, ' BUENA VISTA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (107, ' BUENA VISTA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (108, ' BUENA VISTA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (109, ' BUENA VISTA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (110, ' BUEY MUERTO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (111, ' BUEY RODEO', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (112, ' BURRA HUAÑAUANA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (113, ' CAÑADA RICA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (114, ' CAÑADA SAN RAMON', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (115, ' CADILLO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (116, ' CAJON', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (117, ' CALOJ', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (118, ' CAMPO ALEGRE', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (119, ' CAMPO ALEGRE', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (120, ' CAMPO ALEGRE', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (121, ' CAMPO ALEGRE', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (122, ' CAMPO DEL AGUILA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (123, ' CAMPO DEL CIELO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (124, ' CAMPO DEL CIELO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (125, ' CAMPO DEL CISNE', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (126, ' CAMPO DEL CISNE', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (127, ' CAMPO GALLO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (128, ' CAMPO GRANDE', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (129, ' CAMPO GRANDE', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (130, ' CAMPO GRANDE', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (131, ' CAMPO VERDE', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (132, ' CAMPO VERDE', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (133, ' CAMPO VERDE', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (134, ' CAMPO VERDE', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (135, ' CANARIO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (136, ' CANCINOS', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (137, ' CANDELARIA', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (138, ' CANDELARIA', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (139, ' CARBON POZO', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (140, ' CARBON POZO', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (141, ' CARDON ESQUINA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (142, ' CASARES', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (143, ' CASHICO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (144, ' CASPI CORRAL', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (145, ' CAZADORES', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (146, ' CAÑADA DE LA COSTA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (147, ' CAÑADA DEL MEDIO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (148, ' CAÑADA ESCOBAR', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (149, ' CAÑADA HONDA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (150, ' CAÑADA TALA POZO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (151, ' CEJOLAO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (152, ' CERRILLOS', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (153, ' CERRILLOS', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (154, ' CERRITO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (155, ' CERRO BLANCO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (156, ' CERRO RICO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (157, ' CHAÑAR LAGUNA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (158, ' CHAÑAR POZO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (159, ' CHAÑAR POZO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (160, ' CHAÑAR POZO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (161, ' CHAÑAR POZO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (162, ' CHAÑAR POZO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (163, ' CHAÑAR POZO', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (164, ' CHAÑAR PUJIO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (165, ' CHAÑAR PUJIO', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (166, ' CHACRAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (167, ' CHANCHILLOS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (168, ' CHARCO VIEJO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (169, ' CHARQUINA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (170, ' CHAUCHILLAS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (171, ' CHAUPI POZO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (172, ' CHAÑAR POCITO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (173, ' CHAÑAR POZO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (174, ' CHAÑAR POZO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (175, ' CHAÑAR POZO DE ABAJO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (176, ' CHILCA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (177, ' CHILCA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (178, ' CHILCA JULIANA', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (179, ' CHILCAS LA LOMA', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (180, ' CHILENO', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (181, ' CHINCHILLAL', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (182, ' CHIRA', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (183, ' CHOYA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (184, ' CHUÑA ALBARDON', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (185, ' CHURQUI', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (186, ' CLODOMIRA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (187, ' CNEL. MANUEL LEONCIO RICO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (188, ' CODO POZO', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (189, ' COLLERA HURCUNA', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (190, ' COLOMBIA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (191, ' COLONIA ALPINA', 22);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (192, ' COLONIA DORA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (193, ' COLONIA EL SIMBOLAR', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (194, ' COLONIA GAMARA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (195, ' COLONIA JOSEFINA', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (196, ' COLONIA LA SEGUNDA', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (197, ' COLONIA LA VICTORIA', 22);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (198, ' COLONIA LIBANESA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (199, ' COLONIA MACKINLAY', 22);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (200, ' COLONIA MARIA ELENA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (201, ' COLONIA MERCEDES', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (202, ' COLONIA PINTO', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (203, ' COLONIA SAN JUAN', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (204, ' COLONIA SANTA ROSA AGUIRRE', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (205, ' COLONIA SIEGEL', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (206, ' CONCEPCION', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (207, ' CONDOR HUASI', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (208, ' CONSULÑOJ', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (209, ' CONTRERAS', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (210, ' CORONEL BARROS', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (211, ' CORONEL FERNANDEZ', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (212, ' CORRAL DEL REY', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (213, ' CORRAL QUEMADO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (214, ' CRUZ BAJADA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (215, ' CRUZ POZO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (216, ' CUATRO BOCAS', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (217, ' CUYOJ', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (218, ' DESVIO POZO DULCE', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (219, ' DIENTE DEL ARADO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (220, ' DOÑA LORENZA', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (221, ' DOÑA LUISA', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (222, ' DOLORES', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (223, ' DOLORES', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (224, ' DONADEU', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (225, ' DOS ARBOLES', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (226, ' DOS HERMANAS', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (227, ' EL 110', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (228, ' EL 25', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (229, ' EL AÑIL', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (230, ' EL ABRA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (231, ' EL ABRA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (232, ' EL AIBAL', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (233, ' EL AIBAL', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (234, ' EL AIBE', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (235, ' EL ALAMBRADO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (236, ' EL ALAMBRADO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (237, ' EL ALGARROBO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (238, ' EL ARBOLITO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (239, ' EL ARBOLITO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (240, ' EL ARBOLITO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (241, ' EL ASPIRANTE', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (242, ' EL BAGUAL', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (243, ' EL BAJO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (244, ' EL BAJO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (245, ' EL BAJO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (246, ' EL BALDE', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (247, ' EL BARRIAL', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (248, ' EL BARRIAL', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (249, ' EL BOBADAL', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (250, ' EL BOQUERON', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (251, ' EL BOSQUE', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (252, ' EL BRAGADO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (253, ' EL CAÑON', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (254, ' EL CABURE', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (255, ' EL CACHI', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (256, ' EL CADILLO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (257, ' EL CAJON', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (258, ' EL CAMBIADO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (259, ' EL CAMBIADO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (260, ' EL CAMBIADO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (261, ' EL CARMEN', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (262, ' EL CARMEN', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (263, ' EL CARMEN', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (264, ' EL CARMEN', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (265, ' EL CARMEN', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (266, ' EL CERRITO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (267, ' EL CERRO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (268, ' EL CHAÑAR', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (269, ' EL CHAÑAR', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (270, ' EL CHARCO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (271, ' EL CHUCHI', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (272, ' EL COLORADO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (273, ' EL COLORADO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (274, ' EL CORRIDO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (275, ' EL CRUCE', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (276, ' EL CRUCERO', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (277, ' EL CRUCERO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (278, ' EL CUADRADO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (279, ' EL DEAN', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (280, ' EL DESCANSO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (281, ' EL DESIERTO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (282, ' EL DESTINO', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (283, ' EL DIABLO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (284, ' EL DIAMANTE', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (285, ' EL DIAMANTE', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (286, ' EL DORADO', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (287, ' EL EMPEDRADO', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (288, ' EL FISCO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (289, ' EL HOYO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (290, ' EL HUAICO', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (291, ' EL JUMIAL', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (292, ' EL JUNIALITO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (293, ' EL MALACARA', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (294, ' EL MANANTIAL', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (295, ' EL MISTOL', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (296, ' EL MOJON', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (297, ' EL MOJON', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (298, ' EL MOJONCITO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (299, ' EL NEGRITO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (300, ' EL OJITO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (301, ' EL OSO', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (302, ' EL PACARA', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (303, ' EL PALOMAR', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (304, ' EL PALOMAR', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (305, ' EL PALOMAR', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (306, ' EL PALOMAR', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (307, ' EL PALOMAR', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (308, ' EL PARAISO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (309, ' EL PERAL', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (310, ' EL PERSEGUIDO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (311, ' EL PERTIGO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (312, ' EL PIRUCHO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (313, ' EL POLEAR', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (314, ' EL PORVENIR', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (315, ' EL PORVENIR', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (316, ' EL PORVENIR', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (317, ' EL PORVENIR', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (318, ' EL PUEBLITO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (319, ' EL PUENTE', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (320, ' EL PUENTE', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (321, ' EL PUESTITO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (322, ' EL PUESTITO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (323, ' EL PUESTITO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (324, ' EL PUESTO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (325, ' EL PUESTO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (326, ' EL PUESTO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (327, ' EL QUEBRACHAL', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (328, ' EL QUEMADO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (329, ' EL QUEMADO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (330, ' EL QUEMADO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (331, ' EL QUILLIN', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (332, ' EL REMANSO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (333, ' EL REMATE', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (334, ' EL RETIRO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (335, ' EL RETIRO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (336, ' EL RETIRO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (337, ' EL RETIRO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (338, ' EL RINCON', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (339, ' EL RINCON', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (340, ' EL RINCON', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (341, ' EL RODEO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (342, ' EL ROSARIO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (343, ' EL ROSARIO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (344, ' EL ROSARIO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (345, ' EL ROSARIO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (346, ' EL ROSARIO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (347, ' EL SALADILLO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (348, ' EL SALVADOR', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (349, ' EL SAUCE', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (350, ' EL SIMBOL', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (351, ' EL SIMBOL-ALBERDI', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (352, ' EL SIMBOLAR', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (353, ' EL TOBIANA', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (354, ' EL UCLE', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (355, ' EL VALLE', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (356, ' EL VEINTICINO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (357, ' EL VIZCACHERAL', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (358, ' ENSENADA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (359, ' ESTACION ATAMISQUI', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (360, ' ESTANCIA VIEJA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (361, ' ESTEROS', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (362, ' FERNANDEZ', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (363, ' FLORIDA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (364, ' FLORIDA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (365, ' FORRES', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (366, ' FORTIN INCA', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (367, ' FRIAS', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (368, ' GALEANO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (369, ' GARCEANO', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (370, ' GARZA', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (371, ' GIRARDET', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (372, ' GRAMILLA', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (373, ' GRANADERO GATICA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (374, ' GUAÑAGASTA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (375, ' GUAMPACHA', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (376, ' GUANACO SOMBRIANA', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (377, ' GUARDIA ESCOLTA', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (378, ' GUASAYAN', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (379, ' GUAYPE', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (380, ' GUERRA', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (381, ' HAASE', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (382, ' HERNAN MEJIA MIRAVAL', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (383, ' HERRERA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (384, ' HORCOS TUCUCUNA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (385, ' HORNILLO', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (386, ' HORNILLO', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (387, ' HOYON', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (388, ' HUACHANA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (389, ' HUAICO HONDO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (390, ' HUAYCURU', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (391, ' HUCHO PALLANA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (392, ' HUILLA CATINA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (393, ' HUILLA CATINA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (394, ' HURITU HUASI', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (395, ' HUYAMAMPA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (396, ' ICAÑO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (397, ' INGENIERO EZCURRA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (398, ' INTI HUASI', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (399, ' ISCA YACU', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (400, ' ISLA BAJA', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (401, ' ISLA DE ARAGONES', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (402, ' ISLA DE LOS SOTELOS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (403, ' ISLA DE ROJAS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (404, ' ISLA VERDE', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (405, ' ISLA VERDE', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (406, ' JACIMAMPA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (407, ' JAMIAL GRANDE', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (408, ' JIMENEZ', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (409, ' JUANILLO', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (410, ' JUMI POZO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (411, ' JUMI POZO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (412, ' JUMI POZO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (413, ' JUMI VIEJO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (414, ' JUMIALITO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (415, ' JUNI POZO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (416, ' KENTI TACO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (417, ' KILOMETRO', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (418, ' KILOMETRO 18', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (419, ' KILOMETRO 477', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (420, ' KILOMETRO 49', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (421, ' KILOMETRO 55', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (422, ' LA ABRA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (423, ' LA ABRITA', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (424, ' LA AGUADA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (425, ' LA ALEMANA', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (426, ' LA ALOJA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (427, ' LA ANGELITA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (428, ' LA ARMONIA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (429, ' LA ARMONIA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (430, ' LA ARMONIA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (431, ' LA AURORA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (432, ' LA AURORA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (433, ' LA BELLA CRIOLLA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (434, ' LA BLANCA', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (435, ' LA BLANCA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (436, ' LA BLANCA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (437, ' LA BLANCA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (438, ' LA BLANCA', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (439, ' LA BLANCA', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (440, ' LA BREA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (441, ' LA CAÑADA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (442, ' LA CAÑADA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (443, ' LA CAÑADA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (444, ' LA CAÑADA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (445, ' LA CAÑADA', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (446, ' LA CALERA', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (447, ' LA CALERA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (448, ' LA CAROLINA', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (449, ' LA CHILCA', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (450, ' LA CHILCA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (451, ' LA CHILCA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (452, ' LA CLEMIRA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (453, ' LA COSTA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (454, ' LA COSTOSA', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (455, ' LA CRUZ', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (456, ' LA CRUZ', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (457, ' LA CRUZ', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (458, ' LA CUCHILLA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (459, ' LA DARSENA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (460, ' LA DONOSA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (461, ' LA DORMIDA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (462, ' LA ENSENADA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (463, ' LA ENSENADA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (464, ' LA ESMERALDA', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (465, ' LA ESMERALDA', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (466, ' LA ESPERANZA', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (467, ' LA ESPERANZA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (468, ' LA ESPERANZA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (469, ' LA ESPERANZA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (470, ' LA ESPERANZA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (471, ' LA ESPERANZA', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (472, ' LA ESPERANZA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (473, ' LA ESQUINA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (474, ' LA ESQUINA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (475, ' LA FALDA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (476, ' LA FALDA', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (477, ' LA FIRMEZA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (478, ' LA FLORIDA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (479, ' LA FLORIDA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (480, ' LA FLORIDA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (481, ' LA FLORIDA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (482, ' LA FORTUNA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (483, ' LA FORTUNA', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (484, ' LA FRAGUA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (485, ' LA GRANJA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (486, ' LA GRANJA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (487, ' LA GUARDIA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (488, ' LA GUARDIA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (489, ' LA GUARDIA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (490, ' LA GUARIDA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (491, ' LA HIGUERA', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (492, ' LA HIGUERA', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (493, ' LA INVERNADA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (494, ' LA ISLA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (495, ' LA ISLA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (496, ' LA LAGUNA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (497, ' LA LAGUNA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (498, ' LA LOMA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (499, ' LA LOMA', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (500, ' LA MELADA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (501, ' LA MELADA', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (502, ' LA NEGRITA', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (503, ' LA NENA', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (504, ' LA NORIA', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (505, ' LA NORIA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (506, ' LA PALMA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (507, ' LA PALOMA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (508, ' LA PALOMA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (509, ' LA PALOMA', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (510, ' LA PAMPA', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (511, ' LA PAMPA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (512, ' LA PAMPA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (513, ' LA PAMPA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (514, ' LA PAZ', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (515, ' LA PAZ', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (516, ' LA PETRONILA', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (517, ' LA PORTEÑA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (518, ' LA PORTEÑA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (519, ' LA PRIMAVERA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (520, ' LA PUERTA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (521, ' LA PUERTA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (522, ' LA PUERTA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (523, ' LA PUNTA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (524, ' LA REBANCHA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (525, ' LA REPRESA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (526, ' LA RIVERA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (527, ' LA ROMELIA', 22);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (528, ' LA SIMONA', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (529, ' LA SIMONA', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (530, ' LA TAPA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (531, ' LA TIJERA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (532, ' LA TRAMPA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (533, ' LA UNION', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (534, ' LA UNION', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (535, ' LA UNION', 22);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (536, ' LA VIRTUD', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (537, ' LA VIUDA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (538, ' LA VUELTA DE LA BARRANCA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (539, ' LAGUNA BLANCA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (540, ' LAGUNA DEL SUNCHO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (541, ' LAGUNILLA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (542, ' LAPRIDA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (543, ' LAS ABRAS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (544, ' LAS ABRAS-MITRE', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (545, ' LAS AGUILAS', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (546, ' LAS AGUILAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (547, ' LAS CAÑAS', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (548, ' LAS CEJAS', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (549, ' LAS CEJAS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (550, ' LAS CHACRAS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (551, ' LAS CHACRAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (552, ' LAS CHARCAS', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (553, ' LAS COLONIAS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (554, ' LAS COLONIAS', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (555, ' LAS DELICIAS', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (556, ' LAS DELICIAS', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (557, ' LAS DOLORES', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (558, ' LAS FLORES', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (559, ' LAS FLORES', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (560, ' LAS FLORES', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (561, ' LAS FLORES', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (562, ' LAS FLORES', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (563, ' LAS JUNTAS', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (564, ' LAS LAJAS', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (565, ' LAS LOMAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (566, ' LAS LOMAS', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (567, ' LAS LOMAS', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (568, ' LAS LOMITAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (569, ' LAS LOMITAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (570, ' LAS MARAVILLAS', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (571, ' LAS PEÑAS', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (572, ' LAS PERFORACIONES', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (573, ' LAS PUERTAS', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (574, ' LAS RANDAS', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (575, ' LAS TINAJAS', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (576, ' LAS VIVORITAS', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (577, ' LAVALLE', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (578, ' LAVALLE', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (579, ' LESCANO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (580, ' LEZCANOS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (581, ' LIBERTAD', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (582, ' LIBERTAD', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (583, ' LILO VIEJO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (584, ' LIMACHE', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (585, ' LLAJTA MAUCA', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (586, ' LOJLO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (587, ' LOMA DE YESO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (588, ' LOMA DEL MEDIO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (589, ' LOMAS BLANCAS', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (590, ' LOMITAS', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (591, ' LOMITAS', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (592, ' LOMITAS', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (593, ' LOMITAS', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (594, ' LOMITAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (595, ' LOMITAS', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (596, ' LOMITAS BLANCAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (597, ' LORETO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (598, ' LORO HUASI', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (599, ' LOS ALDERETES', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (600, ' LOS ARIAS', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (601, ' LOS CARDOZOS', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (602, ' LOS CERILLOS', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (603, ' LOS CERRILLOS', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (604, ' LOS CERRILLOS', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (605, ' LOS CESPEDES', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (606, ' LOS ENCANTOS', 22);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (607, ' LOS FLORES', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (608, ' LOS GALLEGOS', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (609, ' LOS HERRERAS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (610, ' LOS JURIES', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (611, ' LOS LINARES', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (612, ' LOS MILAGROS', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (613, ' LOS MILAGROS', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (614, ' LOS MOLLES', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (615, ' LOS MOLLES', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (616, ' LOS NARANJOS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (617, ' LOS NUÑEZ', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (618, ' LOS PEREIRA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (619, ' LOS PIRPINTOS', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (620, ' LOS POCITOS', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (621, ' LOS QUEBRACHOS', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (622, ' LOS QUEBRACHOS', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (623, ' LOS QUIROGA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (624, ' LOS RALOS', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (625, ' LOS RALOS', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (626, ' LOS REMANSOS', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (627, ' LOS ROBLES', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (628, ' LOS ROMANOS', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (629, ' LOS SAUCES', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (630, ' LOS TABLEROS', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (631, ' LOS TELARES', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (632, ' LOS TIGRES', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (633, ' LOTE 25', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (634, ' LUGONES', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (635, ' LUJAN', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (636, ' MACO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (637, ' MACO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (638, ' MAGDALENA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (639, ' MAILIN', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (640, ' MAJADAS', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (641, ' MAL PASO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (642, ' MAL PASO', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (643, ' MALBRAN', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (644, ' MALOTA', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (645, ' MANANTIALES', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (646, ' MANGRULLO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (647, ' MANOGASTA', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (648, ' MANSUPA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (649, ' MAQUITA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (650, ' MARAVILLA', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (651, ' MARAVILLA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (652, ' MARAVILLA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (653, ' MARAVILLA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (654, ' MARCOSPA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (655, ' MARTIN GARCIA', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (656, ' MATARA', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (657, ' MEDELLIN', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (658, ' MEDIA FLOR', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (659, ' MEDIA LUNA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (660, ' MEDIA LUNA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (661, ' MELERO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (662, ' MENDOZA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (663, ' MERCEDES', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (664, ' MERCEDES', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (665, ' MERCEDES', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (666, ' MIEL DE PALO', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (667, ' MILAGRO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (668, ' MILAGRO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (669, ' MILAGRO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (670, ' MILI', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (671, ' MINERVA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (672, ' MIRANDA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (673, ' MISTOL MUYOJ', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (674, ' MISTOL PAMPA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (675, ' MISTOLITO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (676, ' MONTE ALTO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (677, ' MONTE POTRERO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (678, ' MONTE QUEMADO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (679, ' MONTE QUEMADO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (680, ' MONTE REDONDO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (681, ' MONTE REDONDO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (682, ' MONTE REDONDO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (683, ' MONTE RICO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (684, ' MONTE RICO', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (685, ' MONTE VERDE', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (686, ' MONTE VERDE', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (687, ' MORALES', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (688, ' MORAMPA LORETO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (689, ' NARANJITO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (690, ' NARANJITO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (691, ' NARANJITOS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (692, ' NASALO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (693, ' NAVARRO', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (694, ' NEGRA MUERTA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (695, ' NORQUEOJ', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (696, ' NUEVA CERES', 22);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (697, ' NUEVA ESPERANZA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (698, ' NUEVA ESPERANZA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (699, ' NUEVA FRANCIA', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (700, ' NUEVA GRANADA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (701, ' NUEVA GRANADA', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (702, ' NUEVA TRINIDAD', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (703, ' NUEVA TRINIDAD', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (704, ' NUEVO LIBANO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (705, ' OBRAJE LOS TIGRES', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (706, ' OBRAJE MAILIN', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (707, ' OJO DE AGUA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (708, ' ONCAN', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (709, ' ORATORIA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (710, ' OTUMPA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (711, ' OVEJEROS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (712, ' PAAJ MUYO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (713, ' PAAJ POZO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (714, ' PAAJ RODEO', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (715, ' PALIZAS', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (716, ' PALMA FLOR', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (717, ' PALMA LARGA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (718, ' PALMA POZO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (719, ' PALMA REDONDA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (720, ' PALMARES', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (721, ' PALMITAS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (722, ' PALMITAS', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (723, ' PALO NEGRO', 22);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (724, ' PALOMAR', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (725, ' PALOS QUEMADOS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (726, ' PAMPA DE LOS GUANACOS', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (727, ' PAMPA GRANDE', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (728, ' PAMPA MAYO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (729, ' PAMPA MUYOJ', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (730, ' PAMPA MUYOJ', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (731, ' PAMPA POZO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (732, ' PAMPA POZO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (733, ' PAMPA POZO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (734, ' PAMPA POZO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (735, ' PAMPA POZO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (736, ' PAMPA POZO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (737, ' PAMPA TOTORA LORETO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (738, ' PARAJE BAJO CHICO', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (739, ' PARAJE EL 20', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (740, ' PARAJE LOA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (741, ' PARAJE POZO SUNI', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (742, ' PARANA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (743, ' PARANA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (744, ' PASO DE OSCARES', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (745, ' PASO GRANDE', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (746, ' PATAY', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (747, ' PATILLO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (748, ' PERCAS', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (749, ' PERCHIL BAJO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (750, ' PERCHIL BAJO', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (751, ' PIEDRA BLANCA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (752, ' PINTO', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (753, ' PIRUITAS', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (754, ' PLATERO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (755, ' POZO BETBEDER', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (756, ' POZO CABADO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (757, ' POZO CABADO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (758, ' POZO CABADO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (759, ' POZO CASTAÑO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (760, ' POZO CERCADO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (761, ' POZO CERCADO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (762, ' POZO CIEGO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (763, ' POZO DE LA PUERTA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (764, ' POZO DE VILLEGAS', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (765, ' POZO DEL ARBOLITO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (766, ' POZO DEL CAMPO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (767, ' POZO DEL CHAÑAR', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (768, ' POZO DEL CHAÑAR', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (769, ' POZO DEL MONTE', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (770, ' POZO DEL TOBA', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (771, ' POZO DEL TOBA', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (772, ' POZO DULCE', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (773, ' POZO GRANDE', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (774, ' POZO GRANDE', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (775, ' POZO GRANDE', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (776, ' POZO GRANDE', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (777, ' POZO HALLADO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (778, ' POZO HERRERA', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (779, ' POZO HONDO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (780, ' POZO HUASCHO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (781, ' POZO LIMPIO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (782, ' POZO MOSOJ', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (783, ' POZO MUERTO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (784, ' POZO NUEVO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (785, ' POZO VERDE', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (786, ' POZO VERDE', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (787, ' POZO VIEJO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (788, ' POZUELOS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (789, ' PUENTE DEL SALADILLO', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (790, ' PUENTE NEGRO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (791, ' PUERTA CHIQUITA', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (792, ' PUERTA DEL MONTE', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (793, ' PUESTITO', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (794, ' PUESTITO DE SAN ANTONIO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (795, ' PUESTO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (796, ' PUESTO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (797, ' PUESTO DE DIAZ', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (798, ' PUESTO DE DIAZ', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (799, ' PUESTO DE JUANES', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (800, ' PUESTO DE VIEYRA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (801, ' PUESTO DEL MEDIO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (802, ' PUESTO DEL MEDIO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (803, ' PUESTO DEL MEDIO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (804, ' PUESTO DEL MEDIO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (805, ' PUESTO DEL MEDIO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (806, ' PUESTO DEL MEDIO', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (807, ' PUESTO DEL RETIRO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (808, ' PUESTO DEL ROSARIO', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (809, ' PUESTO NUEVO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (810, ' PUESTO NUEVO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (811, ' PUESTO NUEVO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (812, ' PUNA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (813, ' PUNI TAJO', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (814, ' PUNTA CORRAL', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (815, ' PUNTA DEL MONTE', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (816, ' PUNTA POZO', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (817, ' PUNTA POZO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (818, ' PUNTA POZO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (819, ' QUEBRACHAL', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (820, ' QUEBRACHAL', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (821, ' QUEBRACHITO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (822, ' QUEBRACHITOS', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (823, ' QUEBRACHITOS', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (824, ' QUEBRACHO COTO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (825, ' QUEBRACHOS', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (826, ' QUEBRACHOS', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (827, ' QUEBRACHOS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (828, ' QUEBRADA ESQUINA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (829, ' QUENTI TACO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (830, ' QUILUMPA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (831, ' QUIMILI', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (832, ' QUIMILIOJ', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (833, ' QUISHKA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (834, ' QUITA PUNCO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (835, ' RAMA PASO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (836, ' RAMADITA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (837, ' RAMADITA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (838, ' RAMIREZ DE VELAZCO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (839, ' RANCHITOS', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (840, ' RANCHITOS', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (841, ' RAPELLI', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (842, ' REAL SAYANA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (843, ' REMANCITO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (844, ' REMANCITO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (845, ' REMANCITO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (846, ' REMES', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (847, ' REPARO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (848, ' REPRESA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (849, ' RETIRO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (850, ' RETIRO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (851, ' RETIRO', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (852, ' RETIRO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (853, ' RETIRO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (854, ' RIMBOL', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (855, ' RINCON', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (856, ' RINCON', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (857, ' RINCON', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (858, ' RIO DE LA PLATA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (859, ' RIO MUERTO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (860, ' RIO VIEJO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (861, ' RIVADAVIA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (862, ' RIVADAVIA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (863, ' ROBLES', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (864, ' RODEANA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (865, ' RODEANA', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (866, ' RODEO DE SORIA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (867, ' ROMANOS', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (868, ' ROSARIO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (869, ' ROVERSI', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (870, ' RUBIA MORENO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (871, ' RUBIA PASO', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (872, ' RUMI ESQUINA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (873, ' RUMI JACU', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (874, ' RUMIOS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (875, ' SABAGASTA', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (876, ' SACHAYOJ', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (877, ' SALADILLO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (878, ' SALADILLO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (879, ' SALADILLO', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (880, ' SALAVINA', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (881, ' SALVIAIOJ GAITAN', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (882, ' SAN AGUSTIN', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (883, ' SAN AGUSTIN', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (884, ' SAN ANDRES', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (885, ' SAN ANDRES', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (886, ' SAN ANTONIO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (887, ' SAN ANTONIO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (888, ' SAN ANTONIO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (889, ' SAN ANTONIO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (890, ' SAN ANTONIO', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (891, ' SAN ANTONIO LAVALLE', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (892, ' SAN ANTONIO SAN PEDRO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (893, ' SAN ANTONIO DE COPO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (894, ' SAN ANTONIO DE LOS CACERES', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (895, ' SAN BENITO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (896, ' SAN BENITO', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (897, ' SAN CARLOS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (898, ' SAN CARLOS', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (899, ' SAN CARLOS', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (900, ' SAN CARLOS', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (901, ' SAN CARLOS', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (902, ' SAN CARLOS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (903, ' SAN DIONICIO', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (904, ' SAN ENRIQUE', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (905, ' SAN FELIPE', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (906, ' SAN FELIPE', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (907, ' SAN FELIPE', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (908, ' SAN FELIX', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (909, ' SAN FELIX', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (910, ' SAN FERNANDO', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (911, ' SAN FRANCISCO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (912, ' SAN FRANCISCO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (913, ' SAN FRANCISCO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (914, ' SAN FRANCISCO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (915, ' SAN FRANCISCO CNEL FERNANDEZ', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (916, ' SAN GREGORIO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (917, ' SAN GREGORIO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (918, ' SAN IGNACIO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (919, ' SAN IGNACIO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (920, ' SAN IGNACIO', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (921, ' SAN IGNACIO PIEDRA BLANCA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (922, ' SAN ISIDRO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (923, ' SAN ISIDRO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (924, ' SAN ISIDRO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (925, ' SAN ISIDRO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (926, ' SAN ISIDRO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (927, ' SAN ISIDRO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (928, ' SAN ISIDRO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (929, ' SAN ISIDRO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (930, ' SAN ISIDRO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (931, ' SAN ISIDRO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (932, ' SAN JAVIER', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (933, ' SAN JAVIER', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (934, ' SAN JAVIER', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (935, ' SAN JAVIER', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (936, ' SAN JERONIMO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (937, ' SAN JORGE', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (938, ' SAN JORGE', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (939, ' SAN JOSE', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (940, ' SAN JOSE', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (941, ' SAN JOSE', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (942, ' SAN JOSE', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (943, ' SAN JOSE', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (944, ' SAN JOSE', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (945, ' SAN JOSE', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (946, ' SAN JOSE', 22);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (947, ' SAN JOSE', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (948, ' SAN JOSE DE FLORES', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (949, ' SAN JOSE DEL BOQUERON', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (950, ' SAN JOSE MONTE REDONDO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (951, ' SAN JOSE-AVELLANEDA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (952, ' SAN JUAN', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (953, ' SAN JUAN', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (954, ' SAN JUAN', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (955, ' SAN JUAN', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (956, ' SAN JUAN', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (957, ' SAN JUAN', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (958, ' SAN JUSTO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (959, ' SAN LORENZO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (960, ' SAN LORENZO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (961, ' SAN LORENZO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (962, ' SAN LORENZO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (963, ' SAN LUIS', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (964, ' SAN LUIS', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (965, ' SAN LUIS', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (966, ' SAN LUIS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (967, ' SAN LUIS', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (968, ' SAN LUIS', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (969, ' SAN LUIS', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (970, ' SAN LUIS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (971, ' SAN LUIS', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (972, ' SAN MANUEL', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (973, ' SAN MARTIN', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (974, ' SAN MARTIN', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (975, ' SAN MARTIN', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (976, ' SAN MATEO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (977, ' SAN MIGUEL', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (978, ' SAN MIGUEL', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (979, ' SAN NICOLAS', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (980, ' SAN NICOLAS', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (981, ' SAN NICOLAS ABRA GRANDE', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (982, ' SAN NICOLAS SIMBOLAR', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (983, ' SAN PABLO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (984, ' SAN PABLO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (985, ' SAN PABLO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (986, ' SAN PABLO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (987, ' SAN PABLO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (988, ' SAN PABLO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (989, ' SAN PEDRO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (990, ' SAN PEDRO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (991, ' SAN PEDRO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (992, ' SAN PEDRO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (993, ' SAN PEDRO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (994, ' SAN PEDRO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (995, ' SAN PEDRO', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (996, ' SAN PEDRO BAEZ', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (997, ' SAN PEDRO KILOMETRO 49', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (998, ' SAN PEDRO MAILIN', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (999, ' SAN PEDRO OJO DE AGUA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1000, ' SAN PEDRO PUNTA CORRAL', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1001, ' SAN RAMON', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1002, ' SAN RAMON', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1003, ' SAN RAMON', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1004, ' SAN RAMON', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1005, ' SAN RAMON', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1006, ' SAN RAMON', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1007, ' SAN RAMON', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1008, ' SAN RAMON', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1009, ' SAN RAMON', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1010, ' SAN RAMON', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1011, ' SAN RAMON-PELLEGRINI', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1012, ' SAN ROQUE', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1013, ' SAN ROQUE', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1014, ' SAN ROQUE', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1015, ' SAN ROQUE', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1016, ' SAN ROQUE', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1017, ' SAN VICENTE', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1018, ' SAN VICENTE', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1019, ' SAN VICENTE', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1020, ' SAN VICENTE', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1021, ' SAN VICENTE', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1022, ' SAN VICENTE-FOGUEROA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1023, ' SAN VICENTE-LORETO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1024, ' SANAVIRONES', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1025, ' SANTA ANA', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1026, ' SANTA ANA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1027, ' SANTA ANA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1028, ' SANTA BARBARA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1029, ' SANTA BRIGIDA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1030, ' SANTA CATALINA', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1031, ' SANTA CATALINA', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1032, ' SANTA CLARA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1033, ' SANTA CRUZ', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1034, ' SANTA CRUZ', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1035, ' SANTA CRUZ', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1036, ' SANTA ELENA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1037, ' SANTA ELENA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1038, ' SANTA INES', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1039, ' SANTA JUSTINA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1040, ' SANTA LUCIA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1041, ' SANTA LUCIA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1042, ' SANTA LUCIA', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1043, ' SANTA LUCIA', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1044, ' SANTA MARIA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1045, ' SANTA MARIA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1046, ' SANTA MARIA', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1047, ' SANTA MARIA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1048, ' SANTA MARIA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1049, ' SANTA MARIA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1050, ' SANTA MARIA LA CAÑADA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1051, ' SANTA MARIA VILLA FIGUEROA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1052, ' SANTA RITA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1053, ' SANTA RITA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1054, ' SANTA RITA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1055, ' SANTA RITA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1056, ' SANTA ROSA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1057, ' SANTA ROSA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1058, ' SANTA ROSA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1059, ' SANTA ROSA', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1060, ' SANTA ROSA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1061, ' SANTA ROSA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1062, ' SANTA ROSA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1063, ' SANTA ROSA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1064, ' SANTA ROSA LA CAÑADA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1065, ' SANTA ROSA SAN PABLO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1066, ' SANTA ROSA SAN RAMON', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1067, ' SANTA ROSA SIMBOLAR', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1068, ' SANTO DOMINGO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1069, ' SANTO DOMINGO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1070, ' SANTO DOMINGO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1071, ' SANTO DOMINGO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1072, ' SANTO DOMINGO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1073, ' SANTO DOMINGO PELLEGRINI', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1074, ' SANTO DOMINGO PELLEGRINI', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1075, ' SANTO DOMINGO-OJO DE AGUA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1076, ' SANTOS LUGARES', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1077, ' SANTOS LUGARES', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1078, ' SANTOS LUGARES', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1079, ' SARA PAMPA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1080, ' SAUCE BAJADA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1081, ' SAUCE SOLO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1082, ' SAUZAL', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1083, ' SELVA', 22);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1084, ' SESTEADERO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1085, ' SEÑORA PUJIO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1086, ' SHISHI POZO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1087, ' SIETE ARBOLES', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1088, ' SIETE ARBOLES', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1089, ' SILIPICA', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1090, ' SIMBOL', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1091, ' SIMBOL BAJO', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1092, ' SIMBOL CAÑADA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1093, ' SIMBOL POZO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1094, ' SIMBOLAR', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1095, ' SIMBOLAR', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1096, ' SINCHI CAÑA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1097, ' SOCONCHO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1098, ' SOL DE JULIO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1099, ' SOL DE MAYO', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1100, ' SOL DE MAYO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1101, ' SOL DE MAYO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1102, ' SOTELILLOS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1103, ' SOTELOS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1104, ' STAYLE', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1105, ' SUMAMAO', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1106, ' SUMANPA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1107, ' SUNCHITUYOJ', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1108, ' SUNCHO CORRAL', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1109, ' SUNCHO POZO', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1110, ' SUNCHO POZO', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1111, ' SURI POZO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1112, ' SURI POZO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1113, ' SURI POZO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1114, ' SURIHUAYA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1115, ' TABIANITA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1116, ' TABLADA DEL BOQUERON', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1117, ' TABOADA', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1118, ' TACAÑITAS', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1119, ' TACANITAS', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1120, ' TACO ATUN', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1121, ' TACO BAJADA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1122, ' TACO POZO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1123, ' TACO POZO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1124, ' TACO PUJIO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1125, ' TACO TOTARAYOJ', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1126, ' TACOYOJ', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1127, ' TACOYOJ', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1128, ' TAJAMAR', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1129, ' TALA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1130, ' TALA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1131, ' TALA POZO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1132, ' TALA POZO', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1133, ' TALA POZO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1134, ' TALA POZO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1135, ' TALA POZO', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1136, ' TALA YACU', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1137, ' TAPSO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1138, ' TAQUELLO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1139, ' TAQUETUYOJ', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1140, ' TERMAS DE RIO HONDO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1141, ' TINAPJERAYOJ', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1142, ' TINCO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1143, ' TINTINA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1144, ' TIO ALTO', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1145, ' TIO POZO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1146, ' TIPIRO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1147, ' TIUN PUNCO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1148, ' TIUN PUNCO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1149, ' TOBAS', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1150, ' TOMAS YOUNG', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1151, ' TORO PAMPA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1152, ' TORO PAMPA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1153, ' TORO POZO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1154, ' TORO POZO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1155, ' TORO POZO', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1156, ' TOSCA POZO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1157, ' TOTORILLAS', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1158, ' TOTORILLAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1159, ' TRAMO 16', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1160, ' TRES BAJADAS', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1161, ' SAN JOSE', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1162, ' TRES CERROS', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1163, ' ESTACION SIMBOLAR', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1164, ' TRES CRUCES', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1165, ' LOS SORIA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1166, ' TRES FLORES', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1167, ' GRAN PORVENIR', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1168, ' TRES LAGUNAS', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1169, ' SANTA ELENA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1170, ' TRES LAGUNAS', 6);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1171, ' COLONIA MARIA LUIS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1172, ' TRES MOJONES', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1173, ' LA BAJADA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1174, ' TRES POZOS', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1175, ' TRES POZOS', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1176, ' PUESTO DEL MEDIO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1177, ' TRES POZOS', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1178, ' TABLA REDONDA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1179, ' TROZO POZO', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1180, ' LOS ACOSTA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1181, ' TUCANITAS', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1182, ' COLONIA ARGENTINA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1183, ' TUNAS PUNCO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1184, ' TUSCA BAJADA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1185, ' TUSCA POZO', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1186, ' TUSCA POZO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1187, ' TUSCA POZO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1188, ' TUSCA POZO FERNANDEZ', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1189, ' TUSCA POZO SAN VICENTE', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1190, ' UNION', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1191, ' UPIANITA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1192, ' LOMA BLANCA', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1193, ' URUTAU', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1194, ' PASO DE OSCARES', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1195, ' UTURUNCO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1196, ' EL ALBORDON', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1197, ' VACA HUA|UNA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1198, ' VACA HUMAN', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1199, ' VERON', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1200, ' VILELAS', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1201, ' LOMA BLANCA', 24);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1202, ' VILLA ABREGU', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1203, ' VILLA ATAMISQUI', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1204, ' VILLA BALNEARIA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1205, ' PARAJE BOQUERON', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1206, ' VILLA BRANA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1207, ' LA BAJADITA', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1208, ' VILLA FIGUEROA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1209, ' VILLA GUASAYAN', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1210, ' JUME ESQUINA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1211, ' VILLA HIPOLITA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1212, ' TOTORILLA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1213, ' VILLA JIMENEZ', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1214, ' LUJAN', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1215, ' VILLA LA PUNTA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1216, ' KM 0', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1217, ' VILLA MATARA', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1218, ' VINAL ISLA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1219, ' VILLA MATOQUE', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1220, ' CANDELARIA', 10);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1221, ' VILLA MERCEDES', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1222, ' CAMPO DE MAYO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1223, ' VILLA NUEVA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1224, ' EL PUESTO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1225, ' VILLA NUEVA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1226, ' SANTA TERESA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1227, ' VILLA NUEVA', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1228, ' SANTA SILVINA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1229, ' VILLA PALMAR', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1230, ' SAN MIGUEL', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1231, ' VILLA QUEBRACHOS', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1232, ' EL BRETE', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1233, ' LLAJTA SUMAJ', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1234, ' VILLA RIO HONDO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1235, ' HORNILLAS', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1236, ' SAN PEDRO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1237, ' VILLA ROBLES', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1238, ' TACANITAS', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1239, ' KM 23', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1240, ' VILLA SAN MARTIN', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1241, ' LA MANGA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1242, ' RINCON DE ESPERANZA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1243, ' VILLA SAN PEDRO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1244, ' EL CHURQUI', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1245, ' LA MELADA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1246, ' VALLE GRANDE', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1247, ' VILMER', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1248, ' LA BAJADA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1249, ' LA MELEADA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1250, ' RINCON DEL VALLE', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1251, ' JUMIAL GRANDE', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1252, ' VINAL POZO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1253, ' LA BLANCA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1254, ' PICHANA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1255, ' LA CANDELARIA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1256, ' CASASOLA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1257, ' VINARA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1258, ' SAN JUANCITO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1259, ' TERNERO HUATANA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1260, ' PIRUAJ BAJO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1261, ' SANTA ALCIRA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1262, ' VIZCACHERAL', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1263, ' LA REVANCHA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1264, ' SANTA ALCIRA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1265, ' AHI VEREMOS', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1266, ' WEISBURD', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1267, ' LUJAN', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1268, ' EL HOYON', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1269, ' SAUCE BAJADA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1270, ' PARAJE CONZUELO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1271, ' YACU ICHACUNA', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1272, ' LAS TALITAS', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1273, ' CAMPO AMOR', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1274, ' PARAJE SAN LUIS', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1275, ' LOC. MARIA ANGELICA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1276, ' YALAN', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1277, ' EL RINCON', 12);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1278, ' LA BLANCA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1279, ' MANISMIOJ', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1280, ' YANDA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1281, ' CONCHAYOJ', 26);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1282, ' TOTORA PAMPA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1283, ' YASO', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1284, ' BAJADITA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1285, ' YUCHAN', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1286, ' COLLERA HURCUNA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1287, ' YUTO YACA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1288, ' PARAJE SUNCHO POZO EL TRIUNFO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1289, ' ZANJON', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1290, ' ROLDAN', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1291, ' MOJON', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1292, ' PUESTO DEL MEDIO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1293, ' EL DESVIO', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1294, ' TALA ATUN', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1295, ' SAN PEDRO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1296, ' EL TOBA', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1297, ' PAMPA ATUN', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1298, ' LA ABRITA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1299, ' BREAYOJ', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1300, ' KM 25', 15);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1301, ' ESTACION ROBLES', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1302, ' EL CHURQUI', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1303, ' HORNILLOS', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1304, ' BARRANCA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1305, ' SAN ROQUE', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1306, ' PAMPA ATUN', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1307, ' LOS MOJONES', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1308, ' SAN FRANCISCO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1309, ' ESTACION TABOADA', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1310, ' LA MESADA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1311, ' CAÑADA DELMEDIO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1312, ' LA SOLEDAD', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1313, ' SAN JAVIER', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1314, ' LOMAS DE ZAMORA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1315, ' GARZA', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1316, ' PAMPA MULLOJ', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1317, ' TORO POZO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1318, ' SAN ROQUE', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1319, ' PARAJE NUEVA ESPERANZA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1320, ' EL ARENAL', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1321, ' PALO BORRACHO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1322, ' TORO YACU', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1323, ' SAN SERAFIN', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1324, ' LA ESTANCITA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1325, ' EL SIMBOL', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1326, ' ZURI POZO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1327, ' ESTACION ROBLES', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1328, ' LA MANGA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1329, ' RODEO VALDEZ', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1330, ' FISCO DE FATIMA', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1331, ' PARAJE MORCILLO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1332, ' TACO POSO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1333, ' CAÑADA DEL MONTE', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1334, ' SABAGASTA', 27);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1335, ' SAN JUAN', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1336, ' EL SOCORRO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1337, ' CHAÑARITO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1338, ' COLONIA TINCO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1339, ' EL BARRIAL PARAJE', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1340, ' EL CHURQUI', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1341, ' LA NUEVA DONOSA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1342, ' EL REFUGIO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1343, ' SAN ANTONIO', 13);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1344, ' SANTO DOMINGO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1345, ' PARAJE EL MORCILLO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1346, ' SIN ESPECIFICAR', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1347, ' MEDIA LUNA', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1348, ' TACAÑITAS', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1349, ' COLONIA RASQUIN', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1350, ' LAS ABRAS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1351, ' LA CAPILLA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1352, ' PAMPA MUYOJ', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1353, ' MISTOLITO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1354, ' TRAMO 20', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1355, ' CHILCA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1356, ' HIGUERA CHACRA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1357, ' TURENA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1358, ' JANTA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1359, ' LAS DELICIAS', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1360, ' YUTU YACU', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1361, ' LOS DECIMA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1362, ' RINCON DE ATACAMA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1363, ' CAÑADA DE LA COSTA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1364, ' CAÑADA DE TALA POZO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1365, ' LA RESERVA', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1366, ' EL BRACHO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1367, ' SAN JOSE', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1368, ' PUESTO SAN PABLO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1369, ' QUENTI TACO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1370, ' EL PUESTITO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1371, ' TRAMO 18', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1372, ' VUELTA DE LA BARRANCA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1373, ' EL DEANCITO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1374, ' CHAÑAR POZO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1375, ' TRAMO 18', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1376, ' RODEO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1377, ' KM. 340', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1378, ' MAQUITO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1379, ' SANTA ELENA', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1380, ' SAN BENITO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1381, ' CUATRO ESQUINA', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1382, ' PUNUA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1383, ' PUESTITO NORTE', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1384, ' CARA PUJIO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1385, ' CARA PUGIO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1386, ' COMERCIAL', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1387, ' SAN JOSE DE FLORES', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1388, ' CHILQUITA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1389, ' SAN JOSE', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1390, ' CHAGUAR PUNCO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1391, ' EL QUEMAO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1392, ' LOAJ', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1393, ' PUESTO NUEVO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1394, ' LA LOMA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1395, ' POZO SUNI', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1396, ' TUSCA POZO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1397, ' MISTOL', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1398, ' SAN PEDRO', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1399, ' EL CERCADO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1400, ' VILLA DE AGUA', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1401, ' VILLA OJO DE AGUA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1402, ' LESCANO', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1403, ' EL FISCO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1404, ' CUATRO HORCONES', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1405, ' QUEBRACHO MARCADO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1406, ' QUIMILI BAJADA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1407, ' EL MOLLE', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1408, ' LOMA COLORADA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1409, ' EL QUEBRACHITO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1410, ' EL SIMBOLAR', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1411, ' EL SIMBOLAR', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1412, ' LOS CHAÑARES', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1413, ' LOS SUNCHOS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1414, ' EL CINCO', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1415, ' SUMAMPA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1416, ' EL SIMBOL', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1417, ' ORATORIO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1418, ' LA ARGENTINA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1419, ' LA CHICHARRA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1420, ' LA AGUADITA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1421, ' LOS PUESTOS', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1422, ' LA SOLEDAD', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1423, ' EL BRACHO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1424, ' SANTA ELENA', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1425, ' EL VEINTE', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1426, ' SAN BERNARDO', 8);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1427, ' MORCILLO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1428, ' SANTA ROSA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1429, ' ESTACION PUNTA', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1430, ' BRACHO LAGUNA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1431, ' ESTACION LA PUNTA', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1432, ' COLONIA ISLA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1433, ' EL CERRO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1434, ' LAS BARRANCAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1435, ' EL CANARIO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1436, ' LAS CAÑITAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1437, ' RUMI POZO', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1438, ' POZO DEL SIMBOL', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1439, ' LOS POZOS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1440, ' EL CHAÑAR', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1441, ' SANTA LUCIA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1442, ' LAS TALAS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1443, ' KM. 88', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1444, ' CAMPO SAN ANTONIO', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1445, ' EL MOJON', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1446, ' TACUARI', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1447, ' COLONIA PINTO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1448, ' SAN ROQUE', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1449, ' SAN IGNACIO', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1450, ' PUESTITO DEL MEDIO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1451, ' NUEVA LEMA', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1452, ' MORAMPA', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1453, ' LOS PIRPINTOS', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1454, ' EL EMBUDO', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1455, ' CARA PUJIO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1456, ' COLONIA MARIA LUISA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1457, ' VILLA MORENO', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1458, ' EL PINTO', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1459, ' COLONIA HIPOLITO IRIGOYEN', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1460, ' LAS CHACRAS', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1461, ' EL VINAL', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1462, ' LAS HERMANAS', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1463, ' POLPOLLAJTA', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1464, ' SUNCHO POZO', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1465, ' TINAJERAYOJ', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1466, ' BAJO LAS PIEDRAS', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1467, ' SAUCE BAJADA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1468, ' SAN ANTONIO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1469, ' PAMPA MUYOJ', 16);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1470, ' PAMPA MUYOJ', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1471, ' LA MAJADILLA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1472, ' LOS RALOS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1473, ' LAS TINAJAS', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1474, ' LA BAJADA', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1475, ' EL TARTAGAL', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1476, ' EL SAUCE', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1477, ' PUESTO DEL ANGEL', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1478, ' ELCORRALITO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1479, ' EL CORRALITO', 19);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1480, ' EL PORVENIR', 21);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1481, ' CARANCHI YACU', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1482, ' CARANCHI YACU', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1483, ' EL SIMBOL', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1484, ' POZO DEL BARRIAL', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1485, ' POZO DEL BARRIAL', 1);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1486, ' SOCONCHO', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1487, ' YACU CHIRI', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1488, ' YACU CHIRI', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1489, ' MOCHINO', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1490, ' MOCHINO', 3);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1491, ' CAMPO RASSO', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1492, ' COLONIA OSVALDO', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1493, ' EL RODEO', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1494, ' EL RINCON', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1495, ' EL RODEO', 9);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1496, ' CANAL SAUCE', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1497, ' TOCON ESQUINA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1498, ' COLONIA ALCIRA', 4);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1499, ' VILLA AURORA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1500, ' COLONIA SAN JOSE', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1501, ' LA LAGUNA', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1502, ' CORRAL DE SANCHEZ', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1503, ' KM. 50', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1504, ' TALA CRUZ', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1505, ' LOS PARAISOS', 18);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1506, ' POZO DE VARGAS', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1507, ' SANTA MARIA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1508, ' CRUCECITAS', 14);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1509, ' LA FUENTE', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1510, ' LA ELSITA', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1511, ' EL 90', 17);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1512, ' LA HIGUERA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1513, ' LA HIGUERA', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1514, ' LA HIGUERA', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1515, ' MATARA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1516, ' CANAL MELERO', 11);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1517, ' EL BARRIAL', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1518, ' FUERTE VIEJO', 20);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1519, ' FISCO CHICO', 2);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1520, ' LOS MORALES', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1521, ' EL PUESTITO SAN MARCOS', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1522, ' SAN ANTONIO', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1523, ' SAN ANTONIO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1524, ' LA BERNACHA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1525, ' ABRA GRANDE', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1526, ' PINTO', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1527, ' EL TUSCAL', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1528, ' EL POLEAR', 0);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1529, ' VILLA SUAYA', 5);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1530, ' SAUCE BAJADA', 23);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1531, ' PUESTITO SAN ANTONIO', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1532, ' PUESTITO SAN ANTONIO..', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1533, ' LOS QUIROGA', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1534, ' PUESTITO SUD', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1535, ' TALA PUNCO', 25);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1536, ' LOS REMES', 7);
+INSERT INTO localidad (id, descripcion, id_dpto) VALUES (1537, ' LAGUNA BLACA', 13);

@@ -91,31 +91,31 @@
 
                 <div class="fila">
                     <div class="w-3">
-                        <label for="cod_dpto" class="form-label">Departamento</label>
-                        <select id="cod_dpto" class="form-select" v-model="form.cod_dpto"
+                        <label for="id_dpto" class="form-label">Departamento</label>
+                        <select id="id_dpto" class="form-select" v-model="form.id_dpto"
                             :disabled="!habilitarModificacion">
                             <option disabled value="default">Seleccione</option>
-                            <option v-for="d in departamentos" :key="d.cod_dpto" :value="d.cod_dpto">
+                            <option v-for="d in departamentos" :key="d.id_dpto" :value="d.id_dpto">
                                 {{ d.descripcion }}
                             </option>
                         </select>
                     </div>
                     <div class="w-3">
-                        <label for="cod_localidad" class="form-label">Localidad</label>
-                        <select id="cod_localidad" class="form-select" v-model="form.cod_localidad"
+                        <label for="id_localidad" class="form-label">Localidad</label>
+                        <select id="id_localidad" class="form-select" v-model="form.id_localidad"
                             :disabled="!habilitarModificacion">
                             <option disabled value="default">Seleccione</option>
-                            <option v-for="l in localidades" :key="l.cod_localidad" :value="l.cod_localidad">
+                            <option v-for="l in localidades" :key="l.id" :value="l.id">
                                 {{ l.descripcion }}
                             </option>
                         </select>
                     </div>
                     <div class="w-3">
-                        <label for="cod_barrio" class="form-label">Barrio</label>
-                        <select id="cod_barrio" class="form-select" v-model="form.cod_barrio"
+                        <label for="id_barrio" class="form-label">Barrio</label>
+                        <select id="id_barrio" class="form-select" v-model="form.id_barrio"
                             :disabled="!habilitarModificacion">
                             <option disabled value="default">Seleccione</option>
-                            <option v-for="b in barrios" :key="b.cod_barrio" :value="b.cod_barrio">
+                            <option v-for="b in barrios" :key="b.id_barrio" :value="b.id_barrio">
                                 {{ b.descripcion }}
                             </option>
                         </select>
@@ -265,9 +265,9 @@ export default {
                 cuil: '',
                 fecha_nacimiento: '',
                 sexo: 'default',
-                cod_dpto: 'default',
-                cod_localidad: 'default',
-                cod_barrio: 'default',
+                id_dpto: 'default',
+                id_localidad: 'default',
+                id_barrio: 'default',
                 domicilio: '',
                 fecha_registro: '',
                 hora_registro: '',
@@ -278,6 +278,7 @@ export default {
                 cant_parientes: '',
                 importe_acreditado: '',
                 historias: [],
+                empleado: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')).usuario : '',
             },
             quitarArchivoMsgPopup: false,
             botonModificacion: false,
@@ -304,15 +305,15 @@ export default {
         }
     },
     watch: {
-        'form.cod_dpto'(nuevo) {
+        'form.id_dpto'(nuevo) {
             this.cargarLocalidades(nuevo);
-            this.form.cod_localidad = '';
-            this.form.cod_barrio = '';
+            this.form.id_localidad = '';
+            this.form.id_barrio = '';
             this.barrios = [];
         },
-        'form.cod_localidad'(nuevo) {
+        'form.id_localidad'(nuevo) {
             this.cargarBarrios(nuevo);
-            this.form.cod_barrio = '';
+            this.form.id_barrio = '';
         },
         'form.cant_parientes'(newVal) {
             this.actualizarParientes(newVal);
@@ -392,9 +393,9 @@ export default {
             addText("Sexo", this.form.sexo === 'F' ? "Femenino" : "Masculino");
             addText("Cantidad de Parientes", this.form.cant_parientes);
             addText("Domicilio", this.form.domicilio);
-            addText("Departamento", this.obtenerDescripcion(this.departamentos, this.form.cod_dpto));
-            addText("Localidad", this.obtenerDescripcion(this.localidades, this.form.cod_localidad));
-            addText("Barrio", this.obtenerDescripcion(this.barrios, this.form.cod_barrio));
+            addText("Departamento", this.obtenerDescripcion(this.departamentos, this.form.id_dpto));
+            addText("Localidad", this.obtenerDescripcion(this.localidades, this.form.id_localidad));
+            addText("Barrio", this.obtenerDescripcion(this.barrios, this.form.id_barrio));
             addText("Estado", this.form.estado);
             addText("Historial", this.form.observaciones || '-');
             for (const historia of this.form.historias) {
@@ -431,7 +432,7 @@ export default {
         },
 
         obtenerDescripcion(lista, codigo) {
-            const item = lista.find(i => i.cod_dpto === codigo || i.cod_localidad === codigo || i.cod_barrio === codigo);
+            const item = lista.find(i => i.id_dpto === codigo || i.id_localidad === codigo || i.id_barrio === codigo);
             return item ? item.descripcion : '-';
         },
 
@@ -477,28 +478,28 @@ export default {
         },
         async cargarDepartamentos() {
             try {
-                const { data } = await axios.get('/beneficiarios/departamentos');
+                const { data } = await axios.get('/get/departamentos');
                 this.departamentos = data;
             } catch (err) {
                 console.error('Error cargando departamentos', err);
             }
         },
-        async cargarLocalidades(cod_dpto) {
-            if (!cod_dpto) return;
+        async cargarLocalidades(id_dpto) {
+            if (!id_dpto) return;
             try {
-                const { data } = await axios.get('/beneficiarios/localidades', {
-                    params: { cod_dpto }
+                const { data } = await axios.get('/get/localidades', {
+                    params: { id_dpto }
                 });
                 this.localidades = data;
             } catch (err) {
                 console.error('Error cargando localidades', err);
             }
         },
-        async cargarBarrios(cod_localidad) {
-            if (!cod_localidad) return;
+        async cargarBarrios(id_localidad) {
+            if (!id_localidad) return;
             try {
-                const { data } = await axios.get('/beneficiarios/barrios', {
-                    params: { cod_localidad }
+                const { data } = await axios.get('/get/barrios', {
+                    params: { id_localidad }
                 });
                 this.barrios = data;
             } catch (err) {
@@ -529,9 +530,9 @@ export default {
             this.form.cuil = '';
             this.form.fecha_nacimiento = '';
             this.form.sexo = 'default';
-            this.form.cod_dpto = 'default';
-            this.form.cod_localidad = 'default';
-            this.form.cod_barrio = 'default';
+            this.form.id_dpto = 'default';
+            this.form.id_localidad = 'default';
+            this.form.id_barrio = 'default';
             this.form.domicilio = '';
             this.form.fecha_registro = '';
             this.form.hora_registro = '';
@@ -567,7 +568,7 @@ export default {
                     for (const key in data) {
                         if (key in this.form) {
                             this.form[key] = data[key];
-                            if (this.form.cuil != '') {
+                            if (this.form.cuil && this.form.cuil != '') {
                                 this.cuilInicio = this.form.cuil.slice(0, 2);
                                 this.cuilFin = this.form.cuil.slice(10);
                             }
@@ -595,18 +596,18 @@ export default {
                         this.tieneTarjeta = false;
                     }
                     // Precargar selects si hay datos
-                    if (data.cod_dpto) {
-                        this.form.cod_dpto = data.cod_dpto;
-                        await this.cargarLocalidades(data.cod_dpto);
+                    if (data.id_dpto) {
+                        this.form.id_dpto = data.id_dpto;
+                        await this.cargarLocalidades(data.id_dpto);
                     }
 
-                    if (data.cod_localidad) {
-                        this.form.cod_localidad = data.cod_localidad;
-                        await this.cargarBarrios(data.cod_localidad);
+                    if (data.id_localidad) {
+                        this.form.id_localidad = data.id_localidad;
+                        await this.cargarBarrios(data.id_localidad);
                     }
 
-                    if (data.cod_barrio) {
-                        this.form.cod_barrio = data.cod_barrio;
+                    if (data.id_barrio) {
+                        this.form.id_barrio = data.id_barrio;
                     }
 
                     this.mostrarMensaje('Datos cargados automáticamente.');
@@ -656,6 +657,7 @@ export default {
             const formData = new FormData();
             formData.append('beneficiario', JSON.stringify(this.form));
             formData.append('parientes', JSON.stringify(this.parientesArray));
+            formData.append('empleado', this.form.empleado);
             formData.append('archivo', this.archivo != null ? this.archivo.archivo : null);
 
             try {

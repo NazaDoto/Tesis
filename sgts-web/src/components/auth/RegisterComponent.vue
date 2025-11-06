@@ -3,7 +3,7 @@
         <div v-if="cargando" class="pantalla-carga text-center">
             <div class="logo-carga">
                 <img class="logo-img" src="/favicon.ico" width="50" alt="Logo" />
-                <div class="texto-carga">Registrando...</div>
+                <div class="texto-carga c-black">Registrando...</div>
             </div>
         </div>
         <div v-if="mensajePopup" class="mensaje-container-fondo">

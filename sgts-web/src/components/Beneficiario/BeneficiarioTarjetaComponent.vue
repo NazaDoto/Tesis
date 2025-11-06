@@ -4,7 +4,7 @@
         <div v-if="cargando" class="pantalla-carga text-center">
             <div class="logo-carga">
                 <img class="logo-img" src="/favicon.ico" width="50" alt="Logo" />
-                <div class="texto-carga">Cargando...</div>
+                <div class="texto-carga c-black">Cargando...</div>
             </div>
         </div>
 
@@ -58,7 +58,7 @@
             </div>
 
             <!-- Historial -->
-            <div v-if="tarjeta.historias.length > 0" class="historial-container">
+            <div v-if="this.tarjeta.historias.length > 0" class="historial-container"> 
                 <h3 class="subtitulo">Historial</h3>
                 <div class="historial">
                     <div v-for="(historia, index) in tarjeta.historias" :key="index" class="historia-item">

@@ -1,2360 +1,2361 @@
-INSERT INTO BARRIOS (DESCRIPCION, COD_LOCALIDAD) VALUES
-('LAGUNITA NORTE', '6'),
-('S.PAMPA', '5'),
-('VACASNIOJ', '44'),
-('NAVICHA', '45'),
-('LAS CAÑAS', '46'),
-('REAL SAYANA', '12'),
-('BANDA I', '11'),
-('CENTRO', '4'),
-('8 DE ABRIL', '9'),
-('TRIANGULO', '8'),
-('21 VIVIENDAS', '5'),
-('MORAMPA', '21'),
-('CENTRO', '22'),
-('INDEPENDIENTE', '2'),
-('SILIPICA TROZO POZO', '17'),
-('BARTOLOME MITRE', '6'),
-('PUESTO ROSARIO', '5'),
-('BANDA II', '11'),
-('100 VIVIENDAS', '12'),
-('SAN JAVIER', '93'),
-('PALMITAS DE GEREZ', '4'),
-('PADRE AROLDO SUAREZ', '1'),
-('AEROPUERTO', '9'),
-('MUNICIPAL', '8'),
-('LAS VIOLETAS', '3'),
-('EL CRUCERO', '3'),
-('AYUDA MUTUA', '5'),
-('OESTE', '4'),
-('JUAN XXIII', '22'),
-('25 DE MAYO', '17'),
-('LAS AMERICAS', '2'),
-('YACU CHIRI', '6'),
-('VILLA GASTA', '5'),
-('BANDA III', '11'),
-('VIEJO', '12'),
-('SRA PUJIO', '93'),
-('PAMPA MUYOJ', '4'),
-('CICLON', '1'),
-('ALMIRANTE BROWN', '9'),
-('12 DE OCTUBRE', '8'),
-('CENTRO', '5'),
-('POLIGONO', '4'),
-('EL CHURQUI', '17'),
-('2º DE ABRIL', '2'),
-('PUERTA GRANDE', '6'),
-('REAL SAYANA', '842'),
-('BANDA IV', '11'),
-('LA CASILLA', '12'),
-('SAN LORENZO', '93'),
-('EL BARRIAL', '4'),
-('LA PLATA', '1'),
-('AMERICA DEL SUR', '9'),
-('SAN CAYETANO', '8'),
-('COMERCIO', '5'),
-('PALERMO', '4'),
-('EL TRIANGULO', '22'),
-('LAS PILETAS', '17'),
-('COLON', '2'),
-('LIBERTAD', '6'),
-('BANDA V', '11'),
-('NUEVA ESPERANZA', '12'),
-('M LUISA', '93'),
-('HUAICURU', '4'),
-('BOCA', '1'),
-('AUTONOMIA', '9'),
-('CENTRO NORTE', '8'),
-('CORBALAN', '5'),
-('ISLAS MALVINAS', '4'),
-('SAN MARTIN', '22'),
-('VILLA BALNEARIA', '17'),
-('HOSPITAL', '2'),
-('CENTRO', '6'),
-('BANDA VI', '11'),
-('VILLA SUAREZ', '12'),
-('LA GRANJA', '93'),
-('HUCHO POZO', '4'),
-('LA FLORIDA', '1'),
-('BELGRANO', '9'),
-('FERROCARRIL', '5'),
-('PARTICIPACION', '4'),
-('COLON', '22'),
-('RINCON ATACAMA', '17'),
-('NORTE', '2'),
-('LOMITAS', '6'),
-('VILLA ELOISA', '11'),
-('VILLA CORIA', '12'),
-('SANTA ELENA', '4'),
-('AVELLANEDA', '1'),
-('BORGES', '9'),
-('SOR ANGELA DE LA CRUZ', '8'),
-('INMIGRANTES', '5'),
-('EMERGENCIA', '4'),
-('SAN ANTONIO', '22'),
-('LOS RALOS', '17'),
-('JOSE HERNANDEZ', '2'),
-('LAGUNITA SUR', '6'),
-('BAJO DE VERTIZ', '11'),
-('MARAVILLA', '12'),
-('TRAMO 20', '4'),
-('50 VIVIENDAS', '1'),
-('BRUNO VOLTA', '9'),
-('CENTRO', '8'),
-('JARDIN', '5'),
-('CENTRO', '4'),
-('LUJAN', '22'),
-('HERRERA  ALTO', '17'),
-('VILLA ELISA', '2'),
-('EL BOQUERON', '6'),
-('VILLA ELENA', '11'),
-('BAJADITA', '12'),
-('MUNICIPAL', '1'),
-('CABILDO', '9'),
-('EVITA', '8'),
-('MAILIN', '5'),
-('CANALITO NORTE', '4'),
-('SAN FRANCISCO', '22'),
-('AMAPOLA', '17'),
-('RIO DULCE', '11'),
-('PERCHIL', '12'),
-('LA ESPERANZA', '1'),
-('CACERES', '9'),
-('CENTRO SUR', '8'),
-('EVA PERON', '4'),
-('PALOMAR', '22'),
-('VINARA', '17'),
-('SAN ANTONIO', '2'),
-('AVENIDA', '11'),
-('FOPROVI 20 VIVIENDAS', '1'),
-('CAMPO CONTRERAS VIEJO', '9'),
-('SAN MARTIN', '8'),
-('EL GOLFO', '5'),
-('48 VIVIENDAS', '4'),
-('BELGRANO', '22'),
-('PALMA REDONDA', '17'),
-('VILLA AURORA', '2'),
-('VILLA UNION', '11'),
-('ISABEL LA CATOLICA', '1'),
-('CENTENARIO', '9'),
-('PORVENIR', '8'),
-('MATADERO', '5'),
-('LAS CHACRAS', '4'),
-('EZEIZA', '22'),
-('PUESTO LA LINDA', '17'),
-('ARCADIA', '2'),
-('VILLA ROSITA', '11'),
-('CENTRO', '9'),
-('BELGRANO', '8'),
-('SILENCIO', '5'),
-('JORGE NEWBERY', '4'),
-('TAQUELLO', '17'),
-('MALVINAS ARGENTINAS', '2'),
-('CIUDAD DEL NIÑO', '9'),
-('CANAL', '8'),
-('EL CUADRADO', '5'),
-('ALBERDI', '4'),
-('SOTELO', '17'),
-('SANTA RITA', '2'),
-('CONGRESO', '9'),
-('LA NENA', '5'),
-('LIBERTAD', '4'),
-('SAN MARTIN', '17'),
-('21 DE SETIEMBRE', '2'),
-('9 DE JULIO', '11'),
-('COLON', '9'),
-('LA SIMONA', '5'),
-('LAGUNILLA OESTE', '4'),
-('MAIPU', '2'),
-('LA GUARIDA', '11'),
-('BOSCO I', '9'),
-('LA TELESITA', '5'),
-('REMANSO', '4'),
-('VILLA JUANA', '11'),
-('EJERCITO ARGENTINO', '9'),
-('LAS GAMAS', '5'),
-('LAGUNILLA ESTE', '4'),
-('SAN FERNANDO', '11'),
-('EL PALOMAR', '9'),
-('LOTE 4', '5'),
-('120 VIVIENDAS', '4'),
-('25 DE MAYO', '11'),
-('LOTE 40', '5'),
-('UNION', '4'),
-('LA DARSENA', '11'),
-('FRANCISCO DE AGUIRRE', '9'),
-('LOTE 41', '5'),
-('VILLA ROJAS', '11'),
-('SAN FRANCISCO SOLANO', '9'),
-('LOTE 42', '5'),
-('CENTRAL ARGENTINO', '11'),
-('GENERAL PAZ', '9'),
-('LOTE 5', '5'),
-('LOS LAGOS', '11'),
-('HUAICO HONDO', '9'),
-('LOTE 51', '5'),
-('CENTRO', '11'),
-('INDEPENDENCIA', '9'),
-('VILLA INES', '11'),
-('INDUSTRIA', '9'),
-('RINCON', '11'),
-('JARDIN', '9'),
-('PALERMO', '11'),
-('JOHN F. KENNEDY', '9'),
-('LOS TABIQUES', '11'),
-('JORGE NEWBERY', '9'),
-('MENEDEZ', '11'),
-('JUAN B. ALBERDI', '9'),
-('SAN CARLOS', '11'),
-('JUAN DIAZ DE SOLIS', '9'),
-('SARMIENTO', '11'),
-('JUAN FELIPE IBARRA', '9'),
-('VILLA NUEVA', '11'),
-('JUAN XXIII', '9'),
-('VILLA RAQUEL', '11'),
-('JURAMENTO', '9'),
-('BANFIELD', '11'),
-('LA CATOLICA', '9'),
-('SAN JAVIER', '11'),
-('LIBERTAD', '9'),
-('LOS NARANJOS', '11'),
-('LOS INMIGRANTES', '9'),
-('VILLA SUAYA', '11'),
-('MARIANO MORENO', '9'),
-('TABLA REDONDA', '11'),
-('MISHKY MAYU', '9'),
-('DORREGO', '11'),
-('MOSCONI', '9'),
-('MATADERO', '11'),
-('PARQUE AGUIRRE', '9'),
-('PRIMERA JUNTA', '9'),
-('RAMON CARRILLO', '9'),
-('PARQUE INDUSTRIAL', '11'),
-('RECONQUISTA', '9'),
-('SAN MARTIN', '11'),
-('RIVADAVIA', '9'),
-('1º DE MAYO', '11'),
-('SAENZ PEÑA', '9'),
-('YANUZZI', '11'),
-('SAN MARTIN', '9'),
-('AGUA Y ENERGIA', '11'),
-('SANTA LUCIA', '9'),
-('FRASGAS', '11'),
-('SARGENTO CABRAL', '9'),
-('17 DE OCTUBRE', '11'),
-('SARMIENTO', '9'),
-('LOURDES', '11'),
-('TEXTIL', '11'),
-('S.M.A.T.A.', '9'),
-('SAN JAVIER II', '11'),
-('TRADICION', '9'),
-('VILLA GRIDELDA', '11'),
-('FINCA DE RAMOS', '11'),
-('SANTA ROSA  DE LIMA', '9'),
-('QUILMES', '11'),
-('SAN JOSE DE FLORES', '9'),
-('VILLA ANITA', '11'),
-('TRIANGULO', '9'),
-('LA ISLA', '11'),
-('BORGES AMPLIACION', '9'),
-('PARAISO', '11'),
-('VILLA DEL CARMEN', '9'),
-('EL CRUCE', '11'),
-('LOS FLORES', '9'),
-('EL BOSQUE', '11'),
-('TELEFONICOS', '9'),
-('INDEPENDENCIA', '11'),
-('VINALAR', '9'),
-('LA FRATERNIDAD', '11'),
-('BOSCO III', '9'),
-('GORRINI', '11'),
-('TARAPAYA', '9'),
-('SAN JUAN', '11'),
-('C.O.E.S.A.', '9'),
-('MISHKY MAYU', '11'),
-('VILLA BORGES', '9'),
-('IV CENTENARIO', '11'),
-('LOS LAGOS', '9'),
-('SAN RAMON', '11'),
-('INDEPENDENCIA AMPLIACION', '9'),
-('TUSCAL', '11'),
-('LOMAS COLORADAS', '9'),
-('SALIDO', '11'),
-('PERUCHILLO', '9'),
-('UNION FERROVIARIA', '11'),
-('GAS DEL ESTADO', '9'),
-('EL POLEAR', '11'),
-('BOSCO II', '9'),
-('SALTA PROLONGACION', '11'),
-('VINALAR AMPLIACION', '9'),
-('BESARES', '11'),
-('BOCA DEL TIGRE', '9'),
-('NUEVO LIBANO', '11'),
-('MARIANO MORENO AMPLIACION', '9'),
-('LA BAJADA', '11'),
-('RAMOS TABOADA', '11'),
-('VILLA EL PARQUE', '11'),
-('JERARQUIZADOS MUNICIPALES', '9'),
-('VILLA MARGARITA', '11'),
-('ISLAS MALVINAS', '9'),
-('LOS ALAMOS', '11'),
-('NINGUNO', '9'),
-('NINGUNO', '11'),
-('ALBERDI', '9'),
-('LOS PINOS', '9'),
-('DEL PINO', '9'),
-('VILLA GRIMANESA', '9'),
-('PRUEBA TRES', '178'),
-('JARDIN', '178'),
-('INMIGRANTES', '178'),
-('NECOCHEA', '427'),
-('AVELLANEDA', '427'),
-('JUAN JOSE PASO', '427'),
-('EL BALDE', '121'),
-('MATADERO VIEJO', '427'),
-('NINGUNO', '51'),
-('NINGUNO', '51'),
-('NINGUNO', '134'),
-('NINGUNO', '197'),
-('NINGUNO', '197'),
-('NINGUNO', '213'),
-('NINGUNO', '213'),
-('NINGUNO', '225'),
-('NINGUNO', '225'),
-('NINGUNO', '348'),
-('NINGUNO', '348'),
-('NINGUNO', '429'),
-('NINGUNO', '429'),
-('NINGUNO', '459'),
-('NINGUNO', '459'),
-('NINGUNO', '551'),
-('NINGUNO', '551'),
-('NINGUNO', '609'),
-('NINGUNO', '609'),
-('NINGUNO', '641'),
-('NINGUNO', '641'),
-('NINGUNO', '649'),
-('NINGUNO', '649'),
-('NINGUNO', '701'),
-('NINGUNO', '701'),
-('NINGUNO', '751'),
-('NINGUNO', '815'),
-('NINGUNO', '815'),
-('NINGUNO', '822'),
-('NINGUNO', '941'),
-('NINGUNO', '941'),
-('NINGUNO', '1027'),
-('NINGUNO', '1168'),
-('NINGUNO', '1171'),
-('NINGUNO', '1241'),
-('NINGUNO', '13'),
-('NINGUNO', '16'),
-('NINGUNO', '21'),
-('NINGUNO', '26'),
-('NINGUNO', '93'),
-('NINGUNO', '108'),
-('NINGUNO', '113'),
-('NINGUNO', '118'),
-('NINGUNO', '119'),
-('NINGUNO', '150'),
-('NINGUNO', '180'),
-('NINGUNO', '217'),
-('NINGUNO', '251'),
-('NINGUNO', '274'),
-('NINGUNO', '281'),
-('NINGUNO', '307'),
-('NINGUNO', '345'),
-('NINGUNO', '349'),
-('NINGUNO', '355'),
-('NINGUNO', '357'),
-('NINGUNO', '382'),
-('NINGUNO', '421'),
-('NINGUNO', '422'),
-('NINGUNO', '457'),
-('NINGUNO', '477'),
-('NINGUNO', '502'),
-('NINGUNO', '529'),
-('NINGUNO', '541'),
-('NINGUNO', '569'),
-('NINGUNO', '682'),
-('NINGUNO', '684'),
-('NINGUNO', '688'),
-('NINGUNO', '694'),
-('NINGUNO', '699'),
-('NINGUNO', '703'),
-('NINGUNO', '717'),
-('NINGUNO', '772'),
-('NINGUNO', '780'),
-('NINGUNO', '782'),
-('NINGUNO', '801'),
-('NINGUNO', '839'),
-('NINGUNO', '849'),
-('NINGUNO', '859'),
-('NINGUNO', '861'),
-('NINGUNO', '876'),
-('NINGUNO', '877'),
-('NINGUNO', '923'),
-('NINGUNO', '965'),
-('NINGUNO', '1003'),
-('NINGUNO', '1019'),
-('NINGUNO', '1035'),
-('NINGUNO', '1058'),
-('NINGUNO', '1079'),
-('NINGUNO', '1126'),
-('NINGUNO', '1207'),
-('NINGUNO', '1208'),
-('NINGUNO', '1209'),
-('NINGUNO', '1210'),
-('NINGUNO', '1211'),
-('NINGUNO', '1212'),
-('NINGUNO', '63'),
-('NINGUNO', '131'),
-('NINGUNO', '171'),
-('NINGUNO', '182'),
-('NINGUNO', '279'),
-('NINGUNO', '302'),
-('NINGUNO', '353'),
-('NINGUNO', '370'),
-('NINGUNO', '379'),
-('NINGUNO', '381'),
-('NINGUNO', '398'),
-('NINGUNO', '403'),
-('NINGUNO', '499'),
-('NINGUNO', '587'),
-('NINGUNO', '627'),
-('NINGUNO', '656'),
-('NINGUNO', '797'),
-('NINGUNO', '808'),
-('NINGUNO', '816'),
-('NINGUNO', '904'),
-('NINGUNO', '966'),
-('NINGUNO', '1102'),
-('NINGUNO', '1193'),
-('NINGUNO', '1194'),
-('NINGUNO', '88'),
-('NINGUNO', '107'),
-('NINGUNO', '165'),
-('NINGUNO', '185'),
-('NINGUNO', '191'),
-('NINGUNO', '208'),
-('NINGUNO', '368'),
-('NINGUNO', '377'),
-('NINGUNO', '390'),
-('NINGUNO', '448'),
-('NINGUNO', '632'),
-('NINGUNO', '633'),
-('NINGUNO', '637'),
-('NINGUNO', '639'),
-('NINGUNO', '711'),
-('NINGUNO', '738'),
-('NINGUNO', '744'),
-('NINGUNO', '747'),
-('NINGUNO', '755'),
-('NINGUNO', '790'),
-('NINGUNO', '814'),
-('NINGUNO', '817'),
-('NINGUNO', '842'),
-('NINGUNO', '848'),
-('NINGUNO', '881'),
-('NINGUNO', '886'),
-('NINGUNO', '893'),
-('NINGUNO', '924'),
-('NINGUNO', '942'),
-('NINGUNO', '953'),
-('NINGUNO', '967'),
-('NINGUNO', '1000'),
-('NINGUNO', '1002'),
-('NINGUNO', '1004'),
-('NINGUNO', '1014'),
-('NINGUNO', '1070'),
-('NINGUNO', '1083'),
-('NINGUNO', '1100'),
-('NINGUNO', '1111'),
-('NINGUNO', '1133'),
-('NINGUNO', '1155'),
-('NINGUNO', '1226'),
-('NINGUNO', '1227'),
-('NINGUNO', '1228'),
-('NINGUNO', '2'),
-('NINGUNO', '7'),
-('NINGUNO', '9'),
-('NINGUNO', '29'),
-('NINGUNO', '40'),
-('NINGUNO', '50'),
-('NINGUNO', '64'),
-('NINGUNO', '77'),
-('NINGUNO', '78'),
-('NINGUNO', '140'),
-('NINGUNO', '156'),
-('NINGUNO', '161'),
-('NINGUNO', '163'),
-('NINGUNO', '179'),
-('NINGUNO', '187'),
-('NINGUNO', '193'),
-('NINGUNO', '200'),
-('NINGUNO', '210'),
-('NINGUNO', '227'),
-('NINGUNO', '228'),
-('NINGUNO', '244'),
-('NINGUNO', '254'),
-('NINGUNO', '268'),
-('NINGUNO', '277'),
-('NINGUNO', '285'),
-('NINGUNO', '306'),
-('NINGUNO', '312'),
-('NINGUNO', '314'),
-('NINGUNO', '327'),
-('NINGUNO', '336'),
-('NINGUNO', '384'),
-('NINGUNO', '386'),
-('NINGUNO', '389'),
-('NINGUNO', '397'),
-('NINGUNO', '404'),
-('NINGUNO', '425'),
-('NINGUNO', '436'),
-('NINGUNO', '454'),
-('NINGUNO', '470'),
-('NINGUNO', '480'),
-('NINGUNO', '485'),
-('NINGUNO', '489'),
-('NINGUNO', '527'),
-('NINGUNO', '546'),
-('NINGUNO', '549'),
-('NINGUNO', '596'),
-('NINGUNO', '602'),
-('NINGUNO', '606'),
-('NINGUNO', '613'),
-('NINGUNO', '620'),
-('NINGUNO', '657'),
-('NINGUNO', '702'),
-('NINGUNO', '719'),
-('NINGUNO', '720'),
-('NINGUNO', '724'),
-('NINGUNO', '727'),
-('NINGUNO', '833'),
-('NINGUNO', '834'),
-('NINGUNO', '855'),
-('NINGUNO', '864'),
-('NINGUNO', '870'),
-('NINGUNO', '874'),
-('NINGUNO', '887'),
-('NINGUNO', '898'),
-('NINGUNO', '906'),
-('NINGUNO', '909'),
-('NINGUNO', '925'),
-('NINGUNO', '933'),
-('NINGUNO', '934'),
-('NINGUNO', '954'),
-('NINGUNO', '961'),
-('NINGUNO', '968'),
-('NINGUNO', '975'),
-('NINGUNO', '983'),
-('NINGUNO', '984'),
-('NINGUNO', '985'),
-('NINGUNO', '991'),
-('NINGUNO', '1005'),
-('NINGUNO', '1015'),
-('NINGUNO', '1036'),
-('NINGUNO', '1054'),
-('NINGUNO', '1068'),
-('NINGUNO', '1069'),
-('NINGUNO', '1071'),
-('NINGUNO', '1080'),
-('NINGUNO', '1088'),
-('NINGUNO', '1095'),
-('NINGUNO', '1097'),
-('NINGUNO', '1115'),
-('NINGUNO', '1130'),
-('NINGUNO', '1163'),
-('NINGUNO', '1164'),
-('NINGUNO', '1165'),
-('NINGUNO', '1166'),
-('NINGUNO', '1167'),
-('NINGUNO', '1168'),
-('NINGUNO', '1169'),
-('NINGUNO', '1170'),
-('NINGUNO', '1171'),
-('NINGUNO', '1172'),
-('NINGUNO', '1173'),
-('NINGUNO', '68'),
-('NINGUNO', '189'),
-('NINGUNO', '209'),
-('NINGUNO', '211'),
-('NINGUNO', '234'),
-('NINGUNO', '243'),
-('NINGUNO', '246'),
-('NINGUNO', '269'),
-('NINGUNO', '344'),
-('NINGUNO', '360'),
-('NINGUNO', '371'),
-('NINGUNO', '394'),
-('NINGUNO', '419'),
-('NINGUNO', '443'),
-('NINGUNO', '461'),
-('NINGUNO', '505'),
-('NINGUNO', '524'),
-('NINGUNO', '553'),
-('NINGUNO', '628'),
-('NINGUNO', '771'),
-('NINGUNO', '865'),
-('NINGUNO', '1032'),
-('NINGUNO', '1169'),
-('NINGUNO', '27'),
-('NINGUNO', '41'),
-('NINGUNO', '120'),
-('NINGUNO', '139'),
-('NINGUNO', '202'),
-('NINGUNO', '240'),
-('NINGUNO', '272'),
-('NINGUNO', '315'),
-('NINGUNO', '335'),
-('NINGUNO', '383'),
-('NINGUNO', '391'),
-('NINGUNO', '462'),
-('NINGUNO', '513'),
-('NINGUNO', '534'),
-('NINGUNO', '544'),
-('NINGUNO', '598'),
-('NINGUNO', '604'),
-('NINGUNO', '634'),
-('NINGUNO', '648'),
-('NINGUNO', '662'),
-('NINGUNO', '686'),
-('NINGUNO', '728'),
-('NINGUNO', '783'),
-('NINGUNO', '794'),
-('NINGUNO', '800'),
-('NINGUNO', '809'),
-('NINGUNO', '846'),
-('NINGUNO', '866'),
-('NINGUNO', '894'),
-('NINGUNO', '895'),
-('NINGUNO', '926'),
-('NINGUNO', '962'),
-('NINGUNO', '1046'),
-('NINGUNO', '1059'),
-('NINGUNO', '1072'),
-('NINGUNO', '1103'),
-('NINGUNO', '1135'),
-('NINGUNO', '1150'),
-('NINGUNO', '1176'),
-('NINGUNO', '1185'),
-('NINGUNO', '1220'),
-('NINGUNO', '1224'),
-('NINGUNO', '1225'),
-('NINGUNO', '1226'),
-('NINGUNO', '1227'),
-('NINGUNO', '1228'),
-('NINGUNO', '1229'),
-('NINGUNO', '1230'),
-('NINGUNO', '1231'),
-('NINGUNO', '1232'),
-('NINGUNO', '1233'),
-('NINGUNO', '3'),
-('NINGUNO', '4'),
-('NINGUNO', '5'),
-('NINGUNO', '6'),
-('NINGUNO', '7'),
-('NINGUNO', '8'),
-('NINGUNO', '52'),
-('NINGUNO', '79'),
-('NINGUNO', '91'),
-('NINGUNO', '109'),
-('NINGUNO', '122'),
-('NINGUNO', '151'),
-('NINGUNO', '183'),
-('NINGUNO', '207'),
-('NINGUNO', '218'),
-('NINGUNO', '247'),
-('NINGUNO', '267'),
-('NINGUNO', '296'),
-('NINGUNO', '303'),
-('NINGUNO', '337'),
-('NINGUNO', '423'),
-('NINGUNO', '426'),
-('NINGUNO', '437'),
-('NINGUNO', '463'),
-('NINGUNO', '472'),
-('NINGUNO', '481'),
-('NINGUNO', '530'),
-('NINGUNO', '532'),
-('NINGUNO', '574'),
-('NINGUNO', '616'),
-('NINGUNO', '630'),
-('NINGUNO', '650'),
-('NINGUNO', '658'),
-('NINGUNO', '663'),
-('NINGUNO', '674'),
-('NINGUNO', '677'),
-('NINGUNO', '696'),
-('NINGUNO', '704'),
-('NINGUNO', '712'),
-('NINGUNO', '725'),
-('NINGUNO', '741'),
-('NINGUNO', '753'),
-('NINGUNO', '776'),
-('NINGUNO', '858'),
-('NINGUNO', '899'),
-('NINGUNO', '927'),
-('NINGUNO', '951'),
-('NINGUNO', '955'),
-('NINGUNO', '1020'),
-('NINGUNO', '1060'),
-('NINGUNO', '1156'),
-('NINGUNO', '1186'),
-('NINGUNO', '1202'),
-('NINGUNO', '1203'),
-('NINGUNO', '1204'),
-('NINGUNO', '1205'),
-('NINGUNO', '1206'),
-('NINGUNO', '1207'),
-('NINGUNO', '1208'),
-('NINGUNO', '1209'),
-('NINGUNO', '1210'),
-('NINGUNO', '1211'),
-('NINGUNO', '1212'),
-('NINGUNO', '1213'),
-('NINGUNO', '1214'),
-('NINGUNO', '1215'),
-('NINGUNO', '1'),
-('NINGUNO', '28'),
-('NINGUNO', '37'),
-('NINGUNO', '45'),
-('NINGUNO', '57'),
-('NINGUNO', '105'),
-('NINGUNO', '126'),
-('NINGUNO', '148'),
-('NINGUNO', '149'),
-('NINGUNO', '152'),
-('NINGUNO', '175'),
-('NINGUNO', '221'),
-('NINGUNO', '223'),
-('NINGUNO', '236'),
-('NINGUNO', '261'),
-('NINGUNO', '291'),
-('NINGUNO', '331'),
-('NINGUNO', '332'),
-('NINGUNO', '342'),
-('NINGUNO', '358'),
-('NINGUNO', '361'),
-('NINGUNO', '412'),
-('NINGUNO', '415'),
-('NINGUNO', '430'),
-('NINGUNO', '458'),
-('NINGUNO', '464'),
-('NINGUNO', '468'),
-('NINGUNO', '473'),
-('NINGUNO', '482'),
-('NINGUNO', '491'),
-('NINGUNO', '495'),
-('NINGUNO', '512'),
-('NINGUNO', '518'),
-('NINGUNO', '520'),
-('NINGUNO', '538'),
-('NINGUNO', '554'),
-('NINGUNO', '555'),
-('NINGUNO', '568'),
-('NINGUNO', '588'),
-('NINGUNO', '600'),
-('NINGUNO', '621'),
-('NINGUNO', '622'),
-('NINGUNO', '651'),
-('NINGUNO', '661'),
-('NINGUNO', '679'),
-('NINGUNO', '742'),
-('NINGUNO', '759'),
-('NINGUNO', '762'),
-('NINGUNO', '765'),
-('NINGUNO', '795'),
-('NINGUNO', '825'),
-('NINGUNO', '843'),
-('NINGUNO', '872'),
-('NINGUNO', '882'),
-('NINGUNO', '896'),
-('NINGUNO', '943'),
-('NINGUNO', '956'),
-('NINGUNO', '960'),
-('NINGUNO', '974'),
-('NINGUNO', '979'),
-('NINGUNO', '992'),
-('NINGUNO', '1006'),
-('NINGUNO', '1016'),
-('NINGUNO', '1028'),
-('NINGUNO', '1042'),
-('NINGUNO', '1055'),
-('NINGUNO', '1089'),
-('NINGUNO', '1099'),
-('NINGUNO', '1104'),
-('NINGUNO', '1105'),
-('NINGUNO', '1141'),
-('NINGUNO', '1200'),
-('NINGUNO', '1212'),
-('NINGUNO', '1213'),
-('NINGUNO', '1214'),
-('NINGUNO', '1215'),
-('NINGUNO', '20'),
-('NINGUNO', '47'),
-('NINGUNO', '69'),
-('NINGUNO', '83'),
-('NINGUNO', '95'),
-('NINGUNO', '123'),
-('NINGUNO', '133'),
-('NINGUNO', '136'),
-('NINGUNO', '196'),
-('NINGUNO', '215'),
-('NINGUNO', '219'),
-('NINGUNO', '226'),
-('NINGUNO', '262'),
-('NINGUNO', '270'),
-('NINGUNO', '292'),
-('NINGUNO', '305'),
-('NINGUNO', '321'),
-('NINGUNO', '387'),
-('NINGUNO', '401'),
-('NINGUNO', '407'),
-('NINGUNO', '408'),
-('NINGUNO', '435'),
-('NINGUNO', '438'),
-('NINGUNO', '465'),
-('NINGUNO', '483'),
-('NINGUNO', '484'),
-('NINGUNO', '488'),
-('NINGUNO', '493'),
-('NINGUNO', '526'),
-('NINGUNO', '589'),
-('NINGUNO', '635'),
-('NINGUNO', '670'),
-('NINGUNO', '680'),
-('NINGUNO', '758'),
-('NINGUNO', '819'),
-('NINGUNO', '832'),
-('NINGUNO', '844'),
-('NINGUNO', '847'),
-('NINGUNO', '856'),
-('NINGUNO', '907'),
-('NINGUNO', '928'),
-('NINGUNO', '929'),
-('NINGUNO', '939'),
-('NINGUNO', '944'),
-('NINGUNO', '952'),
-('NINGUNO', '981'),
-('NINGUNO', '986'),
-('NINGUNO', '987'),
-('NINGUNO', '1017'),
-('NINGUNO', '1024'),
-('NINGUNO', '1052'),
-('NINGUNO', '1053'),
-('NINGUNO', '1056'),
-('NINGUNO', '1066'),
-('NINGUNO', '1067'),
-('NINGUNO', '1073'),
-('NINGUNO', '1120'),
-('NINGUNO', '1132'),
-('NINGUNO', '1160'),
-('NINGUNO', '1178'),
-('NINGUNO', '1188'),
-('NINGUNO', '1196'),
-('NINGUNO', '1197'),
-('NINGUNO', '1198'),
-('NINGUNO', '1199'),
-('NINGUNO', '1200'),
-('NINGUNO', '1201'),
-('NINGUNO', '5'),
-('NINGUNO', '15'),
-('NINGUNO', '59'),
-('NINGUNO', '203'),
-('NINGUNO', '286'),
-('NINGUNO', '347'),
-('NINGUNO', '411'),
-('NINGUNO', '460'),
-('NINGUNO', '498'),
-('NINGUNO', '525'),
-('NINGUNO', '556'),
-('NINGUNO', '607'),
-('NINGUNO', '608'),
-('NINGUNO', '617'),
-('NINGUNO', '631'),
-('NINGUNO', '665'),
-('NINGUNO', '705'),
-('NINGUNO', '777'),
-('NINGUNO', '813'),
-('NINGUNO', '1026'),
-('NINGUNO', '1094'),
-('NINGUNO', '1113'),
-('NINGUNO', '1122'),
-('NINGUNO', '1124'),
-('NINGUNO', '1145'),
-('NINGUNO', '1154'),
-('NINGUNO', '1172'),
-('NINGUNO', '1192'),
-('NINGUNO', '3'),
-('NINGUNO', '17'),
-('NINGUNO', '22'),
-('NINGUNO', '80'),
-('NINGUNO', '124'),
-('NINGUNO', '144'),
-('NINGUNO', '214'),
-('NINGUNO', '249'),
-('NINGUNO', '255'),
-('NINGUNO', '284'),
-('NINGUNO', '308'),
-('NINGUNO', '316'),
-('NINGUNO', '324'),
-('NINGUNO', '346'),
-('NINGUNO', '369'),
-('NINGUNO', '372'),
-('NINGUNO', '441'),
-('NINGUNO', '444'),
-('NINGUNO', '557'),
-('NINGUNO', '560'),
-('NINGUNO', '567'),
-('NINGUNO', '575'),
-('NINGUNO', '584'),
-('NINGUNO', '599'),
-('NINGUNO', '644'),
-('NINGUNO', '715'),
-('NINGUNO', '721'),
-('NINGUNO', '730'),
-('NINGUNO', '756'),
-('NINGUNO', '779'),
-('NINGUNO', '791'),
-('NINGUNO', '798'),
-('NINGUNO', '802'),
-('NINGUNO', '826'),
-('NINGUNO', '891'),
-('NINGUNO', '892'),
-('NINGUNO', '945'),
-('NINGUNO', '957'),
-('NINGUNO', '963'),
-('NINGUNO', '993'),
-('NINGUNO', '1007'),
-('NINGUNO', '1033'),
-('NINGUNO', '1061'),
-('NINGUNO', '1081'),
-('NINGUNO', '1090'),
-('NINGUNO', '1136'),
-('NINGUNO', '1165'),
-('NINGUNO', '1197'),
-('NINGUNO', '1216'),
-('NINGUNO', '1217'),
-('NINGUNO', '1218'),
-('NINGUNO', '1219'),
-('NINGUNO', '1'),
-('NINGUNO', '48'),
-('NINGUNO', '84'),
-('NINGUNO', '89'),
-('NINGUNO', '135'),
-('NINGUNO', '222'),
-('NINGUNO', '235'),
-('NINGUNO', '252'),
-('NINGUNO', '263'),
-('NINGUNO', '295'),
-('NINGUNO', '297'),
-('NINGUNO', '298'),
-('NINGUNO', '333'),
-('NINGUNO', '366'),
-('NINGUNO', '393'),
-('NINGUNO', '449'),
-('NINGUNO', '466'),
-('NINGUNO', '478'),
-('NINGUNO', '496'),
-('NINGUNO', '618'),
-('NINGUNO', '623'),
-('NINGUNO', '625'),
-('NINGUNO', '654'),
-('NINGUNO', '769'),
-('NINGUNO', '778'),
-('NINGUNO', '850'),
-('NINGUNO', '868'),
-('NINGUNO', '910'),
-('NINGUNO', '917'),
-('NINGUNO', '994'),
-('NINGUNO', '1157'),
-('NINGUNO', '1158'),
-('NINGUNO', '1161'),
-('NINGUNO', '1166'),
-('NINGUNO', '1167'),
-('NINGUNO', '1179'),
-('NINGUNO', '1187'),
-('NINGUNO', '1234'),
-('NINGUNO', '1235'),
-('NINGUNO', '1236'),
-('NINGUNO', '1237'),
-('NINGUNO', '1238'),
-('NINGUNO', '60'),
-('NINGUNO', '85'),
-('NINGUNO', '87'),
-('NINGUNO', '102'),
-('NINGUNO', '103'),
-('NINGUNO', '176'),
-('NINGUNO', '212'),
-('NINGUNO', '325'),
-('NINGUNO', '351'),
-('NINGUNO', '399'),
-('NINGUNO', '405'),
-('NINGUNO', '456'),
-('NINGUNO', '500'),
-('NINGUNO', '519'),
-('NINGUNO', '533'),
-('NINGUNO', '535'),
-('NINGUNO', '537'),
-('NINGUNO', '590'),
-('NINGUNO', '594'),
-('NINGUNO', '681'),
-('NINGUNO', '687'),
-('NINGUNO', '731'),
-('NINGUNO', '736'),
-('NINGUNO', '748'),
-('NINGUNO', '752'),
-('NINGUNO', '761'),
-('NINGUNO', '799'),
-('NINGUNO', '836'),
-('NINGUNO', '918'),
-('NINGUNO', '919'),
-('NINGUNO', '930'),
-('NINGUNO', '938'),
-('NINGUNO', '946'),
-('NINGUNO', '958'),
-('NINGUNO', '969'),
-('NINGUNO', '980'),
-('NINGUNO', '988'),
-('NINGUNO', '1025'),
-('NINGUNO', '1030'),
-('NINGUNO', '1047'),
-('NINGUNO', '1062'),
-('NINGUNO', '1084'),
-('NINGUNO', '1143'),
-('NINGUNO', '1149'),
-('NINGUNO', '1164'),
-('NINGUNO', '1175'),
-('NINGUNO', '1180'),
-('NINGUNO', '1183'),
-('NINGUNO', '1211'),
-('NINGUNO', '1212'),
-('NINGUNO', '1213'),
-('NINGUNO', '1214'),
-('NINGUNO', '1215'),
-('NINGUNO', '1216'),
-('NINGUNO', '1217'),
-('NINGUNO', '1218'),
-('NINGUNO', '1219'),
-('NINGUNO', '114'),
-('NINGUNO', '173'),
-('NINGUNO', '188'),
-('NINGUNO', '216'),
-('NINGUNO', '220'),
-('NINGUNO', '265'),
-('NINGUNO', '271'),
-('NINGUNO', '322'),
-('NINGUNO', '406'),
-('NINGUNO', '413'),
-('NINGUNO', '450'),
-('NINGUNO', '497'),
-('NINGUNO', '582'),
-('NINGUNO', '583'),
-('NINGUNO', '655'),
-('NINGUNO', '660'),
-('NINGUNO', '666'),
-('NINGUNO', '691'),
-('NINGUNO', '700'),
-('NINGUNO', '732'),
-('NINGUNO', '770'),
-('NINGUNO', '773'),
-('NINGUNO', '786'),
-('NINGUNO', '888'),
-('NINGUNO', '900'),
-('NINGUNO', '912'),
-('NINGUNO', '970'),
-('NINGUNO', '995'),
-('NINGUNO', '1008'),
-('NINGUNO', '1048'),
-('NINGUNO', '1112'),
-('NINGUNO', '1151'),
-('NINGUNO', '1152'),
-('NINGUNO', '1153'),
-('NINGUNO', '1191'),
-('NINGUNO', '1218'),
-('NINGUNO', '1222'),
-('NINGUNO', '1223'),
-('NINGUNO', '1224'),
-('NINGUNO', '1225'),
-('NINGUNO', '1226'),
-('NINGUNO', '1227'),
-('NINGUNO', '44'),
-('NINGUNO', '275'),
-('NINGUNO', '283'),
-('NINGUNO', '294'),
-('NINGUNO', '540'),
-('NINGUNO', '573'),
-('NINGUNO', '581'),
-('NINGUNO', '823'),
-('NINGUNO', '851'),
-('NINGUNO', '1184'),
-('NINGUNO', '1185'),
-('NINGUNO', '1186'),
-('NINGUNO', '1187'),
-('NINGUNO', '2'),
-('NINGUNO', '10'),
-('NINGUNO', '25'),
-('NINGUNO', '30'),
-('NINGUNO', '43'),
-('NINGUNO', '53'),
-('NINGUNO', '115'),
-('NINGUNO', '125'),
-('NINGUNO', '143'),
-('NINGUNO', '199'),
-('NINGUNO', '231'),
-('NINGUNO', '245'),
-('NINGUNO', '256'),
-('NINGUNO', '266'),
-('NINGUNO', '282'),
-('NINGUNO', '299'),
-('NINGUNO', '304'),
-('NINGUNO', '338'),
-('NINGUNO', '365'),
-('NINGUNO', '367'),
-('NINGUNO', '375'),
-('NINGUNO', '376'),
-('NINGUNO', '385'),
-('NINGUNO', '501'),
-('NINGUNO', '503'),
-('NINGUNO', '506'),
-('NINGUNO', '571'),
-('NINGUNO', '572'),
-('NINGUNO', '578'),
-('NINGUNO', '580'),
-('NINGUNO', '610'),
-('NINGUNO', '636'),
-('NINGUNO', '653'),
-('NINGUNO', '664'),
-('NINGUNO', '667'),
-('NINGUNO', '673'),
-('NINGUNO', '675'),
-('NINGUNO', '709'),
-('NINGUNO', '723'),
-('NINGUNO', '729'),
-('NINGUNO', '733'),
-('NINGUNO', '734'),
-('NINGUNO', '745'),
-('NINGUNO', '812'),
-('NINGUNO', '830'),
-('NINGUNO', '831'),
-('NINGUNO', '845'),
-('NINGUNO', '869'),
-('NINGUNO', '889'),
-('NINGUNO', '901'),
-('NINGUNO', '908'),
-('NINGUNO', '913'),
-('NINGUNO', '931'),
-('NINGUNO', '971'),
-('NINGUNO', '976'),
-('NINGUNO', '989'),
-('NINGUNO', '996'),
-('NINGUNO', '1009'),
-('NINGUNO', '1018'),
-('NINGUNO', '1038'),
-('NINGUNO', '1041'),
-('NINGUNO', '1043'),
-('NINGUNO', '1049'),
-('NINGUNO', '1057'),
-('NINGUNO', '1074'),
-('NINGUNO', '1093'),
-('NINGUNO', '1108'),
-('NINGUNO', '1118'),
-('NINGUNO', '1119'),
-('NINGUNO', '1147'),
-('NINGUNO', '1170'),
-('NINGUNO', '1173'),
-('NINGUNO', '1195'),
-('NINGUNO', '1217'),
-('NINGUNO', '4'),
-('NINGUNO', '14'),
-('NINGUNO', '18'),
-('NINGUNO', '32'),
-('NINGUNO', '34'),
-('NINGUNO', '35'),
-('NINGUNO', '49'),
-('NINGUNO', '61'),
-('NINGUNO', '67'),
-('NINGUNO', '75'),
-('NINGUNO', '96'),
-('NINGUNO', '106'),
-('NINGUNO', '110'),
-('NINGUNO', '146'),
-('NINGUNO', '147'),
-('NINGUNO', '158'),
-('NINGUNO', '168'),
-('NINGUNO', '169'),
-('NINGUNO', '194'),
-('NINGUNO', '230'),
-('NINGUNO', '237'),
-('NINGUNO', '241'),
-('NINGUNO', '248'),
-('NINGUNO', '257'),
-('NINGUNO', '259'),
-('NINGUNO', '264'),
-('NINGUNO', '278'),
-('NINGUNO', '317'),
-('NINGUNO', '328'),
-('NINGUNO', '329'),
-('NINGUNO', '343'),
-('NINGUNO', '392'),
-('NINGUNO', '414'),
-('NINGUNO', '416'),
-('NINGUNO', '439'),
-('NINGUNO', '442'),
-('NINGUNO', '445'),
-('NINGUNO', '446'),
-('NINGUNO', '447'),
-('NINGUNO', '451'),
-('NINGUNO', '467'),
-('NINGUNO', '474'),
-('NINGUNO', '490'),
-('NINGUNO', '507'),
-('NINGUNO', '514'),
-('NINGUNO', '515'),
-('NINGUNO', '516'),
-('NINGUNO', '542'),
-('NINGUNO', '547'),
-('NINGUNO', '558'),
-('NINGUNO', '562'),
-('NINGUNO', '565'),
-('NINGUNO', '566'),
-('NINGUNO', '576'),
-('NINGUNO', '591'),
-('NINGUNO', '593'),
-('NINGUNO', '668'),
-('NINGUNO', '685'),
-('NINGUNO', '690'),
-('NINGUNO', '693'),
-('NINGUNO', '706'),
-('NINGUNO', '707'),
-('NINGUNO', '726'),
-('NINGUNO', '750'),
-('NINGUNO', '757'),
-('NINGUNO', '766'),
-('NINGUNO', '774'),
-('NINGUNO', '796'),
-('NINGUNO', '803'),
-('NINGUNO', '820'),
-('NINGUNO', '821'),
-('NINGUNO', '829'),
-('NINGUNO', '852'),
-('NINGUNO', '857'),
-('NINGUNO', '914'),
-('NINGUNO', '920'),
-('NINGUNO', '922'),
-('NINGUNO', '932'),
-('NINGUNO', '935'),
-('NINGUNO', '959'),
-('NINGUNO', '972'),
-('NINGUNO', '998'),
-('NINGUNO', '999'),
-('NINGUNO', '1001'),
-('NINGUNO', '1010'),
-('NINGUNO', '1034'),
-('NINGUNO', '1050'),
-('NINGUNO', '1063'),
-('NINGUNO', '1077'),
-('NINGUNO', '1098'),
-('NINGUNO', '1101'),
-('NINGUNO', '1116'),
-('NINGUNO', '1117'),
-('NINGUNO', '1140'),
-('NINGUNO', '1162'),
-('NINGUNO', '11'),
-('NINGUNO', '12'),
-('NINGUNO', '19'),
-('NINGUNO', '24'),
-('NINGUNO', '65'),
-('NINGUNO', '81'),
-('NINGUNO', '94'),
-('NINGUNO', '121'),
-('NINGUNO', '153'),
-('NINGUNO', '177'),
-('NINGUNO', '206'),
-('NINGUNO', '239'),
-('NINGUNO', '242'),
-('NINGUNO', '250'),
-('NINGUNO', '253'),
-('NINGUNO', '273'),
-('NINGUNO', '276'),
-('NINGUNO', '289'),
-('NINGUNO', '293'),
-('NINGUNO', '309'),
-('NINGUNO', '323'),
-('NINGUNO', '326'),
-('NINGUNO', '339'),
-('NINGUNO', '341'),
-('NINGUNO', '352'),
-('NINGUNO', '409'),
-('NINGUNO', '420'),
-('NINGUNO', '424'),
-('NINGUNO', '431'),
-('NINGUNO', '475'),
-('NINGUNO', '479'),
-('NINGUNO', '548'),
-('NINGUNO', '552'),
-('NINGUNO', '561'),
-('NINGUNO', '563'),
-('NINGUNO', '570'),
-('NINGUNO', '579'),
-('NINGUNO', '586'),
-('NINGUNO', '611'),
-('NINGUNO', '652'),
-('NINGUNO', '659'),
-('NINGUNO', '676'),
-('NINGUNO', '678'),
-('NINGUNO', '697'),
-('NINGUNO', '735'),
-('NINGUNO', '754'),
-('NINGUNO', '763'),
-('NINGUNO', '804'),
-('NINGUNO', '810'),
-('NINGUNO', '824'),
-('NINGUNO', '828'),
-('NINGUNO', '840'),
-('NINGUNO', '841'),
-('NINGUNO', '1013'),
-('NINGUNO', '1037'),
-('NINGUNO', '1064'),
-('NINGUNO', '1075'),
-('NINGUNO', '1076'),
-('NINGUNO', '1082'),
-('NINGUNO', '1087'),
-('NINGUNO', '1091'),
-('NINGUNO', '1096'),
-('NINGUNO', '1123'),
-('NINGUNO', '1125'),
-('NINGUNO', '1177'),
-('NINGUNO', '1203'),
-('NINGUNO', '1204'),
-('NINGUNO', '1205'),
-('NINGUNO', '1214'),
-('NINGUNO', '1225'),
-('NINGUNO', '1229'),
-('NINGUNO', '1230'),
-('NINGUNO', '1231'),
-('NINGUNO', '1232'),
-('NINGUNO', '1233'),
-('NINGUNO', '1234'),
-('NINGUNO', '1235'),
-('NINGUNO', '1236'),
-('NINGUNO', '1237'),
-('NINGUNO', '46'),
-('NINGUNO', '82'),
-('NINGUNO', '97'),
-('NINGUNO', '116'),
-('NINGUNO', '204'),
-('NINGUNO', '205'),
-('NINGUNO', '224'),
-('NINGUNO', '232'),
-('NINGUNO', '238'),
-('NINGUNO', '260'),
-('NINGUNO', '300'),
-('NINGUNO', '301'),
-('NINGUNO', '310'),
-('NINGUNO', '311'),
-('NINGUNO', '318'),
-('NINGUNO', '350'),
-('NINGUNO', '378'),
-('NINGUNO', '400'),
-('NINGUNO', '428'),
-('NINGUNO', '492'),
-('NINGUNO', '508'),
-('NINGUNO', '528'),
-('NINGUNO', '536'),
-('NINGUNO', '543'),
-('NINGUNO', '550'),
-('NINGUNO', '559'),
-('NINGUNO', '612'),
-('NINGUNO', '619'),
-('NINGUNO', '624'),
-('NINGUNO', '708'),
-('NINGUNO', '767'),
-('NINGUNO', '768'),
-('NINGUNO', '784'),
-('NINGUNO', '792'),
-('NINGUNO', '805'),
-('NINGUNO', '835'),
-('NINGUNO', '837'),
-('NINGUNO', '838'),
-('NINGUNO', '853'),
-('NINGUNO', '860'),
-('NINGUNO', '873'),
-('NINGUNO', '884'),
-('NINGUNO', '902'),
-('NINGUNO', '915'),
-('NINGUNO', '916'),
-('NINGUNO', '936'),
-('NINGUNO', '940'),
-('NINGUNO', '947'),
-('NINGUNO', '964'),
-('NINGUNO', '973'),
-('NINGUNO', '977'),
-('NINGUNO', '978'),
-('NINGUNO', '1011'),
-('NINGUNO', '1029'),
-('NINGUNO', '1031'),
-('NINGUNO', '1039'),
-('NINGUNO', '1051'),
-('NINGUNO', '1065'),
-('NINGUNO', '1110'),
-('NINGUNO', '1127'),
-('NINGUNO', '1208'),
-('NINGUNO', '6'),
-('NINGUNO', '8'),
-('NINGUNO', '31'),
-('NINGUNO', '33'),
-('NINGUNO', '42'),
-('NINGUNO', '62'),
-('NINGUNO', '66'),
-('NINGUNO', '76'),
-('NINGUNO', '98'),
-('NINGUNO', '99'),
-('NINGUNO', '138'),
-('NINGUNO', '141'),
-('NINGUNO', '142'),
-('NINGUNO', '154'),
-('NINGUNO', '159'),
-('NINGUNO', '160'),
-('NINGUNO', '162'),
-('NINGUNO', '164'),
-('NINGUNO', '166'),
-('NINGUNO', '167'),
-('NINGUNO', '229'),
-('NINGUNO', '233'),
-('NINGUNO', '287'),
-('NINGUNO', '319'),
-('NINGUNO', '330'),
-('NINGUNO', '334'),
-('NINGUNO', '354'),
-('NINGUNO', '362'),
-('NINGUNO', '395'),
-('NINGUNO', '396'),
-('NINGUNO', '410'),
-('NINGUNO', '418'),
-('NINGUNO', '455'),
-('NINGUNO', '469'),
-('NINGUNO', '517'),
-('NINGUNO', '539'),
-('NINGUNO', '545'),
-('NINGUNO', '577'),
-('NINGUNO', '585'),
-('NINGUNO', '595'),
-('NINGUNO', '614'),
-('NINGUNO', '643'),
-('NINGUNO', '647'),
-('NINGUNO', '671'),
-('NINGUNO', '672'),
-('NINGUNO', '689'),
-('NINGUNO', '710'),
-('NINGUNO', '716'),
-('NINGUNO', '718'),
-('NINGUNO', '746'),
-('NINGUNO', '760'),
-('NINGUNO', '764'),
-('NINGUNO', '775'),
-('NINGUNO', '787'),
-('NINGUNO', '807'),
-('NINGUNO', '811'),
-('NINGUNO', '818'),
-('NINGUNO', '827'),
-('NINGUNO', '878'),
-('NINGUNO', '903'),
-('NINGUNO', '990'),
-('NINGUNO', '1085'),
-('NINGUNO', '1106'),
-('NINGUNO', '1107'),
-('NINGUNO', '1134'),
-('NINGUNO', '1137'),
-('NINGUNO', '1142'),
-('NINGUNO', '1144'),
-('NINGUNO', '1146'),
-('NINGUNO', '1194'),
-('NINGUNO', '1199'),
-('NINGUNO', '1209'),
-('NINGUNO', '1215'),
-('NINGUNO', '1223'),
-('NINGUNO', '1232'),
-('NINGUNO', '1233'),
-('NINGUNO', '1234'),
-('NINGUNO', '1235'),
-('NINGUNO', '1236'),
-('NINGUNO', '1237'),
-('NINGUNO', '1238'),
-('NINGUNO', '184'),
-('NINGUNO', '190'),
-('NINGUNO', '192'),
-('NINGUNO', '523'),
-('NINGUNO', '531'),
-('NINGUNO', '603'),
-('NINGUNO', '695'),
-('NINGUNO', '722'),
-('NINGUNO', '948'),
-('NINGUNO', '1086'),
-('NINGUNO', '55'),
-('NINGUNO', '86'),
-('NINGUNO', '100'),
-('NINGUNO', '186'),
-('NINGUNO', '288'),
-('NINGUNO', '320'),
-('NINGUNO', '340'),
-('NINGUNO', '356'),
-('NINGUNO', '359'),
-('NINGUNO', '402'),
-('NINGUNO', '432'),
-('NINGUNO', '453'),
-('NINGUNO', '476'),
-('NINGUNO', '509'),
-('NINGUNO', '521'),
-('NINGUNO', '522'),
-('NINGUNO', '592'),
-('NINGUNO', '597'),
-('NINGUNO', '615'),
-('NINGUNO', '626'),
-('NINGUNO', '669'),
-('NINGUNO', '739'),
-('NINGUNO', '740'),
-('NINGUNO', '785'),
-('NINGUNO', '862'),
-('NINGUNO', '867'),
-('NINGUNO', '885'),
-('NINGUNO', '937'),
-('NINGUNO', '1012'),
-('NINGUNO', '1021'),
-('NINGUNO', '1040'),
-('NINGUNO', '1078'),
-('NINGUNO', '1128'),
-('NINGUNO', '1138'),
-('NINGUNO', '1181'),
-('NINGUNO', '1182'),
-('NINGUNO', '1198'),
-('NINGUNO', '1210'),
-('NINGUNO', '1213'),
-('NINGUNO', '1227'),
-('NINGUNO', '1233'),
-('NINGUNO', '1234'),
-('NINGUNO', '1235'),
-('NINGUNO', '1236'),
-('NINGUNO', '1237'),
-('NINGUNO', '1238'),
-('NINGUNO', '1239'),
-('NINGUNO', '1240'),
-('NINGUNO', '1241'),
-('NINGUNO', '39'),
-('NINGUNO', '71'),
-('NINGUNO', '73'),
-('NINGUNO', '90'),
-('NINGUNO', '145'),
-('NINGUNO', '155'),
-('NINGUNO', '170'),
-('NINGUNO', '172'),
-('NINGUNO', '174'),
-('NINGUNO', '181'),
-('NINGUNO', '374'),
-('NINGUNO', '504'),
-('NINGUNO', '564'),
-('NINGUNO', '601'),
-('NINGUNO', '629'),
-('NINGUNO', '640'),
-('NINGUNO', '642'),
-('NINGUNO', '692'),
-('NINGUNO', '714'),
-('NINGUNO', '743'),
-('NINGUNO', '789'),
-('NINGUNO', '871'),
-('NINGUNO', '875'),
-('NINGUNO', '879'),
-('NINGUNO', '880'),
-('NINGUNO', '911'),
-('NINGUNO', '982'),
-('NINGUNO', '1044'),
-('NINGUNO', '1045'),
-('NINGUNO', '1129'),
-('NINGUNO', '1148'),
-('NINGUNO', '1189'),
-('NINGUNO', '1190'),
-('NINGUNO', '1191'),
-('NINGUNO', '56'),
-('NINGUNO', '58'),
-('NINGUNO', '70'),
-('NINGUNO', '72'),
-('NINGUNO', '74'),
-('NINGUNO', '92'),
-('NINGUNO', '104'),
-('NINGUNO', '137'),
-('NINGUNO', '195'),
-('NINGUNO', '313'),
-('NINGUNO', '363'),
-('NINGUNO', '433'),
-('NINGUNO', '440'),
-('NINGUNO', '486'),
-('NINGUNO', '605'),
-('NINGUNO', '638'),
-('NINGUNO', '737'),
-('NINGUNO', '749'),
-('NINGUNO', '781'),
-('NINGUNO', '793'),
-('NINGUNO', '863'),
-('NINGUNO', '905'),
-('NINGUNO', '950'),
-('NINGUNO', '1114'),
-('NINGUNO', '1121'),
-('NINGUNO', '1131'),
-('NINGUNO', '1139'),
-('NINGUNO', '1206'),
-('NINGUNO', '1221'),
-('NINGUNO', '1228'),
-('NINGUNO', '1230'),
-('NINGUNO', '1231'),
-('NINGUNO', '1232'),
-('NINGUNO', '23'),
-('NINGUNO', '36'),
-('NINGUNO', '117'),
-('NINGUNO', '128'),
-('NINGUNO', '132'),
-('NINGUNO', '198'),
-('NINGUNO', '201'),
-('NINGUNO', '280'),
-('NINGUNO', '364'),
-('NINGUNO', '373'),
-('NINGUNO', '380'),
-('NINGUNO', '388'),
-('NINGUNO', '434'),
-('NINGUNO', '452'),
-('NINGUNO', '471'),
-('NINGUNO', '494'),
-('NINGUNO', '510'),
-('NINGUNO', '511'),
-('NINGUNO', '713'),
-('NINGUNO', '949'),
-('NINGUNO', '997'),
-('NINGUNO', '1022'),
-('NINGUNO', '1159'),
-('NINGUNO', '1201'),
-('NINGUNO', '1219'),
-('NINGUNO', '38'),
-('NINGUNO', '54'),
-('NINGUNO', '101'),
-('NINGUNO', '111'),
-('NINGUNO', '112'),
-('NINGUNO', '127'),
-('NINGUNO', '129'),
-('NINGUNO', '157'),
-('NINGUNO', '258'),
-('NINGUNO', '290'),
-('NINGUNO', '417'),
-('NINGUNO', '487'),
-('NINGUNO', '645'),
-('NINGUNO', '646'),
-('NINGUNO', '683'),
-('NINGUNO', '698'),
-('NINGUNO', '806'),
-('NINGUNO', '854'),
-('NINGUNO', '883'),
-('NINGUNO', '890'),
-('NINGUNO', '897'),
-('NINGUNO', '921'),
-('NINGUNO', '1023'),
-('NINGUNO', '1092'),
-('NINGUNO', '1109'),
-('NINGUNO', '1174'),
-('NINGUNO', '1235'),
-('NINGUNO', '1236'),
-('NINGUNO', '1220'),
-('NINGUNO', '1220'),
-('NINGUNO', '1222'),
-('NINGUNO', '1'),
-('NINGUNO', '1202'),
-('AION Nº 1', '186'),
-('NINGUNO', '1239'),
-('NINGUNO', '1213'),
-('NINGUNO', '1218'),
-('NINGUNO', '1214'),
-('NINGUNO', '1219'),
-('NINGUNO', '1216'),
-('NINGUNO', '1217'),
-('NINGUNO', '1211'),
-('NINGUNO', '1218'),
-('NINGUNO', '1242'),
-('NINGUNO', '1216'),
-('EL RINCON', '11'),
-('NINGUNO', '1217'),
-('NINGUNO', '1174'),
-('NINGUNO', '1175'),
-('CABILDO SANTIAGUEÑO', '11'),
-('EVA PERON', '751'),
-('EL TABIQUE', '11'),
-('TRUNLLELITTI', '9'),
-('TRUNLLELITTI', '1225'),
-('TRUNLLELITTI', '1224'),
-('CAMPO CONTRERAS', '9'),
-('RICARDO ROJAS', '179'),
-('FATIMA', '179'),
-('VILLA NUEVA', '179'),
-('CANAL', '179'),
-('RAMOS MEJIA', '179'),
-('MATADERO', '179'),
-('SANTA ROSA', '179'),
-('JUAN DOMINGO PERON', '179'),
-('GUTIERREZ', '179'),
-('MENENDEZ', '11'),
-('CENTRO', '179'),
-('MALVINAS ARGENTINAS', '179'),
-('MENDILAZU', '179'),
-('NINGUNO', '1244'),
-('EVA PERON', '179'),
-('NINGUNO', '1245'),
-('NINGUNO', '1246'),
-('ALMIRANTE BROWN', '179'),
-('27 DE ABRIL', '179'),
-('MUNICIPAL', '179'),
-('COLEGIALES', '179'),
-('20 VIVIENDAS', '179'),
-('VILLA GRISELDA', '11'),
-('LAS VIOLETAS', '361'),
-('JUAN DOMINGO PERON', '361'),
-('ESPERANZA', '361'),
-('VILLA PAULINA', '361'),
-('OESTE', '361'),
-('PARQUE', '361'),
-('RAMON CARRILLO', '179'),
-('EVA PERON', '361'),
-('YAPEYU', '361'),
-('NUEVA ESPERANZA', '361'),
-('CARLOS ARTURO JUAREZ', '361'),
-('17 DE OCTUBRE', '361'),
-('ALMIRANTE BROWN', '361'),
-('CENTENARIO', '361'),
-('SIGLO XIX', '9'),
-('SIGLO XX', '9'),
-('SIGLO XXI', '9'),
-('CAMPO CONTRERAS DUPLEX', '9'),
-('750 VIVIENDAS', '9'),
-('NINGUNO', '1247'),
-('SUMAMPA', '361'),
-('ELISEO FRINGES', '361'),
-('LA COOPERATIVA', '361'),
-('NINGUNO', '1248'),
-('SARMIENTO', '179'),
-('MATADERO VIEJO', '11'),
-('LA CURVA', '361'),
-('TRAMO 18', '11'),
-('AMPLIACION 1° DE MAYO', '11'),
-('FRATERNIDAD', '11'),
-('SANTA ROSA DE LIMA', '11'),
-('AMPLIACION PARQUE INDUSTRIAL', '11'),
-('NESTOR KIRCHNER', '361'),
-('VILLA 9 DE JULIO', '11'),
-('AMPLIACION PARAISO', '11'),
-('EL PARAISO', '11'),
-('NINGUNO', '1249'),
-('ARENALES', '86'),
-('AVELLANEDA', '86'),
-('NINGUNO', '1250'),
-('NINGUNO', '1251'),
-('NINGUNO', '1252'),
-('LOMAS DE ZAMORA', '86'),
-('ARROYITO', '86'),
-('CENTRO', '86'),
-('NORTE', '86'),
-('MARADONA', '86'),
-('ARTEMIO GRAMAJO', '86'),
-('VIRGEN DEL VALLE', '86'),
-('NINGUNO', '1253'),
-('ALMIRANTE BROWN', '86'),
-('NINGUNO', '1254'),
-('17 DE OCTUBRE', '86'),
-('LA PALUDICA', '1144'),
-('ESPAÑA', '1144'),
-('JARDIN', '1144'),
-('HERRERA', '1144'),
-('VILLA BALNEARIA', '1085'),
-('SAN MARTIN', '1085'),
-('EL ALTO', '1085'),
-('AGUA SANTA', '1144'),
-('SAN PABLO', '1144'),
-('MERCANTIL', '1144'),
-('25 DE MAYO', '1144'),
-('TORO YACU', '1085'),
-('LOS OCULTOS', '1144'),
-('LOS FIERROS', '1144'),
-('LAS LILAS', '1144'),
-('VILLA NUEVA', '1144'),
-('20 VIVIENDAS', '1031'),
-('USINA', '1144'),
-('MUNICIPAL', '1144'),
-('SOBERANIA NACIONAL', '1144'),
-('ADELA', '1144'),
-('SALITRE', '1144'),
-('LA PILETA', '1144'),
-('UNION', '86'),
-('GRAMAJO', '86'),
-('VILLA BALNEARIA', '1144'),
-('2 DE ABRIL', '86'),
-('SAN MARTIN', '1144'),
-('NINGUNO', '1261'),
-('FINCA DE RAMOS', '2'),
-('25 VIVIENDAS', '86'),
-('JOSE HERNANDEZ', '86'),
-('NINGUNO', '1260'),
-('COOPERATIVA', '86'),
-('NINGUNO', '1257'),
-('NINGUNO', '1263'),
-('NINGUNO', '1264'),
-('MERCANTIL', '11'),
-('MATADERO', '607'),
-('CENTRO', '607'),
-('MAILIN', '607'),
-('CENTRO', '1144'),
-('SANTA RITA', '1086'),
-('LOS ALAMOS II', '11'),
-('NINGUNO', '1265'),
-('JORGE W. ABALOS', '11'),
-('AMPLIACION CENTRAL ARGENTINO', '11'),
-('JUAN DOMINGO PERON', '11'),
-('AMPLIACION 25 DE MAYO', '11'),
-('ALBERDI', '11'),
-('FERROCARRIL', '607'),
-('50 VIVIENDAS', '607'),
-('REMANZO', '594'),
-('NINGUNO', '1267'),
-('NINGUNO', '1268'),
-('COMERCIO', '1212'),
-('COMERCIO', '607'),
-('NINGUNO', '1271'),
-('NORTE', '607'),
-('VILLA YANUZZI', '11'),
-('NINGUNO', '1272'),
-('NINGUNO', '1273'),
-('NINGUNO', '1274'),
-('NINGUNO', '1275'),
-('MATADERO', '118'),
-('PROVIPO', '118'),
-('SAN VICENTE', '118'),
-('ARENAL', '118'),
-('BELGRANO', '118'),
-('CENTRO', '118'),
-('NINGUNO', '1276'),
-('CENTRO', '594'),
-('LIBERTAD', '594'),
-('POLIGONO', '594'),
-('NINGUNO', '1277'),
-('PROVIRU', '1165'),
-('EVA PERON', '594'),
-('NINGUNO', '1278'),
-('BELGRANO', '831'),
-('FONAVI III', '831'),
-('LAS TRES ROSAS', '831'),
-('VICTORIA', '831'),
-('MALVINAS', '831'),
-('PALOMAR', '831'),
-('LAS COOPERATIVAS', '831'),
-('CAMPOS 1', '831'),
-('TRIANGULO', '831'),
-('ALOMO', '831'),
-('JUAN XIII', '831'),
-('SANTA ROSA', '831'),
-('SAN MARTIN', '831'),
-('SANTA ANGELA', '831'),
-('IÑIGUEZ', '831'),
-('CAMPO 2', '831'),
-('COLON', '831'),
-('SAN FRANCISCO', '831'),
-('AESYA', '9'),
-('COMERCIAL', '359'),
-('LAS FLORES', '359'),
-('RACEDO', '359'),
-('AVELLANEDA', '359'),
-('ISLAS MALVINAS', '359'),
-('PUENTE ALSINA', '359'),
-('NINGUNO', '1283'),
-('NOROESTE', '359'),
-('NINGUNO', '1284'),
-('PROGRESO', '359'),
-('NINGUNO', '1285'),
-('NINGUNO', '1286'),
-('BELGRANO', '356'),
-('JUAN DOMINGO PERON', '356'),
-('INDEPENDIENTE', '356'),
-('VILLA AURORA', '356'),
-('NINGUNO', '1287'),
-('NINGUNO', '1288'),
-('HOSPITAL', '356'),
-('NINGUNO', '1289'),
-('NINGUNO', '1290'),
-('JOSE HERNANDEZ', '356'),
-('LAS AMERICAS', '356'),
-('SAN ANTONIO', '356'),
-('NORTE', '356'),
-('9 DE JULIO', '356'),
-('CANALITO', '356'),
-('12 DE OCTUBRE', '356'),
-('CAMPINI', '356'),
-('NINGUNO', '1292'),
-('VILLA ELISA', '356'),
-('MAIPU', '356'),
-('SAN ROQUE', '359'),
-('MALVINAS ARGENTINAS', '356'),
-('SANTA RITA', '356'),
-('MATADERO', '356'),
-('COOPERATIVA', '356'),
-('AGUILA', '356'),
-('CENTRO', '356'),
-('SAN ANTONIO', '831'),
-('EL TRIANGULO', '831'),
-('FONAVI 4', '831'),
-('LAS MERCEDES', '831'),
-('CORBALAN', '607'),
-('JUAN F. IBARRA', '831'),
-('NINGUNO', '1293'),
-('COLASANZ', '831'),
-('EZEIZA', '831'),
-('20 VIVIENDAS', '831'),
-('JOSE LUIS GELID', '831'),
-('CALASANZ', '831'),
-('COESA', '9'),
-('LA TABLADA', '11'),
-('NINGUNO', '1294'),
-('EMERGENCIA', '594'),
-('PALERMO', '594'),
-('COLONIA OSVALDO', '5'),
-('UNION', '594'),
-('SAN FRANCISCO', '5'),
-('NINGUNO', '1'),
-('REMANSO', '1211'),
-('LAGUNILLA', '594'),
-('NINGUNO', '1269'),
-('SANTA RITA', '5'),
-('15 VIVIENDAS', '86'),
-('LA FLORIDA', '86'),
-('LUJAN', '831'),
-('SAN JOSE', '1147'),
-('TABIQUE', '11'),
-('NINGUNO', '1297'),
-('BELGRANO', '677'),
-('OESTE', '594'),
-('PARTICIPACION', '594'),
-('CORAZON DE JESUS', '594'),
-('2 DE ABRIL', '356'),
-('JUAN XXIII', '831'),
-('ALBERDI', '594'),
-('LAS CHACRAS', '594'),
-('JORGE NEWBERY', '594'),
-('NINGUNO', '1298'),
-('NINGUNO', '1299'),
-('NINGUNO', '1300'),
-('NINGUNO', '1301'),
-('10 VIVIENDAS', '359'),
-('2 DE ABRIL', '359'),
-('MALVINAS', '1086'),
-('VIRGEN DEL VALLE', '1086'),
-('SAN CAYETANO', '831'),
-('SAN JOSE', '1086'),
-('VIRGEN DE FATIMA', '1086'),
-('PANORAMICO', '706'),
-('NORTE', '706'),
-('NORTE', '1296'),
-('BELLA VISTA', '1296'),
-('NINGUNO', '1302'),
-('C.G.T.', '706'),
-('EL TALA', '706'),
-('BELGRANO', '706'),
-('NINGUNO', '1303'),
-('FONAVI', '1296'),
-('NINGUNO', '1304'),
-('NINGUNO', '1305'),
-('NINGUNO', '1306'),
-('NINGUNO', '1296'),
-('NINGUNO', '1307'),
-('NINGUNO', '1308'),
-('NINGUNO', '1309'),
-('ABREGU', '5'),
-('LA MERCED', '5'),
-('CAMPO ROSSO', '5'),
-('MALVINAS ARGENTINAS', '706'),
-('SAN RAMON', '1110'),
-('MINGUNO', '1310'),
-('NINGUNO', '1310'),
-('NORTE', '1310'),
-('NINGUNO', '1311'),
-('NINGUNO', '1312'),
-('SAN JORGE', '5'),
-('MANZIONE', '5'),
-('VILLA FERNANDEZ', '5'),
-('NINGUNO', '1313'),
-('SAN CAYETANO', '1310'),
-('ESTE', '1310'),
-('CENTRO', '1310'),
-('NINGUNO', '1314'),
-('NINGUNO', '1315'),
-('NINGUNO', '1316'),
-('PALERMO', '706'),
-('TALLERES', '706'),
-('NINGUNO', '1317'),
-('NUESTRA SEÑORA DE LUJAN', '359'),
-('SAN CAYETANO', '359'),
-('BICENTENARIO', '677'),
-('CENTRO', '677'),
-('SOR ANGELA', '677'),
-('SAN MARTIN', '677'),
-('12 DE OCTUBRE', '677'),
-('MUNICIPAL', '677'),
-('VIRGEN DEL CARBALLO', '677'),
-('EL TRIANGULO', '677'),
-('EL PORVENIR', '677'),
-('TRIANGULO', '677'),
-('SAN CAYETANO', '677'),
-('EVITA', '677'),
-('NINGUNO', '1318'),
-('60 VIVIENDAS', '725'),
-('CANAL', '677'),
-('SAN PANTALEON', '725'),
-('SANTA ROSA', '725'),
-('SANTA ELENA', '677'),
-('NINGUNO', '1319'),
-('CANAL', '725'),
-('PRESIDENTE PERON', '725'),
-('VILLA NUEVA', '677'),
-('EL MISTOLAR', '725'),
-('NINGUNO', '1280'),
-('NINGUNO', '1279'),
-('NINGUNO', '1320'),
-('RESIDENCIAL', '359'),
-('SAN JOSE DE FLORES', '359'),
-('NINGUNO', '1321'),
-('NINGUNO', '1323'),
-('NINGUNO', '1325'),
-('7 DE ABRIL', '185'),
-('NINGUNO', '1327'),
-('BELEN', '185'),
-('BAJO AVELLANEDA', '185'),
-('TECHO Y TRABAJO', '185'),
-('FORTABAT', '361'),
-('NINGUNO', '1328'),
-('BELLA VISTA', '706'),
-('NINGUNO', '1329'),
-('ESPERANZA II', '361'),
-('ESPERANZA III', '361'),
-('50 VIVIENDAS', '361'),
-('LAS COOPERATIVAS', '361'),
-('NINGUNO', '1291'),
-('NINGUNO', '1282'),
-('PROVIRU', '831'),
-('60 VIVIENDAS', '361'),
-('94 VIVIENDAS', '361'),
-('NINGUNO', '1330'),
-('NINGUNO', '1331'),
-('SUD', '118'),
-('528 VIVIENDAS', '361'),
-('LA MERCED', '706'),
-('FOPROVI', '706'),
-('NINGUNO', '1332'),
-('MAILIN', '118'),
-('NINGUNO', '1333'),
-('SAN MARTIN', '118'),
-('NINGUNO', '1334'),
-('PALERMO', '1296'),
-('CENTRO', '1296'),
-('NINGUNO', '1335'),
-('NINGUNO', '1336'),
-('EVA PERON', '118'),
-('CRISTO REDENTOR', '706'),
-('NINGUNO', '1337'),
-('NINGUNO', '1338'),
-('NINGUNO', '1339'),
-('NINGUNO', '1322'),
-('100 VIVIENDAS', '594'),
-('NINGUNO', '1340'),
-('CENTENARIO', '594'),
-('SANTA ROSA', '1147'),
-('ISLAS MALVINAS', '1147'),
-('CENTENARIO', '1211'),
-('1º DE ABRIL', '118'),
-('NINGUNO', '1341'),
-('NINGUNO', '1342'),
-('NINGUNO', '1343'),
-('NINGUNO', '1344'),
-('MATADERO', '831'),
-('8 DE SEPTIEMBRE', '359'),
-('JORGE GOTAU', '118'),
-('VIRGEN DE CARMEN', '1101'),
-('EPAM', '831'),
-('NINGUNO', '1345'),
-('LIBERTAD', '359'),
-('RACEDO', '356'),
-('LIBERTAD', '751'),
-('NINGUNO', '1346'),
-('RIVADAVIA', '751'),
-('NINGUNO', '1347'),
-('30 VIVIENDAS', '594'),
-('BELGRANO', '751'),
-('EL SILENCIO', '751'),
-('MALVINAS', '751'),
-('MALVINAS AMPL.', '751'),
-('EL CONDOR', '751'),
-('ISLAS MALVINAS', '594'),
-('NINGUNO', '1349'),
-('SAGRADO CORAZON DE JESUS', '594'),
-('NINGUNO', '1350'),
-('EL QUIMILAR', '725'),
-('LUJAN', '1086'),
-('NINGUNO', '1351'),
-('EL TRIANGULO', '1086'),
-('LOS ALAMOS', '1086'),
-('NINGUNO', '1352'),
-('SAN ROQUE', '1086'),
-('PORVENIR', '677'),
-('NINGUNO', '1353'),
-('CENTRO', '1147'),
-('NINGUNO', '1354'),
-('NINGUNO', '1355'),
-('CANALITO', '594'),
-('CARITAS', '594'),
-('AEROPUERTO', '1147'),
-('20 VIVIENDAS', '594'),
-('NINGUNO', '1356'),
-('CENTRO', '359'),
-('INDEPENDIENTE', '1165'),
-('EVITA', '1144'),
-('SANTA RITA', '1193'),
-('MARACANA', '1193'),
-('MATADERO', '1193'),
-('JARDIN', '607'),
-('NINGUNO', '1357'),
-('SAN JOSE', '607'),
-('QUIMILAR', '1'),
-('QUIMILAR', '725'),
-('VILLA ABREGU', '5'),
-('OBRERO', '5'),
-('FONAVI I', '831'),
-('FONAVI II', '831'),
-('SAN CAYETANO', '725'),
-('NUEVA ESPERANZA', '725'),
-('20VIVIENDAS', '1147'),
-('SAN CAYETANO', '1147'),
-('FATIMA', '1147'),
-('TORO YACU', '1147'),
-('PROVIRU NORTE', '751'),
-('ALBORADA', '751'),
-('NINGUNO', '1360'),
-('COOPERATIVA', '1144'),
-('TRIANGULO', '751'),
-('PALOMAR', '751'),
-('NINGUNO', '1361'),
-('NINGUNO', '1326'),
-('NINGUNO', '1363'),
-('FONAVI', '706'),
-('NINGUNO', '1364'),
-('NINGUNO', '1365'),
-('FONAVI', '607'),
-('SANTA RITA', '697'),
-('EL SILENCIO', '607'),
-('NINGUNO', '1366'),
-('NORESTE', '359'),
-('SARGENTO CABRAL', '1144'),
-('40 VIVIENDAS', '1144'),
-('EL ALTO', '1144'),
-('PROGRESO', '1144'),
-('LIBERTAD', '1144'),
-('PESCADITO', '1144'),
-('50 VIVIENDAS', '1144'),
-('SAN LORENZO', '1144'),
-('TORO YACU', '1144'),
-('TAGAMAMPA', '1144'),
-('EJERCITO ARGENTINO', '1144'),
-('NINGUNO', '1369'),
-('NINGUNO', '1370'),
-('NINGUNO', '1371'),
-('NINGUNO', '1372'),
-('NINGUNO', '1374'),
-('LOS RALOS', '1144'),
-('NINGUNO', '1375'),
-('NINGUNO', '1376'),
-('NINGUNO', '1377'),
-('NINGUNO', '1378'),
-('URQUIZA', '1144'),
-('NINGUNO', '1368'),
-('84 VIVIENDAS', '594'),
-('URIARTE', '594'),
-('MISTOLAR', '594'),
-('PRESIDENTE PERON', '594'),
-('EL PINTO', '594'),
-('100 VIVIENDAS', '1144'),
-('SAN CAYETANO', '594'),
-('CANAL DE DIOS', '594'),
-('NUEVA ESPERANZA', '594'),
-('SAN JOAQUIN', '725'),
-('SAN CAYETANO', '5'),
-('FATIMA', '5'),
-('NINGUNO', '1383'),
-('NINGUNO', '1385'),
-('NINGUNO', '1381'),
-('CANAL DE DIOS', '725'),
-('VIRGEN DEL VALLE', '361'),
-('TIRO FEDERAL', '361'),
-('EL REMANCITO', '361'),
-('30 VIVIENDAS', '361'),
-('SANTA RAFAELA', '5'),
-('JUAN XXIII', '5'),
-('VILLA MARIA', '5'),
-('BELGRANO SUR', '751'),
-('NINGUNO', '1386'),
-('NINGUNO', '1387'),
-('NINGUNO', '1255'),
-('OBRERO', '1144'),
-('SAN ROQUE', '751'),
-('EL TIGRE', '751'),
-('50 VIVIENDAS', '751'),
-('24 DE SEPTIEMBRE', '361'),
-('EL BAJO', '361'),
-('JUVENTUD', '185'),
-('NINGUNO', '1390'),
-('CENTRO', '185'),
-('FRO POVI', '185'),
-('EL CRESPIN', '185'),
-('17 DE OCTUBRE', '185'),
-('NINGUNO', '1392'),
-('VIRGEN DE GUADALUPE', '9'),
-('NINGUNO', '1393'),
-('SAN JOSE', '1193'),
-('NINGUNO', '1256'),
-('MATADERO', '185'),
-('CENTRO', '751'),
-('LOS INMIGRANTES', '356'),
-('72 VIVIENDAS', '356'),
-('LA LOMA', '356'),
-('NINGUNO', '1394'),
-('ROCA', '356'),
-('ISLAS MALVINAS', '356'),
-('21 DE SEPTIEMBRE', '356'),
-('NINGUNO', '1395'),
-('SAN RAMON', '356'),
-('PANORAMICO', '1296'),
-('NINGUNO', '1396'),
-('ARCADIA', '356'),
-('MALVINAS ARGENTINAS', '1296'),
-('NINGUNO', '1397'),
-('EL TALA', '1296'),
-('NINGUNO', '1398'),
-('NINGUNO', '1399'),
-('JUAN PABLO II', '356'),
-('NINGUNO', '1400'),
-('100 VIVIENDAS', '620'),
-('CRISTO REDENTOR', '1296'),
-('PROVIPO', '1147'),
-('EL TRES', '1147'),
-('LUJAN', '1147'),
-('40 VIVIENDAS', '1147'),
-('NINGUNO', '1401'),
-('NINGUNO', '1402'),
-('20 VIVIENDAS', '706'),
-('20 VIVIENDAS', '1296'),
-('NINGUNO', '1403'),
-('NINGUNO', '1404'),
-('EVA PERON', '1310'),
-('10 VIVIENDAS', '1147'),
-('NINGUNO', '1405'),
-('LAS MALVINAS', '5'),
-('FONAVI', '1147'),
-('ISLAS MALVINAS', '677'),
-('LA LEÑERA', '5'),
-('20 VIVIENDAS', '1147'),
-('NINGUNO', '1406'),
-('102 VIVIENDAS', '356'),
-('LAS PENQUITAS', '356'),
-('VILLA NILDA', '5'),
-('RIVADAVIA', '5'),
-('NINGUNO', '1409'),
-('NINGUNO', '1412'),
-('20 VIVIENDAS', '677'),
-('NINGUNO', '1413'),
-('LOTE 38', '5'),
-('120 VIVIENDAS', '5'),
-('PLATENSE OESTE', '5'),
-('COLONIA SAN FRANCISCO', '5'),
-('FONAVI', '118'),
-('BELGRANO', '5'),
-('EL TRIANGULO', '5'),
-('LOTE 29', '5'),
-('NINGUNO', '1414'),
-('OBRAS SANITARIAS', '118'),
-('CABRERA', '118'),
-('ALBERDI', '118'),
-('MARINO CABEZA', '118'),
-('JARDIN', '706'),
-('CENTRO', '1333'),
-('CENTRO', '706'),
-('MUNICIPAL', '706'),
-('NINGUNO', '1234'),
-('NINGUNO', '1415'),
-('NINGUNO', '1416'),
-('NINGUNO', '1418'),
-('NINGUNO', '1419'),
-('NINGUNO', '1420'),
-('LOS FLORES', '604'),
-('EL TABIQUE', '40'),
-('EL TUSCAL', '40'),
-('MENDILARZU', '179'),
-('AEROPUERTO', '751'),
-('LA PAZ', '751'),
-('BICENTENARIO', '356'),
-('12 VIVIENDAS', '356'),
-('PROLONGACION', '356'),
-('INDEPENDENCIA', '356'),
-('COLON', '356'),
-('JULIO ARGENTINO ROCA', '356'),
-('100 VIVIENDAS', '179'),
-('30 VIVIENDAS', '179'),
-('PRESIDENTE NESTOR KISCHNER', '179'),
-('PEREZ', '179'),
-('SAINT GERMAIN', '9'),
-('BELEN', '9'),
-('ULLUAS', '9'),
-('POLICIAL', '9'),
-('JARDIN', '11'),
-('INMIGRANTES', '9'),
-('EL TUSCAL', '11'),
-('AMPLIACION GORRINI', '11'),
-('LOMITAS', '1193'),
-('CENTRO', '1193'),
-('UNIVERSITARIO', '1'),
-('UNIVERSITARIO', '1'),
-('UNIVERSITARIO', '1382'),
-('UNIVERSITARIO', '9'),
-('DEFENSARES', '1213'),
-('LA PALMAS', '11'),
-('CUARTO CENTENARIO', '11'),
-('PALOMAR', '1'),
-('SANTA TERESITA DEL NIÑO', '9'),
-('NINGUNO', '1424'),
-('CONTITUCION', '11'),
-('PROVIPO', '11'),
-('ZANJON', '9'),
-('MAMA ANTULA', '11'),
-('MADRES PLAZA DE MAYO', '9'),
-('AMPLIACION MADRES PLAZA DE MAYO', '9'),
-('NINGUNO', '1362'),
-('NINGUNO', '1425'),
-('NINGUNO.', '794'),
-('NINGUNO', '1427'),
-('CICLON', '68'),
-('LA FLORIDA', '68'),
-('SARMIENTO', '68'),
-('BOCA', '68'),
-('AVELLANEDA', '68'),
-('200 VIVIENDAS', '361'),
-('VILLA GAMBETI', '11'),
-('NINGUNO', '1428'),
-('INDEPENDENCIA', '86'),
-('NINGUNO', '1429'),
-('NINGUNO', '1430'),
-('LOMAS DEL GOLF', '9'),
-('NINGUNO', '1431'),
-('MUNICIPAL', '1296'),
-('PADRE LEOPOLDO SUAREZ', '68'),
-('HNOS WAGNER', '390'),
-('CENTRO', '372'),
-('LASALLE', '118'),
-('ALMIRANTE BROWN', '5');
+
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (0, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1, 'PADRE AROLDO SUAREZ', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2, 'CICLON', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (3, 'LA PLATA', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (4, 'BOCA', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (5, 'LA FLORIDA', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (6, 'AVELLANEDA', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (7, '50 VIVIENDAS', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (8, 'MUNICIPAL', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (9, 'LA ESPERANZA', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (10, 'FOPROVI 20 VIVIENDAS', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (11, 'ISABEL LA CATOLICA', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (12, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (13, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (14, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (15, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (16, 'QUIMILAR', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (17, 'UNIVERSITARIO', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (18, 'UNIVERSITARIO', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (19, 'PALOMAR', 1);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (20, 'INDEPENDIENTE', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (21, 'LAS AMERICAS', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (22, '2º DE ABRIL', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (23, 'COLON', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (24, 'HOSPITAL', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (25, 'NORTE', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (26, 'JOSE HERNANDEZ', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (27, 'VILLA ELISA', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (28, 'SAN ANTONIO', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (29, 'VILLA AURORA', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (30, 'ARCADIA', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (31, 'MALVINAS ARGENTINAS', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (32, 'SANTA RITA', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (33, '21 DE SETIEMBRE', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (34, 'MAIPU', 2);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (35, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (36, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (37, 'FINCA DE RAMOS', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (38, 'EL CRUCERO', 3);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (39, 'LAS VIOLETAS', 3);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (40, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (41, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (42, 'CENTRO', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (43, 'PALMITAS DE GEREZ', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (44, 'OESTE', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (45, 'PAMPA MUYOJ', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (46, 'POLIGONO', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (47, 'EL BARRIAL', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (48, 'PALERMO', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (49, 'HUAICURU', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (50, 'ISLAS MALVINAS', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (51, 'HUCHO POZO', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (52, 'PARTICIPACION', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (53, 'SANTA ELENA', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (54, 'EMERGENCIA', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (55, 'TRAMO 20', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (56, 'CENTRO', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (57, 'CANALITO NORTE', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (58, 'EVA PERON', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (59, '48 VIVIENDAS', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (60, 'LAS CHACRAS', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (61, 'JORGE NEWBERY', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (62, 'ALBERDI', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (63, 'LIBERTAD', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (64, 'LAGUNILLA OESTE', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (65, 'REMANSO', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (66, 'LAGUNILLA ESTE', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (67, '120 VIVIENDAS', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (68, 'UNION', 4);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (69, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (70, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (71, '21 VIVIENDAS', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (72, 'S.PAMPA', 5);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (73, 'AYUDA MUTUA', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (74, 'PUESTO ROSARIO', 5);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (75, 'CENTRO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (76, 'VILLA GASTA', 5);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (77, 'COMERCIO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (78, 'CORBALAN', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (79, 'FERROCARRIL', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (80, 'INMIGRANTES', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (81, 'JARDIN', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (82, 'MAILIN', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (83, 'EL GOLFO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (84, 'MATADERO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (85, 'SILENCIO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (86, 'EL CUADRADO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (87, 'LA NENA', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (88, 'LA SIMONA', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (89, 'LA TELESITA', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (90, 'LAS GAMAS', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (91, 'LOTE 4', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (92, 'LOTE 40', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (93, 'LOTE 41', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (94, 'LOTE 42', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (95, 'LOTE 5', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (96, 'LOTE 51', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (97, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (98, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (99, 'COLONIA OSVALDO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (100, 'SAN FRANCISCO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (101, 'SANTA RITA', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (102, 'ABREGU', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (103, 'LA MERCED', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (104, 'CAMPO ROSSO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (105, 'SAN JORGE', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (106, 'MANZIONE', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (107, 'VILLA FERNANDEZ', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (108, 'VILLA ABREGU', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (109, 'OBRERO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (110, 'SAN CAYETANO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (111, 'FATIMA', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (112, 'SANTA RAFAELA', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (113, 'JUAN XXIII', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (114, 'VILLA MARIA', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (115, 'LAS MALVINAS', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (116, 'LA LEÑERA', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (117, 'VILLA NILDA', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (118, 'RIVADAVIA', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (119, 'LOTE 38', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (120, '120 VIVIENDAS', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (121, 'PLATENSE OESTE', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (122, 'COLONIA SAN FRANCISCO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (123, 'BELGRANO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (124, 'EL TRIANGULO', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (125, 'LOTE 29', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (126, 'ALMIRANTE BROWN', 9);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (127, 'LAGUNITA NORTE', 6);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (128, 'BARTOLOME MITRE', 6);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (129, 'YACU CHIRI', 6);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (130, 'PUERTA GRANDE', 6);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (131, 'LIBERTAD', 6);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (132, 'CENTRO', 6);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (133, 'LOMITAS', 6);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (134, 'LAGUNITA SUR', 6);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (135, 'EL BOQUERON', 6);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (136, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (137, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (138, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (139, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (140, 'TRIANGULO', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (141, 'MUNICIPAL', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (142, '12 DE OCTUBRE', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (143, 'SAN CAYETANO', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (144, 'CENTRO NORTE', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (145, 'SOR ANGELA DE LA CRUZ', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (146, 'CENTRO', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (147, 'EVITA', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (148, 'CENTRO SUR', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (149, 'SAN MARTIN', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (150, 'PORVENIR', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (151, 'BELGRANO', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (152, 'CANAL', 16);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (153, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (154, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (155, '8 DE ABRIL', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (156, 'AEROPUERTO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (157, 'ALMIRANTE BROWN', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (158, 'AMERICA DEL SUR', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (159, 'AUTONOMIA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (160, 'BELGRANO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (161, 'BORGES', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (162, 'BRUNO VOLTA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (163, 'CABILDO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (164, 'CACERES', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (165, 'CAMPO CONTRERAS VIEJO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (166, 'CENTENARIO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (167, 'CENTRO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (168, 'CIUDAD DEL NIÑO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (169, 'CONGRESO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (170, 'COLON', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (171, 'BOSCO I', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (172, 'EJERCITO ARGENTINO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (173, 'EL PALOMAR', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (174, 'FRANCISCO DE AGUIRRE', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (175, 'SAN FRANCISCO SOLANO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (176, 'GENERAL PAZ', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (177, 'HUAICO HONDO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (178, 'INDEPENDENCIA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (179, 'INDUSTRIA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (180, 'JARDIN', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (181, 'JOHN F. KENNEDY', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (182, 'JORGE NEWBERY', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (183, 'JUAN B. ALBERDI', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (184, 'JUAN DIAZ DE SOLIS', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (185, 'JUAN FELIPE IBARRA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (186, 'JUAN XXIII', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (187, 'JURAMENTO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (188, 'LA CATOLICA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (189, 'LIBERTAD', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (190, 'LOS INMIGRANTES', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (191, 'MARIANO MORENO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (192, 'MISHKY MAYU', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (193, 'MOSCONI', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (194, 'PARQUE AGUIRRE', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (195, 'PRIMERA JUNTA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (196, 'RAMON CARRILLO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (197, 'RECONQUISTA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (198, 'RIVADAVIA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (199, 'SAENZ PEÑA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (200, 'SAN MARTIN', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (201, 'SANTA LUCIA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (202, 'SARGENTO CABRAL', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (203, 'SARMIENTO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (204, 'S.M.A.T.A.', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (205, 'TRADICION', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (206, 'SANTA ROSA  DE LIMA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (207, 'SAN JOSE DE FLORES', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (208, 'TRIANGULO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (209, 'BORGES AMPLIACION', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (210, 'VILLA DEL CARMEN', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (211, 'LOS FLORES', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (212, 'TELEFONICOS', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (213, 'VINALAR', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (214, 'BOSCO III', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (215, 'TARAPAYA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (216, 'C.O.E.S.A.', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (217, 'VILLA BORGES', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (218, 'LOS LAGOS', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (219, 'INDEPENDENCIA AMPLIACION', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (220, 'LOMAS COLORADAS', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (221, 'PERUCHILLO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (222, 'GAS DEL ESTADO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (223, 'BOSCO II', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (224, 'VINALAR AMPLIACION', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (225, 'BOCA DEL TIGRE', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (226, 'MARIANO MORENO AMPLIACION', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (227, 'JERARQUIZADOS MUNICIPALES', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (228, 'ISLAS MALVINAS', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (229, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (230, 'ALBERDI', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (231, 'LOS PINOS', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (232, 'DEL PINO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (233, 'VILLA GRIMANESA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (234, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (235, 'TRUNLLELITTI', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (236, 'CAMPO CONTRERAS', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (237, 'SIGLO XIX', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (238, 'SIGLO XX', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (239, 'SIGLO XXI', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (240, 'CAMPO CONTRERAS DUPLEX', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (241, '750 VIVIENDAS', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (242, 'AESYA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (243, 'COESA', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (244, 'VIRGEN DE GUADALUPE', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (245, 'SAINT GERMAIN', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (246, 'BELEN', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (247, 'ULLUAS', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (248, 'POLICIAL', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (249, 'INMIGRANTES', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (250, 'UNIVERSITARIO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (251, 'SANTA TERESITA DEL NIÑO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (252, 'ZANJON', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (253, 'MADRES PLAZA DE MAYO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (254, 'AMPLIACION MADRES PLAZA DE MAYO', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (255, 'LOMAS DEL GOLF', 18);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (256, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (257, 'BANDA I', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (258, 'BANDA II', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (259, 'BANDA III', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (260, 'BANDA IV', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (261, 'BANDA V', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (262, 'BANDA VI', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (263, 'VILLA ELOISA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (264, 'BAJO DE VERTIZ', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (265, 'VILLA ELENA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (266, 'RIO DULCE', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (267, 'AVENIDA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (268, 'VILLA UNION', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (269, 'VILLA ROSITA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (270, '9 DE JULIO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (271, 'LA GUARIDA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (272, 'VILLA JUANA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (273, 'SAN FERNANDO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (274, '25 DE MAYO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (275, 'LA DARSENA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (276, 'VILLA ROJAS', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (277, 'CENTRAL ARGENTINO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (278, 'LOS LAGOS', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (279, 'CENTRO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (280, 'VILLA INES', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (281, 'RINCON', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (282, 'PALERMO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (283, 'LOS TABIQUES', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (284, 'MENEDEZ', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (285, 'SAN CARLOS', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (286, 'SARMIENTO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (287, 'VILLA NUEVA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (288, 'VILLA RAQUEL', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (289, 'BANFIELD', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (290, 'SAN JAVIER', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (291, 'LOS NARANJOS', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (292, 'VILLA SUAYA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (293, 'TABLA REDONDA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (294, 'DORREGO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (295, 'MATADERO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (296, 'PARQUE INDUSTRIAL', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (297, 'SAN MARTIN', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (298, '1º DE MAYO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (299, 'YANUZZI', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (300, 'AGUA Y ENERGIA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (301, 'FRASGAS', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (302, '17 DE OCTUBRE', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (303, 'LOURDES', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (304, 'TEXTIL', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (305, 'SAN JAVIER II', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (306, 'VILLA GRIDELDA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (307, 'FINCA DE RAMOS', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (308, 'QUILMES', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (309, 'VILLA ANITA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (310, 'LA ISLA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (311, 'PARAISO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (312, 'EL CRUCE', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (313, 'EL BOSQUE', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (314, 'INDEPENDENCIA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (315, 'LA FRATERNIDAD', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (316, 'GORRINI', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (317, 'SAN JUAN', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (318, 'MISHKY MAYU', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (319, 'IV CENTENARIO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (320, 'SAN RAMON', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (321, 'TUSCAL', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (322, 'SALIDO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (323, 'UNION FERROVIARIA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (324, 'EL POLEAR', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (325, 'SALTA PROLONGACION', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (326, 'BESARES', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (327, 'NUEVO LIBANO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (328, 'LA BAJADA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (329, 'RAMOS TABOADA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (330, 'VILLA EL PARQUE', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (331, 'VILLA MARGARITA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (332, 'LOS ALAMOS', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (333, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (334, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (335, 'EL RINCON', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (336, 'CABILDO SANTIAGUEÑO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (337, 'EL TABIQUE', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (338, 'MENENDEZ', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (339, 'VILLA GRISELDA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (340, 'MATADERO VIEJO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (341, 'TRAMO 18', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (342, 'AMPLIACION 1° DE MAYO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (343, 'FRATERNIDAD', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (344, 'SANTA ROSA DE LIMA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (345, 'AMPLIACION PARQUE INDUSTRIAL', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (346, 'VILLA 9 DE JULIO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (347, 'AMPLIACION PARAISO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (348, 'EL PARAISO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (349, 'MERCANTIL', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (350, 'LOS ALAMOS II', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (351, 'JORGE W. ABALOS', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (352, 'AMPLIACION CENTRAL ARGENTINO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (353, 'JUAN DOMINGO PERON', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (354, 'AMPLIACION 25 DE MAYO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (355, 'ALBERDI', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (356, 'VILLA YANUZZI', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (357, 'LA TABLADA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (358, 'TABIQUE', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (359, 'JARDIN', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (360, 'EL TUSCAL', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (361, 'AMPLIACION GORRINI', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (362, 'LA PALMAS', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (363, 'CUARTO CENTENARIO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (364, 'CONTITUCION', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (365, 'PROVIPO', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (366, 'MAMA ANTULA', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (367, 'VILLA GAMBETI', 20);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (368, 'REAL SAYANA', 12);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (369, '100 VIVIENDAS', 12);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (370, 'VIEJO', 12);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (371, 'LA CASILLA', 12);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (372, 'NUEVA ESPERANZA', 12);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (373, 'VILLA SUAREZ', 12);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (374, 'VILLA CORIA', 12);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (375, 'MARAVILLA', 12);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (376, 'BAJADITA', 12);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (377, 'PERCHIL', 12);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (378, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (379, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (380, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (381, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (382, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (383, 'SILIPICA TROZO POZO', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (384, '25 DE MAYO', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (385, 'EL CHURQUI', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (386, 'LAS PILETAS', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (387, 'VILLA BALNEARIA', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (388, 'RINCON ATACAMA', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (389, 'LOS RALOS', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (390, 'HERRERA  ALTO', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (391, 'AMAPOLA', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (392, 'VINARA', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (393, 'PALMA REDONDA', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (394, 'PUESTO LA LINDA', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (395, 'TAQUELLO', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (396, 'SOTELO', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (397, 'SAN MARTIN', 17);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (398, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (399, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (400, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (401, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (402, 'MORAMPA', 21);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (403, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (404, 'CENTRO', 22);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (405, 'JUAN XXIII', 22);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (406, 'EL TRIANGULO', 22);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (407, 'SAN MARTIN', 22);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (408, 'COLON', 22);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (409, 'SAN ANTONIO', 22);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (410, 'LUJAN', 22);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (411, 'SAN FRANCISCO', 22);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (412, 'PALOMAR', 22);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (413, 'BELGRANO', 22);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (414, 'EZEIZA', 22);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (415, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (416, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (417, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (418, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (419, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (420, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (421, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (422, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (423, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (424, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (425, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (426, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (427, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (428, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (429, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (430, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (431, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (432, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (433, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (434, 'EL TABIQUE', 50);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (435, 'EL TUSCAL', 50);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (436, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (437, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (438, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (439, 'VACASNIOJ', 44);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (440, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (441, 'NAVICHA', 45);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (442, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (443, 'LAS CAÑAS', 46);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (444, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (445, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (446, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (447, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (448, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (449, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (450, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (451, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (452, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (453, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (454, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (455, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (456, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (457, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (458, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (459, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (460, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (461, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (462, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (463, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (464, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (465, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (466, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (467, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (468, 'CICLON', 78);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (469, 'LA FLORIDA', 78);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (470, 'SARMIENTO', 78);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (471, 'BOCA', 78);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (472, 'AVELLANEDA', 78);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (473, 'PADRE LEOPOLDO SUAREZ', 78);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (474, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (475, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (476, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (477, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (478, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (479, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (480, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (481, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (482, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (483, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (484, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (485, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (486, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (487, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (488, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (489, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (490, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (491, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (492, 'ARENALES', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (493, 'AVELLANEDA', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (494, 'LOMAS DE ZAMORA', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (495, 'ARROYITO', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (496, 'CENTRO', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (497, 'NORTE', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (498, 'MARADONA', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (499, 'ARTEMIO GRAMAJO', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (500, 'VIRGEN DEL VALLE', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (501, 'ALMIRANTE BROWN', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (502, '17 DE OCTUBRE', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (503, 'UNION', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (504, 'GRAMAJO', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (505, '2 DE ABRIL', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (506, '25 VIVIENDAS', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (507, 'JOSE HERNANDEZ', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (508, 'COOPERATIVA', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (509, '15 VIVIENDAS', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (510, 'LA FLORIDA', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (511, 'INDEPENDENCIA', 96);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (512, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (513, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (514, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (515, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (516, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (517, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (518, 'SAN JAVIER', 93);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (519, 'SRA PUJIO', 93);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (520, 'SAN LORENZO', 93);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (521, 'M LUISA', 93);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (522, 'LA GRANJA', 93);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (523, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (524, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (525, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (526, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (527, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (528, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (529, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (530, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (531, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (532, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (533, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (534, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (535, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (536, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (537, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (538, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (539, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (540, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (541, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (542, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (543, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (544, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (545, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (546, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (547, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (548, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (549, 'MATADERO', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (550, 'PROVIPO', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (551, 'SAN VICENTE', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (552, 'ARENAL', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (553, 'BELGRANO', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (554, 'CENTRO', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (555, 'SUD', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (556, 'MAILIN', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (557, 'SAN MARTIN', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (558, 'EVA PERON', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (559, '1º DE ABRIL', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (560, 'JORGE GOTAU', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (561, 'FONAVI', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (562, 'OBRAS SANITARIAS', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (563, 'CABRERA', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (564, 'ALBERDI', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (565, 'MARINO CABEZA', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (566, 'LASALLE', 127);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (567, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (568, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (569, 'EL BALDE', 130);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (570, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (571, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (572, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (573, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (574, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (575, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (576, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (577, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (578, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (579, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (580, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (581, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (582, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (583, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (584, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (585, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (586, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (587, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (588, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (589, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (590, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (591, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (592, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (593, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (594, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (595, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (596, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (597, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (598, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (599, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (600, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (601, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (602, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (603, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (604, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (605, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (606, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (607, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (608, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (609, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (610, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (611, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (612, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (613, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (614, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (615, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (616, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (617, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (618, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (619, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (620, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (621, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (622, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (623, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (624, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (625, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (626, 'PRUEBA TRES', 178);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (627, 'JARDIN', 178);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (628, 'INMIGRANTES', 178);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (629, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (630, 'RICARDO ROJAS', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (631, 'FATIMA', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (632, 'VILLA NUEVA', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (633, 'CANAL', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (634, 'RAMOS MEJIA', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (635, 'MATADERO', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (636, 'SANTA ROSA', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (637, 'JUAN DOMINGO PERON', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (638, 'GUTIERREZ', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (639, 'CENTRO', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (640, 'MALVINAS ARGENTINAS', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (641, 'MENDILAZU', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (642, 'EVA PERON', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (643, 'ALMIRANTE BROWN', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (644, '27 DE ABRIL', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (645, 'MUNICIPAL', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (646, 'COLEGIALES', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (647, '20 VIVIENDAS', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (648, 'RAMON CARRILLO', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (649, 'SARMIENTO', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (650, 'MENDILARZU', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (651, '100 VIVIENDAS', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (652, '30 VIVIENDAS', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (653, 'PRESIDENTE NESTOR KISCHNER', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (654, 'PEREZ', 186);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (655, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (656, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (657, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (658, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (659, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (660, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (661, '7 DE ABRIL', 192);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (662, 'BELEN', 192);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (663, 'BAJO AVELLANEDA', 192);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (664, 'TECHO Y TRABAJO', 192);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (665, 'JUVENTUD', 192);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (666, 'CENTRO', 192);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (667, 'FRO POVI', 192);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (668, 'EL CRESPIN', 192);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (669, '17 DE OCTUBRE', 192);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (670, 'MATADERO', 192);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (671, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (672, 'AION Nº 1', 193);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (673, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (674, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (675, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (676, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (677, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (678, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (679, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (680, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (681, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (682, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (683, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (684, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (685, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (686, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (687, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (688, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (689, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (690, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (691, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (692, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (693, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (694, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (695, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (696, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (697, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (698, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (699, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (700, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (701, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (702, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (703, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (704, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (705, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (706, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (707, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (708, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (709, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (710, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (711, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (712, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (713, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (714, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (715, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (716, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (717, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (718, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (719, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (720, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (721, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (722, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (723, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (724, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (725, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (726, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (727, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (728, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (729, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (730, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (731, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (732, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (733, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (734, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (735, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (736, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (737, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (738, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (739, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (740, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (741, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (742, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (743, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (744, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (745, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (746, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (747, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (748, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (749, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (750, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (751, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (752, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (753, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (754, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (755, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (756, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (757, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (758, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (759, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (760, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (761, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (762, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (763, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (764, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (765, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (766, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (767, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (768, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (769, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (770, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (771, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (772, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (773, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (774, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (775, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (776, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (777, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (778, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (779, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (780, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (781, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (782, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (783, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (784, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (785, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (786, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (787, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (788, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (789, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (790, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (791, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (792, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (793, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (794, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (795, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (796, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (797, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (798, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (799, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (800, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (801, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (802, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (803, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (804, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (805, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (806, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (807, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (808, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (809, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (810, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (811, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (812, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (813, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (814, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (815, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (816, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (817, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (818, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (819, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (820, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (821, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (822, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (823, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (824, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (825, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (826, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (827, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (828, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (829, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (830, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (831, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (832, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (833, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (834, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (835, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (836, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (837, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (838, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (839, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (840, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (841, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (842, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (843, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (844, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (845, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (846, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (847, 'BELGRANO', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (848, 'JUAN DOMINGO PERON', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (849, 'INDEPENDIENTE', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (850, 'VILLA AURORA', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (851, 'HOSPITAL', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (852, 'JOSE HERNANDEZ', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (853, 'LAS AMERICAS', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (854, 'SAN ANTONIO', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (855, 'NORTE', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (856, '9 DE JULIO', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (857, 'CANALITO', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (858, '12 DE OCTUBRE', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (859, 'CAMPINI', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (860, 'VILLA ELISA', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (861, 'MAIPU', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (862, 'MALVINAS ARGENTINAS', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (863, 'SANTA RITA', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (864, 'MATADERO', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (865, 'COOPERATIVA', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (866, 'AGUILA', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (867, 'CENTRO', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (868, '2 DE ABRIL', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (869, 'RACEDO', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (870, 'LOS INMIGRANTES', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (871, '72 VIVIENDAS', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (872, 'LA LOMA', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (873, 'ROCA', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (874, 'ISLAS MALVINAS', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (875, '21 DE SEPTIEMBRE', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (876, 'SAN RAMON', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (877, 'ARCADIA', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (878, 'JUAN PABLO II', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (879, '102 VIVIENDAS', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (880, 'LAS PENQUITAS', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (881, 'BICENTENARIO', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (882, '12 VIVIENDAS', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (883, 'PROLONGACION', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (884, 'INDEPENDENCIA', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (885, 'COLON', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (886, 'JULIO ARGENTINO ROCA', 362);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (887, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (888, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (889, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (890, 'COMERCIAL', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (891, 'LAS FLORES', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (892, 'RACEDO', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (893, 'AVELLANEDA', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (894, 'ISLAS MALVINAS', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (895, 'PUENTE ALSINA', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (896, 'NOROESTE', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (897, 'PROGRESO', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (898, 'SAN ROQUE', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (899, '10 VIVIENDAS', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (900, '2 DE ABRIL', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (901, 'NUESTRA SEÑORA DE LUJAN', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (902, 'SAN CAYETANO', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (903, 'RESIDENCIAL', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (904, 'SAN JOSE DE FLORES', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (905, '8 DE SEPTIEMBRE', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (906, 'LIBERTAD', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (907, 'CENTRO', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (908, 'NORESTE', 365);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (909, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (910, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (911, 'LAS VIOLETAS', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (912, 'JUAN DOMINGO PERON', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (913, 'ESPERANZA', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (914, 'VILLA PAULINA', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (915, 'OESTE', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (916, 'PARQUE', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (917, 'EVA PERON', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (918, 'YAPEYU', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (919, 'NUEVA ESPERANZA', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (920, 'CARLOS ARTURO JUAREZ', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (921, '17 DE OCTUBRE', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (922, 'ALMIRANTE BROWN', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (923, 'CENTENARIO', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (924, 'SUMAMPA', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (925, 'ELISEO FRINGES', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (926, 'LA COOPERATIVA', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (927, 'LA CURVA', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (928, 'NESTOR KIRCHNER', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (929, 'FORTABAT', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (930, 'ESPERANZA II', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (931, 'ESPERANZA III', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (932, '50 VIVIENDAS', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (933, 'LAS COOPERATIVAS', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (934, '60 VIVIENDAS', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (935, '94 VIVIENDAS', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (936, '528 VIVIENDAS', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (937, 'VIRGEN DEL VALLE', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (938, 'TIRO FEDERAL', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (939, 'EL REMANCITO', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (940, '30 VIVIENDAS', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (941, '24 DE SEPTIEMBRE', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (942, 'EL BAJO', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (943, '200 VIVIENDAS', 367);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (944, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (945, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (946, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (947, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (948, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (949, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (950, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (951, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (952, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (953, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (954, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (955, 'CENTRO', 378);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (956, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (957, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (958, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (959, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (960, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (961, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (962, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (963, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (964, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (965, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (966, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (967, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (968, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (969, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (970, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (971, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (972, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (973, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (974, 'HNOS WAGNER', 396);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (975, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (976, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (977, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (978, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (979, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (980, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (981, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (982, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (983, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (984, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (985, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (986, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (987, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (988, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (989, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (990, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (991, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (992, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (993, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (994, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (995, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (996, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (997, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (998, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (999, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1000, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1001, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1002, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1003, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1004, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1005, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1006, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1007, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1008, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1009, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1010, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1011, 'NECOCHEA', 427);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1012, 'AVELLANEDA', 427);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1013, 'JUAN JOSE PASO', 427);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1014, 'MATADERO VIEJO', 427);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1015, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1016, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1017, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1018, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1019, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1020, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1021, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1022, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1023, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1024, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1025, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1026, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1027, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1028, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1029, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1030, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1031, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1032, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1033, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1034, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1035, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1036, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1037, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1038, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1039, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1040, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1041, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1042, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1043, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1044, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1045, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1046, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1047, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1048, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1049, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1050, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1051, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1052, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1053, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1054, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1055, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1056, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1057, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1058, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1059, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1060, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1061, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1062, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1063, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1064, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1065, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1066, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1067, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1068, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1069, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1070, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1071, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1072, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1073, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1074, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1075, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1076, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1077, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1078, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1079, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1080, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1081, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1082, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1083, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1084, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1085, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1086, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1087, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1088, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1089, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1090, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1091, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1092, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1093, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1094, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1095, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1096, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1097, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1098, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1099, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1100, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1101, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1102, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1103, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1104, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1105, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1106, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1107, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1108, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1109, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1110, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1111, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1112, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1113, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1114, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1115, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1116, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1117, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1118, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1119, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1120, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1121, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1122, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1123, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1124, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1125, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1126, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1127, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1128, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1129, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1130, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1131, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1132, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1133, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1134, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1135, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1136, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1137, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1138, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1139, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1140, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1141, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1142, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1143, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1144, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1145, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1146, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1147, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1148, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1149, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1150, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1151, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1152, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1153, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1154, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1155, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1156, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1157, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1158, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1159, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1160, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1161, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1162, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1163, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1164, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1165, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1166, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1167, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1168, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1169, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1170, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1171, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1172, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1173, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1174, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1175, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1176, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1177, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1178, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1179, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1180, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1181, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1182, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1183, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1184, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1185, 'REMANZO', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1186, 'CENTRO', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1187, 'LIBERTAD', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1188, 'POLIGONO', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1189, 'EVA PERON', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1190, 'EMERGENCIA', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1191, 'PALERMO', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1192, 'UNION', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1193, 'LAGUNILLA', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1194, 'OESTE', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1195, 'PARTICIPACION', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1196, 'CORAZON DE JESUS', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1197, 'ALBERDI', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1198, 'LAS CHACRAS', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1199, 'JORGE NEWBERY', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1200, '100 VIVIENDAS', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1201, 'CENTENARIO', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1202, '30 VIVIENDAS', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1203, 'ISLAS MALVINAS', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1204, 'SAGRADO CORAZON DE JESUS', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1205, 'CANALITO', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1206, 'CARITAS', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1207, '20 VIVIENDAS', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1208, '84 VIVIENDAS', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1209, 'URIARTE', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1210, 'MISTOLAR', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1211, 'PRESIDENTE PERON', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1212, 'EL PINTO', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1213, 'SAN CAYETANO', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1214, 'CANAL DE DIOS', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1215, 'NUEVA ESPERANZA', 597);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1216, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1217, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1218, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1219, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1220, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1221, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1222, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1223, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1224, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1225, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1226, 'LOS FLORES', 607);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1227, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1228, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1229, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1230, 'MATADERO', 610);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1231, 'CENTRO', 610);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1232, 'MAILIN', 610);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1233, 'FERROCARRIL', 610);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1234, '50 VIVIENDAS', 610);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1235, 'COMERCIO', 610);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1236, 'NORTE', 610);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1237, 'CORBALAN', 610);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1238, 'JARDIN', 610);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1239, 'SAN JOSE', 610);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1240, 'FONAVI', 610);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1241, 'EL SILENCIO', 610);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1242, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1243, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1244, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1245, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1246, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1247, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1248, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1249, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1250, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1251, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1252, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1253, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1254, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1255, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1256, '100 VIVIENDAS', 623);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1257, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1258, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1259, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1260, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1261, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1262, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1263, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1264, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1265, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1266, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1267, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1268, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1269, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1270, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1271, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1272, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1273, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1274, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1275, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1276, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1277, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1278, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1279, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1280, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1281, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1282, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1283, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1284, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1285, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1286, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1287, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1288, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1289, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1290, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1291, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1292, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1293, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1294, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1295, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1296, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1297, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1298, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1299, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1300, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1301, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1302, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1303, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1304, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1305, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1306, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1307, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1308, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1309, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1310, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1311, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1312, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1313, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1314, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1315, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1316, 'BELGRANO', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1317, 'BICENTENARIO', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1318, 'CENTRO', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1319, 'SOR ANGELA', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1320, 'SAN MARTIN', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1321, '12 DE OCTUBRE', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1322, 'MUNICIPAL', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1323, 'VIRGEN DEL CARBALLO', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1324, 'EL TRIANGULO', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1325, 'EL PORVENIR', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1326, 'TRIANGULO', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1327, 'SAN CAYETANO', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1328, 'EVITA', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1329, 'CANAL', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1330, 'SANTA ELENA', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1331, 'VILLA NUEVA', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1332, 'PORVENIR', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1333, 'ISLAS MALVINAS', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1334, '20 VIVIENDAS', 678);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1335, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1336, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1337, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1338, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1339, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1340, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1341, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1342, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1343, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1344, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1345, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1346, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1347, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1348, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1349, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1350, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1351, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1352, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1353, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1354, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1355, 'SANTA RITA', 698);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1356, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1357, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1358, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1359, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1360, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1361, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1362, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1363, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1364, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1365, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1366, 'PANORAMICO', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1367, 'NORTE', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1368, 'C.G.T.', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1369, 'EL TALA', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1370, 'BELGRANO', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1371, 'MALVINAS ARGENTINAS', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1372, 'PALERMO', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1373, 'TALLERES', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1374, 'BELLA VISTA', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1375, 'LA MERCED', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1376, 'FOPROVI', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1377, 'CRISTO REDENTOR', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1378, 'FONAVI', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1379, '20 VIVIENDAS', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1380, 'JARDIN', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1381, 'CENTRO', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1382, 'MUNICIPAL', 707);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1383, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1384, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1385, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1386, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1387, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1388, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1389, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1390, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1391, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1392, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1393, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1394, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1395, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1396, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1397, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1398, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1399, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1400, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1401, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1402, '60 VIVIENDAS', 726);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1403, 'SAN PANTALEON', 726);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1404, 'SANTA ROSA', 726);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1405, 'CANAL', 726);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1406, 'PRESIDENTE PERON', 726);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1407, 'EL MISTOLAR', 726);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1408, 'EL QUIMILAR', 726);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1409, 'QUIMILAR', 726);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1410, 'SAN CAYETANO', 726);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1411, 'NUEVA ESPERANZA', 726);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1412, 'SAN JOAQUIN', 726);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1413, 'CANAL DE DIOS', 726);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1414, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1415, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1416, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1417, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1418, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1419, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1420, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1421, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1422, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1423, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1424, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1425, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1426, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1427, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1428, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1429, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1430, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1431, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1432, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1433, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1434, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1435, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1436, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1437, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1438, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1439, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1440, 'EVA PERON', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1441, 'LIBERTAD', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1442, 'RIVADAVIA', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1443, 'BELGRANO', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1444, 'EL SILENCIO', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1445, 'MALVINAS', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1446, 'MALVINAS AMPL.', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1447, 'EL CONDOR', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1448, 'PROVIRU NORTE', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1449, 'ALBORADA', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1450, 'TRIANGULO', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1451, 'PALOMAR', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1452, 'BELGRANO SUR', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1453, 'SAN ROQUE', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1454, 'EL TIGRE', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1455, '50 VIVIENDAS', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1456, 'CENTRO', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1457, 'AEROPUERTO', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1458, 'LA PAZ', 752);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1459, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1460, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1461, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1462, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1463, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1464, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1465, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1466, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1467, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1468, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1469, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1470, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1471, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1472, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1473, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1474, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1475, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1476, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1477, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1478, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1479, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1480, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1481, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1482, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1483, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1484, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1485, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1486, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1487, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1488, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1489, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1490, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1491, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1492, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1493, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1494, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1495, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1496, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1497, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1498, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1499, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1500, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1501, 'NINGUNO.', 794);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1502, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1503, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1504, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1505, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1506, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1507, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1508, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1509, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1510, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1511, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1512, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1513, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1514, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1515, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1516, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1517, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1518, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1519, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1520, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1521, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1522, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1523, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1524, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1525, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1526, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1527, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1528, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1529, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1530, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1531, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1532, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1533, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1534, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1535, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1536, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1537, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1538, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1539, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1540, 'BELGRANO', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1541, 'FONAVI III', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1542, 'LAS TRES ROSAS', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1543, 'VICTORIA', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1544, 'MALVINAS', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1545, 'PALOMAR', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1546, 'LAS COOPERATIVAS', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1547, 'CAMPOS 1', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1548, 'TRIANGULO', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1549, 'ALOMO', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1550, 'JUAN XIII', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1551, 'SANTA ROSA', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1552, 'SAN MARTIN', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1553, 'SANTA ANGELA', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1554, 'IÑIGUEZ', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1555, 'CAMPO 2', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1556, 'COLON', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1557, 'SAN FRANCISCO', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1558, 'SAN ANTONIO', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1559, 'EL TRIANGULO', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1560, 'FONAVI 4', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1561, 'LAS MERCEDES', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1562, 'JUAN F. IBARRA', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1563, 'COLASANZ', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1564, 'EZEIZA', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1565, '20 VIVIENDAS', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1566, 'JOSE LUIS GELID', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1567, 'CALASANZ', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1568, 'LUJAN', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1569, 'JUAN XXIII', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1570, 'SAN CAYETANO', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1571, 'PROVIRU', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1572, 'MATADERO', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1573, 'EPAM', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1574, 'FONAVI I', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1575, 'FONAVI II', 831);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1576, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1577, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1578, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1579, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1580, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1581, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1582, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1583, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1584, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1585, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1586, 'REAL SAYANA', 842);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1587, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1588, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1589, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1590, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1591, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1592, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1593, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1594, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1595, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1596, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1597, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1598, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1599, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1600, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1601, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1602, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1603, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1604, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1605, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1606, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1607, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1608, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1609, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1610, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1611, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1612, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1613, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1614, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1615, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1616, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1617, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1618, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1619, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1620, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1621, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1622, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1623, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1624, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1625, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1626, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1627, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1628, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1629, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1630, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1631, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1632, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1633, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1634, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1635, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1636, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1637, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1638, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1639, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1640, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1641, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1642, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1643, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1644, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1645, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1646, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1647, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1648, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1649, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1650, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1651, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1652, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1653, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1654, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1655, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1656, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1657, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1658, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1659, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1660, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1661, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1662, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1663, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1664, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1665, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1666, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1667, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1668, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1669, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1670, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1671, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1672, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1673, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1674, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1675, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1676, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1677, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1678, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1679, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1680, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1681, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1682, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1683, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1684, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1685, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1686, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1687, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1688, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1689, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1690, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1691, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1692, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1693, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1694, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1695, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1696, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1697, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1698, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1699, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1700, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1701, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1702, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1703, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1704, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1705, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1706, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1707, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1708, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1709, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1710, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1711, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1712, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1713, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1714, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1715, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1716, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1717, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1718, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1719, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1720, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1721, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1722, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1723, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1724, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1725, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1726, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1727, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1728, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1729, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1730, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1731, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1732, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1733, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1734, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1735, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1736, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1737, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1738, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1739, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1740, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1741, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1742, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1743, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1744, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1745, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1746, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1747, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1748, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1749, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1750, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1751, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1752, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1753, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1754, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1755, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1756, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1757, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1758, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1759, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1760, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1761, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1762, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1763, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1764, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1765, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1766, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1767, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1768, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1769, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1770, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1771, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1772, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1773, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1774, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1775, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1776, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1777, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1778, '20 VIVIENDAS', 1031);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1779, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1780, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1781, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1782, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1783, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1784, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1785, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1786, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1787, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1788, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1789, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1790, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1791, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1792, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1793, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1794, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1795, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1796, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1797, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1798, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1799, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1800, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1801, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1802, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1803, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1804, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1805, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1806, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1807, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1808, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1809, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1810, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1811, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1812, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1813, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1814, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1815, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1816, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1817, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1818, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1819, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1820, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1821, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1822, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1823, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1824, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1825, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1826, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1827, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1828, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1829, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1830, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1831, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1832, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1833, 'VILLA BALNEARIA', 1082);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1834, 'SAN MARTIN', 1082);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1835, 'EL ALTO', 1082);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1836, 'TORO YACU', 1082);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1837, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1838, 'SANTA RITA', 1083);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1839, 'MALVINAS', 1083);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1840, 'VIRGEN DEL VALLE', 1083);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1841, 'SAN JOSE', 1083);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1842, 'VIRGEN DE FATIMA', 1083);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1843, 'LUJAN', 1083);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1844, 'EL TRIANGULO', 1083);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1845, 'LOS ALAMOS', 1083);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1846, 'SAN ROQUE', 1083);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1847, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1848, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1849, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1850, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1851, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1852, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1853, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1854, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1855, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1856, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1857, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1858, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1859, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1860, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1861, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1862, 'VIRGEN DE CARMEN', 1098);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1863, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1864, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1865, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1866, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1867, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1868, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1869, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1870, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1871, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1872, 'SAN RAMON', 1106);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1873, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1874, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1875, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1876, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1877, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1878, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1879, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1880, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1881, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1882, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1883, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1884, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1885, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1886, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1887, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1888, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1889, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1890, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1891, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1892, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1893, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1894, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1895, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1896, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1897, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1898, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1899, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1900, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1901, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1902, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1903, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1904, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1905, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1906, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1907, 'LA PALUDICA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1908, 'ESPAÑA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1909, 'JARDIN', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1910, 'HERRERA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1911, 'AGUA SANTA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1912, 'SAN PABLO', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1913, 'MERCANTIL', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1914, '25 DE MAYO', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1915, 'LOS OCULTOS', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1916, 'LOS FIERROS', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1917, 'LAS LILAS', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1918, 'VILLA NUEVA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1919, 'USINA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1920, 'MUNICIPAL', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1921, 'SOBERANIA NACIONAL', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1922, 'ADELA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1923, 'SALITRE', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1924, 'LA PILETA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1925, 'VILLA BALNEARIA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1926, 'SAN MARTIN', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1927, 'CENTRO', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1928, 'EVITA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1929, 'COOPERATIVA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1930, 'SARGENTO CABRAL', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1931, '40 VIVIENDAS', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1932, 'EL ALTO', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1933, 'PROGRESO', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1934, 'LIBERTAD', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1935, 'PESCADITO', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1936, '50 VIVIENDAS', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1937, 'SAN LORENZO', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1938, 'TORO YACU', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1939, 'TAGAMAMPA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1940, 'EJERCITO ARGENTINO', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1941, 'LOS RALOS', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1942, 'URQUIZA', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1943, '100 VIVIENDAS', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1944, 'OBRERO', 1140);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1945, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1946, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1947, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1948, 'SAN JOSE', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1949, 'SANTA ROSA', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1950, 'ISLAS MALVINAS', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1951, 'CENTRO', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1952, 'AEROPUERTO', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1953, '20VIVIENDAS', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1954, 'SAN CAYETANO', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1955, 'FATIMA', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1956, 'TORO YACU', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1957, 'PROVIPO', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1958, 'EL TRES', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1959, 'LUJAN', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1960, '40 VIVIENDAS', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1961, '10 VIVIENDAS', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1962, 'FONAVI', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1963, '20 VIVIENDAS', 1143);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1964, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1965, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1966, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1967, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1968, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1969, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1970, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1971, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1972, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1973, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1974, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1975, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1976, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1977, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1978, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1979, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1980, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1981, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1982, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1983, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1984, 'PROVIRU', 1163);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1985, 'INDEPENDIENTE', 1163);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1986, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1987, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1988, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1989, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1990, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1991, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1992, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1993, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1994, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1995, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1996, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1997, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1998, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (1999, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2000, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2001, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2002, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2003, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2004, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2005, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2006, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2007, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2008, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2009, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2010, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2011, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2012, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2013, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2014, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2015, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2016, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2017, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2018, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2019, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2020, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2021, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2022, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2023, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2024, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2025, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2026, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2027, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2028, 'SANTA RITA', 1203);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2029, 'MARACANA', 1203);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2030, 'MATADERO', 1203);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2031, 'SAN JOSE', 1203);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2032, 'LOMITAS', 1203);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2033, 'CENTRO', 1203);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2034, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2035, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2036, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2037, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2038, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2039, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2040, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2041, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2042, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2043, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2044, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2045, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2046, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2047, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2048, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2049, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2050, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2051, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2052, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2053, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2054, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2055, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2056, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2057, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2058, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2059, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2060, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2061, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2062, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2063, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2064, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2065, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2066, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2067, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2068, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2069, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2070, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2071, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2072, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2073, 'REMANSO', 1240);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2074, 'CENTENARIO', 1240);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2075, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2076, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2077, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2078, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2079, 'COMERCIO', 1243);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2080, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2081, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2082, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2083, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2084, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2085, 'DEFENSARES', 1247);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2086, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2087, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2088, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2089, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2090, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2091, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2092, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2093, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2094, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2095, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2096, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2097, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2098, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2099, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2100, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2101, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2102, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2103, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2104, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2105, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2106, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2107, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2108, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2109, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2110, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2111, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2112, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2113, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2114, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2115, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2116, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2117, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2118, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2119, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2120, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2121, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2122, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2123, 'TRUNLLELITTI', 1289);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2124, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2125, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2126, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2127, 'TRUNLLELITTI', 1292);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2128, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2129, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2130, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2131, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2132, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2133, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2134, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2135, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2136, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2137, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2138, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2139, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2140, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2141, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2142, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2143, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2144, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2145, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2146, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2147, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2148, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2149, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2150, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2151, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2152, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2153, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2154, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2155, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2156, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2157, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2158, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2159, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2160, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2161, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2162, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2163, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2164, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2165, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2166, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2167, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2168, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2169, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2170, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2171, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2172, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2173, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2174, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2175, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2176, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2177, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2178, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2179, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2180, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2181, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2182, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2183, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2184, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2185, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2186, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2187, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2188, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2189, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2190, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2191, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2192, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2193, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2194, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2195, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2196, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2197, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2198, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2199, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2200, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2201, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2202, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2203, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2204, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2205, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2206, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2207, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2208, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2209, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2210, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2211, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2212, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2213, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2214, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2215, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2216, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2217, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2218, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2219, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2220, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2221, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2222, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2223, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2224, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2225, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2226, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2227, 'NORTE', 1401);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2228, 'BELLA VISTA', 1401);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2229, 'FONAVI', 1401);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2230, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2231, 'PALERMO', 1401);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2232, 'CENTRO', 1401);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2233, 'PANORAMICO', 1401);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2234, 'MALVINAS ARGENTINAS', 1401);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2235, 'EL TALA', 1401);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2236, 'CRISTO REDENTOR', 1401);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2237, '20 VIVIENDAS', 1401);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2238, 'MUNICIPAL', 1401);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2239, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2240, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2241, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2242, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2243, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2244, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2245, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2246, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2247, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2248, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2249, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2250, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2251, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2252, 'MINGUNO', 1415);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2253, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2254, 'NORTE', 1415);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2255, 'SAN CAYETANO', 1415);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2256, 'ESTE', 1415);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2257, 'CENTRO', 1415);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2258, 'EVA PERON', 1415);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2259, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2260, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2261, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2262, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2263, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2264, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2265, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2266, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2267, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2268, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2269, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2270, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2271, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2272, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2273, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2274, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2275, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2276, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2277, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2278, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2279, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2280, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2281, 'CENTRO', 1438);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2282, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2283, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2284, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2285, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2286, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2287, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2288, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2289, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2290, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2291, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2292, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2293, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2294, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2295, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2296, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2297, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2298, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2299, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2300, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2301, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2302, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2303, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2304, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2305, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2306, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2307, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2308, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2309, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2310, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2311, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2312, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2313, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2314, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2315, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2316, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2317, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2318, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2319, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2320, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2321, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2322, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2323, 'UNIVERSITARIO', 1382);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2324, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2325, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2326, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2327, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2328, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2329, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2330, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2331, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2332, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2333, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2334, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2335, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2336, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2337, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2338, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2339, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2340, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2341, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2342, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2343, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2344, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2345, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2346, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2347, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2348, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2349, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2350, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2351, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2352, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2353, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2354, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2355, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2356, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2357, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2358, 'NINGUNO', 0);
+INSERT INTO barrio (id, descripcion, id_loc) VALUES (2359, 'NINGUNO', 0);

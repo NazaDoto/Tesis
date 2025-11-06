@@ -27,7 +27,7 @@
                     <img v-if="noticia.imagen" :src="'https://nazadoto.com:3500' + noticia.imagen" alt=""
                         class="imagen-noticia" />
                     <p class="fecha-texto">{{ formatearFecha(noticia.fecha) }}</p>
-                    <p class="contenido-texto">{{ noticia.contenido }}</p>
+                    <p class="contenido-texto" v-html="noticia.contenido"></p>
                 </main>
     
                 <!-- Aside con resto de las noticias -->

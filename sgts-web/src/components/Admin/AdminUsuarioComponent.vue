@@ -101,7 +101,7 @@ export default {
         async guardarUsuario(usuario) {
             this.cargando = true;
             try {
-                await axios.post("/beneficiarios/updateUsuario", {usuario: usuario});
+                await axios.post("/beneficiarios/updateUsuario", {usuario: usuario, empleado: JSON.parse(localStorage.getItem('user')).usuario});
                 this.mensaje = "Usuario actualizado correctamente.";
                 this.mensajePopup = true;
             } catch (e) {

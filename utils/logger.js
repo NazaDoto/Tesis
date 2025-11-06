@@ -5,7 +5,7 @@ async function registrarLog(usuario, actividad, detalles) {
   try {
 
     await db.query(
-      "INSERT INTO logs (usuario, actividad, detalles, ip, user_agent) VALUES (?, ?, ?, ?, ?)",
+      "INSERT INTO log (usuario, actividad, detalles) VALUES (?, ?, ?)",
       [usuario, actividad, detalles]
     );
   } catch (err) {

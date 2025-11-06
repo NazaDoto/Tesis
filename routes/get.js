@@ -5,60 +5,51 @@ const router = express.Router();
 
 
 router.get('/departamentos', async (req, res) => {
-    try {
-        const response = await db.query('SELECT * FROM departamentos ORDER BY descripcion ASC');
-        res.json(response[0]);
-    } catch (error) {
-        console.log('No se pudo obtener los departamentos. ', error);
-        res.status(500);
-    }
+  try {
+    const response = await db.query('SELECT * FROM departamento ORDER BY descripcion ASC');
+    res.json(response[0]);
+  } catch (error) {
+    console.log('No se pudo obtener los departamentos. ', error);
+    res.status(500);
+  }
 });
 
-router.get('/localidades/:cod_dpto', async (req, res) => {
-    const { cod_dpto } = req.params;
-    try {
-        const response = await db.query(
-            'SELECT * FROM localidades WHERE cod_dpto = ? ORDER BY descripcion ASC',
-            [cod_dpto]
-        );
-        res.json(response[0]);
-    } catch (error) {
-        console.log('No se pudo obtener las localidades. ', error);
-        res.status(500);
-    }
+router.get('/localidades', async (req, res) => {
+  const { id_dpto } = req.query;
+  console.log(id_dpto)
+  try {
+    const [rows] =
+      await db.query('SELECT id, descripcion FROM localidad WHERE id_dpto = ? ORDER BY descripcion',
+        [id_dpto]);
+        res.json(rows);
+  } catch (err) { console.error(err); res.status(500).send('Error al obtener localidades'); }
 });
 
-router.get('/barrios/:cod_localidad', async (req, res) => {
-    try {
-        const { cod_localidad } = req.params;
-        const response = await db.query(
-            'SELECT * FROM barrios WHERE cod_localidad = ? ORDER BY descripcion ASC',
-            [cod_localidad]
-        );
-        res.json(response[0]);
-    } catch (error) {
-        console.log('No se pudo obtener los barrios', error);
-        res.status(500);
-    }
+router.get('/barrios', async (req, res) => {
+  const { id_localidad } = req.query;
+  try {
+    const [rows] =
+      await db.query('SELECT id, descripcion FROM barrio WHERE id_loc = ? ORDER BY descripcion', [id_localidad]); res.json(rows);
+  } catch (err) { console.error(err); res.status(500).send('Error al obtener barrios'); }
 });
 
 router.get('/descargar', (req, res) => {
-    const filePath = path.join(__dirname, req.query.path);
-    res.download(filePath);
+  const filePath = path.join(__dirname, req.query.path);
+  res.download(filePath);
 });
 
 
 router.get('/usuarios', async (req, res) => {
-    try {
-        const result = await db.query('SELECT id, usuario, fecha_registro, correo, rol, dni FROM usuarios');
-        return res.json(result);
-    } catch (error) {
-        console.log(error)
-        res.status(500).json(error);
-    }
+  try {
+    const result = await db.query('SELECT id, usuario, fecha_registro, correo, rol, dni FROM usuario');
+    return res.json(result);
+  } catch (error) {
+    console.log(error)
+    res.status(500).json(error);
+  }
 });
 // ================== LOGS ==================
-router.get("/logs", async (req, res) => {
+router.get("/log", async (req, res) => {
   try {
     const { fecha_desde, fecha_hasta, usuario, actividad } = req.query;
 
@@ -69,7 +60,7 @@ router.get("/logs", async (req, res) => {
         actividad,
         detalles,
         fecha
-      FROM logs
+      FROM log
       WHERE 1=1
     `;
     const params = [];

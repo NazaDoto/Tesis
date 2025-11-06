@@ -9,7 +9,6 @@
         <a href="https://www.facebook.com/profile.php?id=61552046130284" class="link-pie">FACEBOOK</a>
       </div>
       <div class="footer-content">
-          <router-link class="link-pie" to="/contacto">CONTACTO</router-link>        
           <a href="https://maps.app.goo.gl/XADPbVnJhzR3pyNd7" class="link-pie" target="__blank">DIRECCIÓN: SÁENZ PEÑA N° 340</a>    
       </div>
     </div>

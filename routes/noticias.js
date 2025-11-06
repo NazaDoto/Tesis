@@ -26,8 +26,8 @@ router.get('/get', async (req, res) => {
     try {
         const [rows] = await db.query(`
     SELECT n.id, n.titulo, n.contenido, n.fecha, ni.path AS imagen
-    FROM noticias n
-    LEFT JOIN noticias_imagenes ni ON n.id = ni.id_noticia
+    FROM noticia n
+    LEFT JOIN noticia_imagen ni ON n.id = ni.id_noticia
     ORDER BY n.id DESC
 `);
         res.json([rows]);
@@ -46,8 +46,8 @@ router.get('/getNoticia/:id', async (req, res) => {
         // Traer noticia y su imagen principal (si hay)
         const [rows] = await db.query(`
             SELECT n.id, n.titulo, n.contenido, n.fecha, ni.path AS imagen
-            FROM noticias n
-            LEFT JOIN noticias_imagenes ni ON ni.id_noticia = n.id
+            FROM noticia n
+            LEFT JOIN noticia_imagen ni ON ni.id_noticia = n.id
             WHERE n.id = ?
             ORDER BY ni.id ASC
             LIMIT 1
@@ -66,26 +66,29 @@ router.get('/getNoticia/:id', async (req, res) => {
 
 // 🔹 Agregar noticia
 router.post('/agregar', upload.single('imagen'), async (req, res) => {
+
     try {
-        const { titulo, contenido } = req.body;
+        const { titulo, contenido, empleado } = req.body;
         const imagen = req.file ? `/uploads/noticias/${req.file.filename}` : null;
         // 1️⃣ Insertar noticia (solo titulo, contenido y fecha)
         const fecha = new Date();
+        const resultEmpleado = await db.query('SELECT id FROM usuario WHERE usuario = ?', [empleado]);
+        const empleadId = resultEmpleado[0].length > 0 ? resultEmpleado[0][0].id : null;
         const [result] = await db.query(`
-    INSERT INTO noticias (titulo, contenido, fecha)
-    VALUES (?, ?, ?)
-`, [titulo, contenido, fecha]);
+    INSERT INTO noticia (usuario, titulo, contenido, fecha)
+    VALUES (?, ?, ?, ?)
+`, [empleadId, titulo, contenido, fecha]);
 
         // 2️⃣ Insertar imagen asociada en noticias_imagenes (si existe)
         if (req.file) {
             const pathImagen = `/uploads/noticias/${req.file.filename}`;
             const idNoticia = result.insertId; // id generado de la noticia
             await db.query(`
-        INSERT INTO noticias_imagenes (path, id_noticia)
+        INSERT INTO noticia_imagen (path, id_noticia)
         VALUES (?, ?)
     `, [pathImagen, idNoticia]);
         }
-        await registrarLog(req.user?.usuario || 'desconocido', "CREAR_NOTICIA", `Se creó noticia '${titulo}' (ID ${result.insertId})`);
+        await registrarLog(empleado || 'desconocido', "CREAR_NOTICIA", `Se creó noticia '${titulo}' (ID ${result.insertId})`);
 
         res.json({ mensaje: 'Noticia agregada correctamente' });
     } catch (error) {
@@ -96,23 +99,25 @@ router.post('/agregar', upload.single('imagen'), async (req, res) => {
 
 // 🔹 Editar noticia
 router.post('/editar', upload.single('imagen'), async (req, res) => {
-    try {
-        const { id, titulo, contenido } = req.body;
 
-        let query = 'UPDATE noticias SET titulo = ?, contenido = ?';
+    try {
+        const { titulo, contenido, empleado } = req.body;
+
+        let query = 'UPDATE noticia SET titulo = ?, contenido = ?';
         const params = [titulo, contenido];
 
         if (req.file) {
             const imagen = `/uploads/noticias/${req.file.filename}`;
-            query += ', imagen = ?';
-            params.push(imagen);
+            await db.query(`
+        UPDATE noticia_imagen SET path = ? WHERE id_noticia = ?
+    `, [imagen, id]);
         }
 
         query += ' WHERE id = ?';
         params.push(id);
 
         await db.query(query, params);
-        await registrarLog(req.user?.usuario || 'desconocido', "EDITAR_NOTICIA", `Se editó noticia ID ${id}, nuevo título='${titulo}'`);
+        await registrarLog(empleado || 'desconocido', "EDITAR_NOTICIA", `Se editó noticia ID ${id}, nuevo título='${titulo}'`);
 
         res.json({ mensaje: 'Noticia editada correctamente' });
     } catch (error) {
@@ -123,18 +128,19 @@ router.post('/editar', upload.single('imagen'), async (req, res) => {
 
 // 🔹 Eliminar noticia
 router.post('/eliminar', async (req, res) => {
+
     try {
-        const { id } = req.body;
+        const { id, empleado } = req.body;
 
         // Obtener imagen para eliminar del disco
-        const [rows] = await db.query('SELECT imagen FROM noticias WHERE id = ?', [id]);
-        if (rows.length > 0 && rows[0].imagen) {
-            const filePath = path.join(__dirname, rows[0].imagen);
+        const [rows] = await db.query('SELECT path FROM noticia_imagen WHERE id_noticia = ?', [id]);
+        if (rows.length > 0 && rows[0].path) {
+            const filePath = path.join(__dirname, rows[0].path);
             if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
         }
-
-        await db.query('DELETE FROM noticias WHERE id = ?', [id]);
-        await registrarLog(req.user?.usuario || 'desconocido', "ELIMINAR_NOTICIA", `Se eliminó noticia ID ${id}`);
+        await db.query('DELETE FROM noticia_imagen WHERE id_noticia = ?', [id]);
+        await db.query('DELETE FROM noticia WHERE id = ?', [id]);
+        await registrarLog(empleado || 'desconocido', "ELIMINAR_NOTICIA", `Se eliminó noticia ID ${id}`);
 
         res.json({ mensaje: 'Noticia eliminada correctamente' });
     } catch (error) {

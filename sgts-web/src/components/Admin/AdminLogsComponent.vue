@@ -45,19 +45,15 @@
                             <th>Usuario</th>
                             <th>Actividad</th>
                             <th>Detalles</th>
-                            <th>IP</th>
-                            <th>User Agent</th>
                             <th>Fecha</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="max-h-600">
                         <tr v-for="log in logs" :key="log.id">
                             <td>{{ log.id }}</td>
                             <td>{{ log.usuario }}</td>
                             <td>{{ log.actividad }}</td>
-                            <td>{{ log.detalles }}</td>
-                            <td>{{ log.ip }}</td>
-                            <td>{{ log.user_agent }}</td>
+                            <td :title="log.detalles">{{ log.detalles }}</td>
                             <td>{{ formatearFecha(log.fecha) }}</td>
                         </tr>
                     </tbody>
@@ -103,7 +99,7 @@ export default {
                 if (this.usuario) params.usuario = this.usuario;
                 if (this.actividad) params.actividad = this.actividad;
 
-                const res = await axios.get("/get/logs", { params });
+                const res = await axios.get("/get/log", { params });
                 this.logs = res.data;
             } catch (e) {
                 console.error("Error al cargar logs:", e);
@@ -136,6 +132,7 @@ export default {
     flex-direction: row;
     gap: 10px;
 }
+
 .fila {
     display: flex;
     flex-wrap: wrap;
@@ -164,20 +161,27 @@ export default {
 .tabla-container {
     overflow-x: auto;
     margin-top: 20px;
+    max-height: 450px;
 }
 
 .tabla {
     width: 100%;
+    max-height: calc(100% - 20px) !important;
     border-collapse: collapse;
 }
 
 .tabla th,
 .tabla td {
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #ddd;
     text-align: left;
 }
-
+th, td{
+    max-width: 120px;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
 .tabla th {
     background-color: #f5f5f5;
 }

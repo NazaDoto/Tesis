@@ -2,7 +2,7 @@ const express = require('express');
 const db = require("../db.js"); // conexión MySQL
 const router = express.Router();
 
-// Mapear nombres de departamento a cod_dpto
+// Mapear nombres de departamento a id_dpto
 const departamentosMap = {
   capital: 7,
   banda: 5,
@@ -11,8 +11,8 @@ const departamentosMap = {
 // Función para construir cláusula WHERE según tipo
 function getWhereClause(tipo) {
   if (tipo === "todo") return ""; // sin filtro
-  if (tipo === "interior") return "WHERE b.cod_dpto NOT IN (5,7)"; // todos menos banda y capital
-  if (departamentosMap[tipo]) return `WHERE b.cod_dpto = ${departamentosMap[tipo]}`;
+  if (tipo === "interior") return "WHERE b.id_dpto NOT IN (5,7)"; // todos menos banda y capital
+  if (departamentosMap[tipo]) return `WHERE b.id_dpto = ${departamentosMap[tipo]}`;
   return "";
 }
 
@@ -37,11 +37,11 @@ router.get("/beneficiarios/:tipo", async (req, res) => {
           b.nombre, 
           b.fecha_nacimiento, 
           b.sexo, 
-          b.cod_dpto, 
+          b.id_dpto, 
           d.descripcion AS departamento,
-          b.cod_localidad, 
+          b.id_loc, 
           l.descripcion AS localidad,
-          b.cod_barrio, 
+          b.id_barrio, 
           br.descripcion AS barrio,
           b.domicilio, 
           b.fecha_registro, 
@@ -51,10 +51,10 @@ router.get("/beneficiarios/:tipo", async (req, res) => {
           b.cant_parientes, 
           b.cuil, 
           b.telefono
-       FROM beneficiarios b
-       LEFT JOIN departamentos d ON b.cod_dpto = d.cod_dpto
-       LEFT JOIN localidades l ON b.cod_localidad = l.cod_localidad
-       LEFT JOIN barrios br ON b.cod_barrio = br.cod_barrio
+       FROM beneficiario b
+       LEFT JOIN departamento d ON b.id_dpto = d.id
+       LEFT JOIN localidad l ON b.id_loc = l.id
+       LEFT JOIN barrio br ON b.id_barrio = br.id
        ${whereFinal}
        ORDER BY b.dni`
     );
@@ -88,11 +88,11 @@ router.get("/tarjetas/:tipo", async (req, res) => {
           b.nombre, 
           b.fecha_nacimiento, 
           b.sexo,
-          b.cod_dpto, 
+          b.id_dpto, 
           d.descripcion AS departamento,
-          b.cod_localidad, 
+          b.id_loc, 
           l.descripcion AS localidad,
-          b.cod_barrio, 
+          b.id_barrio, 
           br.descripcion AS barrio,
           b.domicilio, 
           b.fecha_registro AS fecha_registro_benef,
@@ -108,11 +108,11 @@ router.get("/tarjetas/:tipo", async (req, res) => {
           t.fecha_modificacion AS fecha_modif_tarjeta, 
           t.importe_acreditado, 
           t.num_cuenta
-       FROM tarjetas_soc t
-       INNER JOIN beneficiarios b ON t.dni = b.dni
-       LEFT JOIN departamentos d ON b.cod_dpto = d.cod_dpto
-       LEFT JOIN localidades l ON b.cod_localidad = l.cod_localidad
-       LEFT JOIN barrios br ON b.cod_barrio = br.cod_barrio
+       FROM tarjeta_soc t
+       INNER JOIN beneficiario b ON t.dni = b.dni
+       LEFT JOIN departamento d ON b.id_dpto = d.id
+       LEFT JOIN localidad l ON b.id_loc = l.id
+       LEFT JOIN barrio br ON b.id_barrio = br.id
        ${whereFinal}
        ORDER BY t.num_tarjeta`
     );

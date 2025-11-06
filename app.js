@@ -13,6 +13,7 @@ const informesRoutes = require('./routes/informes');
 const getRoutes = require('./routes/get');
 const beneficiariosRoutes = require('./routes/beneficiarios');
 const tarjetasRoutes = require('./routes/tarjetas');
+const verificarToken = require('./routes/middlewares/auth');
 
 // Configurar variables de entorno
 dotenv.config();
@@ -32,7 +33,33 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
-//Uso de rutas
+// Middleware global para verificar token, excluyendo ciertas rutas
+const rutasExentasExactas = [
+    '/auth/login',
+    '/auth/register',
+    '/noticias/get',
+];
+
+const rutasExentasRegex = [
+    /^\/noticias\/getNoticia\/.+$/,
+    /^\/uploads\/noticias\/.+$/   // cualquier archivo dentro de /uploads/noticias/
+];
+
+app.use((req, res, next) => {
+    const path = req.path;
+
+    // Si coincide exactamente con alguna ruta exenta
+    if (rutasExentasExactas.includes(path)) return next();
+
+    // Si coincide con alguna regex de rutas exentas
+    if (rutasExentasRegex.some(re => re.test(path))) return next();
+
+    // Si no es ruta exenta, verificar token
+    verificarToken(req, res, next);
+});
+
+
+
 app.use('/auth', authRoutes);
 app.use('/get/', getRoutes);
 app.use('/beneficiarios/', beneficiariosRoutes);
