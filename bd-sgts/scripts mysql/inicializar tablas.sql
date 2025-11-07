@@ -1,136 +1,137 @@
 #drop database sgts;
-CREATE DATABASE sgts;
+create database sgts;
 use sgts;
 
-CREATE TABLE USUARIO (
-id INT PRIMARY KEY AUTO_INCREMENT,
-dni INT UNIQUE,
-usuario VARCHAR(50) UNIQUE,
-contraseña VARCHAR(255),
-fecha_registro DATE,
-correo VARCHAR(100),
-rol tinyint default 0
-);
-CREATE TABLE DEPARTAMENTO (
-	id INT PRIMARY KEY,
-    descripcion VARCHAR(100) NOT NULL
+create table usuario (
+  id int primary key auto_increment,
+  dni int unique,
+  usuario varchar(50) unique,
+  contraseña varchar(255),
+  fecha_registro date,
+  correo varchar(100),
+  rol tinyint default 0
 );
 
-CREATE TABLE LOCALIDAD (
-	id INT PRIMARY KEY,
-    descripcion VARCHAR(255),
-    id_dpto INT,
-    FOREIGN KEY (id_dpto) REFERENCES DEPARTAMENTO(id)
+create table departamento (
+  id int primary key,
+  descripcion varchar(100) not null
 );
 
-CREATE TABLE BARRIO (
-    id INT PRIMARY KEY,
-    descripcion VARCHAR(100) NOT NULL,
-    id_loc INT,
-    FOREIGN KEY (id_loc) REFERENCES LOCALIDAD(id)
+create table localidad (
+  id int primary key,
+  descripcion varchar(255),
+  id_dpto int,
+  foreign key (id_dpto) references departamento(id)
 );
 
-CREATE TABLE BENEFICIARIO (
-	id int primary key auto_increment,
-    dni INT,
-    cuil varchar(20),
-    nombre VARCHAR(100) NOT NULL,
-    fecha_nacimiento DATE,
-    sexo CHAR(1),
-    id_dpto INT null,
-    id_loc INT null,
-    id_barrio INT null,
-    domicilio VARCHAR(200),
-    fecha_registro DATE,
-    hora_registro TIME,
-    estado CHAR(1),
-    fecha_modificacion DATE,
-    hora_modificacion TIME,
-    cant_parientes INT DEFAULT 0,
-    archivo_adjunto VARCHAR(100),
-    telefono VARCHAR(100),
-    id_usuario INT,
-    FOREIGN KEY (id_dpto) REFERENCES DEPARTAMENTO(id),
-    FOREIGN KEY (id_loc) REFERENCES LOCALIDAD(id),
-    FOREIGN KEY (id_barrio) REFERENCES BARRIO(id),
-    FOREIGN KEY (id_usuario) REFERENCES USUARIO(id)
+create table barrio (
+  id int primary key,
+  descripcion varchar(100) not null,
+  id_loc int,
+  foreign key (id_loc) references localidad(id)
 );
 
-CREATE TABLE ARCHIVO_BENEFICIARIO(
-id int primary key auto_increment,
-id_beneficiario int,
-dni INT,
-id_archivo INT,
-path VARCHAR(100),
-FOREIGN KEY (id_beneficiario) REFERENCES BENEFICIARIO(id)
+create table beneficiario (
+  id int primary key auto_increment,
+  dni int,
+  cuil varchar(20),
+  nombre varchar(100) not null,
+  fecha_nacimiento date,
+  sexo char(1),
+  id_dpto int null,
+  id_loc int null,
+  id_barrio int null,
+  domicilio varchar(200),
+  fecha_registro date,
+  hora_registro time,
+  estado char(1),
+  fecha_modificacion date,
+  hora_modificacion time,
+  cant_parientes int default 0,
+  archivo_adjunto varchar(100),
+  telefono varchar(100),
+  id_usuario int,
+  foreign key (id_dpto) references departamento(id),
+  foreign key (id_loc) references localidad(id),
+  foreign key (id_barrio) references barrio(id),
+  foreign key (id_usuario) references usuario(id)
 );
 
-CREATE TABLE PARIENTE (
-	id int  primary key auto_increment,
-    id_beneficiario int,
-    dni_titular INT,
-    dni_pariente INT,
-    nombre_pariente VARCHAR(100),
-    fecha_nacimiento DATE,
-    sexo CHAR(1),
-    fecha_registro DATE,
-    fecha_modificacion DATE,
-    FOREIGN KEY (id_beneficiario) REFERENCES BENEFICIARIO(id)
+create table archivo_beneficiario (
+  id int primary key auto_increment,
+  id_beneficiario int,
+  dni int,
+  id_archivo int,
+  path varchar(100),
+  foreign key (id_beneficiario) references beneficiario(id)
 );
 
-CREATE TABLE TARJETA_SOC (
-	id int primary key auto_increment,
-    id_beneficiario int,
-    dni INT,
-    num_cuenta VARCHAR(20),
-    num_tarjeta VARCHAR(20),
-    fecha_registro DATE,
-    estado VARCHAR(30),
-    fecha_modificacion DATE,
-    importe_acreditado DECIMAL(10, 2),
-    FOREIGN KEY (id_beneficiario) REFERENCES BENEFICIARIO(id)
+create table pariente (
+  id int primary key auto_increment,
+  id_beneficiario int,
+  dni_titular int,
+  dni_pariente int,
+  nombre_pariente varchar(100),
+  fecha_nacimiento date,
+  sexo char(1),
+  fecha_registro date,
+  fecha_modificacion date,
+  foreign key (id_beneficiario) references beneficiario(id)
 );
 
-CREATE TABLE HISTORIAL_MOV (
-	id int primary key auto_increment,
-    id_beneficiario int,
-    dni INT,
-    observaciones VARCHAR(255),
-    fecha DATE,
-    FOREIGN KEY (id_beneficiario) REFERENCES BENEFICIARIO(id)
+create table tarjeta_soc (
+  id int primary key auto_increment,
+  id_beneficiario int,
+  dni int,
+  num_cuenta varchar(20),
+  num_tarjeta varchar(20),
+  fecha_registro date,
+  estado varchar(30),
+  fecha_modificacion date,
+  importe_acreditado decimal(10, 2),
+  foreign key (id_beneficiario) references beneficiario(id)
 );
 
-CREATE TABLE SOLICITUD (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-    id_beneficiario int,
-	dni INT,
-    fecha_solicitud DATE,
-    path_dni VARCHAR(100),
-    path_historial_medico VARCHAR(100),
-    FOREIGN KEY (id_beneficiario) REFERENCES BENEFICIARIO(id)
+create table historial_mov (
+  id int primary key auto_increment,
+  id_beneficiario int,
+  dni int,
+  observaciones varchar(255),
+  fecha date,
+  foreign key (id_beneficiario) references beneficiario(id)
 );
 
-CREATE TABLE NOTICIA (
-id INT PRIMARY KEY AUTO_INCREMENT,
-titulo VARCHAR(255),
-fecha Date,
-contenido TEXT,
-usuario INT,
-foreign key (usuario) references usuario(id)
+create table solicitud (
+  id int primary key auto_increment,
+  id_beneficiario int,
+  dni int,
+  fecha_solicitud date,
+  path_dni varchar(100),
+  path_historial_medico varchar(100),
+  foreign key (id_beneficiario) references beneficiario(id)
 );
 
-CREATE TABLE NOTICIA_IMAGEN (
-id INT PRIMARY KEY AUTO_INCREMENT,
-path VARCHAR(255),
-id_noticia INT,
-FOREIGN KEY (id_noticia) REFERENCES NOTICIA(id)
+create table noticia (
+  id int primary key auto_increment,
+  titulo varchar(255),
+  fecha date,
+  contenido text,
+  usuario int,
+  foreign key (usuario) references usuario(id)
 );
 
-CREATE TABLE log (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  usuario VARCHAR(50),
-  actividad VARCHAR(255),
-  detalles TEXT,
-  fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+create table noticia_imagen (
+  id int primary key auto_increment,
+  path varchar(255),
+  id_noticia int,
+  foreign key (id_noticia) references noticia(id)
+);
+
+create table log (
+  id int auto_increment primary key,
+  usuario varchar(50),
+  actividad varchar(255),
+  detalles text,
+  fecha timestamp default current_timestamp,
   foreign key (usuario) references usuario(usuario)
 );

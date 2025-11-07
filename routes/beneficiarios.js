@@ -120,7 +120,7 @@ router.get('/getDatos', async (req, res) => {
 
           // Buscar id_loc
           const [locRows] = await db.query(`
-                SELECT id FROM localidades 
+                SELECT id FROM localidad 
                 WHERE LOWER(TRIM(descripcion)) = ? AND id_dpto = ?
             `, [loc_desc, id_dpto]);
 
@@ -129,7 +129,7 @@ router.get('/getDatos', async (req, res) => {
 
             // Buscar id_barrio
             const [barrioRows] = await db.query(`
-                    SELECT id FROM barrios 
+                    SELECT id FROM barrio 
                     WHERE LOWER(TRIM(descripcion)) = ? AND id_loc = ?
                 `, [barrio_desc, id_loc]);
 

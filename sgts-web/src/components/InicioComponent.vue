@@ -8,7 +8,7 @@
         <!-- Noticia destacada a la izquierda -->
         <div class="noticia-destacada">
           <router-link :to="'/noticia/' + noticias[0].id" v-if="noticias.length > 0">
-            <img class="noticia-imagen-destacada" :src="'http://localhost:3500' + noticias[0].imagen" alt="">
+            <img class="noticia-imagen-destacada" :src="'https://nazadoto.com:3500' + noticias[0].imagen" alt="">
             <div class="noticia-titulo destacada">{{ noticias[0].titulo }}</div>
           </router-link>
         </div>
@@ -18,7 +18,7 @@
            <div class="noticias-scroll">
              <router-link :to="'/noticia/' + noticia.id" v-for="noticia in noticias.slice(1)" :key="noticia.id"
                class="noticia-cuadrada">
-               <img class="noticia-imagen" :src="'http://localhost:3500' + noticia.imagen" alt="">
+               <img class="noticia-imagen" :src="'https://nazadoto.com:3500' + noticia.imagen" alt="">
                <div class="noticia-titulo">{{ noticia.titulo }}</div>
              </router-link>
            </div>
