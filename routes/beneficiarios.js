@@ -50,7 +50,7 @@ router.get('/getDatos', async (req, res) => {
     const [rows2] = await db.query('SELECT * FROM tarjeta_soc WHERE dni = ?', [dni]);
     const [historial] = await db.execute(
       `SELECT observaciones, fecha 
-             FROM HISTORIAL_MOV 
+             FROM historial_mov 
              WHERE dni = ? 
              ORDER BY fecha DESC`,
       [dni]

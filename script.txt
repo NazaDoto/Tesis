@@ -72,7 +72,7 @@ CREATE TABLE TARJETAS_SOC (
     FOREIGN KEY (dni) REFERENCES BENEFICIARIOS(dni)
 );
 
-CREATE TABLE HISTORIAL_MOV (
+CREATE TABLE historial_mov (
     dni INT,
     tipo_mov INT,
     observaciones VARCHAR(255),
