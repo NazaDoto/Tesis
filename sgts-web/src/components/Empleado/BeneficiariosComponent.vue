@@ -95,7 +95,7 @@
                         <select id="id_dpto" class="form-select" v-model="form.id_dpto"
                             :disabled="!habilitarModificacion">
                             <option disabled value="default">Seleccione</option>
-                            <option v-for="d in departamentos" :key="d.id_dpto" :value="d.id_dpto">
+                            <option v-for="d in departamentos" :key="d.id" :value="d.id">
                                 {{ d.descripcion }}
                             </option>
                         </select>
@@ -115,9 +115,14 @@
                         <select id="id_barrio" class="form-select" v-model="form.id_barrio"
                             :disabled="!habilitarModificacion">
                             <option disabled value="default">Seleccione</option>
-                            <option v-for="b in barrios" :key="b.id_barrio" :value="b.id_barrio">
-                                {{ b.descripcion }}
-                            </option>
+                            <template v-if="barrios.length > 0">
+                                <option v-for="b in barrios" :key="b.id" :value="b.id">
+                                    {{ b.descripcion }}
+                                </option>
+                            </template>
+                            <template v-else>
+                                <option value="0">NINGUNO</option>
+                            </template>
                         </select>
                     </div>
                 </div>
@@ -485,7 +490,9 @@ export default {
             }
         },
         async cargarLocalidades(id_dpto) {
+            console.log('antes', id_dpto)
             if (!id_dpto) return;
+            console.log('desp')
             try {
                 const { data } = await axios.get('/get/localidades', {
                     params: { id_dpto }
@@ -524,8 +531,8 @@ export default {
             this.parientesArray = nuevos;
         },
         resetForm() {
-        this.cuilInicio = '';
-        this.cuilFin = '';
+            this.cuilInicio = '';
+            this.cuilFin = '';
             this.form.nombre = '';
             this.form.cuil = '';
             this.form.fecha_nacimiento = '';

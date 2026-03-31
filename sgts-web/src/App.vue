@@ -396,5 +396,10 @@ html {
     }
 }
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+    .total .flex-container
+    {
+        width: 100%;
+    }
+}
 </style>

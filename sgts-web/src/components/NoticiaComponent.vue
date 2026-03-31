@@ -1,48 +1,74 @@
 <template>
-    <div>
+    <div class="pagina-noticia">
 
-        <div class="ancho-pag">
-            <!-- Pantalla de carga -->
-            <div v-if="cargando" class="pantalla-carga text-center">
-                <div class="logo-carga">
-                    <img class="logo-img" src="/favicon.ico" width="50" alt="Logo" />
-                    <div class="texto-carga">Cargando noticia...</div>
-                </div>
-            </div>
-    
-            <!-- Popup mensaje -->
-            <div v-if="mensajePopup" class="mensaje-container-fondo">
-                <div class="mensaje-container">
-                    <span class="mensaje">{{ mensaje }}</span>
-                    <button class="btn-mensaje" @click="mensajePopup = false; mensaje = ''">
-                        Ok
-                    </button>
-                </div>
-            </div>
-    
-            <!-- Contenido de la noticia -->
-            <div v-if="!cargando" class="contenido-noticia container">
-                <main class="noticia-principal">
-                    <h2 class="titulo-noticia">{{ noticia.titulo }}</h2>
-                    <img v-if="noticia.imagen" :src="'https://nazadoto.com:3500' + noticia.imagen" alt=""
-                        class="imagen-noticia" />
-                    <p class="fecha-texto">{{ formatearFecha(noticia.fecha) }}</p>
-                    <p class="contenido-texto" v-html="noticia.contenido"></p>
-                </main>
-    
-                <!-- Aside con resto de las noticias -->
-                <aside class="noticias-laterales">
-                    <div class="lista-noticias mt-2">
-                        <router-link v-for="n in otrasNoticias" :key="n.id" :to="'/noticia/' + n.id"
-                            class="noticia-lateral">
-                            <img v-if="n.imagen" :src="'https://nazadoto.com:3500' + n.imagen" alt=""
-                                class="noticia-imagen-lateral" />
-                            <span>{{ n.titulo }}</span>
-                        </router-link>                    
-                    </div>
-                </aside>
+        <!-- Loader -->
+        <div v-if="cargando" class="pantalla-carga text-center">
+            <div class="logo-carga">
+                <img class="logo-img" src="/favicon.ico" width="50" />
+                <div class="texto-carga">Cargando noticia...</div>
             </div>
         </div>
+
+        <!-- Popup -->
+        <div v-if="mensajePopup" class="mensaje-container-fondo">
+            <div class="mensaje-container">
+                <span class="mensaje">{{ mensaje }}</span>
+                <button class="btn-mensaje" @click="mensajePopup = false">
+                    Ok
+                </button>
+            </div>
+        </div>
+
+        <!-- Contenido -->
+        <div v-if="!cargando" class="contenido-noticia">
+
+            <!-- PRINCIPAL -->
+            <main class="noticia-principal">
+
+                <h1 class="titulo-noticia">{{ noticia.titulo }}</h1>
+
+                <p class="fecha-texto">
+                    {{ formatearFecha(noticia.fecha) }}
+                </p>
+
+                <img v-if="noticia.imagen"
+                    :src="'https://nazadoto.com:3500' + noticia.imagen"
+                    class="imagen-noticia"
+                />
+
+                <div class="contenido-texto" v-html="noticia.contenido"></div>
+
+            </main>
+
+            <!-- ASIDE -->
+            <aside class="noticias-laterales">
+
+                <h3 class="titulo-aside">Otras noticias</h3>
+
+                <div class="lista-noticias">
+
+                    <router-link
+                        v-for="n in otrasNoticias"
+                        :key="n.id"
+                        :to="'/noticia/' + n.id"
+                        class="card-noticia"
+                    >
+                        <img v-if="n.imagen"
+                            :src="'https://nazadoto.com:3500' + n.imagen"
+                            class="card-img"
+                        />
+
+                        <div class="card-body">
+                            <span class="card-titulo">{{ n.titulo }}</span>
+                        </div>
+                    </router-link>
+
+                </div>
+
+            </aside>
+
+        </div>
+
         <pie-component></pie-component>
     </div>
 </template>
@@ -103,76 +129,138 @@ export default {
 </script>
 
 <style scoped>
-.container {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
+
+/* Layout general */
+.pagina-noticia {
+    max-width: 1200px;
+    margin: auto;
 }
 
+/* Grid principal */
+.contenido-noticia {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* PRINCIPAL */
 .noticia-principal {
-    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
 }
 
 .titulo-noticia {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 10px;
+}
+
+.fecha-texto {
+    font-size: 0.9rem;
+    color: gray;
+    margin-bottom: 15px;
 }
 
 .imagen-noticia {
     width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    margin-bottom: 10px;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .contenido-texto {
     font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: 1.7;
     text-align: justify;
-    
-}
-.text-top{
-  margin: 0 auto auto auto;
-  text-align: center;
-}
-.fecha-texto {
-    font-size: 0.9rem;
-    color: gray;
-    margin-top: 10px;
 }
 
+/* ASIDE */
 .noticias-laterales {
-    flex: 1;
-    padding-left: 10px;
-    display:flex;
+    display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
+.titulo-aside {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* Cards */
 .lista-noticias {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
-.noticia-lateral {
+.card-noticia {
     display: flex;
-    flex-direction: row;
     gap: 10px;
-    align-items: center;
     text-decoration: none;
     color: inherit;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.noticia-imagen-lateral {
+.card-noticia:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card-img {
     width: 100px;
     height: 80px;
     object-fit: cover;
-    border-radius: 6px;
 }
 
-.noticia-lateral span {
+.card-body {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.card-titulo {
     font-size: 0.95rem;
 }
+
+/* 📱 MOBILE */
+@media (max-width: 991px) {
+
+    .contenido-noticia {
+        grid-template-columns: 1fr;
+    }
+
+    .noticias-laterales {
+        margin-top: 20px;
+        padding:20px;
+    }
+
+    .card-noticia {
+        flex-direction: row;
+    }
+
+}
+
+/* 📱 EXTRA SMALL */
+@media (max-width: 600px) {
+
+    .titulo-noticia {
+        font-size: 1.6rem;
+    }
+
+    .contenido-texto {
+        font-size: 1rem;
+    }
+
+    .card-img {
+        width: 80px;
+        height: 70px;
+    }
+
+}
+
 </style>

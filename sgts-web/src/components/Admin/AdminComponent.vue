@@ -34,4 +34,11 @@ export default {
   width: 100%;
   background-color: #3e3eab;
 }
+
+@media screen and (max-width: 992px) {
+  .vista {
+    width:calc(100%);
+    margin-right: auto;
+  }
+  }
 </style>
