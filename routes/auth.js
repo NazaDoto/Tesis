@@ -70,14 +70,13 @@ router.post('/register', async (req, res) => {
             [usuario, hashedPassword, fechaRegistro, correo, dni]
         );
 
-        const userId = result.insertId; // ID del usuario recién creado
 
         // 2. Buscar beneficiario en MySQL
         const [benefRows] = await db.query('SELECT * FROM beneficiario WHERE dni = ?', [dni]);
 
         if (benefRows.length > 0) {
-            // Existe beneficiario en MySQL, actualizar id_usuario
-            await db.query('UPDATE beneficiario SET id_usuario = ? WHERE dni = ?', [userId, dni]);
+            // Existe beneficiario en MySQL, actualizar usuario
+            await db.query('UPDATE beneficiario SET usuario = ? WHERE dni = ?', [usuario, dni]);
         } else {
             // Buscar en ben_titu.dbf
             const benPath = path.join(__dirname, './padron/ben_titu.dbf');
@@ -89,7 +88,7 @@ router.post('/register', async (req, res) => {
                 // Opcional: puedes agregar lógica para id_dpto, id_loc, id_barrio aquí
                 const [result] = await db.query(
                     `INSERT INTO beneficiario 
-                    (dni, nombre, fecha_nacimiento, sexo, domicilio, cant_parientes, id_usuario) 
+                    (dni, nombre, fecha_nacimiento, sexo, domicilio, cant_parientes, usuario) 
                     VALUES (?, ?, ?, ?, ?, ?, ?)`,
                     [
                         dni,
@@ -98,7 +97,7 @@ router.post('/register', async (req, res) => {
                         ben.SEXO?.toUpperCase() === 'F' ? 'F' : 'M',
                         ben.DOMI?.trim() || '',
                         ben.CANT_PARE || 0,
-                        userId
+                        usuario
                     ]
                 );
                 const id_beneficiario = result.insertId;

@@ -275,6 +275,9 @@ export default {
 
         if (archivoDni) formData.append('dni', archivoDni);
         if (archivoHistorial) formData.append('historial', archivoHistorial);
+        if (JSON.parse(localStorage.getItem('user')).rol === '0'){
+          formData.append('usuario', JSON.parse(localStorage.getItem('user')).usuario);
+        }
         formData.append('empleado', JSON.parse(localStorage.getItem('user')).usuario || 'desconocido');
         // Enviar con axios usando multipart/form-data
         await axios.post('/tarjetas/solicitar', formData, {

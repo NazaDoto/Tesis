@@ -225,7 +225,7 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
       observaciones,
       cant_parientes,
       importe,
-      id_usuario,
+      usuario,
     } = beneficiarioData;
 
     // Archivo adjunto
