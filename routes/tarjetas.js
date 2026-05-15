@@ -276,25 +276,28 @@ router.post('/solicitar', upload.fields([
             domicilio, cant_parientes, usuario, cuil, empleado
         } = req.body;
 
-        // Parientes llega como JSON string, parsearlo
         const parientes = JSON.parse(req.body.parientes || '[]');
 
         const fechaHoy = new Date();
         const fecha = fechaHoy.toISOString().slice(0, 10);
         const hora = fechaHoy.toTimeString().slice(0, 8);
 
-        // Obtener paths de archivos guardados
-        const pathDni = req.files['dni'] ? `/uploads/solicitudes/${req.files['dni'][0].filename}` : null;
-        const pathHistorial = req.files['historial'] ? `/uploads/solicitudes/${req.files['historial'][0].filename}` : null;
+        const pathDni = req.files['dni']
+            ? `/uploads/solicitudes/${req.files['dni'][0].filename}`
+            : null;
 
-        // 1. Insertar en beneficiario (incluyendo archivo_adjunto que será pathDni)
-        await db.query(`
-      INSERT into beneficiario (
-        dni, nombre, fecha_nacimiento, sexo, telefono, id_dpto, id_loc, id_barrio,
-        domicilio, fecha_registro, hora_registro, fecha_modificacion, hora_modificacion,
-        cant_parientes, usuario, cuil
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    `, [
+        const pathHistorial = req.files['historial']
+            ? `/uploads/solicitudes/${req.files['historial'][0].filename}`
+            : null;
+
+        // 1. Insertar beneficiario
+        const [insertBeneficiario] = await db.query(`
+            INSERT INTO beneficiario (
+                dni, nombre, fecha_nacimiento, sexo, telefono, id_dpto, id_loc, id_barrio,
+                domicilio, fecha_registro, hora_registro, fecha_modificacion, hora_modificacion,
+                cant_parientes, usuario, cuil
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `, [
             dni,
             nombre,
             fecha_nacimiento,
@@ -312,21 +315,25 @@ router.post('/solicitar', upload.fields([
             usuario || null,
             cuil
         ]);
-        await registrarLog(empleado || 'desconocido', "SOLICITUD_TARJETA", `Nueva solicitud tarjeta DNI ${dni} - Nombre: ${nombre}`);
+
+        // ID del beneficiario recién insertado
+        const id_beneficiario = insertBeneficiario.insertId;
+
+        await registrarLog(
+            empleado || 'desconocido',
+            "SOLICITUD_TARJETA",
+            `Nueva solicitud tarjeta DNI ${dni} - Nombre: ${nombre}`
+        );
 
         // 2. Insertar parientes
         if (parientes.length > 0) {
             for (const pariente of parientes) {
-                const result = await db.query(`SELECT id FROM beneficiario WHERE dni = ?`, [p.dni]);
-                const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
                 await db.query(`
-          insert into pariente (
-            id_beneficiario, dni_titular, dni_pariente, nombre_pariente,
-            fecha_nacimiento, sexo,
-            fecha_registro,  
-            fecha_modificacion
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        `, [
+                    INSERT INTO pariente (
+                        id_beneficiario, dni_titular, dni_pariente, nombre_pariente,
+                        fecha_nacimiento, sexo, fecha_registro, fecha_modificacion
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                `, [
                     id_beneficiario,
                     dni,
                     pariente.dni_pariente,
@@ -339,12 +346,13 @@ router.post('/solicitar', upload.fields([
             }
         }
 
-        // 3. Insertar en solicitudes (con paths)
+        // 3. Insertar solicitud
         await db.query(`
-      INSERT INTO solicitud (
-        id_beneficiario, dni, fecha_solicitud, path_dni, path_historial_medico
-      ) VALUES (?, ?, ?, ?, ?)
-    `, [id_beneficiario,
+            INSERT INTO solicitud (
+                id_beneficiario, dni, fecha_solicitud, path_dni, path_historial_medico
+            ) VALUES (?, ?, ?, ?, ?)
+        `, [
+            id_beneficiario,
             dni,
             fecha,
             pathDni,
@@ -352,29 +360,40 @@ router.post('/solicitar', upload.fields([
         ]);
 
         // 4. Inicializar tarjeta
-        const result = await db.query(`SELECT id FROM beneficiario WHERE dni = ?`, [dni]);
-        const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
         await db.query(`
-      INSERT INTO tarjeta_soc (
-        id_beneficiario, dni, fecha_registro, estado
-      ) VALUES (?,?, ?, ?)
-    `, [
+            INSERT INTO tarjeta_soc (
+                id_beneficiario, dni, fecha_registro, estado
+            ) VALUES (?, ?, ?, ?)
+        `, [
             id_beneficiario,
             dni,
             fecha,
             'PENDIENTE'
         ]);
 
-        await db.query(`INSERT INTO historial_mov(id_beneficiario,observaciones, fecha, dni) VALUES (?,?, ?, ?)`, [id_beneficiario, 'SOLICITUD DE TARJETA', fechaHoy, dni])
+        // 5. Historial
+        await db.query(`
+            INSERT INTO historial_mov (
+                id_beneficiario, observaciones, fecha, dni
+            ) VALUES (?, ?, ?, ?)
+        `, [
+            id_beneficiario,
+            'SOLICITUD DE TARJETA',
+            fecha,
+            dni
+        ]);
 
-        // 🔔 Emitir evento a empleados
-        const io = req.app.get('io'); // <--- esto obtiene la instancia de Socket.IO
+        // 6. Notificación a empleados
+        const io = req.app.get('io');
+
         io.emit("nueva_solicitud", {
             dni,
             nombre,
             fecha
         });
+
         res.json({ mensaje: 'Solicitud registrada correctamente con archivos' });
+
     } catch (error) {
         console.error('Error en /solicitar:', error);
         res.status(500).json({ error: 'Error al procesar la solicitud' });
