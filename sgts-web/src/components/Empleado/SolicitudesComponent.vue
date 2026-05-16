@@ -47,8 +47,7 @@
         <div class="container">
             <h3 class="titulo-pagina">Gestionar Solicitudes</h3>
 
-            <input class="form-control buscador" type="number" placeholder="Buscar por ID o DNI" v-model="buscar"
-                @change="filtrarSolicitudes">
+            <input class="form-control buscador" type="number" placeholder="Buscar por ID o DNI" v-model="buscar">
 
             <!-- Encabezado de tabla -->
             <div class="solicitud-encabezado">
@@ -66,14 +65,16 @@
                 <span>{{ solicitud.id }}</span>
                 <span>{{ solicitud.dni }}</span>
                 <span>{{ formatearFecha(solicitud.fecha_solicitud) }}</span>
-                <a class="btn btn-secundario"
-                    :href="('https://nazadoto.com:3500/get/descargar?path=' + solicitud.path_dni)">
+                <button type="button" class="btn btn-secundario"
+                    :disabled="!solicitud.path_dni"
+                    @click="abrirAdjunto(solicitud.path_dni)">
                     Ver
-                </a>
-                <a class="btn btn-secundario"
-                    :href="('https://nazadoto.com:3500/get/descargar?path=' + solicitud.path_historial_medico)">
+                </button>
+                <button type="button" class="btn btn-secundario"
+                    :disabled="!solicitud.path_historial_medico"
+                    @click="abrirAdjunto(solicitud.path_historial_medico)">
                     Ver
-                </a>
+                </button>
                 <span :class="estadoClass(solicitud.estado)">{{ solicitud.estado }}</span>
                 <a class="btn btn-primario" @click="responder(solicitud)">Responder</a>
             </div>
@@ -104,10 +105,9 @@ export default {
         async responderSolicitud() {
             this.cargandoDatos = true;
             try {
-                await axios.post('/tarjetas/actualizarSolicitud', { params: { form: this.form } });
+                await axios.post('/tarjetas/actualizarSolicitud', { form: this.form });
                 this.resetForm();
                 this.fetchSolicitudes();
-                this.filtrarSolicitudes();
             } catch (error) {
                 console.log(error);
             } finally {
@@ -142,12 +142,25 @@ export default {
                 year: '2-digit'
             })
         },
-        filtrarSolicitudes() {
-            const texto = this.buscar.toString().toLowerCase();
-            this.solicitudesFiltradas = this.solicitudes.filter(s =>
-                s.id.toString().includes(texto) ||
-                s.dni.toString().includes(texto)
-            );
+        async abrirAdjunto(storagePath) {
+            if (!storagePath) return;
+            try {
+                const { data } = await axios.get('/get/descargar', {
+                    params: { path: storagePath },
+                    responseType: 'blob',
+                });
+                const url = URL.createObjectURL(data);
+                const win = window.open(url, '_blank', 'noopener,noreferrer');
+                if (!win) {
+                    this.mensaje = 'El navegador bloqueó la ventana emergente. Permita ventanas emergentes para ver el archivo.';
+                    this.mensajePopup = true;
+                }
+                setTimeout(() => URL.revokeObjectURL(url), 120000);
+            } catch (e) {
+                console.error(e);
+                this.mensaje = 'No se pudo abrir el archivo. Verifique su sesión o que el archivo exista.';
+                this.mensajePopup = true;
+            }
         },
         estadoClass(estado) {
             return {
@@ -208,6 +221,10 @@ export default {
 }
 .btn-secundario:hover {
     background: #d1d5db;
+}
+.btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
 }
 
 /* Estados */

@@ -451,7 +451,10 @@ router.get('/getSolicitudes', async (req, res) => {
 
 router.post('/actualizarSolicitud', async (req, res) => {
     try {
-        const { form } = req.body.params; // obtenemos el form del front
+        const form = req.body?.form ?? req.body?.params?.form;
+        if (!form) {
+            return res.status(400).json({ error: 'Formulario requerido' });
+        }
         const { id, dni, estado, observacion } = form;
 
         // 1. Obtener estado actual de tarjeta_soc
@@ -534,7 +537,7 @@ router.post('/actualizarSolicitud', async (req, res) => {
                 }
             }
         }
-        await registrarLog(empleado || 'desconocido', "ACTUALIZAR_SOLICITUD", `Actualización solicitud tarjeta DNI ${dni} - Nuevo estado: ${estado} - Obs: ${observacion}`);
+        await registrarLog(req.user?.usuario || 'desconocido', "ACTUALIZAR_SOLICITUD", `Actualización solicitud tarjeta DNI ${dni} - Nuevo estado: ${estado} - Obs: ${observacion}`);
 
         res.json({ mensaje: 'Solicitud actualizada correctamente' });
     } catch (error) {

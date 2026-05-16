@@ -38,6 +38,7 @@ const rutasExentasExactas = [
     '/auth/login',
     '/auth/register',
     '/noticias/get',
+    '/favicon.ico',
 ];
 
 const rutasExentasRegex = [

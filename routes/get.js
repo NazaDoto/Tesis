@@ -1,7 +1,26 @@
 const express = require('express');
+const fs = require('fs');
 const db = require('../db');
 const path = require('path');
 const router = express.Router();
+
+/** Resuelve path bajo routes/uploads sin permitir salto de directorio. */
+function resolveUploadFile(queryPath) {
+  const uploadsDir = path.resolve(__dirname, 'uploads');
+  let rel = String(queryPath || '').trim();
+  if (!rel) return null;
+
+  // Aceptar "/uploads/solicitudes/x.jpg", "uploads/solicitudes/x.jpg" o "solicitudes/x.jpg"
+  rel = rel.replace(/^[\\/]+/, '');
+  rel = rel.replace(/^uploads[\\/]/i, '');
+
+  const abs = path.resolve(uploadsDir, rel);
+  const relFromRoot = path.relative(uploadsDir, abs);
+  if (!relFromRoot || relFromRoot.startsWith('..') || path.isAbsolute(relFromRoot)) {
+    return null;
+  }
+  return abs;
+}
 
 
 router.get('/departamentos', async (req, res) => {
@@ -34,8 +53,22 @@ router.get('/barrios', async (req, res) => {
 });
 
 router.get('/descargar', (req, res) => {
-  const filePath = path.join(__dirname, req.query.path);
-  res.download(filePath);
+  try {
+    const abs = resolveUploadFile(req.query.path);
+    if (!abs) {
+      return res.status(400).json({ error: 'Ruta inválida' });
+    }
+    if (!fs.existsSync(abs) || !fs.statSync(abs).isFile()) {
+      return res.status(404).json({ error: 'Archivo no encontrado' });
+    }
+
+    const base = path.basename(abs);
+    res.setHeader('Content-Disposition', `inline; filename*=UTF-8''${encodeURIComponent(base)}`);
+    return res.sendFile(abs);
+  } catch (err) {
+    console.error('Error en /get/descargar:', err);
+    return res.status(500).json({ error: 'Error al servir el archivo' });
+  }
 });
 
 
