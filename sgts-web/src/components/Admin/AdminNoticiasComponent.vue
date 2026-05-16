@@ -79,87 +79,117 @@
     </div>
 
     <!-- Modal Agregar / Editar Noticia -->
-    <div v-if="mostrarAgregar" class="modal-fondo">
-      <div class="modal-contenido modal-grande">
-        <div class="modal-header">
-          <h4>{{ isEditing ? 'Editar Noticia' : 'Agregar Noticia' }}</h4>
-          <button class="btn-cerrar" @click="cerrarAgregar">✕</button>
+    <div v-if="mostrarAgregar" class="modal-fondo" @click.self="cerrarAgregar">
+      <div
+        class="modal-contenido modal-grande"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-noticia-titulo"
+      >
+        <header class="modal-header">
+          <div class="modal-header-texto">
+            <h4 id="modal-noticia-titulo" class="modal-titulo">
+              {{ isEditing ? 'Editar noticia' : 'Nueva noticia' }}
+            </h4>
+            <p class="modal-subtitulo">
+              Título, cuerpo de la noticia e imagen opcional (JPG o PNG).
+            </p>
+          </div>
+          <button type="button" class="btn-cerrar" aria-label="Cerrar" @click="cerrarAgregar">✕</button>
+        </header>
+
+        <div class="modal-cuerpo">
+          <label class="campo-label" for="titulo">Título</label>
+          <input
+            id="titulo"
+            v-model="nuevaNoticia.titulo"
+            type="text"
+            class="input-modal-titulo"
+            placeholder="Ej.: Novedades del mes"
+            autocomplete="off"
+          />
+
+          <span class="campo-label">Contenido</span>
+          <div class="toolbar" aria-label="Formato de texto">
+            <button type="button" @click.prevent="exec('bold')" title="Negrita"><b>B</b></button>
+            <button type="button" @click.prevent="exec('italic')" title="Cursiva"><i>I</i></button>
+            <button type="button" @click.prevent="exec('underline')" title="Subrayado"><u>U</u></button>
+
+            <button type="button" @click.prevent="exec('insertUnorderedList')" title="Viñetas">•</button>
+            <button type="button" @click.prevent="exec('insertOrderedList')" title="Numerada">1.</button>
+
+            <button type="button" @click.prevent="exec('justifyLeft')" title="Alinear izquierda">⟸</button>
+            <button type="button" @click.prevent="exec('justifyCenter')" title="Centrar">≡</button>
+            <button type="button" @click.prevent="exec('justifyRight')" title="Alinear derecha">⟹</button>
+
+            <label class="select-inline">
+              Tamaño
+              <select v-model="selectedFontSize" @change="applyFontSize">
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="24">24</option>
+              </select>
+            </label>
+
+            <input type="color" v-model="selectedColor" @input="applyColor" title="Color de texto" />
+
+            <button type="button" @click.prevent="promptLink" title="Insertar enlace">🔗</button>
+
+            <button type="button" @click.prevent="exec('undo')" title="Deshacer">↶</button>
+            <button type="button" @click.prevent="exec('redo')" title="Rehacer">↷</button>
+          </div>
+
+          <div
+            ref="editor"
+            class="editor"
+            contenteditable="true"
+            role="textbox"
+            aria-multiline="true"
+            aria-label="Cuerpo de la noticia"
+            @input="onEditorInput"
+            @keydown.enter.prevent="handleEnter"
+            @paste.prevent="onPaste"
+          ></div>
         </div>
 
-        <input
-          id="titulo"
-          v-model="nuevaNoticia.titulo"
-          placeholder="Título"
-          class="input-tabla fullwidth"
-        />
-
-        <!-- Toolbar -->
-        <div class="toolbar">
-          <button type="button" @click.prevent="exec('bold')" title="Negrita"><b>B</b></button>
-          <button type="button" @click.prevent="exec('italic')" title="Cursiva"><i>I</i></button>
-          <button type="button" @click.prevent="exec('underline')" title="Subrayado"><u>U</u></button>
-
-          <button type="button" @click.prevent="exec('insertUnorderedList')" title="Viñetas">•</button>
-          <button type="button" @click.prevent="exec('insertOrderedList')" title="Numerada">1.</button>
-
-          <button type="button" @click.prevent="exec('justifyLeft')" title="Alinear izquierda">⟸</button>
-          <button type="button" @click.prevent="exec('justifyCenter')" title="Centrar">≡</button>
-          <button type="button" @click.prevent="exec('justifyRight')" title="Alinear derecha">⟹</button>
-
-          <label class="select-inline">
-            Tamaño
-            <select v-model="selectedFontSize" @change="applyFontSize">
-              <option value="12">12</option>
-              <option value="14">14</option>
-              <option value="16">16</option>
-              <option value="18">18</option>
-              <option value="24">24</option>
-            </select>
-          </label>
-
-          <input type="color" v-model="selectedColor" @input="applyColor" title="Color de texto" />
-
-          <button type="button" @click.prevent="promptLink" title="Insertar enlace">🔗</button>
-
-          <button type="button" @click.prevent="exec('undo')" title="Deshacer">↶</button>
-          <button type="button" @click.prevent="exec('redo')" title="Rehacer">↷</button>
-        </div>
-
-        <!-- Editor -->
-        <div
-          ref="editor"
-          class="editor"
-          contenteditable="true"
-          @input="onEditorInput"
-          @keydown.enter.prevent="handleEnter"
-          @paste.prevent="onPaste"
-        ></div>
-
-        <!-- Imagen destacada + vista previa -->
-        <div class="imagen-preview">
-          <label class="label-file" for="imagen">Imagen destacada</label>
-          <div class="fila-imagen-modal">
-            <input
-              id="imagen"
-              name="imagen"
-              type="file"
-              class="input-file-visible"
-              @change="onFileChangeNueva($event)"
-              accept=".jpg,.png,.jpeg"
-            />
-            <div v-if="imagenPreview" class="preview-box">
-              <img :src="imagenPreview" class="thumb-modal" alt="Vista previa" />
-              <button type="button" class="btn-eliminar btn-quitar-thumb" @click="removeImagenPreview">
-                Quitar
-              </button>
+        <div class="modal-panel-media">
+          <span class="panel-media-etiqueta">Imagen destacada</span>
+          <div class="panel-media-fila">
+            <label class="btn-adjuntar-imagen">
+              {{ imagenPreview ? 'Cambiar' : 'Elegir imagen' }}
+              <input
+                id="imagen"
+                name="imagen"
+                type="file"
+                class="input-file-sr"
+                accept=".jpg,.png,.jpeg"
+                @change="onFileChangeNueva($event)"
+              />
+            </label>
+            <span v-if="imagenNombre" class="nombre-archivo" :title="imagenNombre">{{ imagenNombre }}</span>
+            <div class="panel-media-thumb" aria-hidden="true">
+              <img v-if="imagenPreview" :src="imagenPreview" class="thumb-modal" alt="" />
+              <span v-else class="thumb-placeholder-modal">—</span>
             </div>
+            <button
+              v-if="imagenPreview"
+              type="button"
+              class="btn-quitar-imagen"
+              @click="removeImagenPreview"
+            >
+              Quitar
+            </button>
           </div>
         </div>
 
-        <div class="actions">
-          <button class="btn-guardar" @click="guardarNoticia">{{ isEditing ? 'Guardar' : 'Agregar' }}</button>
-          <button class="btn" @click="cerrarAgregar">Cancelar</button>
-        </div>
+        <footer class="modal-footer-acciones">
+          <button type="button" class="btn-cancelar-modal" @click="cerrarAgregar">Cancelar</button>
+          <button type="button" class="btn-guardar btn-principal-modal" @click="guardarNoticia">
+            {{ isEditing ? 'Guardar cambios' : 'Publicar noticia' }}
+          </button>
+        </footer>
       </div>
     </div>
   </div>
@@ -194,6 +224,7 @@ export default {
 
       // preview de imagen destacada (dataURL)
       imagenPreview: null,
+      imagenNombre: "",
 
       // toolbar state
       selectedFontSize: "12",
@@ -282,6 +313,7 @@ export default {
       this.editingId = null;
       this.nuevaNoticia = { titulo: "", contenido: "", imagenFile: null };
       this.imagenPreview = null;
+      this.imagenNombre = "";
       this.mostrarAgregar = true;
       this.$nextTick(() => {
         // inicializamos editor vacío
@@ -299,6 +331,7 @@ export default {
       this.nuevaNoticia.contenido = n.contenido || "";
       this.nuevaNoticia.imagenFile = null;
       this.imagenPreview = n.imagen ? this.urlImagenPublica(n.imagen) : null;
+      this.imagenNombre = n.imagen ? this.nombreArchivoDesdePath(n.imagen) : "";
       this.mostrarAgregar = true;
       this.$nextTick(() => {
         if (this.$refs.editor) {
@@ -315,6 +348,7 @@ export default {
       this.editingId = null;
       this.nuevaNoticia = { titulo: "", contenido: "", imagenFile: null };
       this.imagenPreview = null;
+      this.imagenNombre = "";
     },
 
     // ---------------- editor actions ----------------
@@ -375,6 +409,12 @@ export default {
       return base ? `${base}${p}` : p;
     },
 
+    nombreArchivoDesdePath(ruta) {
+      if (!ruta) return "";
+      const partes = String(ruta).replace(/\\/g, "/").split("/");
+      return partes[partes.length - 1] || "imagen";
+    },
+
     excerptContenido(html, max = 140) {
       const t = this.htmlToText(html).replace(/\s+/g, " ").trim();
       if (!t) return "—";
@@ -409,7 +449,7 @@ export default {
       const file = e.target.files && e.target.files[0];
       if (!file) return;
       this.nuevaNoticia.imagenFile = file;
-      // preview
+      this.imagenNombre = file.name;
       const reader = new FileReader();
       reader.onload = (ev) => {
         this.imagenPreview = ev.target.result;
@@ -420,6 +460,7 @@ export default {
     removeImagenPreview() {
       this.imagenPreview = null;
       this.nuevaNoticia.imagenFile = null;
+      this.imagenNombre = "";
       // reset input file if present
       const input = document.getElementById("imagen");
       if (input) input.value = "";
@@ -665,7 +706,7 @@ export default {
   font-size: 14px;
 }
 
-/* modal */
+/* modal noticias */
 .modal-fondo {
   position: fixed;
   top: 0;
@@ -677,83 +718,234 @@ export default {
   align-items: center;
   justify-content: center;
   z-index: 2000;
+  padding: 12px;
 }
 .modal-contenido {
-  background: white;
-  padding: 16px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 1100px;
-  max-height: 90vh;
-  overflow-y: auto;
+  background: #fff;
+  border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
+.modal-contenido.modal-grande {
+  display: flex;
+  flex-direction: column;
+  width: min(96vw, 880px);
+  max-height: min(92vh, 860px);
+  padding: 0;
+  overflow: hidden;
+}
 .modal-header {
+  flex-shrink: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px 12px;
+  border-bottom: 1px solid #e8e8f2;
+  background: linear-gradient(180deg, #fafbff 0%, #fff 100%);
+}
+.modal-header-texto {
+  min-width: 0;
+}
+.modal-titulo {
+  margin: 0 0 4px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c2c87;
+}
+.modal-subtitulo {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #5b5b7a;
+  line-height: 1.35;
 }
 .btn-cerrar {
+  flex-shrink: 0;
   background: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+.btn-cerrar:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.modal-cuerpo {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 14px 18px 12px;
+}
+.campo-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #3e3eab;
+  margin: 14px 0 6px;
+}
+.campo-label:first-child {
+  margin-top: 0;
+}
+.input-modal-titulo {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.input-modal-titulo:focus {
+  outline: none;
+  border-color: #3e3eab;
+  box-shadow: 0 0 0 3px rgba(62, 62, 171, 0.2);
+}
+
+.modal-cuerpo .toolbar {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.modal-cuerpo .editor {
+  min-height: 140px;
+  max-height: min(38vh, 300px);
+  border: 1px solid #d1d5db;
+  padding: 10px;
+  border-radius: 8px;
+  overflow: auto;
+  font-size: 14px;
+  white-space: pre-wrap;
+  background: #fcfcfd;
+  margin-bottom: 0;
+}
+
+.modal-panel-media {
+  flex-shrink: 0;
+  padding: 10px 18px 12px;
+  border-top: 1px solid #e8e8f2;
+  background: #f4f5fb;
+}
+.panel-media-etiqueta {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #3e3eab;
+  margin-bottom: 8px;
+}
+.panel-media-fila {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  min-height: 56px;
+}
+.btn-adjuntar-imagen {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3e3eab;
+  background: #fff;
+  border: 1px solid #3e3eab;
+  border-radius: 8px;
   cursor: pointer;
 }
-
-/* editor */
-.editor {
-  min-height: 240px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 6px;
-  overflow: auto;
-  margin-bottom: 10px;
-  font-size: 14px;
-  white-space: pre-wrap; /* ayuda a renderizar saltos cuando se pega texto */
+.btn-adjuntar-imagen:hover {
+  background: #eef0ff;
+}
+.input-file-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.nombre-archivo {
+  font-size: 0.8rem;
+  color: #4b5563;
+  max-width: min(42vw, 220px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.panel-media-thumb {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #d6d6ea;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thumb-modal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.thumb-placeholder-modal {
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+.btn-quitar-imagen {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+.btn-quitar-imagen:hover {
+  background: #fee2e2;
 }
 
-/* imagen preview modal */
-.label-file {
+.modal-footer-acciones {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px 16px;
+  border-top: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.05);
+}
+.btn-cancelar-modal {
+  padding: 8px 16px;
   font-weight: 600;
   font-size: 0.9rem;
   color: #374151;
-  margin-bottom: 4px;
-  display: block;
-}
-.fila-imagen-modal {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 12px;
-}
-.input-file-visible {
-  flex: 1;
-  min-width: 200px;
-  font-size: 0.85rem;
-}
-.imagen-preview {
-  margin-top: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.preview-box {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-}
-.thumb-modal {
-  width: 96px;
-  height: 96px;
-  object-fit: cover;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
 }
-.btn-quitar-thumb {
-  padding: 4px 10px;
-  font-size: 0.8rem;
+.btn-cancelar-modal:hover {
+  background: #e5e7eb;
+}
+.btn-principal-modal {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  margin: 0 !important;
 }
 
 /* otros estilos heredados de tu archivo original */
@@ -856,12 +1048,16 @@ export default {
 
 /* responsive */
 @media (max-width: 700px) {
-  .modal-contenido {
-    width: 95%;
-    padding: 12px;
+  .modal-contenido.modal-grande {
+    width: 100%;
+    max-height: 94vh;
   }
-  .editor {
-    min-height: 160px;
+  .modal-cuerpo .editor {
+    min-height: 120px;
+    max-height: 32vh;
+  }
+  .nombre-archivo {
+    max-width: 120px;
   }
 }
 </style>
