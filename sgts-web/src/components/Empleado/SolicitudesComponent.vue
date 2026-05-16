@@ -103,15 +103,12 @@ export default {
     },
     methods: {
         async responderSolicitud() {
-            this.cargandoDatos = true;
             try {
                 await axios.post('/tarjetas/actualizarSolicitud', { form: this.form });
                 this.resetForm();
-                this.fetchSolicitudes();
+                await this.fetchSolicitudes();
             } catch (error) {
                 console.log(error);
-            } finally {
-                this.cargandoDatos = false;
             }
         },
         resetForm() {
@@ -150,11 +147,7 @@ export default {
                     responseType: 'blob',
                 });
                 const url = URL.createObjectURL(data);
-                const win = window.open(url, '_blank', 'noopener,noreferrer');
-                if (!win) {
-                    this.mensaje = 'El navegador bloqueó la ventana emergente. Permita ventanas emergentes para ver el archivo.';
-                    this.mensajePopup = true;
-                }
+                window.open(url, '_blank', 'noopener,noreferrer');
                 setTimeout(() => URL.revokeObjectURL(url), 120000);
             } catch (e) {
                 console.error(e);
@@ -188,6 +181,11 @@ export default {
 </script>
 
 <style scoped>
+/* Loader por encima del modal (global App.vue usa z-index: 2 en .pantalla-carga-vista) */
+.pantalla-carga-vista {
+    z-index: 2000;
+}
+
 /* General */
 .titulo-pagina {
     margin: 1rem 0;
