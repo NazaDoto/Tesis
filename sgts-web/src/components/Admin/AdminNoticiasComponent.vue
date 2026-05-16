@@ -18,42 +18,64 @@
       </div>
     </div>
 
-    <!-- Tabla de noticias -->
-    <div class="container">
-      <h3 class="mt-2">Gestión de Noticias</h3>
+    <!-- Listado de noticias -->
+    <div class="container admin-noticias">
+      <div class="cabecera-noticias">
+        <h3 class="titulo-seccion">Gestión de Noticias</h3>
+        <button type="button" class="btn-agregar" @click="abrirAgregar">Agregar Noticia</button>
+      </div>
 
-      <button class="btn-agregar" @click="abrirAgregar">Agregar Noticia</button>
-
-      <table class="tabla-usuarios">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Título</th>
-            <th>Contenido</th>
-            <th>Imagen</th>
-            <th>Fecha</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="n in noticias" :key="n.id">
-            <td>{{ n.id }}</td>
-            <td><input v-model="n.titulo" class="input-tabla" /></td>
-            <td>
-              <div class="contenido-pequeno" v-html="n.contenido"></div>
-            </td>
-            <td>
-              <input type="file" @change="onFileChange($event, n)" />
-              <img v-if="n.imagen" :src="n.imagen" width="50" alt="Imagen" />
-            </td>
-            <td>{{ formatearFecha(n.fecha) }}</td>
-            <td>
-              <button class="btn-guardar" @click="abrirEditar(n)">Editar</button>
-              <button class="btn-eliminar" @click="eliminarNoticia(n.id)">Eliminar</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="tabla-noticias-wrap">
+        <table class="tabla-usuarios tabla-noticias">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-titulo">Título</th>
+              <th class="col-contenido">Resumen</th>
+              <th class="col-imagen">Imagen</th>
+              <th class="col-fecha">Fecha</th>
+              <th class="col-acciones">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="n in noticias" :key="n.id">
+              <td class="col-id">{{ n.id }}</td>
+              <td class="col-titulo">
+                <input v-model="n.titulo" class="input-tabla input-titulo-lista" type="text" />
+              </td>
+              <td class="col-contenido">
+                <p class="contenido-preview" :title="htmlToText(n.contenido)">
+                  {{ excerptContenido(n.contenido) }}
+                </p>
+              </td>
+              <td class="col-imagen">
+                <div class="celda-imagen">
+                  <div v-if="thumbLista(n)" class="thumb-wrap">
+                    <img :src="thumbLista(n)" class="thumb-mini" alt="" />
+                  </div>
+                  <div v-else class="thumb-placeholder">Sin imagen</div>
+                  <label class="label-file-mini">
+                    <span class="label-file-text">Cambiar</span>
+                    <input
+                      type="file"
+                      class="input-file-oculto"
+                      accept=".jpg,.jpeg,.png"
+                      @change="onFileChange($event, n)"
+                    />
+                  </label>
+                </div>
+              </td>
+              <td class="col-fecha">{{ formatearFecha(n.fecha) }}</td>
+              <td class="col-acciones">
+                <div class="acciones-fila">
+                  <button type="button" class="btn-guardar" @click="abrirEditar(n)">Editar</button>
+                  <button type="button" class="btn-eliminar" @click="eliminarNoticia(n.id)">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- Modal Agregar / Editar Noticia -->
@@ -113,13 +135,24 @@
           @paste.prevent="onPaste"
         ></div>
 
-        <!-- Imagen destacada (preview) -->
+        <!-- Imagen destacada + vista previa -->
         <div class="imagen-preview">
-          <label class="label-file">Imagen destacada</label>
-<input id="imagen" name="imagen" type="file" @change="onFileChangeNueva($event)" accept=".jpg,.png,.jpeg" />
-          <div v-if="imagenPreview" class="preview-box">
-            <img :src="imagenPreview" alt="Preview" />
-            <button class="btn-eliminar" @click="removeImagenPreview">Quitar</button>
+          <label class="label-file" for="imagen">Imagen destacada</label>
+          <div class="fila-imagen-modal">
+            <input
+              id="imagen"
+              name="imagen"
+              type="file"
+              class="input-file-visible"
+              @change="onFileChangeNueva($event)"
+              accept=".jpg,.png,.jpeg"
+            />
+            <div v-if="imagenPreview" class="preview-box">
+              <img :src="imagenPreview" class="thumb-modal" alt="Vista previa" />
+              <button type="button" class="btn-eliminar btn-quitar-thumb" @click="removeImagenPreview">
+                Quitar
+              </button>
+            </div>
           </div>
         </div>
 
@@ -264,8 +297,8 @@ export default {
       this.editingId = n.id;
       this.nuevaNoticia.titulo = n.titulo || "";
       this.nuevaNoticia.contenido = n.contenido || "";
-      this.nuevaNoticia.imagenFile = null; // no cambiar hasta que el usuario suba una nueva
-      this.imagenPreview = n.imagen || null; // si tu API devuelve URL en n.imagen
+      this.nuevaNoticia.imagenFile = null;
+      this.imagenPreview = n.imagen ? this.urlImagenPublica(n.imagen) : null;
       this.mostrarAgregar = true;
       this.$nextTick(() => {
         if (this.$refs.editor) {
@@ -328,11 +361,31 @@ export default {
 
     // manejo de Enter: insertamos <br><br> para mantener separación y no crear tags extra raros
     handleEnter(e) {
-  e.preventDefault(); // ahora “e” sí se usa
-  document.execCommand("insertHTML", false, "<br><br>");
-  this.onEditorInput();
-}
-,
+      e.preventDefault();
+      document.execCommand("insertHTML", false, "<br><br>");
+      this.onEditorInput();
+    },
+
+    /** URL absoluta para imágenes guardadas bajo /uploads/... */
+    urlImagenPublica(ruta) {
+      if (!ruta) return "";
+      if (ruta.startsWith("http") || ruta.startsWith("data:")) return ruta;
+      const base = (axios.defaults.baseURL || "").replace(/\/$/, "");
+      const p = ruta.startsWith("/") ? ruta : `/${ruta}`;
+      return base ? `${base}${p}` : p;
+    },
+
+    excerptContenido(html, max = 140) {
+      const t = this.htmlToText(html).replace(/\s+/g, " ").trim();
+      if (!t) return "—";
+      return t.length > max ? `${t.slice(0, max)}…` : t;
+    },
+
+    thumbLista(n) {
+      if (n.imagenPreviewLocal) return n.imagenPreviewLocal;
+      if (n.imagen) return this.urlImagenPublica(n.imagen);
+      return "";
+    },
 
     // on input: guardamos HTML en el modelo (luego sanitizamos antes de enviar)
     onEditorInput() {
@@ -373,10 +426,14 @@ export default {
     },
 
     onFileChange(e, noticia) {
-      // para edición rápida desde la tabla: setear imagenFile y preview si querés
       const file = e.target.files && e.target.files[0];
       if (!file) return;
       noticia.imagenFile = file;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        noticia.imagenPreviewLocal = ev.target.result;
+      };
+      reader.readAsDataURL(file);
     },
 
     // ---------------- guardar (agregar o editar) ----------------
@@ -426,6 +483,162 @@ export default {
 </script>
 
 <style scoped>
+/* Listado */
+.admin-noticias {
+  max-width: 100%;
+}
+.cabecera-noticias {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.titulo-seccion {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2c2c87;
+}
+.tabla-noticias-wrap {
+  overflow-x: auto;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e2f0;
+  background: #fafbff;
+}
+.tabla-noticias {
+  min-width: 720px;
+  margin-top: 0;
+}
+.tabla-noticias .col-titulo,
+.tabla-noticias .col-contenido {
+  text-align: left;
+}
+.tabla-noticias thead .col-titulo,
+.tabla-noticias thead .col-contenido {
+  text-align: left;
+}
+.col-id {
+  width: 52px;
+  white-space: nowrap;
+}
+.col-titulo {
+  min-width: 160px;
+  max-width: 220px;
+  text-align: left;
+}
+.col-contenido {
+  min-width: 200px;
+  max-width: 320px;
+  text-align: left;
+}
+.contenido-preview {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: #374151;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.col-imagen {
+  width: 128px;
+  min-width: 128px;
+}
+.celda-imagen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+.thumb-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #d6d6ea;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thumb-mini {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.thumb-placeholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  border: 1px dashed #c4c4dd;
+  background: #f3f4f6;
+  font-size: 0.65rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.2;
+  padding: 4px;
+}
+.label-file-mini {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+}
+.label-file-text {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #3e3eab;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #3e3eab;
+  background: #fff;
+}
+.label-file-mini:hover .label-file-text {
+  background: #eef0ff;
+}
+.input-file-oculto {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.input-titulo-lista {
+  width: 100%;
+  max-width: 100%;
+}
+.col-fecha {
+  white-space: nowrap;
+  width: 92px;
+  font-size: 0.85rem;
+}
+.col-acciones {
+  width: 1%;
+  white-space: nowrap;
+}
+.acciones-fila {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: stretch;
+}
+.acciones-fila .btn-guardar,
+.acciones-fila .btn-eliminar {
+  margin: 0;
+  width: 100%;
+  min-width: 88px;
+}
+
 /* Toolbar & editor styling */
 .toolbar {
   display: flex;
@@ -499,24 +712,48 @@ export default {
   white-space: pre-wrap; /* ayuda a renderizar saltos cuando se pega texto */
 }
 
-/* imagen preview */
+/* imagen preview modal */
+.label-file {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 4px;
+  display: block;
+}
+.fila-imagen-modal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px;
+}
+.input-file-visible {
+  flex: 1;
+  min-width: 200px;
+  font-size: 0.85rem;
+}
 .imagen-preview {
   margin-top: 8px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 .preview-box {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
-  align-items: center;
 }
-.preview-box img {
-  max-width: 160px;
-  max-height: 120px;
+.thumb-modal {
+  width: 96px;
+  height: 96px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #ddd;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+.btn-quitar-thumb {
+  padding: 4px 10px;
+  font-size: 0.8rem;
 }
 
 /* otros estilos heredados de tu archivo original */
@@ -556,6 +793,9 @@ export default {
 .btn-agregar:hover {
   background: #2c2c87;
 }
+.btn-agregar {
+  flex-shrink: 0;
+}
 .btn-eliminar {
   background: #ab3e3e;
   color: white;
@@ -578,6 +818,18 @@ export default {
   gap: 8px;
   justify-content: flex-end;
   margin-top: 8px;
+}
+.actions .btn {
+  background: #e5e7eb;
+  color: #1f2937;
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.actions .btn:hover {
+  background: #d1d5db;
 }
 
 /* popup message */

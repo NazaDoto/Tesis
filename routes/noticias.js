@@ -101,7 +101,11 @@ router.post('/agregar', upload.single('imagen'), async (req, res) => {
 router.post('/editar', upload.single('imagen'), async (req, res) => {
 
     try {
-        const { titulo, contenido, empleado } = req.body;
+        const { titulo, contenido, empleado, id } = req.body;
+        const idNoticia = parseInt(id, 10);
+        if (!idNoticia || Number.isNaN(idNoticia)) {
+            return res.status(400).json({ error: 'ID de noticia inválido' });
+        }
 
         let query = 'UPDATE noticia SET titulo = ?, contenido = ?';
         const params = [titulo, contenido];
@@ -110,14 +114,14 @@ router.post('/editar', upload.single('imagen'), async (req, res) => {
             const imagen = `/uploads/noticias/${req.file.filename}`;
             await db.query(`
         UPDATE noticia_imagen SET path = ? WHERE id_noticia = ?
-    `, [imagen, id]);
+    `, [imagen, idNoticia]);
         }
 
         query += ' WHERE id = ?';
-        params.push(id);
+        params.push(idNoticia);
 
         await db.query(query, params);
-        await registrarLog(empleado || 'desconocido', "EDITAR_NOTICIA", `Se editó noticia ID ${id}, nuevo título='${titulo}'`);
+        await registrarLog(empleado || 'desconocido', "EDITAR_NOTICIA", `Se editó noticia ID ${idNoticia}, nuevo título='${titulo}'`);
 
         res.json({ mensaje: 'Noticia editada correctamente' });
     } catch (error) {
