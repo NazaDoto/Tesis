@@ -52,6 +52,20 @@ function formatearFecha(fechaISO) {
     const anio = String(fecha.getFullYear());
     return `${anio}-${mes}-${dia}`;
 }
+
+/** Cuenta/tarjeta enmascaradas en pantalla (XXXX-XXXX-XXXX-1234) no sirven para UPDATE en BD. */
+function esValorEnmascarado(valor) {
+    if (valor === null || valor === undefined || valor === '') return true;
+    return /X/i.test(String(valor));
+}
+
+async function obtenerTarjetaPorDni(dni) {
+    const [rows] = await db.execute(
+        'SELECT * FROM tarjeta_soc WHERE dni = ? ORDER BY fecha_modificacion DESC, id DESC LIMIT 1',
+        [dni]
+    );
+    return rows.length > 0 ? rows[0] : null;
+}
 const transporter = nodemailer.createTransport({
     host: 'mail.complejojfi.gob.ar',
     port: 25,
@@ -143,7 +157,7 @@ WHERE dni = ?;`,
 });
 router.post('/update', async (req, res) => {
 
-    const {
+    let {
         dni,
         num_cuenta,
         num_tarjeta,
@@ -155,18 +169,40 @@ router.post('/update', async (req, res) => {
         empleado
     } = req.body;
 
-    if (!dni || !num_cuenta) {
-        return res.status(400).json({ error: 'DNI y número de cuenta son obligatorios.' });
+    dni = String(dni || '').trim();
+    if (!dni) {
+        return res.status(400).json({ error: 'El DNI es obligatorio.' });
     }
 
     try {
         let accion = "ACTUALIZAR_TARJETA";
+        let rows = [];
 
-        // Buscar tarjeta actual
-        const [rows] = await db.execute(
-            'SELECT * FROM tarjeta_soc WHERE dni = ? AND num_cuenta = ?',
-            [dni, num_cuenta]
-        );
+        if (esValorEnmascarado(num_cuenta)) {
+            const tarjetaDb = await obtenerTarjetaPorDni(dni);
+            if (!tarjetaDb) {
+                return res.status(400).json({
+                    error: 'No hay tarjeta registrada para ese DNI. Use "Comprobar en padrón" o verifique el alta.',
+                });
+            }
+            num_cuenta = tarjetaDb.num_cuenta;
+            if (esValorEnmascarado(num_tarjeta)) {
+                num_tarjeta = tarjetaDb.num_tarjeta;
+            }
+            rows = [tarjetaDb];
+        } else {
+            [rows] = await db.execute(
+                'SELECT * FROM tarjeta_soc WHERE dni = ? AND num_cuenta = ?',
+                [dni, num_cuenta]
+            );
+            if (rows.length > 0 && esValorEnmascarado(num_tarjeta)) {
+                num_tarjeta = rows[0].num_tarjeta;
+            }
+        }
+
+        if (!num_cuenta) {
+            return res.status(400).json({ error: 'El número de cuenta es obligatorio.' });
+        }
 
         let estadoAnterior = null;
         let observacion = '';

@@ -335,12 +335,22 @@ html {
 
 .texto-carga {
     font-style: italic;
-    margin: 20px;
-    color: white;
+    margin: 20px 0 0;
+}
+
+.pantalla-carga .texto-carga {
+    color: #374151;
+}
+
+.pantalla-carga-vista .texto-carga {
+    color: #fff;
 }
 
 .logo-carga {
-    margin-top: -10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-img {
@@ -364,34 +374,24 @@ html {
     box-shadow: none;
 }
 
-.pantalla-carga {
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100svw;
-    height: 100svh;
-    background-color: white;
-    align-content: center;
-}
-
-.pantalla-carga:hover {
-    cursor: wait;
-}
+/* Overlay de carga a pantalla completa (fixed evita recorte por overflow de .vista) */
+.pantalla-carga,
 .pantalla-carga-vista {
-    z-index: 2;
-    position: absolute;
-    top: 10px;
-    left: 20svw;
-    width: calc(80svw - 20px);
-    height: calc(100svh - 20px);
-    background-color: rgba(0, 0, 0, 0.5);
-    align-content: center;
-    border-radius: 5px;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: wait;
 }
 
-.pantalla-carga-vista:hover {
-    cursor: wait;
+.pantalla-carga {
+    background-color: #fff;
+}
+
+.pantalla-carga-vista {
+    background-color: rgba(0, 0, 0, 0.55);
 }
 
 @keyframes l2 {

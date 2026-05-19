@@ -121,7 +121,8 @@ export default {
             mensaje: '',
             cargandoDatos: false,
             habilitarModificacion: false,
-
+            botonModificacion: false,
+            habilitarImprimir: false,
         };
     },
     methods: {
@@ -157,22 +158,47 @@ export default {
             this.mensaje = mensaje;
         },
         async guardarTarjeta() {
+            if (!this.form.dni) {
+                this.mostrarMensaje('Ingrese un DNI y pulse "Comprobar en padrón" antes de guardar.');
+                return;
+            }
+            if (this.form.estado === '' || this.form.estado === 'default') {
+                this.mostrarMensaje('Seleccione un estado de tarjeta.');
+                return;
+            }
+
             const ahora = new Date();
             const fechaHoy = ahora.toISOString().split('T')[0];
 
             if (!this.form.fecha_registro) this.form.fecha_registro = fechaHoy;
             this.form.fecha_modificacion = fechaHoy;
 
+            this.cargandoDatos = true;
             try {
-                const { data } = await axios.post('/tarjetas/update', this.form);
+                const payload = {
+                    dni: String(this.form.dni),
+                    num_cuenta: this.form.num_cuenta,
+                    num_tarjeta: this.form.num_tarjeta,
+                    fecha_registro: this.form.fecha_registro,
+                    estado: this.form.estado,
+                    fecha_modificacion: this.form.fecha_modificacion,
+                    importe_acreditado: this.form.importe_acreditado,
+                    observaciones: this.form.observaciones || '',
+                    empleado: this.form.empleado,
+                };
+                const { data } = await axios.post('/tarjetas/update', payload);
                 if (data.success) {
-                    this.mostrarMensaje("Tarjeta guardada correctamente.");
+                    this.mostrarMensaje('Tarjeta guardada correctamente.');
+                    await this.comprobarPadron();
                 } else {
-                    this.mostrarMensaje("No se pudo guardar la tarjeta.");
+                    this.mostrarMensaje('No se pudo guardar la tarjeta.');
                 }
             } catch (err) {
                 console.error(err);
-                this.mostrarMensaje("Error al guardar la tarjeta.");
+                const msg = err.response?.data?.error || 'Error al guardar la tarjeta.';
+                this.mostrarMensaje(msg);
+            } finally {
+                this.cargandoDatos = false;
             }
         }
     }

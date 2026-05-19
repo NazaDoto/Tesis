@@ -190,11 +190,6 @@ export default {
 </script>
 
 <style scoped>
-/* Loader por encima del modal (global App.vue usa z-index: 2 en .pantalla-carga-vista) */
-.pantalla-carga-vista {
-    z-index: 2000;
-}
-
 /* General */
 .titulo-pagina {
     margin: 1rem 0;

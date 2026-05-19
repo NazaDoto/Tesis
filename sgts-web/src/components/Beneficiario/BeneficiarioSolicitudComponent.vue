@@ -13,23 +13,24 @@
 
       </div>
     </div>
-    <div v-if="tieneTarjeta != 'PENDIENTE'" class="container">
-      <h3 class="mt-2">Solicitar Tarjeta</h3>
-      <form @submit.prevent="solicitar" class="formulario-beneficiario">
+    <div v-if="tieneTarjeta != 'PENDIENTE'" class="container solicitud-beneficiario">
+      <h3 class="titulo-seccion">Solicitar Tarjeta</h3>
+      <p class="subtitulo-seccion">Completá tus datos. Los campos con * son obligatorios.</p>
+      <form @submit.prevent="solicitar" class="formulario-beneficiario form-solicitud">
         <div class="fila">
           <div class="w-5">
             <label for="cuil" class="form-label">CUIL</label>
             <div class="flex-cuil">
               <!-- Prefijo editable (2 dígitos) -->
-              <input class="form-control text-center cuil-lado" maxlength="2" type="text" v-model="cuilInicio"
-                @input="updateCuil" style="max-width: 3em;" required />
+              <input class="form-control text-center cuil-lado" maxlength="2" type="text" inputmode="numeric"
+                v-model="cuilInicio" @input="updateCuil" required />
 
               <!-- DNI no editable -->
               <span class="input-group-text cuil-medio">{{ usuario.dni }}</span>
 
               <!-- Verificador editable (1 dígito) -->
-              <input class="form-control text-center cuil-lado" maxlength="1" type="text" v-model="cuilFin"
-                @input="updateCuil" style="max-width: 3em;" required />
+              <input class="form-control text-center cuil-lado" maxlength="1" type="text" inputmode="numeric"
+                v-model="cuilFin" @input="updateCuil" required />
             </div>
           </div>
           <div class="w-5">
@@ -107,8 +108,8 @@
             <input id="domicilio" class="form-control" v-model="usuario.domicilio" type="text" required />
           </div>
         </div>
-        <div class="form-container" v-for="i in usuario.cant_parientes" :key="i">
-          <h5>Pariente {{ i }}</h5>
+        <div class="form-container pariente-card" v-for="i in usuario.cant_parientes" :key="i">
+          <h5 class="pariente-titulo">Pariente {{ i }}</h5>
           <div class="fila">
             <div class="w-5">
               <label class="form-label" :for="'nom-pariente' + i">Nombre y Apellido</label>
@@ -138,14 +139,14 @@
             </div>
           </div>
         </div>
-        <div class="fila m-4">
-          <button type="submit" class="btn-mensaje">Solicitar</button>
+        <div class="fila fila-acciones">
+          <button type="submit" class="btn-mensaje btn-solicitar">Enviar solicitud</button>
         </div>
 
       </form>
     </div>
-    <div v-else class="container">
-      <h3 class="mt-2">Estado de la Solicitud</h3>
+    <div v-else class="container solicitud-beneficiario solicitud-estado">
+      <h3 class="titulo-seccion">Estado de la Solicitud</h3>
       <div class="solicitud-detalle">
         <!-- Datos principales -->
         <div class="solicitud-info">
@@ -458,25 +459,81 @@ export default {
   flex-direction: column;
 }
 
+.titulo-seccion {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2c2c87;
+}
+
+.subtitulo-seccion {
+  margin: 0 0 1rem;
+  font-size: 0.88rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.form-solicitud :deep(.form-label) {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+
 .flex-cuil {
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: minmax(56px, 0.85fr) minmax(0, 2fr) minmax(48px, 0.75fr);
+  gap: 8px;
   width: 100%;
-  flex-direction: row;
+  align-items: stretch;
 }
 
 .cuil-lado {
-  width: 20%;
+  width: 100%;
   max-width: none !important;
+  min-height: 42px;
 }
 
 .cuil-medio {
-  width: 60%;
-  justify-content: center !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  word-break: break-all;
+  background: #f3f4f6;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
 }
 
 .form-control.text-center {
   text-align: center;
-  padding: 0 !important;
+}
+
+.pariente-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.pariente-titulo {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #3e3eab;
+}
+
+.fila-acciones {
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.btn-solicitar {
+  width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .flex-container {
@@ -484,14 +541,6 @@ export default {
   flex-direction: column;
   gap: 10px;
   width: 600px;
-}
-
-.pantalla-carga {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: rgba(255, 255, 255, 0.9);
 }
 
 .c-black {
@@ -544,9 +593,108 @@ export default {
   background: linear-gradient(rgb(175, 210, 255), rgb(0, 87, 168)) !important;
 }
 
-@media screen and (max-width: 768px) {
-  .form-container {
-    width: 90%;
+/* ——— Mobile (beneficiario: sidebar estrecho + vista angosta) ——— */
+@media screen and (max-width: 991px) {
+  .solicitud-beneficiario.container {
+    padding: 12px 14px 28px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-solicitud .fila {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .form-solicitud .fila .w-5 {
+    width: 100% !important;
+    max-width: 100%;
+    flex: 1 1 100%;
+    margin-bottom: 14px;
+  }
+
+  .form-solicitud .form-control,
+  .form-solicitud .form-select {
+    width: 100%;
+    min-height: 44px;
+    font-size: 16px; /* evita zoom automático en iOS */
+  }
+
+  .form-solicitud input[type="file"].form-control {
+    min-height: auto;
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+
+  .flex-cuil {
+    grid-template-columns: 64px 1fr 52px;
+    gap: 6px;
+  }
+
+  .cuil-medio {
+    font-size: 0.78rem;
+    padding: 0 4px;
+  }
+
+  .pariente-card {
+    width: 100% !important;
+    padding: 14px 12px;
+    margin: 0 0 12px;
+  }
+
+  .fila-acciones {
+    position: sticky;
+    bottom: 0;
+    margin: 8px -14px 0;
+    padding: 12px 14px 16px;
+    background: linear-gradient(to top, #fff 85%, rgba(255, 255, 255, 0.95));
+    border-top: 1px solid #e5e7eb;
+    z-index: 5;
+  }
+
+  .btn-solicitar {
+    box-shadow: 0 4px 12px rgba(0, 90, 207, 0.25);
+  }
+
+  /* Vista estado solicitud */
+  .solicitud-estado .solicitud-info {
+    grid-template-columns: 1fr;
+  }
+
+  .solicitud-estado .historial-encabezado {
+    display: none;
+  }
+
+  .solicitud-estado .historial-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 12px 14px;
+  }
+
+  .solicitud-estado .historial-item span:first-child {
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  .solicitud-estado .historial-item span:last-child {
+    font-size: 0.82rem;
+    color: #6b7280;
+  }
+
+  .solicitud-estado .historial-item span:last-child::before {
+    content: 'Fecha: ';
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .flex-cuil {
+    grid-template-columns: 52px 1fr 44px;
+  }
+
+  .cuil-medio {
+    font-size: 0.72rem;
   }
 }
 </style>
