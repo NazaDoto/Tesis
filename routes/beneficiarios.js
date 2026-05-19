@@ -40,6 +40,31 @@ function formatearFecha(fechaISO) {
   return `${anio}-${mes}-${dia}`;
 }
 
+function sanitizarId(valor) {
+  if (valor === null || valor === undefined || valor === '' || valor === 'default') return null;
+  return valor;
+}
+
+function normalizarImporte(valor) {
+  if (valor === null || valor === undefined || valor === '') return null;
+  const n = Number(valor);
+  return Number.isNaN(n) ? null : n;
+}
+
+function sanitizarEstadoTarjeta(estado) {
+  if (estado === null || estado === undefined || estado === '' || estado === 'default') return null;
+  return estado;
+}
+
+async function obtenerTarjetaPorDni(dni) {
+  const [rows] = await db.execute(
+    `SELECT * FROM tarjeta_soc WHERE dni = ?
+     ORDER BY COALESCE(fecha_modificacion, fecha_registro) DESC, id DESC LIMIT 1`,
+    [dni]
+  );
+  return rows.length > 0 ? rows[0] : null;
+}
+
 router.get('/getDatos', async (req, res) => {
   const dni = req.query.dni;
   if (!dni) return res.status(400).json({ error: 'DNI no proporcionado' });
@@ -47,7 +72,11 @@ router.get('/getDatos', async (req, res) => {
   try {
     // 1. Buscar en la base de datos MySQL
     const [rows] = await db.query('SELECT * FROM beneficiario WHERE dni = ?', [dni]);
-    const [rows2] = await db.query('SELECT * FROM tarjeta_soc WHERE dni = ?', [dni]);
+    const [rows2] = await db.query(
+      `SELECT estado, importe_acreditado FROM tarjeta_soc WHERE dni = ?
+       ORDER BY COALESCE(fecha_modificacion, fecha_registro) DESC, id DESC LIMIT 1`,
+      [dni]
+    );
     const [historial] = await db.execute(
       `SELECT observaciones, fecha 
              FROM historial_mov 
@@ -57,7 +86,8 @@ router.get('/getDatos', async (req, res) => {
     );
     if (rows.length > 0) {
       const b = rows[0];
-      const c = rows2[0];
+      const c = rows2[0] || {};
+      const importe = c.importe_acreditado;
       return res.json({
         dni: b.dni,
         nombre: b.nombre,
@@ -65,9 +95,11 @@ router.get('/getDatos', async (req, res) => {
         sexo: b.sexo,
         id_dpto: b.id_dpto,
         id_loc: b.id_loc,
+        id_localidad: b.id_loc,
         id_barrio: b.id_barrio,
         domicilio: b.domicilio,
-        estado: c.estado || 'default',
+        estado: c.estado ?? null,
+        importe_acreditado: importe !== null && importe !== undefined ? Number(importe) : '',
         fecha_registro: formatearFecha(b.fecha_registro),
         hora_registro: b.hora_registro,
         fecha_modificacion: formatearFecha(b.fecha_modificacion),
@@ -206,77 +238,84 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
   try {
     const { beneficiario, parientes, empleado } = req.body;
     const beneficiarioData = JSON.parse(beneficiario);
-    const parientesArray = JSON.parse(parientes);
-    const {
-      dni,
-      cuil,
-      nombre,
-      fecha_nacimiento,
-      sexo,
-      id_dpto,
-      id_loc,
-      id_barrio,
-      domicilio,
-      fecha_registro,
-      hora_registro,
-      estado,
-      fecha_modificacion,
-      hora_modificacion,
-      observaciones,
-      cant_parientes,
-      importe,
-      usuario,
-    } = beneficiarioData;
+    const parientesArray = JSON.parse(parientes || '[]');
 
-    // Archivo adjunto
+    const dni = String(beneficiarioData.dni || '').trim();
+    if (!dni) {
+      return res.status(400).json({ success: false, error: 'El DNI es obligatorio.' });
+    }
+
+    const cuil = beneficiarioData.cuil || null;
+    const nombre = beneficiarioData.nombre || null;
+    const fecha_nacimiento = beneficiarioData.fecha_nacimiento || null;
+    const sexo = sanitizarId(beneficiarioData.sexo) || null;
+    const id_dpto = sanitizarId(beneficiarioData.id_dpto);
+    const id_loc = sanitizarId(beneficiarioData.id_localidad ?? beneficiarioData.id_loc);
+    const id_barrio = sanitizarId(beneficiarioData.id_barrio);
+    const domicilio = beneficiarioData.domicilio || null;
+    const fecha_registro = beneficiarioData.fecha_registro || null;
+    const hora_registro = beneficiarioData.hora_registro || null;
+    const fecha_modificacion = beneficiarioData.fecha_modificacion || null;
+    const hora_modificacion = beneficiarioData.hora_modificacion || null;
+    const observaciones = beneficiarioData.observaciones || '';
+    const cant_parientes = beneficiarioData.cant_parientes || 0;
+    const estadoTarjeta = sanitizarEstadoTarjeta(beneficiarioData.estado);
+    const importe = normalizarImporte(
+      beneficiarioData.importe_acreditado ?? beneficiarioData.importe
+    );
+
+    const fechaHoy = new Date().toISOString().split('T')[0];
+    let archivoNombre = null;
+
     if (req.file) {
-      const relativePath = path.join(req.file.originalname);
-      archivoNombre = relativePath.replace(/\\/g, '/'); // Para compatibilidad Windows/Linux
+      archivoNombre = req.file.originalname.replace(/\\/g, '/');
+    }
 
-      // Guardar también en tabla de archivos, si corresponde
-      const result = await db.query ('SELECT id FROM beneficiario WHERE dni = ?', [dni]);
-      const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
-      await db.query(`
-    INSERT INTO archivo_beneficiario (id_beneficiario, dni, path)
-    VALUES (?, ?, ?)
-    ON DUPLICATE KEY UPDATE path = VALUES(path)
-  `, [id_beneficiario, dni, archivoNombre]);
-      // Insertar o actualizar en beneficiario
-      await db.query(`
-    INSERT into beneficiario (
+    const paramsBeneficiario = [
       dni, cuil, nombre, fecha_nacimiento, sexo,
       id_dpto, id_loc, id_barrio, domicilio,
-      fecha_registro, hora_registro, 
-      fecha_modificacion, hora_modificacion, cant_parientes, archivo_adjunto
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    ON DUPLICATE KEY UPDATE
-      cuil = VALUES(cuil),
-      nombre = VALUES(nombre),
-      fecha_nacimiento = VALUES(fecha_nacimiento),
-      sexo = VALUES(sexo),
-      id_dpto = VALUES(id_dpto),
-      id_loc = VALUES(id_loc),
-      id_barrio = VALUES(id_barrio),
-      domicilio = VALUES(domicilio),
-      fecha_registro = VALUES(fecha_registro),
-      hora_registro = VALUES(hora_registro),
-      fecha_modificacion = VALUES(fecha_modificacion),
-      hora_modificacion = VALUES(hora_modificacion),
-      cant_parientes = VALUES(cant_parientes),
-      archivo_adjunto = VALUES(archivo_adjunto)
-  `, [
-        dni, cuil, nombre, fecha_nacimiento, sexo,
-        id_dpto, id_loc, id_barrio, domicilio,
-        fecha_registro, hora_registro,
-        fecha_modificacion, hora_modificacion, cant_parientes, archivoNombre
-      ]);
-    } else {
-      // Insertar o actualizar en beneficiario
+      fecha_registro, hora_registro,
+      fecha_modificacion, hora_modificacion, cant_parientes,
+    ];
+
+    if (archivoNombre) {
       await db.query(`
-        INSERT into beneficiario (
+        INSERT INTO beneficiario (
           dni, cuil, nombre, fecha_nacimiento, sexo,
           id_dpto, id_loc, id_barrio, domicilio,
-          fecha_registro, hora_registro, 
+          fecha_registro, hora_registro,
+          fecha_modificacion, hora_modificacion, cant_parientes, archivo_adjunto
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ON DUPLICATE KEY UPDATE
+          cuil = VALUES(cuil),
+          nombre = VALUES(nombre),
+          fecha_nacimiento = VALUES(fecha_nacimiento),
+          sexo = VALUES(sexo),
+          id_dpto = VALUES(id_dpto),
+          id_loc = VALUES(id_loc),
+          id_barrio = VALUES(id_barrio),
+          domicilio = VALUES(domicilio),
+          fecha_registro = VALUES(fecha_registro),
+          hora_registro = VALUES(hora_registro),
+          fecha_modificacion = VALUES(fecha_modificacion),
+          hora_modificacion = VALUES(hora_modificacion),
+          cant_parientes = VALUES(cant_parientes),
+          archivo_adjunto = VALUES(archivo_adjunto)
+      `, [...paramsBeneficiario, archivoNombre]);
+
+      const [benRows] = await db.query('SELECT id FROM beneficiario WHERE dni = ?', [dni]);
+      const idBenArch = benRows.length > 0 ? benRows[0].id : null;
+      await db.query(`
+        INSERT INTO archivo_beneficiario (id_beneficiario, dni, path)
+        VALUES (?, ?, ?)
+        ON DUPLICATE KEY UPDATE path = VALUES(path)
+      `, [idBenArch, dni, archivoNombre]);
+    } else {
+      await db.query(`
+        INSERT INTO beneficiario (
+          dni, cuil, nombre, fecha_nacimiento, sexo,
+          id_dpto, id_loc, id_barrio, domicilio,
+          fecha_registro, hora_registro,
           fecha_modificacion, hora_modificacion, cant_parientes
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON DUPLICATE KEY UPDATE
@@ -293,37 +332,47 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
           fecha_modificacion = VALUES(fecha_modificacion),
           hora_modificacion = VALUES(hora_modificacion),
           cant_parientes = VALUES(cant_parientes)
-      `, [
-        dni, cuil, nombre, fecha_nacimiento, sexo,
-        id_dpto, id_loc, id_barrio, domicilio,
-        fecha_registro, hora_registro,
-        fecha_modificacion, hora_modificacion, cant_parientes
-      ]);
-
+      `, paramsBeneficiario);
     }
-    await registrarLog(empleado || 'desconocido', "ACTUALIZAR_BENEFICIARIO", `Se actualizó beneficiario DNI ${dni} (${nombre})`);
 
+    await registrarLog(empleado || 'desconocido', 'ACTUALIZAR_BENEFICIARIO', `Se actualizó beneficiario DNI ${dni} (${nombre})`);
 
-    const fechaHoy = new Date().toISOString().split('T')[0];
-    const horaHoy = new Date().toTimeString().split(' ')[0].slice(0, 5);
-    const result = await db.query(`SELECT id FROM beneficiario WHERE dni = ?`, [dni]);
-    const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
-    await db.query(`INSERT INTO tarjeta_soc(id_beneficiario, dni, fecha_registro, fecha_modificacion, estado, importe_acreditado) VALUES (?,?,?,?,?,?)
-      ON DUPLICATE KEY UPDATE
-      fecha_modificacion = VALUES(fecha_modificacion),
-      estado = VALUES(estado),
-      importe_acreditado = VALUES(importe_acreditado)`, [id_beneficiario,dni, fechaHoy, fechaHoy, estado, importe])
-    await db.query(`INSERT INTO historial_mov(id_beneficiario,observaciones, fecha, dni) VALUES (?,?, ?, ?)`, [id_beneficiario,observaciones ? observaciones : 'ACTUALIZACIÓN DE BENEFICIARIO', fechaHoy, dni])
+    const [result] = await db.query('SELECT id FROM beneficiario WHERE dni = ?', [dni]);
+    const id_beneficiario = result.length > 0 ? result[0].id : null;
 
-    // Eliminar parientes anteriores
-    await db.query(`DELETE FROM PARIENTE WHERE dni_titular = ?`, [dni]);
+    const tarjetaExistente = await obtenerTarjetaPorDni(dni);
+    const fechaModTarjeta = fecha_modificacion || fechaHoy;
+
+    if (tarjetaExistente) {
+      await db.execute(
+        `UPDATE tarjeta_soc SET
+          fecha_modificacion = ?,
+          estado = ?,
+          importe_acreditado = ?
+        WHERE id = ?`,
+        [fechaModTarjeta, estadoTarjeta, importe, tarjetaExistente.id]
+      );
+    } else if (estadoTarjeta || importe !== null) {
+      await db.execute(
+        `INSERT INTO tarjeta_soc (id_beneficiario, dni, fecha_registro, fecha_modificacion, estado, importe_acreditado)
+         VALUES (?, ?, ?, ?, ?, ?)`,
+        [id_beneficiario, dni, fecha_registro || fechaHoy, fechaModTarjeta, estadoTarjeta, importe]
+      );
+    }
+
+    await db.query(
+      'INSERT INTO historial_mov(id_beneficiario, observaciones, fecha, dni) VALUES (?, ?, ?, ?)',
+      [id_beneficiario, observaciones || 'ACTUALIZACIÓN DE BENEFICIARIO', fechaHoy, dni]
+    );
+
+    await db.query('DELETE FROM pariente WHERE dni_titular = ?', [dni]);
 
     // Insertar nuevos parientes
 
     for (const p of parientesArray) {
       if (p.dni && p.nombre) {
-        const result = await db.query(`SELECT id FROM beneficiario WHERE dni = ?`, [p.dni]);
-        const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
+        const [parBenRows] = await db.query('SELECT id FROM beneficiario WHERE dni = ?', [p.dni]);
+        const idParBeneficiario = parBenRows.length > 0 ? parBenRows[0].id : null;
         await db.query(`
           insert into pariente (
             id_beneficiario, dni_titular, dni_pariente, nombre_pariente,
@@ -332,16 +381,16 @@ router.post('/update', upload.single('archivo'), async (req, res) => {
             fecha_modificacion
           ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         `, [
-          id_beneficiario,
+          idParBeneficiario,
           dni,
           p.dni,
           p.nombre,
           p.fecha_nacimiento || null,
-          p.sexo || null,
+          sanitizarId(p.sexo) || null,
           fechaHoy,
           fechaHoy,
         ]);
-        await registrarLog(empleado || 'desconocido', "INSERTAR_PARIENTE", `Beneficiario DNI ${dni}, Pariente: ${p.nombre} (${p.dni})`);
+        await registrarLog(empleado || 'desconocido', 'INSERTAR_PARIENTE', `Beneficiario DNI ${dni}, Pariente: ${p.nombre} (${p.dni})`);
 
       }
     }

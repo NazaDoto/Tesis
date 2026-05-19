@@ -39,14 +39,16 @@
                 </div>
                 <div class="dato">
                     <span class="label">Estado</span>
-                    <span class="valor estado" :class="'estado-' + tarjeta.estado.toLowerCase()">
+                    <span class="valor estado" :class="tarjeta.estado ? 'estado-' + tarjeta.estado.toLowerCase() : ''">
                         {{ tarjeta.estado }}
                     </span>
                 </div>
                 <div class="dato">
                     <span class="label">Importe Acreditado</span>
                     <span class="valor">
-                        {{ tarjeta.importe_acreditado ? '$' + tarjeta.importe_acreditado : '####' }}
+                        {{ tarjeta.importe_acreditado !== '' && tarjeta.importe_acreditado !== null
+                            ? '$' + tarjeta.importe_acreditado
+                            : '####' }}
                     </span>
                 </div>
             </div>
@@ -98,10 +100,27 @@ export default {
         async fetchTarjeta(silencioso = false) {
             if (!silencioso) this.cargando = true;
             try {
+                const user = JSON.parse(localStorage.getItem('user') || '{}');
                 const response = await axios.get('/tarjetas/getDatos', {
-                    params: { dni: JSON.parse(localStorage.getItem('user')).dni },
+                    params: { dni: user.dni },
                 });
-                this.tarjeta = response.data;
+                const data = response.data || {};
+                this.tarjeta = {
+                    dni: data.dni ?? user.dni ?? '',
+                    num_cuenta: data.num_cuenta || '',
+                    num_tarjeta: data.num_tarjeta || '',
+                    fecha_registro: data.fecha_registro || '',
+                    fecha_modificacion: data.fecha_modificacion || '',
+                    estado: data.estado || '',
+                    importe_acreditado:
+                        data.importe_acreditado !== null &&
+                        data.importe_acreditado !== undefined &&
+                        data.importe_acreditado !== ''
+                            ? data.importe_acreditado
+                            : '',
+                    observaciones: data.observaciones || '',
+                    historias: Array.isArray(data.historias) ? data.historias : [],
+                };
             } finally {
                 if (!silencioso) this.cargando = false;
             }

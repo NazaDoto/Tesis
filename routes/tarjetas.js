@@ -65,6 +65,17 @@ function valorNumericoTarjeta(valor) {
     return String(valor).trim();
 }
 
+function normalizarImporte(valor) {
+    if (valor === null || valor === undefined || valor === '') return null;
+    const n = Number(valor);
+    return Number.isNaN(n) ? null : n;
+}
+
+function importeParaRespuesta(valor) {
+    const n = normalizarImporte(valor);
+    return n === null ? '' : n;
+}
+
 function normalizarFecha(fecha) {
     if (!fecha) {
         return new Date().toISOString().split('T')[0];
@@ -95,7 +106,7 @@ function enmascararNumero(valor) {
 
 async function obtenerTarjetaPorDni(dni) {
     const [rows] = await db.execute(
-        'SELECT * FROM tarjeta_soc WHERE dni = ? ORDER BY fecha_modificacion DESC, id DESC LIMIT 1',
+        'SELECT * FROM tarjeta_soc WHERE dni = ? ORDER BY COALESCE(fecha_modificacion, fecha_registro) DESC, id DESC LIMIT 1',
         [dni]
     );
     return rows.length > 0 ? rows[0] : null;
@@ -124,7 +135,7 @@ router.get('/getDatos', async (req, res) => {
         const [rows] = await db.execute(
             `SELECT dni, num_cuenta, num_tarjeta, fecha_registro, estado, fecha_modificacion, importe_acreditado
              FROM tarjeta_soc WHERE dni = ?
-             ORDER BY fecha_modificacion DESC, id DESC LIMIT 1`,
+             ORDER BY COALESCE(fecha_modificacion, fecha_registro) DESC, id DESC LIMIT 1`,
             [dni]
         );
 
@@ -151,7 +162,7 @@ router.get('/getDatos', async (req, res) => {
                 fecha_registro: formatearFecha(b.fecha_registro),
                 estado: b.estado,
                 fecha_modificacion: formatearFecha(b.fecha_modificacion),
-                importe_acreditado: b.importe_acreditado,
+                importe_acreditado: importeParaRespuesta(b.importe_acreditado),
                 historias: historial.map(mov => ({
                     observaciones: mov.observaciones,
                     fecha: formatearFecha(mov.fecha),
@@ -168,18 +179,18 @@ router.get('/getDatos', async (req, res) => {
         const registro = records.find(r => String(r.DNI)?.trim() === String(dni));
 
         if (registro) {
-            const cuenta = registro.NUMRUSUAR || '';
-            const tarjeta = registro.NUM_TAR || '';
+            const cuenta = valorNumericoTarjeta(registro.NUMRUSUAR);
+            const tarjeta = valorNumericoTarjeta(registro.NUM_TAR);
             return res.json({
                 dni: dni,
-                num_cuenta: cuenta,
-                num_tarjeta: tarjeta,
+                num_cuenta: vistaEmpleado ? cuenta : enmascararNumero(cuenta),
+                num_tarjeta: vistaEmpleado ? tarjeta : enmascararNumero(tarjeta),
                 num_cuenta_real: cuenta,
                 num_tarjeta_real: tarjeta,
                 fecha_registro: registro.FECHA_REG ? new Date(registro.FECHA_REG).toLocaleDateString('es-AR') : '',
                 estado: registro.TS,
                 fecha_modificacion: registro.FECHA_MOD ? new Date(registro.FECHA_MOD).toLocaleDateString('es-AR') : '',
-                importe_acreditado: registro.TOT_IMP || 0,
+                importe_acreditado: importeParaRespuesta(registro.TOT_IMP),
                 historias: [{ fecha: formatearFecha(registro.FECHA_MOD), observaciones: registro.OBSERV }] || ''
             });
         }
@@ -216,6 +227,7 @@ router.post('/update', async (req, res) => {
 
     fecha_registro = normalizarFecha(fecha_registro);
     fecha_modificacion = normalizarFecha(fecha_modificacion);
+    importe_acreditado = normalizarImporte(importe_acreditado);
 
     try {
         let accion = "ACTUALIZAR_TARJETA";
@@ -270,17 +282,19 @@ router.post('/update', async (req, res) => {
         const fechaHoy = new Date().toISOString().split('T')[0];
 
         if (rows.length > 0) {
-            estadoAnterior = rows[0].estado;
-            const cuentaWhere = cuentaAnterior || rows[0].num_cuenta;
+            const registro = rows[0];
+            const idTarjeta = registro.id;
+            estadoAnterior = registro.estado;
+            const cuentaPrev = valorNumericoTarjeta(cuentaAnterior ?? registro.num_cuenta);
             const cambios = [];
-            if (String(cuentaWhere) !== String(num_cuenta)) {
-                cambios.push(`Cuenta: ${cuentaWhere} → ${num_cuenta}`);
+            if (cuentaPrev !== valorNumericoTarjeta(num_cuenta)) {
+                cambios.push(`Cuenta: ${cuentaPrev || '(vacía)'} → ${num_cuenta}`);
             }
-            if (String(rows[0].num_tarjeta || '') !== String(num_tarjeta || '')) {
-                cambios.push(`Tarjeta: ${rows[0].num_tarjeta || '(vacía)'} → ${num_tarjeta || '(vacía)'}`);
+            if (valorNumericoTarjeta(registro.num_tarjeta) !== valorNumericoTarjeta(num_tarjeta)) {
+                cambios.push(`Tarjeta: ${registro.num_tarjeta || '(vacía)'} → ${num_tarjeta || '(vacía)'}`);
             }
 
-            await db.execute(
+            const [resultadoUpdate] = await db.execute(
                 `UPDATE tarjeta_soc SET
                   num_cuenta = ?,
                   num_tarjeta = ?,
@@ -288,9 +302,13 @@ router.post('/update', async (req, res) => {
                   estado = ?,
                   fecha_modificacion = ?,
                   importe_acreditado = ?
-                WHERE dni = ? AND num_cuenta = ?`,
-                [num_cuenta, num_tarjeta, fecha_registro, estado, fecha_modificacion, importe_acreditado, dni, cuentaWhere]
+                WHERE id = ?`,
+                [num_cuenta, num_tarjeta, fecha_registro, estado, fecha_modificacion, importe_acreditado, idTarjeta]
             );
+
+            if (resultadoUpdate.affectedRows === 0) {
+                return res.status(400).json({ error: 'No se pudo actualizar la tarjeta en la base de datos.' });
+            }
 
             const detalleCambios = cambios.length ? ` ${cambios.join('. ')}.` : '';
             observacion = (estadoAnterior !== estado)

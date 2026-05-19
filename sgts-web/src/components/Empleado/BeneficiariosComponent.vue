@@ -683,7 +683,8 @@ export default {
                 }
             } catch (error) {
                 console.error("Error al conectar con el servidor:", error);
-                this.mostrarMensaje("Error de conexión.");
+                const msg = error.response?.data?.error || 'Error al guardar el beneficiario.';
+                this.mostrarMensaje(msg);
             } finally {
                 this.cargandoDatos = false;
             }
