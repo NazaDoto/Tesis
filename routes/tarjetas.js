@@ -59,6 +59,34 @@ function esValorEnmascarado(valor) {
     return /X/i.test(String(valor));
 }
 
+function normalizarFecha(fecha) {
+    if (!fecha) {
+        return new Date().toISOString().split('T')[0];
+    }
+    const s = String(fecha).trim();
+    if (/^\d{4}-\d{2}-\d{2}/.test(s)) {
+        return s.slice(0, 10);
+    }
+    const m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
+    if (m) {
+        let anio = m[3];
+        if (anio.length === 2) anio = `20${anio}`;
+        return `${anio}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`;
+    }
+    const d = new Date(s);
+    if (!Number.isNaN(d.getTime())) {
+        return d.toISOString().split('T')[0];
+    }
+    return new Date().toISOString().split('T')[0];
+}
+
+function enmascararNumero(valor) {
+    if (valor === null || valor === undefined || valor === '') return '';
+    const s = String(valor).replace(/\D/g, '');
+    if (!s) return String(valor);
+    return `XXXX-XXXX-XXXX-${s.slice(-4)}`;
+}
+
 async function obtenerTarjetaPorDni(dni) {
     const [rows] = await db.execute(
         'SELECT * FROM tarjeta_soc WHERE dni = ? ORDER BY fecha_modificacion DESC, id DESC LIMIT 1',
@@ -87,16 +115,8 @@ router.get('/getDatos', async (req, res) => {
     try {
         // 1. Buscar en MySQL
         const [rows] = await db.execute(
-            `SELECT 
-    dni, 
-    CONCAT('XXXX-XXXX-XXXX-', RIGHT(LPAD(num_cuenta, 16, '0'), 4)) AS num_cuenta,
-    CONCAT('XXXX-XXXX-XXXX-', RIGHT(LPAD(num_tarjeta, 16, '0'), 4)) AS num_tarjeta,
-    fecha_registro, 
-    estado, 
-    fecha_modificacion, 
-    importe_acreditado
-FROM tarjeta_soc 
-WHERE dni = ?;`,
+            `SELECT dni, num_cuenta, num_tarjeta, fecha_registro, estado, fecha_modificacion, importe_acreditado
+             FROM tarjeta_soc WHERE dni = ?`,
             [dni]
         );
 
@@ -114,8 +134,10 @@ WHERE dni = ?;`,
 
             return res.json({
                 dni: b.dni,
-                num_cuenta: b.num_cuenta,
-                num_tarjeta: b.num_tarjeta,
+                num_cuenta: enmascararNumero(b.num_cuenta),
+                num_tarjeta: enmascararNumero(b.num_tarjeta),
+                num_cuenta_real: b.num_cuenta,
+                num_tarjeta_real: b.num_tarjeta,
                 fecha_registro: formatearFecha(b.fecha_registro),
                 estado: b.estado,
                 fecha_modificacion: formatearFecha(b.fecha_modificacion),
@@ -174,33 +196,48 @@ router.post('/update', async (req, res) => {
         return res.status(400).json({ error: 'El DNI es obligatorio.' });
     }
 
+    if (!estado || estado === 'default') {
+        return res.status(400).json({ error: 'Seleccione un estado de tarjeta válido.' });
+    }
+
+    fecha_registro = normalizarFecha(fecha_registro);
+    fecha_modificacion = normalizarFecha(fecha_modificacion);
+
     try {
         let accion = "ACTUALIZAR_TARJETA";
         let rows = [];
 
-        if (esValorEnmascarado(num_cuenta)) {
-            const tarjetaDb = await obtenerTarjetaPorDni(dni);
-            if (!tarjetaDb) {
-                return res.status(400).json({
-                    error: 'No hay tarjeta registrada para ese DNI. Use "Comprobar en padrón" o verifique el alta.',
-                });
-            }
-            num_cuenta = tarjetaDb.num_cuenta;
+        const tarjetaPorDni = await obtenerTarjetaPorDni(dni);
+
+        if (tarjetaPorDni) {
+            num_cuenta = tarjetaPorDni.num_cuenta;
             if (esValorEnmascarado(num_tarjeta)) {
-                num_tarjeta = tarjetaDb.num_tarjeta;
+                num_tarjeta = tarjetaPorDni.num_tarjeta;
             }
-            rows = [tarjetaDb];
-        } else {
+            rows = [tarjetaPorDni];
+        } else if (!esValorEnmascarado(num_cuenta) && String(num_cuenta).trim()) {
             [rows] = await db.execute(
                 'SELECT * FROM tarjeta_soc WHERE dni = ? AND num_cuenta = ?',
-                [dni, num_cuenta]
+                [dni, String(num_cuenta).trim()]
             );
-            if (rows.length > 0 && esValorEnmascarado(num_tarjeta)) {
-                num_tarjeta = rows[0].num_tarjeta;
+            if (rows.length > 0) {
+                num_cuenta = rows[0].num_cuenta;
+                if (esValorEnmascarado(num_tarjeta)) {
+                    num_tarjeta = rows[0].num_tarjeta;
+                }
+            } else {
+                num_cuenta = String(num_cuenta).trim();
+                if (esValorEnmascarado(num_tarjeta)) {
+                    num_tarjeta = num_tarjeta || '';
+                }
             }
+        } else {
+            return res.status(400).json({
+                error: 'No hay tarjeta en el sistema para este DNI. Pulse "Comprobar en padrón" y, si corresponde, realice el alta con los datos del padrón.',
+            });
         }
 
-        if (!num_cuenta) {
+        if (!num_cuenta || !String(num_cuenta).trim()) {
             return res.status(400).json({ error: 'El número de cuenta es obligatorio.' });
         }
 

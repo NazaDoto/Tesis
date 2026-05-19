@@ -123,6 +123,8 @@ export default {
             habilitarModificacion: false,
             botonModificacion: false,
             habilitarImprimir: false,
+            numCuentaReal: '',
+            numTarjetaReal: '',
         };
     },
     methods: {
@@ -135,10 +137,18 @@ export default {
                 });
 
                 if (data && Object.keys(data).length > 0) {
+                    this.numCuentaReal = data.num_cuenta_real || '';
+                    this.numTarjetaReal = data.num_tarjeta_real || '';
                     for (const key in data) {
                         if (key in this.form && data[key] !== null && data[key] !== undefined) {
                             this.form[key] = data[key];
                         }
+                    }
+                    if (!this.numCuentaReal && data.num_cuenta && !/X/i.test(String(data.num_cuenta))) {
+                        this.numCuentaReal = data.num_cuenta;
+                    }
+                    if (!this.numTarjetaReal && data.num_tarjeta && !/X/i.test(String(data.num_tarjeta))) {
+                        this.numTarjetaReal = data.num_tarjeta;
                     }
                     this.mostrarMensaje("Datos encontrados y cargados.");
                 } else {
@@ -175,10 +185,12 @@ export default {
 
             this.cargandoDatos = true;
             try {
+                const cuenta = this.numCuentaReal || this.form.num_cuenta;
+                const tarjeta = this.numTarjetaReal || this.form.num_tarjeta;
                 const payload = {
                     dni: String(this.form.dni),
-                    num_cuenta: this.form.num_cuenta,
-                    num_tarjeta: this.form.num_tarjeta,
+                    num_cuenta: cuenta,
+                    num_tarjeta: tarjeta,
                     fecha_registro: this.form.fecha_registro,
                     estado: this.form.estado,
                     fecha_modificacion: this.form.fecha_modificacion,
