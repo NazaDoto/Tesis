@@ -3,6 +3,7 @@
         <NavbarPublicoComponent
             v-if="$route.path === '/' || $route.path === '/login' || $route.path === '/contacto' || $route.path === '/registrar'|| $route.path === '/requisitos' || $route.path === '/noticias' || /^\/noticia(\/.*)?$/.test($route.path)" />
         <router-view></router-view>
+        <ToastContainer />
     </div>
 </template>
 
@@ -10,11 +11,14 @@
 import 'bootstrap';
 import '@popperjs/core';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastContainer } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 import NavbarPublicoComponent from './components/NavbarPublicoComponent.vue';
 export default {
     name: 'App',
     components: {
-        NavbarPublicoComponent
+        NavbarPublicoComponent,
+        ToastContainer,
     }
 }
 </script>

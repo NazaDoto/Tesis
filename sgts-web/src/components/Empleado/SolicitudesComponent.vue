@@ -61,7 +61,7 @@
             </div>
 
             <!-- Items -->
-            <div class="solicitud-item" v-for="(solicitud, index) in solicitudesFiltradas" :key="index">
+            <div class="solicitud-item" v-for="solicitud in solicitudesFiltradas" :key="solicitud.id">
                 <span>{{ solicitud.id }}</span>
                 <span>{{ solicitud.dni }}</span>
                 <span>{{ formatearFecha(solicitud.fecha_solicitud) }}</span>
@@ -84,6 +84,8 @@
 
 <script>
 import axios from 'axios';
+import emitter from '@/eventBus';
+
 export default {
     data() {
         return {
@@ -121,16 +123,19 @@ export default {
             this.form.estado = solicitud.estado;
             this.form.dni = solicitud.dni;
         },
-        async fetchSolicitudes() {
-            this.cargandoDatos = true;
+        async fetchSolicitudes(silencioso = false) {
+            if (!silencioso) this.cargandoDatos = true;
             try {
                 const response = await axios.get('/tarjetas/getSolicitudes');
-                this.solicitudes = response.data[0];
+                this.solicitudes = response.data[0] || [];
             } catch (error) {
-               // console.log(error);
+                console.error(error);
             } finally {
-                this.cargandoDatos = false;
+                if (!silencioso) this.cargandoDatos = false;
             }
+        },
+        onNuevaSolicitudRecibida() {
+            this.fetchSolicitudes(true);
         },
         formatearFecha(fecha) {
             return new Date(fecha).toLocaleDateString('es-AR', {
@@ -166,6 +171,10 @@ export default {
     },
     async mounted() {
         await this.fetchSolicitudes();
+        emitter.on('nueva_solicitud', this.onNuevaSolicitudRecibida);
+    },
+    beforeUnmount() {
+        emitter.off('nueva_solicitud', this.onNuevaSolicitudRecibida);
     },
     computed: {
         solicitudesFiltradas() {

@@ -108,6 +108,7 @@
 <script>
 import emitter from '@/eventBus';
 import router from '@/router';
+import { desconectarSocketEmpleado } from '@/services/empleadoSocket';
 
 export default {
     data() {
@@ -122,6 +123,7 @@ export default {
         },
         cerrarSesion() {
             this.mostrarModal = false;
+            desconectarSocketEmpleado();
             localStorage.clear();
             emitter.emit('usuarioDeslogueado');
             router.push('/');

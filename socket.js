@@ -17,9 +17,24 @@ function configurarSocketIO(env, app) {
         server = https.createServer({ key, cert }, app);
     }
 
+    const origenesPermitidos = [
+        "http://localhost:8080",
+        "http://127.0.0.1:8080",
+        "https://sgts.nazadoto.com",
+        "https://nazadoto.com",
+        "https://nazadoto.com:3500",
+    ];
+
     const io = new Server(server, {
         cors: {
-            origin: ["http://localhost:8080", "https://sgts.nazadoto.com"],
+            origin(origin, callback) {
+                if (!origin) return callback(null, true);
+                if (origenesPermitidos.includes(origin)) return callback(null, true);
+                if (/^https?:\/\/([a-z0-9-]+\.)?nazadoto\.com(:\d+)?$/i.test(origin)) {
+                    return callback(null, true);
+                }
+                callback(new Error(`CORS socket no permitido: ${origin}`));
+            },
             methods: ["GET", "POST"],
             allowedHeaders: ["Content-Type", "Authorization"],
             credentials: true,
