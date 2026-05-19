@@ -462,11 +462,15 @@ export default {
             this.cargandoDatos = true;
             try {
                 const { data } = await axios.get('/tarjetas/getDatos', {
-                    params: { dni: this.form.dni }
+                    params: { dni: this.form.dni, empleado: '1' }
                 });
 
                 if (data && Object.keys(data).length > 0) {
-                    this.tarjetaForm = { ...data };
+                    this.tarjetaForm = {
+                        ...data,
+                        num_cuenta: data.num_cuenta_real ?? data.num_cuenta,
+                        num_tarjeta: data.num_tarjeta_real ?? data.num_tarjeta,
+                    };
                     this.modalVisible = true;
                 } else {
                     this.mostrarMensaje("No se encontró una tarjeta asociada al DNI.");

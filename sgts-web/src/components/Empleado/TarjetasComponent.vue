@@ -23,19 +23,19 @@
                 </div>
                 <div class="fila">
                     <div class="w-100"><button type="button" class="btn-tarjeta" :disabled="!botonModificacion"
-                            @click="habilitarModificacion = true; habilitarImprimir = true;">Modificar datos (cuenta, tarjeta, estado…)</button>
+                            @click="habilitarModificacion = true; habilitarImprimir = true;">Modificar datos</button>
                     </div>
                 </div>
                 <div class="fila">
                     <div class="w-5">
                         <label for="num_cuenta" class="form-label">Número de Cuenta</label>
                         <input id="num_cuenta" class="form-control" v-model="form.num_cuenta" type="text"
-                            :disabled="!habilitarModificacion" placeholder="Ingrese o modifique el número de cuenta" />
+                            :disabled="!habilitarModificacion" />
                     </div>
                     <div class="w-5">
                         <label for="num_tarjeta" class="form-label">Número de Tarjeta</label>
                         <input id="num_tarjeta" class="form-control" v-model="form.num_tarjeta" type="text"
-                            :disabled="!habilitarModificacion" placeholder="Ingrese o modifique el número de tarjeta" />
+                            :disabled="!habilitarModificacion" />
                     </div>
                 </div>
 
@@ -127,21 +127,19 @@ export default {
 
             try {
                 const { data } = await axios.get('/tarjetas/getDatos', {
-                    params: { dni: this.form.dni }
+                    params: { dni: this.form.dni, empleado: '1' }
                 });
 
                 if (data && Object.keys(data).length > 0) {
                     for (const key in data) {
-                        if (key === 'num_cuenta' || key === 'num_tarjeta' || key.endsWith('_real')) continue;
+                        if (key.endsWith('_real')) continue;
                         if (key in this.form && data[key] !== null && data[key] !== undefined) {
                             this.form[key] = data[key];
                         }
                     }
-                    const cuentaReal = data.num_cuenta_real || data.num_cuenta || '';
-                    const tarjetaReal = data.num_tarjeta_real || data.num_tarjeta || '';
-                    this.form.num_cuenta = /X/i.test(String(cuentaReal)) ? '' : cuentaReal;
-                    this.form.num_tarjeta = /X/i.test(String(tarjetaReal)) ? '' : tarjetaReal;
-                    this.mostrarMensaje("Datos encontrados y cargados. Pulse «Modificar Datos» para editar cuenta, tarjeta y demás campos.");
+                    this.form.num_cuenta = String(data.num_cuenta_real ?? data.num_cuenta ?? '').trim();
+                    this.form.num_tarjeta = String(data.num_tarjeta_real ?? data.num_tarjeta ?? '').trim();
+                    this.mostrarMensaje('Datos encontrados y cargados.');
                 } else {
                     this.mostrarMensaje("No se encontraron datos para ese DNI.");
                 }
@@ -168,8 +166,8 @@ export default {
                 return;
             }
             const cuenta = String(this.form.num_cuenta || '').trim();
-            if (!cuenta || /X/i.test(cuenta)) {
-                this.mostrarMensaje('Ingrese un número de cuenta válido (pulse «Modificar Datos» si el campo está bloqueado).');
+            if (!cuenta || /^X{4}-X{4}-X{4}-/i.test(cuenta)) {
+                this.mostrarMensaje('Ingrese un número de cuenta válido.');
                 return;
             }
 

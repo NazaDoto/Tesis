@@ -53,10 +53,16 @@ function formatearFecha(fechaISO) {
     return `${anio}-${mes}-${dia}`;
 }
 
-/** Cuenta/tarjeta enmascaradas en pantalla (XXXX-XXXX-XXXX-1234) no sirven para UPDATE en BD. */
+/** Valor enmascarado tipo XXXX-XXXX-XXXX-1234 (no sirve para UPDATE). */
 function esValorEnmascarado(valor) {
     if (valor === null || valor === undefined || valor === '') return true;
-    return /X/i.test(String(valor));
+    const s = String(valor).trim();
+    return /^X{4}[-\s]?X{4}[-\s]?X{4}[-\s]?/i.test(s);
+}
+
+function valorNumericoTarjeta(valor) {
+    if (valor === null || valor === undefined) return '';
+    return String(valor).trim();
 }
 
 function normalizarFecha(fecha) {
@@ -109,19 +115,23 @@ const transporter = nodemailer.createTransport({
 // GET /tarjetas/getDatos?dni=12345678
 router.get('/getDatos', async (req, res) => {
     const dni = req.query.dni;
+    const vistaEmpleado = req.query.empleado === '1' || req.query.empleado === 'true';
 
     if (!dni) return res.status(400).json({ error: 'DNI requerido' });
 
     try {
-        // 1. Buscar en MySQL
+        // 1. Buscar en MySQL (última tarjeta del DNI)
         const [rows] = await db.execute(
             `SELECT dni, num_cuenta, num_tarjeta, fecha_registro, estado, fecha_modificacion, importe_acreditado
-             FROM tarjeta_soc WHERE dni = ?`,
+             FROM tarjeta_soc WHERE dni = ?
+             ORDER BY fecha_modificacion DESC, id DESC LIMIT 1`,
             [dni]
         );
 
         if (rows.length > 0) {
             const b = rows[0];
+            const cuentaDb = valorNumericoTarjeta(b.num_cuenta);
+            const tarjetaDb = valorNumericoTarjeta(b.num_tarjeta);
 
             // Buscar historial de movimientos
             const [historial] = await db.execute(
@@ -134,10 +144,10 @@ router.get('/getDatos', async (req, res) => {
 
             return res.json({
                 dni: b.dni,
-                num_cuenta: enmascararNumero(b.num_cuenta),
-                num_tarjeta: enmascararNumero(b.num_tarjeta),
-                num_cuenta_real: b.num_cuenta,
-                num_tarjeta_real: b.num_tarjeta,
+                num_cuenta: vistaEmpleado ? cuentaDb : enmascararNumero(cuentaDb),
+                num_tarjeta: vistaEmpleado ? tarjetaDb : enmascararNumero(tarjetaDb),
+                num_cuenta_real: cuentaDb,
+                num_tarjeta_real: tarjetaDb,
                 fecha_registro: formatearFecha(b.fecha_registro),
                 estado: b.estado,
                 fecha_modificacion: formatearFecha(b.fecha_modificacion),
