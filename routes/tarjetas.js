@@ -158,10 +158,14 @@ router.get('/getDatos', async (req, res) => {
         const registro = records.find(r => String(r.DNI)?.trim() === String(dni));
 
         if (registro) {
+            const cuenta = registro.NUMRUSUAR || '';
+            const tarjeta = registro.NUM_TAR || '';
             return res.json({
                 dni: dni,
-                num_cuenta: registro.NUMRUSUAR || '',
-                num_tarjeta: registro.NUM_TAR || '',
+                num_cuenta: cuenta,
+                num_tarjeta: tarjeta,
+                num_cuenta_real: cuenta,
+                num_tarjeta_real: tarjeta,
                 fecha_registro: registro.FECHA_REG ? new Date(registro.FECHA_REG).toLocaleDateString('es-AR') : '',
                 estado: registro.TS,
                 fecha_modificacion: registro.FECHA_MOD ? new Date(registro.FECHA_MOD).toLocaleDateString('es-AR') : '',
@@ -208,13 +212,23 @@ router.post('/update', async (req, res) => {
         let rows = [];
 
         const tarjetaPorDni = await obtenerTarjetaPorDni(dni);
+        let cuentaAnterior = null;
 
         if (tarjetaPorDni) {
-            num_cuenta = tarjetaPorDni.num_cuenta;
-            if (esValorEnmascarado(num_tarjeta)) {
+            cuentaAnterior = tarjetaPorDni.num_cuenta;
+            rows = [tarjetaPorDni];
+
+            if (!esValorEnmascarado(num_cuenta) && String(num_cuenta).trim()) {
+                num_cuenta = String(num_cuenta).trim();
+            } else {
+                num_cuenta = tarjetaPorDni.num_cuenta;
+            }
+
+            if (!esValorEnmascarado(num_tarjeta)) {
+                num_tarjeta = String(num_tarjeta ?? '').trim() || tarjetaPorDni.num_tarjeta;
+            } else {
                 num_tarjeta = tarjetaPorDni.num_tarjeta;
             }
-            rows = [tarjetaPorDni];
         } else if (!esValorEnmascarado(num_cuenta) && String(num_cuenta).trim()) {
             [rows] = await db.execute(
                 'SELECT * FROM tarjeta_soc WHERE dni = ? AND num_cuenta = ?',
@@ -247,22 +261,31 @@ router.post('/update', async (req, res) => {
 
         if (rows.length > 0) {
             estadoAnterior = rows[0].estado;
+            const cuentaWhere = cuentaAnterior || rows[0].num_cuenta;
+            const cambios = [];
+            if (String(cuentaWhere) !== String(num_cuenta)) {
+                cambios.push(`Cuenta: ${cuentaWhere} → ${num_cuenta}`);
+            }
+            if (String(rows[0].num_tarjeta || '') !== String(num_tarjeta || '')) {
+                cambios.push(`Tarjeta: ${rows[0].num_tarjeta || '(vacía)'} → ${num_tarjeta || '(vacía)'}`);
+            }
 
-            // Actualizar tarjeta
             await db.execute(
                 `UPDATE tarjeta_soc SET
+                  num_cuenta = ?,
                   num_tarjeta = ?,
                   fecha_registro = ?,
                   estado = ?,
                   fecha_modificacion = ?,
                   importe_acreditado = ?
                 WHERE dni = ? AND num_cuenta = ?`,
-                [num_tarjeta, fecha_registro, estado, fecha_modificacion, importe_acreditado, dni, num_cuenta]
+                [num_cuenta, num_tarjeta, fecha_registro, estado, fecha_modificacion, importe_acreditado, dni, cuentaWhere]
             );
 
+            const detalleCambios = cambios.length ? ` ${cambios.join('. ')}.` : '';
             observacion = (estadoAnterior !== estado)
-                ? `ACTUALIZACIÓN DE DATOS DE TARJETA. Estado: ${estadoAnterior} pasa a ${estado}. ${observaciones}`
-                : `ACTUALIZACIÓN DE DATOS DE TARJETA (sin cambio de estado). ${observaciones}`;
+                ? `ACTUALIZACIÓN DE DATOS DE TARJETA. Estado: ${estadoAnterior} pasa a ${estado}.${detalleCambios} ${observaciones}`
+                : `ACTUALIZACIÓN DE DATOS DE TARJETA (sin cambio de estado).${detalleCambios} ${observaciones}`;
             const result = await db.query(`SELECT id FROM beneficiario WHERE dni = ?`, [dni]);
             const id_beneficiario = result[0].length > 0 ? result[0][0].id : null;
             await db.query(

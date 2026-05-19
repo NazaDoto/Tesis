@@ -1,12 +1,7 @@
 <template>
     <div class="vista">
         <!-- Pantalla de carga -->
-        <div v-if="cargandoDatos" class="pantalla-carga-vista">
-            <div class="logo-carga">
-                <img class="logo-img" src="/favicon.ico" width="50" alt="" />
-                <div class="texto-carga">Cargando...</div>
-            </div>
-        </div>
+        <LoadingOverlay :show="cargandoDatos" variant="dark" />
 
         <!-- Popup de mensaje -->
         <div v-if="mensajePopup" class="mensaje-container-fondo">
@@ -105,12 +100,17 @@ export default {
     },
     methods: {
         async responderSolicitud() {
+            this.cargandoDatos = true;
             try {
                 await axios.post('/tarjetas/actualizarSolicitud', { form: this.form });
                 this.resetForm();
-                await this.fetchSolicitudes();
+                await this.fetchSolicitudes(true);
             } catch (error) {
                 console.log(error);
+                this.mensaje = 'No se pudo guardar la solicitud.';
+                this.mensajePopup = true;
+            } finally {
+                this.cargandoDatos = false;
             }
         },
         resetForm() {
@@ -305,22 +305,4 @@ export default {
     margin: 0.5rem 0 1rem;
 }
 
-/* Popup */
-.mensaje-container-fondo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.mensaje-container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
 </style>

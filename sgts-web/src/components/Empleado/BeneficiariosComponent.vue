@@ -1,11 +1,6 @@
 <template>
     <div class="vista">
-        <div v-if="cargandoDatos" class="pantalla-carga-vista text-center">
-            <div class="logo-carga">
-                <img class="logo-img" src="/favicon.ico" width="50" alt="" />
-                <div class="texto-carga">Cargando...</div>
-            </div>
-        </div>
+        <LoadingOverlay :show="cargandoDatos" variant="dark" />
         <div v-if="mensajePopup" class="mensaje-container-fondo">
             <div class="mensaje-container">
                 <span class="mensaje">{{ mensaje }}</span>
@@ -460,9 +455,11 @@ export default {
             };
         },
         async verTarjeta() {
+            if (!this.form.dni) {
+                this.mostrarMensaje('Ingrese un DNI antes de ver la tarjeta.');
+                return;
+            }
             this.cargandoDatos = true;
-            if (!this.form.dni) return;
-
             try {
                 const { data } = await axios.get('/tarjetas/getDatos', {
                     params: { dni: this.form.dni }
@@ -640,12 +637,12 @@ export default {
                 });
                 this.archivo = null;
                 this.form.archivo = null;
+                this.mostrarMensaje('Archivo eliminado correctamente.');
             } catch (error) {
                 console.error(error);
                 this.mostrarMensaje('Error al eliminar el archivo.');
             } finally {
                 this.cargandoDatos = false;
-                this.mostrarMensaje('Archivo eliminado correctamente.');
             }
         },
 
@@ -667,6 +664,7 @@ export default {
             formData.append('empleado', this.form.empleado);
             formData.append('archivo', this.archivo != null ? this.archivo.archivo : null);
 
+            this.cargandoDatos = true;
             try {
                 const response = await axios.post('/beneficiarios/update', formData, {
                     headers: {
@@ -682,6 +680,8 @@ export default {
             } catch (error) {
                 console.error("Error al conectar con el servidor:", error);
                 this.mostrarMensaje("Error de conexión.");
+            } finally {
+                this.cargandoDatos = false;
             }
         },
 

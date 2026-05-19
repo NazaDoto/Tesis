@@ -1,11 +1,6 @@
 <template>
     <div class="vista">
-        <div v-if="cargandoDatos" class="pantalla-carga-vista text-center">
-            <div class="logo-carga">
-                <img class="logo-img" src="/favicon.ico" width="50" alt="" />
-                <div class="texto-carga">Cargando...</div>
-            </div>
-        </div>
+        <LoadingOverlay :show="cargandoDatos" variant="dark" />
         <div v-if="mensajePopup" class="mensaje-container-fondo">
             <div class="mensaje-container">
                 <span class="mensaje">{{ mensaje }}</span>
@@ -28,19 +23,19 @@
                 </div>
                 <div class="fila">
                     <div class="w-100"><button type="button" class="btn-tarjeta" :disabled="!botonModificacion"
-                            @click="habilitarModificacion = true; habilitarImprimir = true;">Modificar Datos</button>
+                            @click="habilitarModificacion = true; habilitarImprimir = true;">Modificar datos (cuenta, tarjeta, estado…)</button>
                     </div>
                 </div>
                 <div class="fila">
                     <div class="w-5">
                         <label for="num_cuenta" class="form-label">Número de Cuenta</label>
                         <input id="num_cuenta" class="form-control" v-model="form.num_cuenta" type="text"
-                            :disabled="true" />
+                            :disabled="!habilitarModificacion" placeholder="Ingrese o modifique el número de cuenta" />
                     </div>
                     <div class="w-5">
                         <label for="num_tarjeta" class="form-label">Número de Tarjeta</label>
                         <input id="num_tarjeta" class="form-control" v-model="form.num_tarjeta" type="text"
-                            :disabled="true" />
+                            :disabled="!habilitarModificacion" placeholder="Ingrese o modifique el número de tarjeta" />
                     </div>
                 </div>
 
@@ -123,13 +118,12 @@ export default {
             habilitarModificacion: false,
             botonModificacion: false,
             habilitarImprimir: false,
-            numCuentaReal: '',
-            numTarjetaReal: '',
         };
     },
     methods: {
         async comprobarPadron() {
             this.cargandoDatos = true;
+            this.habilitarModificacion = false;
 
             try {
                 const { data } = await axios.get('/tarjetas/getDatos', {
@@ -137,20 +131,17 @@ export default {
                 });
 
                 if (data && Object.keys(data).length > 0) {
-                    this.numCuentaReal = data.num_cuenta_real || '';
-                    this.numTarjetaReal = data.num_tarjeta_real || '';
                     for (const key in data) {
+                        if (key === 'num_cuenta' || key === 'num_tarjeta' || key.endsWith('_real')) continue;
                         if (key in this.form && data[key] !== null && data[key] !== undefined) {
                             this.form[key] = data[key];
                         }
                     }
-                    if (!this.numCuentaReal && data.num_cuenta && !/X/i.test(String(data.num_cuenta))) {
-                        this.numCuentaReal = data.num_cuenta;
-                    }
-                    if (!this.numTarjetaReal && data.num_tarjeta && !/X/i.test(String(data.num_tarjeta))) {
-                        this.numTarjetaReal = data.num_tarjeta;
-                    }
-                    this.mostrarMensaje("Datos encontrados y cargados.");
+                    const cuentaReal = data.num_cuenta_real || data.num_cuenta || '';
+                    const tarjetaReal = data.num_tarjeta_real || data.num_tarjeta || '';
+                    this.form.num_cuenta = /X/i.test(String(cuentaReal)) ? '' : cuentaReal;
+                    this.form.num_tarjeta = /X/i.test(String(tarjetaReal)) ? '' : tarjetaReal;
+                    this.mostrarMensaje("Datos encontrados y cargados. Pulse «Modificar Datos» para editar cuenta, tarjeta y demás campos.");
                 } else {
                     this.mostrarMensaje("No se encontraron datos para ese DNI.");
                 }
@@ -176,6 +167,11 @@ export default {
                 this.mostrarMensaje('Seleccione un estado de tarjeta.');
                 return;
             }
+            const cuenta = String(this.form.num_cuenta || '').trim();
+            if (!cuenta || /X/i.test(cuenta)) {
+                this.mostrarMensaje('Ingrese un número de cuenta válido (pulse «Modificar Datos» si el campo está bloqueado).');
+                return;
+            }
 
             const ahora = new Date();
             const fechaHoy = ahora.toISOString().split('T')[0];
@@ -185,12 +181,10 @@ export default {
 
             this.cargandoDatos = true;
             try {
-                const cuenta = this.numCuentaReal || this.form.num_cuenta;
-                const tarjeta = this.numTarjetaReal || this.form.num_tarjeta;
                 const payload = {
                     dni: String(this.form.dni),
                     num_cuenta: cuenta,
-                    num_tarjeta: tarjeta,
+                    num_tarjeta: String(this.form.num_tarjeta || '').trim(),
                     fecha_registro: this.form.fecha_registro,
                     estado: this.form.estado,
                     fecha_modificacion: this.form.fecha_modificacion,
@@ -201,6 +195,7 @@ export default {
                 const { data } = await axios.post('/tarjetas/update', payload);
                 if (data.success) {
                     this.mostrarMensaje('Tarjeta guardada correctamente.');
+                    this.habilitarModificacion = false;
                     await this.comprobarPadron();
                 } else {
                     this.mostrarMensaje('No se pudo guardar la tarjeta.');

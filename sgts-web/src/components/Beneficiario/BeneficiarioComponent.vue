@@ -1,11 +1,6 @@
 <template>
   <div class="flex-inline">
-    <div v-if="cargando" class="pantalla-carga text-center">
-      <div class="logo-carga">
-        <img class="logo-img" src="/favicon.ico" width="50" alt="Logo" />
-        <div class="texto-carga c-black">Cargando...</div>
-      </div>
-    </div>
+    <LoadingOverlay :show="cargando" />
     <SidebarBeneficiarioComponent :tiene-tarjeta="tieneTarjeta"></SidebarBeneficiarioComponent>
     <router-view class="vista" :tiene-tarjeta="tieneTarjeta"></router-view>
 
@@ -66,7 +61,7 @@ export default {
   },
   mounted() {
     conectarRealtime();
-    this.verificarTarjeta();
+    this.verificarTarjeta(true);
     emitter.on('solicitud_actualizada', this.onSolicitudActualizada);
     emitter.on('usuarioDeslogueado', this.onUsuarioDeslogueado);
   },

@@ -2,12 +2,7 @@
     <div class="pagina-noticia">
 
         <!-- Loader -->
-        <div v-if="cargando" class="pantalla-carga text-center">
-            <div class="logo-carga">
-                <img class="logo-img" src="/favicon.ico" width="50" />
-                <div class="texto-carga">Cargando noticia...</div>
-            </div>
-        </div>
+        <LoadingOverlay :show="cargando" text="Cargando noticia..." />
 
         <!-- Popup -->
         <div v-if="mensajePopup" class="mensaje-container-fondo">

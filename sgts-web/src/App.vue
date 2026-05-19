@@ -76,31 +76,30 @@ a {
     text-decoration: none;
 }
 
+/* Popups de mensaje: por encima de modales locales, por debajo del loader (10000) */
 .mensaje-container-fondo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100svh;
-    width: 100svw;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 10;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 9000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mensaje-container {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     gap: 10px;
-    height: 100px;
-    min-width: 100px;
+    min-height: 100px;
+    min-width: 200px;
+    max-width: min(90vw, 420px);
     padding: 20px;
     border-radius: 10px;
     background-color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 

@@ -1,5 +1,6 @@
 <template>
     <div class="vista">
+        <LoadingOverlay :show="cargando" />
         <div class="container">
             <h3 class="mt-2">Registro de actividades</h3>
 
@@ -70,6 +71,7 @@ import * as XLSX from "xlsx";
 export default {
     data() {
         return {
+            cargando: false,
             logs: [],
             fechaDesde: "",
             fechaHasta: "",
@@ -92,6 +94,7 @@ export default {
         },
 
         async cargarLogs() {
+            this.cargando = true;
             try {
                 const params = {};
                 if (this.fechaDesde) params.fecha_desde = this.fechaDesde;
@@ -103,6 +106,8 @@ export default {
                 this.logs = res.data;
             } catch (e) {
                 console.error("Error al cargar logs:", e);
+            } finally {
+                this.cargando = false;
             }
         },
         exportarExcel() {

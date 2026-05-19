@@ -1,14 +1,8 @@
 <template>
   <div class="vista">
-    <div class="container">
-      <!-- Pantalla de carga -->
-      <div v-if="cargandoDatos" class="pantalla-carga-vista text-center">
-        <div class="logo-carga">
-          <img class="logo-img" src="/favicon.ico" width="50" alt="" />
-          <div class="texto-carga">Cargando...</div>
-        </div>
-      </div>
+    <LoadingOverlay :show="cargandoDatos" variant="dark" text="Generando informe..." />
 
+    <div class="container">
       <!-- Popup mensajes -->
       <div v-if="mensajePopup" class="mensaje-container-fondo">
         <div class="mensaje-container">

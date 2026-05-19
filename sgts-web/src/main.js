@@ -3,6 +3,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import emitter from '@/eventBus';
+import LoadingOverlay from '@/components/LoadingOverlay.vue';
 const env = 'prod';
 
 if (env === 'dev') {
@@ -14,6 +15,7 @@ if (env === 'dev') {
 // Creamos la instancia de la app primero
 const app = createApp(App);
 
+app.component('LoadingOverlay', LoadingOverlay);
 app.use(router);
 
 // Interceptor de requests para agregar el token

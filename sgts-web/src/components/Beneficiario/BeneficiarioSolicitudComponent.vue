@@ -1,11 +1,6 @@
 <template>
   <div class="vista">
-    <div v-if="cargando" class="pantalla-carga text-center">
-      <div class="logo-carga">
-        <img class="logo-img" src="/favicon.ico" width="50" alt="Logo" />
-        <div class="texto-carga">Cargando</div>
-      </div>
-    </div>
+    <LoadingOverlay :show="cargando" />
     <div v-if="mensajePopup" class="mensaje-container-fondo">
       <div class="mensaje-container">
         <span class="mensaje">{{ mensaje }}</span>

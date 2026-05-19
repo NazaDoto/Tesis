@@ -1,12 +1,7 @@
 <template>
   <div class="vista">
     <!-- Pantalla de carga -->
-    <div v-if="cargando" class="pantalla-carga text-center">
-      <div class="logo-carga">
-        <img class="logo-img" src="/favicon.ico" width="50" alt="Logo" />
-        <div class="texto-carga">Cargando...</div>
-      </div>
-    </div>
+    <LoadingOverlay :show="cargando" />
 
     <!-- Popup mensaje -->
     <div v-if="mensajePopup" class="mensaje-container-fondo">
@@ -1022,28 +1017,6 @@ export default {
 }
 .actions .btn:hover {
   background: #d1d5db;
-}
-
-/* popup message */
-.mensaje-container-fondo {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3000;
-}
-.mensaje-container {
-  background: white;
-  padding: 12px 16px;
-  border-radius: 8px;
-  min-width: 220px;
-  text-align: center;
-}
-.btn-mensaje {
-  margin-top: 8px;
-  padding: 6px 10px;
 }
 
 /* responsive */
