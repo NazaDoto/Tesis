@@ -358,8 +358,6 @@ html {
 
 .form-control {
     border-radius: 4px !important;
-    padding-right: 2.5rem;
-    /* Espacio suficiente para el botón */
 }
 
 .nav-logo {

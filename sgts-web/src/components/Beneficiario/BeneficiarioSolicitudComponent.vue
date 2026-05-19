@@ -151,7 +151,7 @@
           </div>
           <div class="info-item">
             <span class="label">Estado</span>
-            <span class="value">
+            <span class="value estado" :class="solicitud.estado ? 'estado-' + String(solicitud.estado).toLowerCase() : ''">
               {{ solicitud.estado }}
             </span>
           </div>
@@ -405,6 +405,33 @@ export default {
   font-size: 1rem;
 }
 
+.estado {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.estado-solicitada {
+  background: #e6f0ff;
+  color: #0056d6;
+}
+
+.estado-pendiente {
+  background: #fff5e0;
+  color: #c77700;
+}
+
+.estado-entregada {
+  background: #e8ffe6;
+  color: #0d8a2d;
+}
+
+.estado-baja {
+  background: #ffe6e6;
+  color: #c70000;
+}
 
 /* Historial estilo tabla */
 .historial {
@@ -475,35 +502,42 @@ export default {
 
 .flex-cuil {
   display: grid;
-  grid-template-columns: minmax(56px, 0.85fr) minmax(0, 2fr) minmax(48px, 0.75fr);
-  gap: 8px;
+  grid-template-columns: 3.25rem minmax(0, 1fr) 2.75rem;
+  gap: 6px;
   width: 100%;
   align-items: stretch;
 }
 
-.cuil-lado {
+.flex-cuil .cuil-lado {
   width: 100%;
+  min-width: 0;
   max-width: none !important;
   min-height: 42px;
+  padding: 8px 4px !important;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .cuil-medio {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 0;
   min-height: 42px;
-  padding: 0 6px;
-  font-size: 0.85rem;
+  padding: 0 8px;
+  font-size: 0.9rem;
   font-weight: 600;
   text-align: center;
-  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   background: #f3f4f6;
   border: 1px solid #dee2e6;
   border-radius: 0.375rem;
-}
-
-.form-control.text-center {
-  text-align: center;
+  box-sizing: border-box;
 }
 
 .pariente-card {
@@ -623,13 +657,19 @@ export default {
   }
 
   .flex-cuil {
-    grid-template-columns: 64px 1fr 52px;
+    grid-template-columns: 3rem minmax(0, 1fr) 2.5rem;
     gap: 6px;
   }
 
+  .flex-cuil .cuil-lado {
+    min-height: 44px;
+    padding: 10px 2px !important;
+    font-size: 1.125rem;
+  }
+
   .cuil-medio {
-    font-size: 0.78rem;
-    padding: 0 4px;
+    font-size: clamp(0.75rem, 3.2vw, 0.9rem);
+    padding: 0 6px;
   }
 
   .pariente-card {
@@ -685,11 +725,17 @@ export default {
 
 @media screen and (max-width: 380px) {
   .flex-cuil {
-    grid-template-columns: 52px 1fr 44px;
+    grid-template-columns: 2.75rem minmax(0, 1fr) 2.25rem;
+  }
+
+  .flex-cuil .cuil-lado {
+    font-size: 1.05rem;
+    padding: 8px 2px !important;
   }
 
   .cuil-medio {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
+    padding: 0 4px;
   }
 }
 </style>

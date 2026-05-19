@@ -70,11 +70,12 @@
                     @click="abrirAdjunto(solicitud.path_historial_medico)">
                     Ver
                 </button>
-                <span :class="estadoClass(solicitud.estado)">{{ solicitud.estado }}</span>
+                <span class="estado" :class="estadoClass(solicitud.estado)">{{ solicitud.estado }}</span>
                 <div class="acciones-solicitud">
                     <button type="button" class="btn btn-primario" @click="responder(solicitud)">Responder</button>
-                    <button type="button" class="btn btn-peligro" :disabled="cargandoDatos"
-                        @click="confirmarEliminar(solicitud)">Eliminar</button>
+                    <button type="button" class="btn-eliminar-x" :disabled="cargandoDatos"
+                        aria-label="Eliminar solicitud" title="Eliminar solicitud"
+                        @click="confirmarEliminar(solicitud)">×</button>
                 </div>
             </div>
         </div>
@@ -261,22 +262,33 @@ export default {
     cursor: not-allowed;
 }
 
-/* Estados */
-.estado-pendiente {
-    color: #b91c1c;
-    font-weight: bold;
+/* Estados (mismos colores que vista beneficiario / tarjeta) */
+.estado {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
 }
-.estado-entregada {
-    color: #065f46;
-    font-weight: bold;
-}
-.estado-baja {
-    color: #6b7280;
-    font-weight: bold;
-}
+
 .estado-solicitada {
-    color: #dad603;
-    font-weight: bold;
+    background: #e6f0ff;
+    color: #0056d6;
+}
+
+.estado-pendiente {
+    background: #fff5e0;
+    color: #c77700;
+}
+
+.estado-entregada {
+    background: #e8ffe6;
+    color: #0d8a2d;
+}
+
+.estado-baja {
+    background: #ffe6e6;
+    color: #c70000;
 }
 
 /* Tabla */
@@ -296,14 +308,33 @@ export default {
     align-items: center;
 }
 
-.btn-peligro {
-    background: #dc2626;
-    color: #fff;
-    border: none;
+.btn-eliminar-x {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #fff;
+    color: #6b7280;
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
-.btn-peligro:hover:not(:disabled) {
-    background: #b91c1c;
+.btn-eliminar-x:hover:not(:disabled) {
+    background: #fef2f2;
+    border-color: #fca5a5;
+    color: #dc2626;
+}
+
+.btn-eliminar-x:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
 }
 
 .solicitud-encabezado {
