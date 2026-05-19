@@ -185,7 +185,7 @@
 <script>
 import router from '@/router';
 import axios from 'axios';
-
+import emitter from '@/eventBus';
 
 export default {
   data() {
@@ -326,13 +326,23 @@ export default {
         console.error(error);
       }
     },
-    async fetchSolicitud() {
-      
+    async fetchSolicitud(silencioso = false) {
+      if (!silencioso) this.cargando = true;
       try {
-        const response = await axios.get('/tarjetas/getSolicitud', { params: { dni: this.usuario.dni } });
+        const response = await axios.get('/tarjetas/getSolicitud', {
+          params: { dni: this.usuario.dni },
+        });
         this.solicitud = response.data;
       } catch (error) {
-        console.log(error.response.data)
+        if (error.response) console.log(error.response.data);
+      } finally {
+        if (!silencioso) this.cargando = false;
+      }
+    },
+    onDatosActualizados(data) {
+      const miDni = String(this.usuario.dni || '');
+      if (miDni && String(data?.dni) === miDni) {
+        this.fetchSolicitud(true);
       }
     },
     async fetchDatos() {
@@ -351,12 +361,16 @@ export default {
   },
   async mounted() {
     await this.fetchDepartamentos();
-    this.usuario.dni = await JSON.parse(localStorage.getItem('user')).dni;
+    this.usuario.dni = JSON.parse(localStorage.getItem('user')).dni;
     if (localStorage.getItem('tieneTarjeta') != null) {
       await this.fetchSolicitud();
-    } else {     
+    } else {
       await this.fetchDatos();
     }
+    emitter.on('beneficiario_datos_actualizados', this.onDatosActualizados);
+  },
+  beforeUnmount() {
+    emitter.off('beneficiario_datos_actualizados', this.onDatosActualizados);
   },
 }
 </script>

@@ -106,6 +106,7 @@
 <script>
 import emitter from '@/eventBus';
 import router from '@/router';
+import { desconectarRealtime } from '@/services/realtimeSocket';
 
 export default {
     props: {
@@ -126,6 +127,7 @@ export default {
         },
         cerrarSesion() {
             this.mostrarModal = false;
+            desconectarRealtime();
             localStorage.clear();
             emitter.emit('usuarioDeslogueado');
             router.push('/');

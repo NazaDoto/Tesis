@@ -15,6 +15,10 @@
 <script>
 import SidebarBeneficiarioComponent from './SidebarBeneficiarioComponent.vue';
 import axios from 'axios';
+import emitter from '@/eventBus';
+import { conectarRealtime, desconectarRealtime } from '@/services/realtimeSocket';
+import { notificarSolicitudActualizada } from '@/utils/notificaciones';
+
 export default {
   components: {
     SidebarBeneficiarioComponent,
@@ -22,30 +26,56 @@ export default {
   data() {
     return {
       cargando: false,
-      tieneTarjeta: null
-    }
+      tieneTarjeta: null,
+    };
   },
   methods: {
-    async verificarTarjeta() {
-      this.cargando = true;
-      const dni = JSON.parse(localStorage.getItem('user')).dni
+    obtenerDni() {
+      try {
+        return JSON.parse(localStorage.getItem('user') || '{}').dni;
+      } catch {
+        return null;
+      }
+    },
+    async verificarTarjeta(silencioso = false) {
+      const dni = this.obtenerDni();
+      if (!dni) return;
+      if (!silencioso) this.cargando = true;
       try {
         const response = await axios.get('/beneficiarios/verificarTarjeta', {
-          params: { dni: dni }
+          params: { dni },
         });
         this.tieneTarjeta = response.data.estado;
         localStorage.setItem('tieneTarjeta', this.tieneTarjeta);
       } catch (error) {
-        console.log('No tiene tarjeta.');
+        console.log('No tiene tarjeta.', error);
       } finally {
-        this.cargando = false;
+        if (!silencioso) this.cargando = false;
       }
+    },
+    onSolicitudActualizada(data) {
+      const miDni = String(this.obtenerDni() || '');
+      if (!miDni || String(data?.dni) !== miDni) return;
+      notificarSolicitudActualizada(data);
+      this.verificarTarjeta(true);
+      emitter.emit('beneficiario_datos_actualizados', data);
+    },
+    onUsuarioDeslogueado() {
+      desconectarRealtime();
     },
   },
   mounted() {
+    conectarRealtime();
     this.verificarTarjeta();
-  }
-}
+    emitter.on('solicitud_actualizada', this.onSolicitudActualizada);
+    emitter.on('usuarioDeslogueado', this.onUsuarioDeslogueado);
+  },
+  beforeUnmount() {
+    emitter.off('solicitud_actualizada', this.onSolicitudActualizada);
+    emitter.off('usuarioDeslogueado', this.onUsuarioDeslogueado);
+    desconectarRealtime();
+  },
+};
 </script>
 
 <style scoped>

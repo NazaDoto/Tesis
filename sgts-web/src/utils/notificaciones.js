@@ -31,6 +31,40 @@ export function permisoNotificaciones() {
 /**
  * Toast en la app + notificación del sistema si el usuario lo permitió.
  */
+export async function notificarSolicitudActualizada(data = {}) {
+  const estado = data.estado || '';
+  const cuerpo = data.observacion
+    ? `Estado: ${estado}. ${data.observacion}`
+    : `Tu solicitud ahora está en estado: ${estado}`;
+
+  toast.info(cuerpo, {
+    ...TOAST_OPTS,
+    autoClose: 6000,
+    onClick: () => {
+      if (router.currentRoute.value.path !== '/beneficiario/solicitud') {
+        router.push('/beneficiario/solicitud');
+      }
+    },
+  });
+
+  if (!('Notification' in window) || Notification.permission !== 'granted') return;
+
+  try {
+    const notif = new Notification('Actualización de tu solicitud', {
+      body: cuerpo,
+      icon: '/favicon.ico',
+      tag: `solicitud-actualizada-${data.dni}`,
+    });
+    notif.onclick = () => {
+      window.focus();
+      notif.close();
+      router.push('/beneficiario/solicitud');
+    };
+  } catch (err) {
+    console.warn('Notification API:', err);
+  }
+}
+
 export async function notificarNuevaSolicitud(data = {}) {
   const nombre = data.nombre || 'Beneficiario';
   const dni = data.dni || '';

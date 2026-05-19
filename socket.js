@@ -44,6 +44,15 @@ function configurarSocketIO(env, app) {
     // Guardar io en app para usarlo en rutas
     app.set("io", io);
 
+    io.on("connection", (socket) => {
+        socket.on("join_beneficiario", (dni) => {
+            const normalizado = String(dni || "").trim();
+            if (/^\d{7,8}$/.test(normalizado)) {
+                socket.join(`beneficiario:${normalizado}`);
+            }
+        });
+    });
+
     return server;
 }
 

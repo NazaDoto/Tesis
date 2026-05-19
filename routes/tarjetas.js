@@ -539,6 +539,20 @@ router.post('/actualizarSolicitud', async (req, res) => {
         }
         await registrarLog(req.user?.usuario || 'desconocido', "ACTUALIZAR_SOLICITUD", `Actualización solicitud tarjeta DNI ${dni} - Nuevo estado: ${estado} - Obs: ${observacion}`);
 
+        const estadoFinal =
+            estado !== 'default' && estado !== estadoViejo ? estado : estadoViejo;
+
+        const io = req.app.get('io');
+        if (io) {
+            io.to(`beneficiario:${dni}`).emit('solicitud_actualizada', {
+                dni: String(dni),
+                estado: estadoFinal,
+                estadoAnterior: estadoViejo,
+                observacion: observacion || null,
+                huboCambioEstado: estado !== 'default' && estado !== estadoViejo,
+            });
+        }
+
         res.json({ mensaje: 'Solicitud actualizada correctamente' });
     } catch (error) {
         console.error('Error al actualizar solicitud:', error);

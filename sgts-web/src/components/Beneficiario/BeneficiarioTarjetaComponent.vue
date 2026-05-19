@@ -79,6 +79,8 @@
 <script>
 import axios from 'axios';
 import jsPDF from 'jspdf';
+import emitter from '@/eventBus';
+
 export default {
     data() {
         return {
@@ -99,15 +101,21 @@ export default {
         }
     },
     methods: {
-        async fetchTarjeta() {
-            this.cargando = true;
+        async fetchTarjeta(silencioso = false) {
+            if (!silencioso) this.cargando = true;
             try {
-                const response = await axios.get('tarjetas/getDatos', {
-                    params: { dni: JSON.parse(localStorage.getItem('user')).dni }
+                const response = await axios.get('/tarjetas/getDatos', {
+                    params: { dni: JSON.parse(localStorage.getItem('user')).dni },
                 });
                 this.tarjeta = response.data;
             } finally {
-                this.cargando = false;
+                if (!silencioso) this.cargando = false;
+            }
+        },
+        onDatosActualizados(data) {
+            const miDni = String(JSON.parse(localStorage.getItem('user') || '{}').dni || '');
+            if (miDni && String(data?.dni) === miDni) {
+                this.fetchTarjeta(true);
             }
         },
         async imprimir() {
@@ -202,7 +210,11 @@ export default {
     },
     mounted() {
         this.fetchTarjeta();
-    }
+        emitter.on('beneficiario_datos_actualizados', this.onDatosActualizados);
+    },
+    beforeUnmount() {
+        emitter.off('beneficiario_datos_actualizados', this.onDatosActualizados);
+    },
 }
 </script>
 
