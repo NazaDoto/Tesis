@@ -8,6 +8,7 @@ const multer = require('multer');
 const fs = require('fs');
 const dotenv = require('dotenv');
 const { registrarLog } = require('../utils/logger'); // 👈 importar logger
+const { eliminarBeneficiarioPorDni } = require('../utils/eliminarBeneficiario');
 
 dotenv.config();
 // Carpeta destino para archivos
@@ -721,6 +722,45 @@ router.post('/actualizarSolicitud', async (req, res) => {
     } catch (error) {
         console.error('Error al actualizar solicitud:', error);
         res.status(500).json({ error: 'No se pudo actualizar la solicitud' });
+    }
+});
+
+/** Elimina solicitud y todos los datos del beneficiario (por DNI). No borra `usuario`. */
+router.post('/eliminarSolicitud', async (req, res) => {
+    try {
+        const { id, empleado } = req.body;
+        if (!id) {
+            return res.status(400).json({ error: 'ID de solicitud requerido' });
+        }
+
+        const [rows] = await db.execute(
+            'SELECT id, dni FROM solicitud WHERE id = ? LIMIT 1',
+            [id]
+        );
+        if (!rows.length) {
+            return res.status(404).json({ error: 'Solicitud no encontrada' });
+        }
+
+        const { dni } = rows[0];
+        await eliminarBeneficiarioPorDni(db, dni);
+
+        const usuarioLog = empleado || req.user?.usuario || 'desconocido';
+        await registrarLog(
+            usuarioLog,
+            'ELIMINAR_SOLICITUD_BENEFICIARIO',
+            `Eliminados datos de beneficiario DNI ${dni} (solicitud id ${id}). Cuenta en usuario sin cambios.`
+        );
+
+        res.json({
+            success: true,
+            mensaje: `Datos del beneficiario DNI ${dni} eliminados. La cuenta de usuario no fue borrada.`,
+        });
+    } catch (error) {
+        console.error('Error en /tarjetas/eliminarSolicitud:', error);
+        res.status(500).json({
+            success: false,
+            error: error.message || 'No se pudo eliminar la solicitud',
+        });
     }
 });
 

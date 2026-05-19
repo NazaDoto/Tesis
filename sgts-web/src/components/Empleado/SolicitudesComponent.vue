@@ -71,7 +71,11 @@
                     Ver
                 </button>
                 <span :class="estadoClass(solicitud.estado)">{{ solicitud.estado }}</span>
-                <a class="btn btn-primario" @click="responder(solicitud)">Responder</a>
+                <div class="acciones-solicitud">
+                    <button type="button" class="btn btn-primario" @click="responder(solicitud)">Responder</button>
+                    <button type="button" class="btn btn-peligro" :disabled="cargandoDatos"
+                        @click="confirmarEliminar(solicitud)">Eliminar</button>
+                </div>
             </div>
         </div>
     </div>
@@ -96,9 +100,37 @@ export default {
             mensaje: '',
             solicitudes: [],
             buscar: '',
+            empleado: JSON.parse(localStorage.getItem('user') || '{}').usuario || 'desconocido',
         }
     },
     methods: {
+        confirmarEliminar(solicitud) {
+            const dni = solicitud.dni;
+            const ok = window.confirm(
+                `¿Eliminar la solicitud #${solicitud.id} y todos los datos del beneficiario DNI ${dni}?\n\n` +
+                'Se borrarán: solicitud, beneficiario, tarjeta, historial, parientes y archivos adjuntos.\n' +
+                'No se elimina la cuenta de usuario.'
+            );
+            if (ok) this.eliminarSolicitud(solicitud);
+        },
+        async eliminarSolicitud(solicitud) {
+            this.cargandoDatos = true;
+            try {
+                const { data } = await axios.post('/tarjetas/eliminarSolicitud', {
+                    id: solicitud.id,
+                    empleado: this.empleado,
+                });
+                this.mensaje = data.mensaje || 'Solicitud eliminada correctamente.';
+                this.mensajePopup = true;
+                await this.fetchSolicitudes(true);
+            } catch (error) {
+                console.error(error);
+                this.mensaje = error.response?.data?.error || 'No se pudo eliminar la solicitud.';
+                this.mensajePopup = true;
+            } finally {
+                this.cargandoDatos = false;
+            }
+        },
         async responderSolicitud() {
             this.cargandoDatos = true;
             try {
@@ -251,9 +283,27 @@ export default {
 .solicitud-encabezado,
 .solicitud-item {
     display: grid;
-    grid-template-columns: 0.4fr 1fr 1fr 0.7fr 0.9fr 1fr 0.7fr;
+    grid-template-columns: 0.4fr 1fr 1fr 0.7fr 0.9fr 1fr 1.1fr;
     text-align: center;
     align-items: center;
+}
+
+.acciones-solicitud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-peligro {
+    background: #dc2626;
+    color: #fff;
+    border: none;
+}
+
+.btn-peligro:hover:not(:disabled) {
+    background: #b91c1c;
 }
 
 .solicitud-encabezado {
