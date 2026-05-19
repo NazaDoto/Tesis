@@ -104,6 +104,40 @@ function enmascararNumero(valor) {
     return `XXXX-XXXX-XXXX-${s.slice(-4)}`;
 }
 
+/** Texto de historial visible al beneficiario: nunca números completos de cuenta/tarjeta. */
+function enmascararParaHistorial(valor) {
+    const v = String(valor ?? '').trim();
+    if (!v || v === '(vacía)') return '(vacía)';
+    const enmascarado = enmascararNumero(v);
+    return enmascarado || 'XXXX-XXXX-XXXX-????';
+}
+
+function sanitizarObservacionBeneficiario(texto) {
+    if (!texto) return texto;
+    let s = String(texto);
+    s = s.replace(
+        /Cuenta:\s*([^→.]+?)\s*→\s*([^.,]+)/gi,
+        (_, anterior, nuevo) =>
+            `Cuenta: ${enmascararParaHistorial(anterior)} → ${enmascararParaHistorial(nuevo)}`
+    );
+    s = s.replace(
+        /Tarjeta:\s*([^→.]+?)\s*→\s*([^.,]+)/gi,
+        (_, anterior, nuevo) =>
+            `Tarjeta: ${enmascararParaHistorial(anterior)} → ${enmascararParaHistorial(nuevo)}`
+    );
+    s = s.replace(/\b\d{8,}\b/g, (digitos) => enmascararNumero(digitos));
+    return s;
+}
+
+function mapHistorial(historial, vistaEmpleado) {
+    return historial.map((mov) => ({
+        observaciones: vistaEmpleado
+            ? mov.observaciones
+            : sanitizarObservacionBeneficiario(mov.observaciones),
+        fecha: formatearFecha(mov.fecha),
+    }));
+}
+
 async function obtenerTarjetaPorDni(dni) {
     const [rows] = await db.execute(
         'SELECT * FROM tarjeta_soc WHERE dni = ? ORDER BY COALESCE(fecha_modificacion, fecha_registro) DESC, id DESC LIMIT 1',
@@ -163,10 +197,7 @@ router.get('/getDatos', async (req, res) => {
                 estado: b.estado,
                 fecha_modificacion: formatearFecha(b.fecha_modificacion),
                 importe_acreditado: importeParaRespuesta(b.importe_acreditado),
-                historias: historial.map(mov => ({
-                    observaciones: mov.observaciones,
-                    fecha: formatearFecha(mov.fecha),
-                }))
+                historias: mapHistorial(historial, vistaEmpleado)
             });
         }
 
@@ -191,7 +222,12 @@ router.get('/getDatos', async (req, res) => {
                 estado: registro.TS,
                 fecha_modificacion: registro.FECHA_MOD ? new Date(registro.FECHA_MOD).toLocaleDateString('es-AR') : '',
                 importe_acreditado: importeParaRespuesta(registro.TOT_IMP),
-                historias: [{ fecha: formatearFecha(registro.FECHA_MOD), observaciones: registro.OBSERV }] || ''
+                historias: [{
+                    fecha: formatearFecha(registro.FECHA_MOD),
+                    observaciones: vistaEmpleado
+                        ? (registro.OBSERV || '')
+                        : sanitizarObservacionBeneficiario(registro.OBSERV || ''),
+                }]
             });
         }
 
@@ -288,10 +324,14 @@ router.post('/update', async (req, res) => {
             const cuentaPrev = valorNumericoTarjeta(cuentaAnterior ?? registro.num_cuenta);
             const cambios = [];
             if (cuentaPrev !== valorNumericoTarjeta(num_cuenta)) {
-                cambios.push(`Cuenta: ${cuentaPrev || '(vacía)'} → ${num_cuenta}`);
+                cambios.push(
+                    `Cuenta: ${enmascararParaHistorial(cuentaPrev)} → ${enmascararParaHistorial(num_cuenta)}`
+                );
             }
             if (valorNumericoTarjeta(registro.num_tarjeta) !== valorNumericoTarjeta(num_tarjeta)) {
-                cambios.push(`Tarjeta: ${registro.num_tarjeta || '(vacía)'} → ${num_tarjeta || '(vacía)'}`);
+                cambios.push(
+                    `Tarjeta: ${enmascararParaHistorial(registro.num_tarjeta)} → ${enmascararParaHistorial(num_tarjeta)}`
+                );
             }
 
             const [resultadoUpdate] = await db.execute(
