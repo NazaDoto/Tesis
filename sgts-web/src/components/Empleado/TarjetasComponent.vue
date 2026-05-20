@@ -206,7 +206,7 @@ export default {
             }
 
             const ahora = new Date();
-            const fechaHoy = ahora.toISOString().split('T')[0];
+            const fechaHoy = `${ahora.getFullYear()}-${String(ahora.getMonth() + 1).padStart(2, '0')}-${String(ahora.getDate()).padStart(2, '0')}`;
 
             if (!this.form.fecha_registro) this.form.fecha_registro = fechaHoy;
             this.form.fecha_modificacion = fechaHoy;

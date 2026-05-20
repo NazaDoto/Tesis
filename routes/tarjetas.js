@@ -45,13 +45,35 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({ storage, fileFilter });
 
 
-function formatearFecha(fechaISO) {
-    if (!fechaISO) return '';
-    const fecha = new Date(fechaISO);
-    const dia = String(fecha.getDate()).padStart(2, '0');
-    const mes = String(fecha.getMonth() + 1).padStart(2, '0');
-    const anio = String(fecha.getFullYear());
-    return `${anio}-${mes}-${dia}`;
+/** Fecha civil local (Argentina) en YYYY-MM-DD, sin corrimiento por zona horaria. */
+function fechaHoyLocal() {
+    const ahora = new Date();
+    return `${ahora.getFullYear()}-${String(ahora.getMonth() + 1).padStart(2, '0')}-${String(ahora.getDate()).padStart(2, '0')}`;
+}
+
+function formatearFecha(fecha) {
+    if (fecha === null || fecha === undefined || fecha === '') return '';
+
+    if (fecha instanceof Date) {
+        if (Number.isNaN(fecha.getTime())) return '';
+        const y = fecha.getUTCFullYear();
+        const m = String(fecha.getUTCMonth() + 1).padStart(2, '0');
+        const d = String(fecha.getUTCDate()).padStart(2, '0');
+        return `${y}-${m}-${d}`;
+    }
+
+    const s = String(fecha).trim();
+    const iso = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (iso) return `${iso[1]}-${iso[2]}-${iso[3]}`;
+
+    const parsed = new Date(s);
+    if (!Number.isNaN(parsed.getTime())) {
+        const y = parsed.getUTCFullYear();
+        const m = String(parsed.getUTCMonth() + 1).padStart(2, '0');
+        const d = String(parsed.getUTCDate()).padStart(2, '0');
+        return `${y}-${m}-${d}`;
+    }
+    return '';
 }
 
 /** Valor enmascarado tipo XXXX-XXXX-XXXX-1234 (no sirve para UPDATE). */
@@ -78,24 +100,17 @@ function importeParaRespuesta(valor) {
 }
 
 function normalizarFecha(fecha) {
-    if (!fecha) {
-        return new Date().toISOString().split('T')[0];
-    }
-    const s = String(fecha).trim();
-    if (/^\d{4}-\d{2}-\d{2}/.test(s)) {
-        return s.slice(0, 10);
-    }
+    const formateada = formatearFecha(fecha);
+    if (formateada) return formateada;
+
+    const s = String(fecha || '').trim();
     const m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
     if (m) {
         let anio = m[3];
         if (anio.length === 2) anio = `20${anio}`;
         return `${anio}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`;
     }
-    const d = new Date(s);
-    if (!Number.isNaN(d.getTime())) {
-        return d.toISOString().split('T')[0];
-    }
-    return new Date().toISOString().split('T')[0];
+    return fechaHoyLocal();
 }
 
 function enmascararNumero(valor) {
@@ -219,9 +234,9 @@ router.get('/getDatos', async (req, res) => {
                 num_tarjeta: vistaEmpleado ? tarjeta : enmascararNumero(tarjeta),
                 num_cuenta_real: cuenta,
                 num_tarjeta_real: tarjeta,
-                fecha_registro: registro.FECHA_REG ? new Date(registro.FECHA_REG).toLocaleDateString('es-AR') : '',
+                fecha_registro: formatearFecha(registro.FECHA_REG),
                 estado: registro.TS,
-                fecha_modificacion: registro.FECHA_MOD ? new Date(registro.FECHA_MOD).toLocaleDateString('es-AR') : '',
+                fecha_modificacion: formatearFecha(registro.FECHA_MOD),
                 importe_acreditado: importeParaRespuesta(registro.TOT_IMP),
                 historias: [{
                     fecha: formatearFecha(registro.FECHA_MOD),
@@ -263,7 +278,7 @@ router.post('/update', async (req, res) => {
     }
 
     fecha_registro = normalizarFecha(fecha_registro);
-    fecha_modificacion = normalizarFecha(fecha_modificacion);
+    fecha_modificacion = fechaHoyLocal();
     importe_acreditado = normalizarImporte(importe_acreditado);
 
     try {
@@ -316,7 +331,7 @@ router.post('/update', async (req, res) => {
 
         let estadoAnterior = null;
         let observacion = '';
-        const fechaHoy = new Date().toISOString().split('T')[0];
+        const fechaHoy = fechaHoyLocal();
 
         if (rows.length > 0) {
             const registro = rows[0];
@@ -444,7 +459,7 @@ router.post('/solicitar', upload.fields([
         const parientes = JSON.parse(req.body.parientes || '[]');
 
         const fechaHoy = new Date();
-        const fecha = fechaHoy.toISOString().slice(0, 10);
+        const fecha = fechaHoyLocal();
         const hora = fechaHoy.toTimeString().slice(0, 8);
 
         const pathDni = req.files['dni']
