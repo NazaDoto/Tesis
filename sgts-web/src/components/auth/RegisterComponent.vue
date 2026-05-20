@@ -69,7 +69,7 @@
               autocomplete="new-password"
             />
           </motion.div>
-        </motion.div>
+        </div>
       </motion.div>
 
       <motion.div class="auth-actions">
