@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { eliminarLogsPorUsuarios } = require('./logger');
 
 const UPLOADS_ROOT = path.join(__dirname, '../routes/uploads');
 
@@ -113,6 +114,10 @@ async function eliminarBeneficiarioPorDni(db, dni) {
             [dniStr]
         );
         usuariosEliminados = usuariosRows;
+        await eliminarLogsPorUsuarios(
+            conn,
+            usuariosRows.map((r) => r.usuario)
+        );
         await conn.execute('DELETE FROM usuario WHERE dni = ?', [dniStr]);
 
         await conn.commit();
