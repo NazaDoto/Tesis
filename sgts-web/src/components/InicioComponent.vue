@@ -3,7 +3,7 @@
     <div class="banner">
       <img class="img-banner" src="../../public/recursos/ministerio-banner.jpg" alt="">
     </div>
-    <div class="ancho-pag">
+    <div class="ancho-pag inicio-noticias">
       <section class="noticias" v-if="noticias.length > 0">
         <!-- Noticia destacada a la izquierda -->
         <div class="noticia-destacada">
@@ -93,7 +93,7 @@ export default {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .noticia-destacada {
@@ -151,6 +151,11 @@ export default {
 
 .img-banner {
   width: 100%;
+  display: block;
+}
+
+.inicio-noticias {
+  padding-top: 3.5rem;
 }
 
 
@@ -187,6 +192,9 @@ hr {
 @media only screen and (max-width: 1150px) {
   .ancho-pag{
     padding:0 5px;
+  }
+  .inicio-noticias {
+    padding-top: 2.25rem;
   }
   .noticias{
     flex-direction: column;

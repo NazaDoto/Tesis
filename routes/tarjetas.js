@@ -725,7 +725,7 @@ router.post('/actualizarSolicitud', async (req, res) => {
     }
 });
 
-/** Elimina solicitud y todos los datos del beneficiario (por DNI). No borra `usuario`. */
+/** Elimina solicitud, datos del beneficiario y cuenta en `usuario` (por DNI). */
 router.post('/eliminarSolicitud', async (req, res) => {
     try {
         const { id, empleado } = req.body;
@@ -742,18 +742,21 @@ router.post('/eliminarSolicitud', async (req, res) => {
         }
 
         const { dni } = rows[0];
-        await eliminarBeneficiarioPorDni(db, dni);
+        const resultado = await eliminarBeneficiarioPorDni(db, dni);
 
         const usuarioLog = empleado || req.user?.usuario || 'desconocido';
+        const cuentaTxt = resultado.usuario_eliminado
+            ? ` Cuenta "${resultado.usuario_eliminado}" eliminada.`
+            : ' Sin cuenta de usuario registrada para ese DNI.';
         await registrarLog(
             usuarioLog,
             'ELIMINAR_SOLICITUD_BENEFICIARIO',
-            `Eliminados datos de beneficiario DNI ${dni} (solicitud id ${id}). Cuenta en usuario sin cambios.`
+            `Eliminados datos DNI ${dni} (solicitud id ${id}).${cuentaTxt}`
         );
 
         res.json({
             success: true,
-            mensaje: `Datos del beneficiario DNI ${dni} eliminados. La cuenta de usuario no fue borrada.`,
+            mensaje: `Solicitud y datos del DNI ${dni} eliminados.${cuentaTxt}`,
         });
     } catch (error) {
         console.error('Error en /tarjetas/eliminarSolicitud:', error);

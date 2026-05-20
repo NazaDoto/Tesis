@@ -49,7 +49,7 @@ function eliminarArchivosEnDisco(dni, solicitudes = []) {
 }
 
 /**
- * Borra beneficiario y datos relacionados por DNI. No toca la tabla `usuario`.
+ * Borra beneficiario, datos relacionados y cuenta en `usuario` por DNI.
  */
 async function eliminarBeneficiarioPorDni(db, dni) {
     const dniStr = String(dni || '').trim();
@@ -70,6 +70,7 @@ async function eliminarBeneficiarioPorDni(db, dni) {
     );
 
     const conn = await db.getConnection();
+    let usuariosEliminados = [];
     try {
         await conn.beginTransaction();
 
@@ -107,6 +108,13 @@ async function eliminarBeneficiarioPorDni(db, dni) {
 
         await conn.execute('DELETE FROM beneficiario WHERE dni = ?', [dniStr]);
 
+        const [usuariosRows] = await conn.execute(
+            'SELECT id, usuario FROM usuario WHERE dni = ?',
+            [dniStr]
+        );
+        usuariosEliminados = usuariosRows;
+        await conn.execute('DELETE FROM usuario WHERE dni = ?', [dniStr]);
+
         await conn.commit();
     } catch (err) {
         await conn.rollback();
@@ -117,7 +125,12 @@ async function eliminarBeneficiarioPorDni(db, dni) {
 
     eliminarArchivosEnDisco(dniStr, solicitudes);
 
-    return { dni: dniStr, id_beneficiario: idBeneficiario };
+    return {
+        dni: dniStr,
+        id_beneficiario: idBeneficiario,
+        usuario_eliminado: usuariosEliminados[0]?.usuario || null,
+        usuarios_eliminados: usuariosEliminados.length,
+    };
 }
 
 module.exports = { eliminarBeneficiarioPorDni };

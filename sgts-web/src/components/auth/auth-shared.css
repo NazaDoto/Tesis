@@ -1,0 +1,143 @@
+.auth-page {
+  width: 100%;
+  min-height: calc(100dvh - 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 26rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.auth-form--wide {
+  max-width: 36rem;
+}
+
+.auth-titulo {
+  margin: 0;
+  font-size: clamp(1.35rem, 4vw, 1.75rem);
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+}
+
+.auth-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  width: 100%;
+  background: #fff;
+  padding: 1.25rem 1.125rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.auth-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.875rem;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.auth-field--full {
+  grid-column: 1 / -1;
+}
+
+.auth-field label {
+  color: #111827;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.auth-field .form-control {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.auth-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
+}
+
+.auth-submit {
+  width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.auth-link-wrap {
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.auth-link-wrap a {
+  color: #2563eb;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+@media screen and (max-width: 640px) {
+  .auth-page {
+    justify-content: flex-start;
+    padding: 1rem 0.75rem 1.5rem;
+    min-height: calc(100dvh - 56px);
+  }
+
+  .auth-form,
+  .auth-form--wide {
+    max-width: 100%;
+  }
+
+  .auth-card {
+    padding: 1rem 0.875rem;
+    border-radius: 10px;
+  }
+
+  .auth-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-field .form-control {
+    font-size: 16px;
+    min-height: 44px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .auth-titulo {
+    font-size: 1.35rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .auth-page {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .auth-card {
+    padding: 0.875rem 0.75rem;
+  }
+}

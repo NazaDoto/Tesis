@@ -108,9 +108,8 @@ export default {
         confirmarEliminar(solicitud) {
             const dni = solicitud.dni;
             const ok = window.confirm(
-                `¿Eliminar la solicitud #${solicitud.id} y todos los datos del beneficiario DNI ${dni}?\n\n` +
-                'Se borrarán: solicitud, beneficiario, tarjeta, historial, parientes y archivos adjuntos.\n' +
-                'No se elimina la cuenta de usuario.'
+                `¿Eliminar la solicitud #${solicitud.id} y todos los datos del DNI ${dni}?\n\n` +
+                'Se borrarán: solicitud, beneficiario, tarjeta, historial, parientes, archivos adjuntos y la cuenta de usuario.'
             );
             if (ok) this.eliminarSolicitud(solicitud);
         },
